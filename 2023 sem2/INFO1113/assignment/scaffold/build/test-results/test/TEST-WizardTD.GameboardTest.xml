@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WizardTD.GameboardTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-26T07:22:36" hostname="bamingyuandeMacBook-Air.local" time="1.041">
+  <properties/>
+  <testcase name="testGetTile()" classname="WizardTD.GameboardTest" time="1.041"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

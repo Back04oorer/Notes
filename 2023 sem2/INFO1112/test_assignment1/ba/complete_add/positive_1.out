@@ -1,0 +1,45 @@
+Just a friendly reminder! You have these tasks to finish today.
+- task1
+
+These tasks need to be finished in the next three days!
+- task1.1 by 28/08/23
+- task2 by 30/08/23
+
+You have the following meetings today!
+- meeting1 at 11:30
+
+You have the following meetings scheduled over the next week!
+- meeting2 on 29/08/23 at 18:00
+- meeting3 on 30/08/23 at 08:00
+- test on 03/09/23 at 14:00
+
+What would you like to do?
+1. Complete tasks
+2. Add a new meeting.
+3. Share a task.
+4. Share a meeting.
+5. Change Jafr's master directory.
+6. Exit
+Which task(s) would you like to mark as completed?
+1. task1 by 27/08/23
+2. task1.1 by 28/08/23
+3. task2 by 30/08/23
+Marked as complete.
+What would you like to do?
+1. Complete tasks
+2. Add a new meeting.
+3. Share a task.
+4. Share a meeting.
+5. Change Jafr's master directory.
+6. Exit
+Please enter a meeting description:
+Please enter a date:
+Please enter a time:
+Ok, I have added i love math1064 on 31/08/23 at 18:00.
+Would you like to share this meeting? [y/n]: What would you like to do?
+1. Complete tasks
+2. Add a new meeting.
+3. Share a task.
+4. Share a meeting.
+5. Change Jafr's master directory.
+6. Exit

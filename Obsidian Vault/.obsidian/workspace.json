@@ -1,0 +1,198 @@
+{
+  "main": {
+    "id": "d25d08acde05e685",
+    "type": "split",
+    "children": [
+      {
+        "id": "61d62aba7c1ba189",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ff1f27de00059e14",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tasks.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b7dd13b5c457a17c",
+    "type": "split",
+    "children": [
+      {
+        "id": "6dff03a71efc96d6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "62c7d845e366be4a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a62bac2a801b5e10",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d4b8b171640d18fd",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 219.5086555480957
+  },
+  "right": {
+    "id": "55fc198c7034ec57",
+    "type": "split",
+    "children": [
+      {
+        "id": "d2f4c8d21c5f56e2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "39e77337fe14848a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Tasks.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2c6c6f1632e0fe82",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Tasks.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "94a58ca9da0e7e77",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "bf40ad371d403d8a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Tasks.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-importer:Open Importer": false
+    }
+  },
+  "active": "ff1f27de00059e14",
+  "lastOpenFiles": [
+    "COMP2823/Tut/week 3 Trees🌲.md",
+    "COMP2823/Mistakes",
+    "INFO2222/Lecture 1.md",
+    "Tasks.md",
+    "Untitled 1.md",
+    "COMP2823/Tut/Tut.md",
+    "Untitled.png",
+    "Untitled.jpeg",
+    "Untitled 48.png",
+    "Untitled 47.png",
+    "Untitled 46.png",
+    "Untitled 45.png",
+    "Untitled 44.png",
+    "Untitled 43.png",
+    "Untitled 42.png",
+    "Untitled 41.png",
+    "INFO2222/Lecture 2.md",
+    "INFO2222",
+    "COMP2823/Tut",
+    "COMP2823/How to write formal proof.md",
+    "COMP2823",
+    "COMP2123(42)/错题/错题.md",
+    "COMP2123(42)/Week2-Lists/Week2-Lists.md",
+    "COMP2123(42)/Week1-Analysis/Week1-Analysis.md",
+    "COMP2123(42)/Tutes/Tutes.md",
+    "COMP2123(42)/Tute1+2+9/Tute1+2+9.md",
+    "COMP2123(42)/Note/Note.md",
+    "COMP2123(42)/Graph/Graph.md",
+    "COMP2123(42)/错题",
+    "COMP2123(42)/证明题.md",
+    "COMP2123(42)/各个数据结构ADT.md",
+    "COMP2123(42)/Week2-Lists",
+    "COMP2123(42)/Week1-Analysis",
+    "COMP2123(42)/Tutorial1-Analysis.md",
+    "COMP2123(42)/Tutes",
+    "COMP2123(42)/Tute1+2+9",
+    "COMP2123(42)/Pseudocode.md",
+    "COMP2123(42)/Note",
+    "COMP2123(42)/COMP2123(42).md",
+    "COMP2017/Textbook Notes W2/Textbook Notes W2.md",
+    "COMP2017/Lec 2 Notes/Lec 2 Notes.md",
+    "COMP2017/COMP2017.md",
+    "COMP2823/COMP2823.md",
+    "COMP2823/ADTs/ADTs.md",
+    "INFO2222/INFO2222.md"
+  ]
+}

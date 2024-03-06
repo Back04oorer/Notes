@@ -1,0 +1,120 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage{tikz}
+
+\title{MATH1064 Assignment2}
+\author{SID:530157791}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+
+\subsection*{Answer to question1}
+(a) $(p,q) = (5,13)$ ,  $n = p \cdot q = 65$\\\\
+(b)\\ 
+
+(i)
+\begin{enumerate}
+\item All numbers less than n and divisible by p are not coprime to n since they share a factor with p.So we have:\\
+$A = \{p,2p,3p, ......,(q-1)p\}$ and $|A| = q-1$
+
+\item Similarly, all numbers less than n and divisible by q are not coprime to n.
+$B =  \{q,2q,3q, ......,(p-1)q\}$ and and $|B| = p-1$
+
+\item $|A \cap B| = 0$
+
+\item Thus there are $(p - 1) + (q-1)$(Inclusion-Exclusion Principle) numbers are not coprime to n.
+
+\item Therefore there are $pq - 1 - (p + q - 2) = (p - 1)(q - 1)$ numbers are coprime(gcd(k, n) = 1) to n when $0 < k < n$.
+\end{enumerate}
+\quad (ii) $ \varphi(n) = (5-1)(13-1) = 48$\\\\
+(c) $e = 7$, public key : (7,65)
+
+
+
+
+
+
+==================================================================================================
+\newpage
+==================================================================================================
+\subsection*{Answer to question2}
+In this case,I choose $d = 7$ such that  $7 \cdot 7 \equiv 1 (mod 48)$\\
+Private key : (7, 65)
+
+
+\subsection*{Answer to question3}
+Imformation :
+\begin{itemize}
+	\item Public key : (7,65)
+	\item Private key : (7,65)
+	\item SID : 530157791
+	\item Last 8 digit : 30157791($M = \{m_1,  m_2 , ..., m_8\}$ = \{3,0,1,5,7,7,9,1\})
+	\item d = 7
+	\item e = 7
+\end{itemize}
+
+(a) $c_i \equiv m_i^7$ (mod 65),$0 \leq c < n $
+\begin{itemize}
+\item $c_1 = 3^7 $mod 65 = 42
+\item $c_2 = 0^7$mod 65 = 0
+\item $c_3 = 1^7$mod 65 = 1
+\item $c_4 = 5^7$mod 65 = 60
+\item $c_5 = 7^7$mod 65 = 58
+\item $c_6 = 7^7$mod 65 = 58
+\item $c_7 = 9^7$mod 65 = 9
+\item $c_8 = 1^7$mod 65 = 1
+\end{itemize}
+
+
+==================================================================================================
+\newpage
+
+(b)$m_i^{'} \equiv c_i^7$ (mod 65),$0 \leq m < n $ ,$1 \leq i \leq 8,i \in \mathbb{N}$
+\begin{itemize}
+\item $m_1^{'} = 42^7 $mod 65 = 3
+\item $m_2^{'} = 0^7$mod 65 = 0
+\item $m_3^{'} = 1^7$mod 65 = 1
+\item $m_4^{'} = 60^7$mod 65 = 5
+\item $m_5^{'} = 58^7$mod 65 = 7
+\item $m_6^{'}= 58^7$mod 65 = 7
+\item $m_7^{'} = 9^7$mod 65 = 9
+\item $m_8^{'} = 1^7$mod 65 = 1
+\end{itemize}
+
+$M^{'} = \{3,0,1,5,7,7,9,1\}$\\
+
+$M = M^{'}$
+
+
+==================================================================================================
+\newpage
+==================================================================================================
+\subsection*{Answer to question4}
+(a) James's(my friend) public key : (7 ,  33)\\\\
+(b) Perelman.
+\begin{itemize}
+\item P = 16
+\item E = 5
+\item R =18
+\item E = 5
+\item L = 12
+\item M = 13
+\item A = 1
+\item N = 14
+\end{itemize}
+Then encode $M = \{16,5,18,5,12,13,1,14\}$ by public key (7,33).\\
+Encoded messages $c_i \equiv m_i^7$ mod n,  $1 \leq i \leq 8,i \in \mathbb{N}$\\
+$C = \{25,14,6,14,12,7,1,20\}$\\\\
+(c)Encoded messages from James:\\
+$CJ$ = $\{50, 16, 16, 60, 14, 57, 60, 9, 52, 60, 47\}$\\
+My private key : (7,65)\\
+So that $MJ_i \equiv CJ_i^7$ (mod 65):\\
+$MJ = \{15, 16, 16, 5, 14, 8, 5, 9, 13, 5, 18\}$\\
+Which is Oppenheimer!\\
+==================================================================================================
+
+\end{document}
