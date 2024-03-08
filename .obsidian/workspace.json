@@ -4,22 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "93265bcf67f95310",
+        "id": "a69f301f1aa66ea2",
         "type": "tabs",
         "children": [
           {
-            "id": "5ed04169bba17c5b",
+            "id": "d7653a70b37dc40f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
+                "file": "2024 sem1/COMP2823/TutorialSolution/Week 1 - analysis (solutions).pdf"
+              }
+            }
+          },
+          {
+            "id": "f387dc3d3de466af",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf"
               }
             }
           }
@@ -146,25 +155,32 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5ed04169bba17c5b",
+  "active": "f387dc3d3de466af",
   "lastOpenFiles": [
-    "雅思考试/雅思口语/1. 地点类必备基础语料补充：.pdf",
+    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.synctex(busy)",
+    "2024 sem1/COMP2823/TutorialSolution/Week 1 - analysis (solutions).pdf",
+    "2024 sem1/COMP2823/TutorialSolution/Week 2 - lists (solutions).pdf",
+    "2024 sem1/COMP2823/TutorialSolution/Week 3 - trees (solutions).pdf",
+    "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf",
+    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.aux",
+    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.log",
+    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.synctex.gz",
+    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.pdf",
+    "2024 sem1/COMP2823/Assignment/Latex/Assignment1 2.synctex(busy)",
+    "2024 sem1/COMP2823/TutorialSolution/Week 7 - graphs (solution).pdf",
+    "2024 sem1/COMP2823/Assignment/A1.md",
+    "2024 sem1/MATH2022/Mistakes/Week 2.md",
+    "2024 sem1/MATH2022/Graphs/Pasted image 20240307225840.png",
+    "2024 sem1/INFO2222/Lecture 1.md",
+    "2024 sem1/COMP2823/Tut/week 3 Trees🌲.md",
+    "Obsidian Vault/Tasks.md",
+    "Obsidian Vault/COMP2017/Lec 2 Notes/Lec 2 Notes.md",
+    "Obsidian Vault/COMP2017/Textbook Notes W2/Textbook Notes W2.md",
+    "Obsidian Vault/COMP2017/COMP2017.md",
+    "2024 sem1/COMP2823/Tut/Week 2 List 📋.md",
+    "README.md",
     "Obsidian Vault/COMP2823/Tut/week 3 Trees🌲.md",
     "Obsidian Vault/COMP2823/Tut/Week 2 List 📋.md",
-    "2024 sem1/COMP2823/TutorialSolution/Week 2 - lists (solutions).pdf",
-    "README.md",
-    "2024 sem1/COMP2823/textbooks/Algorithm Design and Applications[A4].pdf",
-    "2024 sem1/COMP2823/TutorialSolution/Week 4 - binary search trees (solutions).pdf",
-    "2024 sem1/COMP2823/TutorialSolution/Week 1 - analysis (solutions).pdf",
-    "2024 sem1/COMP2823/TutorialSolution/Week 6 - hashing (solution).pdf",
-    "2024 sem1/COMP2823/TutorialSolution/Week 8 - graph algorithms (solutions).pdf",
-    "2024 sem1/COMP2823/TutorialSolution/Week 11 - divide and conquer 2 (solution).pdf",
-    "2024 sem1/COMP2823/TutorialSolution/Week 0 - induction (solutions).pdf",
-    "2024 sem1/COMP2823/TutorialSolution/Week 9 - greedy (solution).pdf",
-    "2024 sem1/COMP2823/TutorialSolution/Week 7 - graphs (solution).pdf",
-    "Obsidian Vault/INFO2222/Lecture 1.md",
-    "Obsidian Vault/Tasks.md",
-    "Obsidian Vault/COMP2017/Textbook Notes W2/Textbook Notes W2.md",
-    "Obsidian Vault/COMP2017/Lec 2 Notes/Lec 2 Notes.md"
+    "Obsidian Vault/INFO2222/Lecture 1.md"
   ]
 }

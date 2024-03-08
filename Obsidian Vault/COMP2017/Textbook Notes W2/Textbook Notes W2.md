@@ -13,11 +13,6 @@ machine-level program it generates has
 
 if tut quiz has this shit. …. ..
 
-![[/Untitled 31.png|Untitled 31.png]]
-
-  
-
-  
 
 ## Pointer …..
 

@@ -2,8 +2,6 @@
 
 Refers to the protection of data from unauthorized disclosure. It ensures that sensitive information is accessible only to authorized users and is not disclosed to unauthorized individuals or entities.
 
-当谈到信息安全中的机密性时，它指的是保护数据免受未经授权的披露。它确保敏感信息仅对授权用户可访问，并且不会被未经授权的个人或实体披露。
-
 A scenario of confidentiality could be a situation where a company stores customer data, such as personal information or financial records. The company has implemented security measures to ensure that only authorized employees have access to this data. This includes using strong passwords, encryption techniques, and access control mechanisms. By maintaining confidentiality, the company can protect the privacy and trust of its customers and prevent unauthorized individuals from accessing or misusing their sensitive information.
 
 一个简单的机密性场景可以是一个公司存储客户数据，如个人信息或财务记录。该公司已经实施了安全措施，以确保只有授权的员工可以访问这些数据。这包括使用强密码、加密技术和访问控制机制。通过保持机密性，公司可以保护客户的隐私和信任，防止未经授权的个人访问或滥用他们的敏感信息。

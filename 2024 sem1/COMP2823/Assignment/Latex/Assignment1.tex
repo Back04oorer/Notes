@@ -1,0 +1,120 @@
+
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\title{Assignment 1}
+\author{Mingyuan Ba \\ SID: 530157791}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Problem 1}
+\subsection*{a)}
+The number of iterations is 
+\begin{center}
+    $(n-1) + (n-2) + \dots + 1 + 0= \frac{n(n-1)}{2}$
+\end{center}
+which is bounded by $n^2$, For each iteration corresponding to 
+indices $i,j$, we only need to perform a single comparison operation, 
+so the time complexity per iteration is $O(1)$.
+Thus , the overall time complexity is $O(n^2)$.
+
+\subsection*{b)}
+Assume for simplicity that $n$ is even. To lowerbound the running time, 
+consider only comparisons made during the first half of its execution.
+Since this is part of the full execution, analyzing only this part 
+gives a lower bound on the total running time.  The main observation we 
+need is that for each of the considered iterations, we make at least 
+$\frac{n}{2}$ comparisons, allow us to lower bound the total number 
+of comparisons made:
+\begin{center}
+    $\sum_{i=0}^{n-1} (n-1- i) \geq \sum_{i=0}^{\frac{n}{2} - 1} \frac{n}{2}
+    = \frac{n^2}{4} = \Omega{(n^2)}$
+\end{center}
+
+\newpage
+
+\section*{Problem 2}
+
+\subsection*{Sum()}
+
+When a new element get pushed or poped, the sum need to be updated.
+The \textbf{Sum} operation return the value of variable \textbf{sum},
+which takes O(1) time.\\
+We modified the push and pop operations. 
+Adding the new element to the sum takes O(1) time, so push still runs 
+in O(1) time. Similarly, subtracting the removed element from the 
+sum takes O(1) time, so pop still runs in O(1) time.
+
+
+\begin{algorithm*}
+    \begin{algorithmic}[1]
+    
+    \Function{NewPush}{e}
+        \State $sum \gets sum + e$
+        \State \Call{push}{e}
+    \EndFunction
+    
+    \end{algorithmic}
+\end{algorithm*}
+
+\begin{algorithm*}
+    \begin{algorithmic}[1]
+    
+    \Function{NewPop}{}
+        \State $e \gets \Call{pop}{}$
+        \State $sum \gets sum - e$
+    \EndFunction
+    
+    \end{algorithmic}
+\end{algorithm*}
+
+\begin{algorithm*}
+    \begin{algorithmic}[1]
+    
+    \Function{Sum}{}
+        \State \Return{sum}
+    \EndFunction
+    
+    \end{algorithmic}
+\end{algorithm*}
+
+
+\newpage
+
+\section*{Problem 3}
+\subsection*{a)}
+\begin{algorithm}
+    \begin{algorithmic}[1]
+    \Function{A}{$B, m$}
+        \State $n \gets len(B)$
+        \State $j \gets n - 1$
+        \State $i \gets 0$
+        \State $counts \gets 0$
+        \While{$i < j$}
+            \If{$B[i]] + B[i] \geq m$}
+                \State $counts \gets counts + (j - i)$
+                \State $j \gets j - 1$
+            \Else
+                \State $i \gets i + 1$
+            \EndIf
+        \EndWhile
+        \State \Return $count$
+    \EndFunction
+    \end{algorithmic}
+\end{algorithm}
+
+
+\subsection*{b)}
+
+
+\end{document}
