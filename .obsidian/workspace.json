@@ -27,8 +27,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf",
+                "file": "2024 sem1/COMP2823/TutorialSolution/Week 1 - analysis (solutions).pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf",
+                "file": "2024 sem1/COMP2823/TutorialSolution/Week 1 - analysis (solutions).pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf"
+                "file": "2024 sem1/COMP2823/TutorialSolution/Week 1 - analysis (solutions).pdf"
               }
             }
           }
@@ -155,19 +154,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f387dc3d3de466af",
+  "active": "d7653a70b37dc40f",
   "lastOpenFiles": [
     "2024 sem1/COMP2823/Assignment/Latex/Assignment1.synctex(busy)",
-    "2024 sem1/COMP2823/TutorialSolution/Week 1 - analysis (solutions).pdf",
-    "2024 sem1/COMP2823/TutorialSolution/Week 2 - lists (solutions).pdf",
-    "2024 sem1/COMP2823/TutorialSolution/Week 3 - trees (solutions).pdf",
-    "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf",
     "2024 sem1/COMP2823/Assignment/Latex/Assignment1.aux",
     "2024 sem1/COMP2823/Assignment/Latex/Assignment1.log",
     "2024 sem1/COMP2823/Assignment/Latex/Assignment1.synctex.gz",
     "2024 sem1/COMP2823/Assignment/Latex/Assignment1.pdf",
-    "2024 sem1/COMP2823/Assignment/Latex/Assignment1 2.synctex(busy)",
-    "2024 sem1/COMP2823/TutorialSolution/Week 7 - graphs (solution).pdf",
+    "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf",
+    "2024 sem1/COMP2823/Assignment/Latex/Assignment1 3.synctex(busy)",
+    "2024 sem1/COMP2823/Assignment/indigenous_perspectives_climate_adaptation.pdf",
+    "2024 sem1/COMP2823/TutorialSolution/Week 1 - analysis (solutions).pdf",
+    "2024 sem1/COMP2823/TutorialSolution/Week 2 - lists (solutions).pdf",
+    "2024 sem1/COMP2823/TutorialSolution/Week 3 - trees (solutions).pdf",
     "2024 sem1/COMP2823/Assignment/A1.md",
     "2024 sem1/MATH2022/Mistakes/Week 2.md",
     "2024 sem1/MATH2022/Graphs/Pasted image 20240307225840.png",

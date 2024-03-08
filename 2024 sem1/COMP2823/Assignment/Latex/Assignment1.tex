@@ -101,20 +101,70 @@ sum takes O(1) time, so pop still runs in O(1) time.
         \State $i \gets 0$
         \State $counts \gets 0$
         \While{$i < j$}
-            \If{$B[i]] + B[i] \geq m$}
+            \If{$B[i] + B[j] \geq m$}
                 \State $counts \gets counts + (j - i)$
                 \State $j \gets j - 1$
             \Else
                 \State $i \gets i + 1$
             \EndIf
         \EndWhile
-        \State \Return $count$
+        \State \Return $counts$
     \EndFunction
     \end{algorithmic}
 \end{algorithm}
 
 
 \subsection*{b)}
+\textbf{Theorem}: For B, m given above,the algorithm $A$ should correctly
+calculate the number of index pairs $i, j$ such that $B[i] + B[j] \geq m$
+for all $i < j$.\\\\
+\textbf{Base Case}: \\
+$n = 2$,B has only 2 element $B[0], B[1]$. The algorithm A compares $B[0]
++ B[1]$ with m. If $B[0] + B[1] \geq m$, $A$ sets $counts$ to 1 which is 
+correct. Else, there is no valid index pair.\\\\
+\textbf{Inductive Step}:\\
+Assume that for any array $B$ of length $k$ algorithm $A$ works correctly.
+We need to prove that for an array $B$ of length $k+1$, the algorithm $A$
+can also correctly calculate the number of satisfying index pairs.\\
+\textit{Proof}:
 
+The algorithm $A$ starts checking from $i = 0$ and $j = k$.
+\begin{itemize}
+    \item If $B[0] + B[k] \geq m$ , given the sorted property,  all elements 
+    between $B[0]$ and $B[k]$ also sum up to be greater than or equal to m. $k-i$ correctly counts the number of pairs
+    with $B[k]$.Then, algorithm decrease $j$ by 1(which is $k-1$ now).
+    Based on the assumption, the algorithm has already calculated all 
+    valid index pairs within the indexes from $0$ to $k-1$.Thus, algorithm finds all 
+    valid index pairs for an array $B$ of length $k+1$.
 
+    \item If $B[0] + B[k] < m$, the algorithm increments \(i\) 
+    by 1 in a loop until \(B[i] + B[k] \geq m\) is satisfied. 
+    At this point, \(k-i\) is added to the counts, or the loop continues 
+    until \(i = j\) (indicating there are no valid index pairs). In both 
+    cases, we have found all valid pairs involving $B[k]$. Based 
+    on the assumption, we have found all valid pair involving B[k-1].
+    Thus the algorithm finds all valid index pairs for an 
+    array $B$ of length $k+1$.
+    
+
+    \end{itemize}
+\textbf{Conclusion}\\\\
+Therefore, by induction, we conclude that for any sorted array $B$ of 
+length $n$ and any positive integer m, the algorithm $A(B, m)$ correctly 
+calculates the number of index pairs $(i, j)$ such that $B[i] + B[j] 
+\geq m$.
+
+\subsection*{c)}
+
+\textit{Line 2-5, 7,11,14} all consist of assignments, simple comparisons, 
+simple math operations and the return statements return booleans, all 
+of which takes O(1) time.Each iteration of the while loop on 
+\textit{line 6-13} perform O(1) time operations.And either i is incremented 
+by 1(\textit{line 11}),or j is decremented by 1(\textit{line 9}),Hence, 
+each iteration decreases the distance between i and j by 1.Given that 
+the initial distance between i and j is $n - 1$ (where n is the length 
+of the array B), the loop can run at most $n - 1$ times.Thus,the loop takes 
+at most $O(1) \cdot O(n)$ or $O(n)$ time.. Since we saw that the operations 
+outside the loop all take constant time, the loop dominates the running 
+time, which comes down to $O(n)$ time in total, as required.
 \end{document}
