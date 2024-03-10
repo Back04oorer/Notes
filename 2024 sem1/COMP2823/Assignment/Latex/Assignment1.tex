@@ -37,7 +37,7 @@ need is that for each of the considered iterations, we make at least
 $\frac{n}{2}$ comparisons, allow us to lower bound the total number 
 of comparisons made:
 \begin{center}
-    $\sum_{i=0}^{n-1} (n-1- i) \geq \sum_{i=0}^{\frac{n}{2} - 1} \frac{n}{2}
+    $\sum_{i=0}^{n-1} (n-i-1) \geq \sum_{i=0}^{\frac{n}{2} - 1} \frac{n}{2}
     = \frac{n^2}{4} = \Omega{(n^2)}$
 \end{center}
 
@@ -96,7 +96,7 @@ sum takes O(1) time, so pop still runs in O(1) time.
 \begin{algorithm}
     \begin{algorithmic}[1]
     \Function{A}{$B, m$}
-        \State $n \gets len(B)$
+        \State $n \gets sizeof(B)$
         \State $j \gets n - 1$
         \State $i \gets 0$
         \State $counts \gets 0$

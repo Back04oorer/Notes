@@ -1,5 +1,0 @@
-- [ ] MATH2022 tut sheet Week 3 📅 2024-03-08
-- [ ] COMP2823 tut sheet week 3 📅 2024-03-06 ⏫ 
-- [ ] COMP2823 assignment1  📅 2024-03-10
-- [ ] MATH2022 Notes Week 2 F + Week 3 📅 2024-03-10
-- [ ] COMP2017 Coding Challenge 

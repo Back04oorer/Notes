@@ -4,26 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "a69f301f1aa66ea2",
+        "id": "2fb5ce8d4e7bfd2e",
         "type": "tabs",
         "children": [
           {
-            "id": "d7653a70b37dc40f",
+            "id": "f23e39e2adf183f0",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "2024 sem1/COMP2823/TutorialSolution/Week 1 - analysis (solutions).pdf"
-              }
-            }
-          },
-          {
-            "id": "f387dc3d3de466af",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf"
+                "file": "2024 sem1/Tasks.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -77,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 267.50390243530273
   },
   "right": {
     "id": "d78c8d55117ae1ea",
@@ -93,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024 sem1/COMP2823/TutorialSolution/Week 1 - analysis (solutions).pdf",
+                "file": "2024 sem1/Tasks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024 sem1/COMP2823/TutorialSolution/Week 1 - analysis (solutions).pdf",
+                "file": "2024 sem1/Tasks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024 sem1/COMP2823/TutorialSolution/Week 1 - analysis (solutions).pdf"
+                "file": "2024 sem1/Tasks.md"
               }
             }
           }
@@ -154,27 +146,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d7653a70b37dc40f",
+  "active": "f23e39e2adf183f0",
   "lastOpenFiles": [
-    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.synctex(busy)",
-    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.aux",
-    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.log",
-    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.synctex.gz",
-    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.pdf",
-    "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf",
-    "2024 sem1/COMP2823/Assignment/Latex/Assignment1 3.synctex(busy)",
-    "2024 sem1/COMP2823/Assignment/indigenous_perspectives_climate_adaptation.pdf",
-    "2024 sem1/COMP2823/TutorialSolution/Week 1 - analysis (solutions).pdf",
-    "2024 sem1/COMP2823/TutorialSolution/Week 2 - lists (solutions).pdf",
-    "2024 sem1/COMP2823/TutorialSolution/Week 3 - trees (solutions).pdf",
+    "Dead Cells",
+    "2024 sem1/COMP2017/codes_Pre/W4/Q3.c",
+    "2024 sem1/COMP2017/codes_Pre/W4/Q2",
+    "2024 sem1/COMP2017/codes_Pre/W4/Q1",
+    "2024 sem1/COMP2017/codes_Pre/W4/Q2.c",
+    "2024 sem1/COMP2017/codes_Pre/W4/test",
+    "2024 sem1/COMP2017/codes_Pre/W4/test.c",
+    "2024 sem1/COMP2017/codes_Pre/W4/Q1.c",
+    "2024 sem1/COMP2017/codes_Pre/W4",
+    "2024 sem1/COMP2017/codes_Pre/W3",
+    "2024 sem1/COMP2017/Tut sheets",
+    "2024 sem1/COMP2017/Untitled.md",
+    "2024 sem1/Tasks.md",
+    "2024 sem1/COMP2123(42)/各个数据结构ADT.md",
     "2024 sem1/COMP2823/Assignment/A1.md",
     "2024 sem1/MATH2022/Mistakes/Week 2.md",
     "2024 sem1/MATH2022/Graphs/Pasted image 20240307225840.png",
     "2024 sem1/INFO2222/Lecture 1.md",
     "2024 sem1/COMP2823/Tut/week 3 Trees🌲.md",
-    "Obsidian Vault/Tasks.md",
     "Obsidian Vault/COMP2017/Lec 2 Notes/Lec 2 Notes.md",
-    "Obsidian Vault/COMP2017/Textbook Notes W2/Textbook Notes W2.md",
+    "2024 sem1/COMP2017/Textbook Notes W2/Textbook Notes W2.md",
     "Obsidian Vault/COMP2017/COMP2017.md",
     "2024 sem1/COMP2823/Tut/Week 2 List 📋.md",
     "README.md",
