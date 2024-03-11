@@ -1,10 +1,13 @@
-- [ ] MATH2022 tut sheet Week 3 📅 2024-03-08
+- [ ] MAQTH2022 tut sheet Week 3 📅 2024-03-08
 - [ ] COMP2823 tut sheet week 3 📅 2024-03-06 ⏫ 
 - [ ] MATH2022 Notes Week 2 F + Week 3 📅 2024-03-10
 - [x] COMP2017 Coding Challenge Week 2
-- [ ] COMP2017 Week3 Lec 😈
-- [ ] COMP2017 Week3 Coding Challenge
+- [x] COMP2017 Week3 Lec 😈
+- [x] COMP2017 Week3 Coding Challenge
 - [ ] COMP2017 Week3 Tut sheet😈
-- [ ] COMP2017 Assignment final update
+- [x] COMP2017 Assignment final update
 - [x] MATH2022 Week3 Worksheet
 - [ ] COMP2823 assignment1  📅 2024-03-22
+- [ ] ICPU https://sydney-au-sa.terradotta.com/index.cfm?FuseAction=Abroad.ViewLink&Parent_ID=0&Link_ID=EECDA33E-D5A4-8A46-70B6447C35C8BF43
+- [ ] 
+- [ ] 
