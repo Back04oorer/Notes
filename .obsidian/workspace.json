@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "2fb5ce8d4e7bfd2e",
+        "id": "2f9b41d465e754e7",
         "type": "tabs",
         "children": [
           {
-            "id": "f23e39e2adf183f0",
+            "id": "c47fde4eb62ac70e",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf"
+                "file": "2024 sem1/COMP2823/textbooks/Algorithm Design and Applications[A4].pdf"
               }
             }
           }
@@ -83,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf",
+                "file": "2024 sem1/COMP2823/textbooks/Algorithm Design and Applications[A4].pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf",
+                "file": "2024 sem1/COMP2823/textbooks/Algorithm Design and Applications[A4].pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf"
+                "file": "2024 sem1/COMP2823/textbooks/Algorithm Design and Applications[A4].pdf"
               }
             }
           }
@@ -144,8 +144,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f23e39e2adf183f0",
+  "active": "c47fde4eb62ac70e",
   "lastOpenFiles": [
+    "2024 sem1/COMP2823/textbooks/Algorithm Design and Applications[A4].pdf",
+    "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf",
     "2024 sem1/COMP2823/Assignment/Latex/Assignment1.aux",
     "2024 sem1/COMP2823/Assignment/Latex/Assignment1.synctex(busy)",
     "2024 sem1/COMP2823/Assignment/Latex/Assignment1.log",
@@ -156,8 +158,6 @@
     "2024 sem1/COMP2017/codes_Pre/W4/Q7/Q7.c",
     "2024 sem1/COMP2017/codes_Pre/W4/Q7/Q7",
     "2024 sem1/COMP2017/codes_Pre/W4/Q7/rick.txt",
-    "2024 sem1/COMP2017/codes_Pre/W4/Q7",
-    "2024 sem1/COMP2017/codes_Pre/W4/Q6",
     "2024 sem1/COMP2017/Untitled.md",
     "2024 sem1/COMP2123(42)/各个数据结构ADT.md",
     "2024 sem1/COMP2823/Assignment/A1.md",
