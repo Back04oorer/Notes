@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024 sem1/MATH2022/Mistakes/Week 2.md",
+                "file": "2024 sem1/Tasks.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024 sem1/MATH2022/Mistakes/Week 2.md",
+                "file": "2024 sem1/Tasks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024 sem1/MATH2022/Mistakes/Week 2.md",
+                "file": "2024 sem1/Tasks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024 sem1/MATH2022/Mistakes/Week 2.md"
+                "file": "2024 sem1/Tasks.md"
               }
             }
           }
@@ -146,8 +146,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "773fbf53c2a163b1",
+  "active": "72a7811b68cc11e5",
   "lastOpenFiles": [
+    "2024 sem1/INFO2222/Lecture 1.md",
+    "2024 sem1/INFO2222/Lecture 2.md",
+    "2024 sem1/INFO2222/Lecture 3.md",
+    "2024 sem1/MATH2022/Mistakes/Week 2.md",
     "2024 sem1/MATH2022/Notes/Notes.synctex(busy)",
     "2024 sem1/MATH2022/Notes/Notes.log",
     "2024 sem1/MATH2022/Notes/Graphs/Alternative_Group.jpg",
@@ -161,12 +165,10 @@
     "2024 sem1/MATH2022/Notes.synctex(busy)",
     "2024 sem1/MATH2022/Graphs/Pasted image 20240312230947.png",
     "2024 sem1/MATH2022/Graphs/Pasted image 20240307225840.png",
-    "2024 sem1/MATH2022/Mistakes/Week 2.md",
     "2024 sem1/Tasks.md",
     "2024 sem1/COMP2017/Untitled.md",
     "2024 sem1/COMP2123(42)/各个数据结构ADT.md",
     "2024 sem1/COMP2823/Assignment/A1.md",
-    "2024 sem1/INFO2222/Lecture 1.md",
     "2024 sem1/COMP2823/Tut/week 3 Trees🌲.md",
     "Obsidian Vault/COMP2017/Lec 2 Notes/Lec 2 Notes.md",
     "2024 sem1/COMP2017/Textbook Notes W2/Textbook Notes W2.md",

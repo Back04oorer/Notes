@@ -18,15 +18,7 @@ Integrity in information security refers to the assurance that data remains accu
 
 A scenario of integrity could be a financial institution that stores transaction records. The institution implements measures to ensure the integrity of these records, such as using cryptographic techniques to detect any unauthorized changes to the data. This ensures that the transaction records are reliable and trustworthy, preventing any fraudulent activities or tampering with the financial data. By maintaining integrity, the institution can ensure the accuracy and reliability of its financial records, which is crucial for maintaining trust with customers and regulatory compliance.
 
-  
-
-  
-
-  
-
-  
-
-==<mark style="background: #FFF3A3A6;"></mark>==### Authorization
+### Authorization
 
 Authorization in information security refers to the process of granting or denying access rights to users or entities based on their identity and privileges. It determines what actions users are allowed to perform within a system or on specific resources.
 
