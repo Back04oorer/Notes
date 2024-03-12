@@ -4,7 +4,7 @@
 
 
 int main(int argc, char** argv){
-	int len = 0 ;,
+	int len = 0 ;
 	sscanf(argv[1],"%d",&len);
 
 	srand(2);

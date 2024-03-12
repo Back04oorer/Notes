@@ -8,14 +8,14 @@ int encode_run(const char* line_run,unsigned length,char *buf,unsigned buf_len){
 		return 1;
 	}
 
-	int count = 1;t
+	int count = 1;
 	int index_buf = 0;
 
 	for(int i = 1; i < length; i++){
 		if(line_run[i] == line_run[i-1]){
 			count++;
 		}else{
-			buf[index_buf] = (char)(count - 0 + '0');
+			buf[index_buf] = (char) (count-0 + '0');
 			index_buf++;
 			count = 1;
 		}

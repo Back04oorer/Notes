@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{placeins}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 
 \title{Assignment 1}
@@ -78,7 +79,7 @@ sum takes O(1) time, so pop still runs in O(1) time.
     \end{algorithmic}
 \end{algorithm*}
 
-\begin{algorithm*}
+\begin{algorithm}
     \begin{algorithmic}[1]
     
     \Function{Sum}{}
@@ -86,12 +87,124 @@ sum takes O(1) time, so pop still runs in O(1) time.
     \EndFunction
     
     \end{algorithmic}
+\end{algorithm}
+
+\newpage
+\subsection*{Min()}
+To fulfill the equirement,I used a new stack(\textit{minStack}) to keep track 
+of the minimum value within the main stack (\textit{mainStack}).Here's an 
+explanation and analysis of each operation along with their time complexity:
+
+\begin{itemize}
+    \item \textit{NewPush}:\\
+    For each \textit{Newpush} operation, an element x is pushed onto the
+    \textit{mainStack}. Simultaneously, x is compared with the top 
+    element of \textit{minStack} (the current minimum value). If x is smaller or 
+    equal, or if \textit{minStack} is empty, x will be pushed onto \textit{minStack}. 
+    This ensures that the top of minStack always holds the minimum value 
+    of all elements in \textit{mainStack}.\\
+    Since the \textit{NewPush} operation itself and the conditional update 
+    of \textit{minStack} are constant time operations, the time complexity is $O(1)$.
+    
+    \item \textit{NewPop}:\\
+    When performing a pop operation, the top element is popped from 
+    \textit{mainStack}. Then, if this popped element is equal to the top element 
+    of minStack (the current minimum value), it is also popped from minStack. 
+    This maintains the correctness of \textit{mainStack} to reflect the new 
+    minimum value of mainStack after the pop operation.\\
+    As both popping the element and updating minStack are constant time operations,
+    the time complexity is $O(1)$.
+
+    \item \textit{Min}:\\
+    The top element of \textit{minStack} always represents the minimum value 
+    among all elements in \textit{mainStack}, returning the top element of 
+    \textit{minStack} retrieves the minimum value in O(1) time.
+\end{itemize}
+
+\begin{algorithm*}
+    \begin{algorithmic}[1]
+    \Function{NewPush}{$x$}
+        \State $mainStack.push(x)$
+        \If{$minStack.isEmpty()$ or $x \leq minStack.top()$}
+            \State $minStack.push(x)$
+        \EndIf
+    \EndFunction
+    \end{algorithmic}
 \end{algorithm*}
+    
+\begin{algorithm*}
+    \begin{algorithmic}[1]
+    \Function{NewPop}{void}
+        \If{not $mainStack.isEmpty()$}
+            \State $x \gets mainStack.pop()$
+            \If{$x = minStack.top()$}
+                \State $minStack.pop()$
+            \EndIf
+            \State \Return $x$
+        \Else
+            \State \Return Error \Comment{Stack is empty}
+        \EndIf
+    \EndFunction
+    \end{algorithmic}
+\end{algorithm*}
+
+\begin{algorithm*}
+    \begin{algorithmic}[1]
+    \Function{Min}{void}
+        \If{not $minStack.isEmpty()$}
+            \State \Return $minStack.top()$
+        \Else
+            \State \Return Error \Comment{Stack is empty}
+        \EndIf
+    \EndFunction
+    \end{algorithmic}
+\end{algorithm*}
+
+     
+    
+\newpage
+
+\subsection*{PopSmaller}   
+
+\begin{algorithm}
+    \caption{PopSmaller(e) Function}
+    \begin{algorithmic}[1]
+    \Function{PopSmaller}{$e$}
+        \While{! isEmpty(stack) \textbf{and} peek(stack) $\leq e$}
+            \State pop(stack)
+        \EndWhile
+        \State push(stack, $e$)
+    \EndFunction
+    \end{algorithmic}
+\end{algorithm}
+
+\textit{}
+Assuming that when an element is pushed onto the stack, 
+we charge 3 dollars, with 1 dollar allocated for the actual 
+time consumption of the \textit{push} operation and the 
+remaining 2 dollars reserved for potential future operations 
+within \textit{PopSmaller}, such as comparisons and pops($O(1)$).
+
+In this approach, each \textit{push} operation incurs
+an amortized cost of 3 dollars, with one unit covering the actual 
+\textit{push} operation and the other two saved for potential 
+future comparisons and pops within \textit{PopSmaller}. 
+Conversely, the pop and comparison actions within \textit{PopSmaller}
+do not incur additional cost, as they are covered by the extra dollars
+from preceding push operations.
+In conclusion, as each push operation incurs an amortized cost of 
+3 dollars while pop and comparison operations entail no additional cost, 
+it can be concluded that PopSmaller is effectively amortized $O(1)$.
+
+
+
+
 
 
 \newpage
 
 \section*{Problem 3}
+
 \subsection*{a)}
 \begin{algorithm}
     \begin{algorithmic}[1]
@@ -112,6 +225,7 @@ sum takes O(1) time, so pop still runs in O(1) time.
     \EndFunction
     \end{algorithmic}
 \end{algorithm}
+
 
 
 \subsection*{b)}

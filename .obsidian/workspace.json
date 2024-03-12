@@ -11,11 +11,9 @@
             "id": "f23e39e2adf183f0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "2024 sem1/Tasks.md",
-                "mode": "source",
-                "source": false
+                "file": "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024 sem1/Tasks.md",
+                "file": "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024 sem1/Tasks.md",
+                "file": "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024 sem1/Tasks.md"
+                "file": "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf"
               }
             }
           }
@@ -148,19 +146,19 @@
   },
   "active": "f23e39e2adf183f0",
   "lastOpenFiles": [
-    "2024 sem1/COMP2017/codes_Pre/W3/test",
-    "2024 sem1/COMP2017/codes_Pre/W3/Q7",
-    "2024 sem1/COMP2017/codes_Pre/W3/Q7.c",
-    "2024 sem1/COMP2017/codes_Pre/W3/Q8",
-    "2024 sem1/COMP2017/codes_Pre/W3/Q8.c",
-    "2024 sem1/COMP2017/codes_Pre/W3/files/file2.txt",
-    "2024 sem1/COMP2017/codes_Pre/W3/files/file1.txt",
-    "2024 sem1/COMP2017/codes_Pre/W3/files",
-    "2024 sem1/COMP2017/codes_Pre/W3/Q13",
-    "2024 sem1/COMP2017/codes_Pre/W3/Q13.c",
-    "2024 sem1/COMP2017/codes_Pre/W3/Q12",
-    "2024 sem1/COMP2017/Untitled.md",
+    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.aux",
+    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.synctex(busy)",
+    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.log",
+    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.synctex.gz",
+    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.pdf",
+    "2024 sem1/COMP2823/Assignment/Latex/Assignment1 4.synctex(busy)",
     "2024 sem1/Tasks.md",
+    "2024 sem1/COMP2017/codes_Pre/W4/Q7/Q7.c",
+    "2024 sem1/COMP2017/codes_Pre/W4/Q7/Q7",
+    "2024 sem1/COMP2017/codes_Pre/W4/Q7/rick.txt",
+    "2024 sem1/COMP2017/codes_Pre/W4/Q7",
+    "2024 sem1/COMP2017/codes_Pre/W4/Q6",
+    "2024 sem1/COMP2017/Untitled.md",
     "2024 sem1/COMP2123(42)/各个数据结构ADT.md",
     "2024 sem1/COMP2823/Assignment/A1.md",
     "2024 sem1/MATH2022/Mistakes/Week 2.md",
