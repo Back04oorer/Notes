@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "2f9b41d465e754e7",
+        "id": "1c5f30d594a59045",
         "type": "tabs",
         "children": [
           {
-            "id": "c47fde4eb62ac70e",
+            "id": "72a7811b68cc11e5",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "2024 sem1/COMP2823/textbooks/Algorithm Design and Applications[A4].pdf"
+                "file": "2024 sem1/MATH2022/Mistakes/Week 2.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024 sem1/COMP2823/textbooks/Algorithm Design and Applications[A4].pdf",
+                "file": "2024 sem1/MATH2022/Mistakes/Week 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024 sem1/COMP2823/textbooks/Algorithm Design and Applications[A4].pdf",
+                "file": "2024 sem1/MATH2022/Mistakes/Week 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024 sem1/COMP2823/textbooks/Algorithm Design and Applications[A4].pdf"
+                "file": "2024 sem1/MATH2022/Mistakes/Week 2.md"
               }
             }
           }
@@ -144,25 +146,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c47fde4eb62ac70e",
+  "active": "773fbf53c2a163b1",
   "lastOpenFiles": [
-    "2024 sem1/COMP2823/textbooks/Algorithm Design and Applications[A4].pdf",
-    "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf",
-    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.aux",
-    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.synctex(busy)",
-    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.log",
-    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.synctex.gz",
-    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.pdf",
-    "2024 sem1/COMP2823/Assignment/Latex/Assignment1 4.synctex(busy)",
+    "2024 sem1/MATH2022/Notes/Notes.synctex(busy)",
+    "2024 sem1/MATH2022/Notes/Notes.log",
+    "2024 sem1/MATH2022/Notes/Graphs/Alternative_Group.jpg",
+    "2024 sem1/MATH2022/Notes/Notes.synctex.gz",
+    "2024 sem1/MATH2022/Notes/Notes.pdf",
+    "2024 sem1/MATH2022/Notes/Notes.aux",
+    "2024 sem1/MATH2022/Notes/Graphs",
+    "2024 sem1/MATH2022/Notes/Notes.tex",
+    "2024 sem1/MATH2022/Notes",
+    "2024 sem1/MATH2022/untitled folder",
+    "2024 sem1/MATH2022/Notes.synctex(busy)",
+    "2024 sem1/MATH2022/Graphs/Pasted image 20240312230947.png",
+    "2024 sem1/MATH2022/Graphs/Pasted image 20240307225840.png",
+    "2024 sem1/MATH2022/Mistakes/Week 2.md",
     "2024 sem1/Tasks.md",
-    "2024 sem1/COMP2017/codes_Pre/W4/Q7/Q7.c",
-    "2024 sem1/COMP2017/codes_Pre/W4/Q7/Q7",
-    "2024 sem1/COMP2017/codes_Pre/W4/Q7/rick.txt",
     "2024 sem1/COMP2017/Untitled.md",
     "2024 sem1/COMP2123(42)/各个数据结构ADT.md",
     "2024 sem1/COMP2823/Assignment/A1.md",
-    "2024 sem1/MATH2022/Mistakes/Week 2.md",
-    "2024 sem1/MATH2022/Graphs/Pasted image 20240307225840.png",
     "2024 sem1/INFO2222/Lecture 1.md",
     "2024 sem1/COMP2823/Tut/week 3 Trees🌲.md",
     "Obsidian Vault/COMP2017/Lec 2 Notes/Lec 2 Notes.md",

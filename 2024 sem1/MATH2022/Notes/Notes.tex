@@ -190,9 +190,9 @@ A \textbf{symmetric group} $S_n$ on a set of $n$ symbols is the group consisting
     \end{itemize} 
 
 
-    \item \textbf{Permutations}\\
+    \item \textbf{Permutations}
     \begin{itemize}
-        \item For a finite set of size n, there are \hl{n!} permutations (write $|X|=n$ ), The set of permutations of X is denoted $Sym(X)$ or $S_x$,So,\hl{$$|Sym(X)|=n!$$}
+        \item For a finite set of size n, there are \hl{n!} permutations (write $|X|=n$ ), The set of permutations of X is denoted $Sym(X)$ or $S_x$,So,\hl{$|Sym(X)|=n!$}
     \end{itemize}
 
     \item \hl{THEOREM}: \\
@@ -208,6 +208,83 @@ A \textbf{symmetric group} $S_n$ on a set of $n$ symbols is the group consisting
 
 \end{enumerate}
 
+\section{Week2}
+
+\section*{Week 3}
+
+\subsection*{Matrix Recap}
+\begin{itemize}
+    \item \textbf{Elementary Matrices and Invertibility}
+    \item \textbf{Determinants, Properties}
+\end{itemize}
+
+\subsection*{Odd and Even Permutations}
+\begin{itemize}
+    \item \textbf{Transposition}\\
+    \textit{Definition}: A transposition is a permutation 
+    $\phi: \mathbb{X} \rightarrow \mathbb{X}$, which interchanges two distinct elements $a,b \in \mathbb{X}$ leaving all other elements unchanged. Thus,
+    \begin{center}
+        $\phi = (ab)$.
+    \end{center}
+    
+    \textit{Fact}: All \hl{cycles} are a product (composition) of transpositions.
+    \begin{center}
+        $(a_1,a_2,a_3, \ldots, a_n) = (a_1 a_2)(a_1a_3)\ldots(a_1a_n)$.
+    \end{center}
+    
+    \textit{Corollary}: Every permutation of a finite set is a product (composition) of transpositions.
+    
+    \item \textbf{Even/Odd}\\
+    \textit{Definition}: We call a permutation even (or odd) if it is a product of an even (or odd, respectively) number of transpositions.
+    \begin{itemize}
+        \item $(123) = (12)(13)$ is \hl{even}.
+        \item $(1234) = (12)(13)(14)$ is \hl{odd}.
+        \item $(1) = (12)(12) = (13)(13)$ is \hl{even}.
+    \end{itemize}
+    \textit{Properties}:
+    \begin{itemize}
+        \item Single transpositions are self-inverse: $(ab)(ab) = 1$.
+        \item A permutation and its inverse have the same parity.
+    \end{itemize}
+
+
+    \item \textbf{Permutation Matrix}\\
+    \textit{Definition}: A permutation matrix is the result of applying a permutation to the rows of the identity matrix.
+    \begin{center}
+        $\phi = (132) = (13)(12) = R_1 \leftrightarrow R_3, R_1 \leftrightarrow R_2$.
+    \end{center}
+    Hence, \hl{$\text{Det}(M) = \text{Det}(E_1 E_2) = \text{Det}(E_1)\text{Det}(E_2) = (-1)^2 = 1$}.
+
+\end{itemize}
+\newpage
+
+\subsection*{The Alternating Subgroup, $\text{Alt}(n)$, of $\text{Sym}(n)$}
+
+\begin{itemize}
+    \item \textbf{Subgroup}\\
+    \textit{Definition}: A subgroup, $H$, of a group, $G$, is a subset of $G$ which is also a group 
+    under the same operation. We write $H \leq G$ or $H < G$ if $H$ is a proper subset of $G$.
+    
+    \textit{Proof a subgroup}:
+    \begin{itemize}
+        \item It is non-empty
+        \item  It is closed under the operation.\\
+        Associativity: Inherited from G\\
+        Identity: $\exists a \in G, a^k = e$ \\
+        Inverse: $a^k = e \rightarrow aa^{k-1} = e = a^{k-1}a$
+    \end{itemize}
+
+
+
+    \item \textbf{Alternating Group}\\
+    \textit{Definition}: The alternating group (on \(n\) letters) is the set of even permutations 
+    in \(Sym(n)\). That is, \(Alt(n) = \{\)even permutations of \(\{1, 2, \ldots, n\}\}\).
+    \begin{figure}[htbp]
+        \centering % 图片居中
+        \includegraphics[width=1.0\textwidth]{Graphs/Alternative_Group.jpg} % 插入图片，并设置图片宽度为文本宽度的80%
+    \end{figure}
+
+\end{itemize}
 
 
 \end{document}
