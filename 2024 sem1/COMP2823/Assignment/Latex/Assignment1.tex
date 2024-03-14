@@ -178,8 +178,30 @@ explanation and analysis of each operation along with their time complexity:
     \end{algorithmic}
 \end{algorithm}
 
-\textit{}
-Assuming that when an element is pushed onto the stack, 
+Assume a sequence of $n$ operations consists of combination of 
+\texttt{push}, \texttt{pop}, and $\texttt{PopSmaller}(e)$ operations. 
+For every element, the maximum number of times it can be involved 
+in a pop operation (whether it's a regular pop or part of 
+$\texttt{PopSmaller}(e)$) is once, because once it's popped, it's 
+not pushed back unless explicitly done by another operation. 
+Therefore, each element is pushed once and popped at most once, 
+leading to a total cost of $2n$ for $n$ elements 
+(considering the worst-case scenario where all elements are 
+eventually popped). Thus, the total work done for $n$ operations 
+is $O(n)$, and the average work done per operation, or the 
+amortized cost, is $O(n) / n = O(1)$.
+
+
+Following the definition of amortized time complexity, where a 
+sequence of $n$ operations has $O(f(n))$ amortized time if the total 
+work is $O(nf(n))$, we have shown that for a sequence of $n$ operations 
+involving $\texttt{PopSmaller}(e)$, the total work is $O(n)$, making 
+the amortized time complexity $O(1)$ per operation. This satisfies 
+the condition without increasing the complexity of other stack 
+operations.
+
+To elucidate further , 
+assuming that when an element is pushed onto the stack, 
 we charge 3 dollars, with 1 dollar allocated for the actual 
 time consumption of the \textit{push} operation and the 
 remaining 2 dollars reserved for potential future operations 
@@ -195,11 +217,6 @@ from preceding push operations.
 In conclusion, as each push operation incurs an amortized cost of 
 3 dollars while pop and comparison operations entail no additional cost, 
 it can be concluded that PopSmaller is effectively amortized $O(1)$.
-
-
-
-
-
 
 \newpage
 
