@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
+\usepackage{mathabx}
 \usepackage{cancel}
 \usepackage{graphicx}
 \usepackage{tikz}
@@ -285,6 +286,133 @@ A \textbf{symmetric group} $S_n$ on a set of $n$ symbols is the group consisting
     \end{figure}
 
 \end{itemize}
+
+\newpage
+
+\section*{Week4}
+
+\begin{enumerate}
+    \item Elementary matrices: An $n \times n$ matrix is called elementary if it is the result of applying a single elementary row operation to the identity matrix $I_{n}$.
+    \item Effect of multiplication by an elementary matrix: If $E$ is the elementary matrix obtained by applying the elementary row operation $\rho$ to $I_{n}$, and $A$ is any matrix with $n$ rows, then the matrix product $E A$ is the matrix obtained by applying $\rho$ to $A$.
+    \item Invertibility criterion and algorithm: A square matrix $A$ is invertible if and only if $A$ is a product of elementary matrices, which occurs if and only if the augmented matrix $[A \mid I]$ can be row reduced to $[I \mid B]$, in which case $A^{-1}=B$.
+    \item Half of the definition of invertibility suffices for square matrices: If $A$ is a square matrix and $A B=I$ or $B A=I$ then $A B=B A=I$, in which case the inverse $A^{-1}$ exists and equals $B$.
+    \item Determinants of matrices of dimensions 1,2 and 3: The determinant of a $1 \times 1$ matrix $[a]$ is simply the entry $a$. The determinant of a $2 \times 2$ matrix $A=\left[\begin{array}{cc}a & b \\ c & d\end{array}\right]$ is $\det A=\left|\begin{array}{cc}a & b \\ c & d\end{array}\right|=a d-b c$. The determinant of a $3 \times 3$ matrix $A=\left[\begin{array}{ccc}a & b & c \\ d & e & f \\ g & h & k\end{array}\right]$ is
+    \[
+    \det A=|A|=a\left|\begin{array}{cc}
+    e & f \\
+    h & k
+    \end{array}\right|-b\left|\begin{array}{cc}
+    d & f \\
+    g & k
+    \end{array}\right|+c\left|\begin{array}{cc}
+    d & e \\
+    g & h
+    \end{array}\right|
+    \]
+    called the expansion along the first row, where the smaller determinant arises by ignoring the row and column of the entry being used as a coefficient.
+    \item Determinants in general: Following the pattern for $3 \times 3$ matrices, we may expand along any row or down any column of a given square matrix $A$ of any size, producing the same number, called the determinant of $A$, denoted by $\det A$ or $|A|$, provided one uses adjustment factors given by the chequerboard patterns
+    \[
+    \left[\begin{array}{ccc}
+    + & - & + \\
+    - & + & - \\
+    + & - & +
+    \end{array}\right], \quad\left[\begin{array}{cccc}
+    + & - & + & - \\
+    - & + & - & + \\
+    + & - & + & - \\
+    - & + & - & +
+    \end{array}\right]
+    \]
+    and so on to higher dimensions.
+    \item Multiplicative property of determinants: If $A$ and $B$ are square matrices of the same size then $\det(A B)=(\det A)(\det B)$.
+    \item Invertibility criterion using determinants: A square matrix is invertible if and only if its determinant is nonzero.
+    \item Effects of elementary row and columns operations on determinants: Let $A$ be a square matrix. If $B$ is obtained from $A$ by swapping two rows or swapping two columns then
+    \[
+    \det B=-\det A \text{.}
+    \]
+    If $B$ is obtained from $A$ by multiplying a row or column by a scalar $\lambda$ then
+    \[
+    \det B=\lambda \det A \text{.}
+    \]
+    If $B$ is obtained from $A$ by adding a multiple of one row [column] to another row [column] then
+    \[
+    \det B=\det A \text{.}
+    \]
+    \item Determinant of the transpose: If $A$ is a square matrix then $\det\left(A^{T}\right)=\det A$.
+    \item Transpositions: A permutation that interchanges two letters and fixes all other letters is called a transposition.
+    \item \hl{Even and odd permutations:} A permutation of a finite set is called even if it is a product of an even number of transpositions (and by default the identity permutation is even), and called odd if it is a product of an odd number of transpositions.
+    \item \hl{No permutation can be both even and odd:} If $n$ is a positive integer then the symmetric group $S_{n}$ is the disjoint union of $A_{n}$, the subset of even permutations (and called the alternating group), and $S_{n} \backslash A_{n}$, the complement of $A_{n}$, which comprises exactly the subset of all odd permutations.
+    
+    \newpage
+
+    \item \hl{Cosest}:For a Symmetric Group $S_n, n\geq 2$,
+    \begin{itemize}
+        \item \textbf{Symmetric Group and Cosets:} The symmetric group, denoted as $S_n$, represents the group of all permutations of $n$ elements. Within this group, a \textit{coset} is a form of subset created by multiplying a group element by every element within a subgroup. Specifically, for a subgroup $H$ in a group $G$, and any element $g \in G$, we define:
+        \begin{itemize}
+            \item A \textit{left coset} of $H$ in $G$ with respect to $g$ as $gH = \{gh : h \in H\}$.
+            \item A \textit{right coset} of $H$ in $G$ with respect to $g$ as $Hg = \{hg : h \in H\}$.
+        \end{itemize}
+        Important properties of cosets include:
+        \begin{itemize}
+            \item Cosets of a subgroup partition the group.
+            \item All left (or right) cosets of a subgroup have the same cardinality as the subgroup itself.
+        \end{itemize}
+    \end{itemize}
+
+    \begin{figure}[htbp]
+        \centering % 图片居中
+        \includegraphics[width=0.8\textwidth]{Graphs/Coset.jpg} % 插入图片，并设置图片宽度为文本宽度的80%
+    \end{figure}
+    
+    \newpage
+
+    \item Conjugates of permutations: If $\alpha$ and $\beta$ are any permutations of a given set then the conjugate of $\alpha$ by $\beta$ is the permutation \hl{$\beta^{-1} \alpha \beta$}, denoted by $\alpha^{\beta}$, using exponential notation. We denote by $\alpha^{-\beta}$ the inverse of $\alpha^{\beta}$, so that $\alpha^{-\beta}=\beta^{-1} \alpha^{-1} \beta$, the conjugate of $\alpha^{-1}$ by $\beta$ (not to be confused with $\beta \alpha \beta^{-1}$, which is $\alpha^{\beta^{-1}}$, the conjugate of $\alpha$ by $\beta^{-1}$.
+    \item \textbf{\textit{Properties on Conjugation:}}
+            Let $(S,*)$ be a set with an associative binary operation, $*$ , and an identity element, e.
+            \begin{itemize}
+                \item \textit{multiplicative} $(ab)^c = a^{c}b^{c}$
+                \begin{center}
+                    $(ab)^c = c^{-1} (a b) c = (c^{-1} a c) (c^{-1} b c) = a^{c}b^{c}$
+                \end{center}
+
+                \item $(a^b)^{-1} = (a^{-1})^{b}$ \\
+                \textit{Note that}: $a^{b^{-1}}$ is the conjugate of $a$ by $b^{-1}$ 
+            \end{itemize}
+
+    \item Effect of conjugation on the cycle decomposition of a permutation: If $\alpha$ and $\beta$ are permutations and $\left(\begin{array}{llll}a_{1} & a_{2} & \ldots & a_{k}\end{array}\right)$ is a cycle in the cycle decomposition of $\alpha$ then $\left(a_{1} \beta a_{2} \beta \ldots a_{k} \beta\right)$ is a cycle in the cycle decomposition of the conjugate $\alpha^{\beta}$.
+    \item \textbf{\textit{More on Conjugation}}: \\Suppose $\alpha,\beta \in Sym(n)$,we want to write decomposition of $\alpha^{\beta}$
+    from the cycle decomposition of $\alpha$.
+    \begin{itemize}
+        \item \hl{Lemma}:If $(a_1,a_2,a_3 ...... a_k)$ is cycle in $\alpha$,
+        then $(a_1\beta a_2\beta a_3\beta a_4\beta ... a_k\beta)$ is a cycle in $\alpha^{\beta}$.(\hl{$a_k \beta$ means $\beta(a_k)$})
+        \\\\\textbf{\textit{Proof}}
+        \begin{center}
+            Suppose $i \in \{1,2,3 ... k-1\}$,Then\\
+            $(a_i \beta) \rightarrow (a_i \beta)(\beta^{-1}a \beta) = a_i \beta \beta^{-1} a \beta
+            = a_i a \beta = a_{i+1} \beta$
+        \end{center}
+        Similarly
+        \begin{center}
+            $(a_k \beta) \rightarrow (a_k \beta)(\beta^{-1}a \beta) = a_k \beta \beta^{-1} a \beta
+            = a_k a \beta = a_1 \beta$
+        \end{center}
+        \hl{$\rightarrow$} stands for "maps to".
+        \\\hl{This proof only shows that the conjugate of a cycle is in(one of) $\alpha^{\beta}$. }
+        But in fact:
+        \begin{center}
+            $(a_1a_2a_3...a_k)^{\beta} = (a_1\beta a_1\beta ... a_k\beta) (\star)$
+        \end{center}
+        Which means the conjugate of a cycle $a_i$ is exactly a $a_i \beta$.
+    \item \textbf{\textit{Corollary}}: To find $\alpha^{\beta}$, just replace every $a_i$, in each cycle with $a_i \beta$
+        \begin{center}
+            \textbf{Proof}: If $\alpha = a_1 a_2 a_3... a_k$ for cycles $a_i$, 
+            the conjugate $\alpha ^{\beta} = a_1 ^{\beta} a_2 ^{\beta} a_2 ^{\beta} ... a_k ^{\beta}$ ------ \textit{multiplicativity}
+            \\$= (a_1\beta a_1\beta ... a_k\beta)$ ------ \textit{see $\star$ above}
+
+        \end{center}
+    
+    \end{itemize}
+\end{enumerate}
 
 
 \end{document}
