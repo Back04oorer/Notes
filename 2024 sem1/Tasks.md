@@ -15,5 +15,5 @@
 - [ ] MATH2022 Tut sheet week 4
 - [ ] COMP2823 Tut sheet week 4 😈
 - [ ] MATH2022 Sample Quiz
-- [ ] COMP2017 Week4 Tut sheet 😈
+- [ ] COMP2017 Week 4 Tut sheet 😈
 - [x] COMP2823 Week 4 quiz
