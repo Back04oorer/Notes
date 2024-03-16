@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: a1.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: unsrt.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Database file #1: references.bib
+Warning--empty journal in SSLDragonSHA256
+You've used 8 entries,
+            1791 wiz_defined-function locations,
+            483 strings with 4525 characters,
+and the built_in function-call counts, 1005 in all, are:
+= -- 87
+> -- 23
+< -- 0
++ -- 13
+- -- 5
+* -- 8
+:= -- 148
+add.period$ -- 26
+call.type$ -- 8
+change.case$ -- 8
+chr.to.int$ -- 0
+cite$ -- 9
+duplicate$ -- 43
+empty$ -- 141
+format.name$ -- 5
+if$ -- 242
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 1
+newline$ -- 45
+num.names$ -- 5
+pop$ -- 47
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 29
+stack$ -- 0
+substring$ -- 0
+swap$ -- 7
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 5
+width$ -- 9
+write$ -- 81
+(There was 1 warning)

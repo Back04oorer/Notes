@@ -4,20 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "762ea287f6a8badb",
+        "id": "378f5785a90a2f61",
         "type": "tabs",
         "children": [
           {
-            "id": "0fbe6bf7630d3ea9",
+            "id": "004d34c1f7cc0b0a",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "2023 sem1/MATH1002/Notes/Notes.pdf"
+                "file": "2024 sem1/info2222-h1-homework-1.pdf"
+              }
+            }
+          },
+          {
+            "id": "640abab0eac42b84",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "2024 sem1/INFO2222/Assignment1/a1.pdf"
+              }
+            }
+          },
+          {
+            "id": "10b6428e0223fc04",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "2024 sem1/INFO2222/Assignment1/Assignment 1 2024.pdf"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -83,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023 sem1/MATH1002/Notes/Notes.pdf",
+                "file": "2024 sem1/INFO2222/Assignment1/a1.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023 sem1/MATH1002/Notes/Notes.pdf",
+                "file": "2024 sem1/INFO2222/Assignment1/a1.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023 sem1/MATH1002/Notes/Notes.pdf"
+                "file": "2024 sem1/INFO2222/Assignment1/a1.pdf"
               }
             }
           }
@@ -144,23 +165,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0fbe6bf7630d3ea9",
+  "active": "640abab0eac42b84",
   "lastOpenFiles": [
-    "2023 sem2/MATH1064/Notes/Notes.pdf",
-    "2023 sem1/MATH1002/Notes/Notes.pdf",
-    "2024 sem1/Tasks.md",
-    "2024 sem1/COMP2823/Tut/week 3 Trees🌲.md",
-    "2024 sem1/MATH2022/Notes/Notes.synctex(busy)",
-    "2024 sem1/MATH2022/Notes/Notes.synctex.gz",
-    "2024 sem1/MATH2022/Notes/Notes.pdf",
-    "2024 sem1/MATH2022/Notes/Notes.log",
-    "2024 sem1/MATH2022/Notes/Notes.aux",
-    "2024 sem1/COMP2823/Guide to written assignments.pdf",
-    "Dead Cells-1",
-    "Dead Cells.zip",
-    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.synctex(busy)",
-    "2024 sem1/INFO2222/Lecture 1.md",
+    "2024 sem1/INFO2222/Assignment1/a1.synctex(busy)",
+    "2024 sem1/info2222-h1-homework-1.pdf",
+    "2024 sem1/INFO2222/Assignment1/a1.pdf",
+    "2024 sem1/INFO2222/Assignment1/Assignment 1 2024.pdf",
+    "2024 sem1/INFO2222/Assignment1/graphs/Stream_cipher.jpg",
+    "2024 sem1/INFO2222/Assignment1/graphs",
+    "2024 sem1/INFO2222/Assignment1/Untitled.md",
+    "2024 sem1/INFO2222/Assignment1/a1.pyg",
+    "2024 sem1/INFO2222/Assignment1/a1.blg",
+    "2024 sem1/INFO2222/Assignment1/a1.bbl",
+    "2024 sem1/INFO2222/Assignment1/a1.fls",
+    "2024 sem1/INFO2222/Assignment1/a1.synctex.gz",
     "2024 sem1/INFO2222/Lecture 2.md",
+    "2024 sem1/INFO2222/Lecture 1.md",
+    "2024 sem1/Tasks.md",
+    "README.md",
+    "2024 sem1/COMP2823/Tut/week 3 Trees🌲.md",
     "2024 sem1/INFO2222/Lecture 3.md",
     "2024 sem1/MATH2022/Mistakes/Week 2.md",
     "2024 sem1/MATH2022/Notes/Graphs/Alternative_Group.jpg",
@@ -173,7 +196,6 @@
     "2024 sem1/COMP2017/Textbook Notes W2/Textbook Notes W2.md",
     "Obsidian Vault/COMP2017/COMP2017.md",
     "2024 sem1/COMP2823/Tut/Week 2 List 📋.md",
-    "README.md",
     "Obsidian Vault/COMP2823/Tut/week 3 Trees🌲.md",
     "Obsidian Vault/COMP2823/Tut/Week 2 List 📋.md",
     "Obsidian Vault/INFO2222/Lecture 1.md"

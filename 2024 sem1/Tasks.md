@@ -4,16 +4,17 @@
 - [x] COMP2017 Week3 Lec 😈
 - [x] COMP2017 Week3 Coding Challenge
 - [x] COMP2017 Week3 Tut sheet 😈
-- [ ] COMP2017 Week4 Coding Challenge
 - [x] COMP2017 Assignment final update
 - [x] MATH2022 Week3 Worksheet
-- [ ] COMP2823 assignment1  📅 2024-03-22
+- [x] COMP2823 assignment1  📅 2024-03-22
 - [ ] ICPU https://sydney-au-sa.terradotta.com/index.cfm?FuseAction=Abroad.ViewLink&Parent_ID=0&Link_ID=EECDA33E-D5A4-8A46-70B6447C35C8BF43
 - [x] COMP2823 tut sheet week 3 
 - [ ] INFO2222 Assignment 1 📅 2024-03-31
 - [ ] INFO2222 Tut sheet week 4
 - [ ] MATH2022 Tut sheet week 4
+- [ ] COMP2017 Week4 Coding Challenge
 - [ ] COMP2823 Tut sheet week 4 😈
 - [ ] MATH2022 Sample Quiz
 - [ ] COMP2017 Week 4 Tut sheet 😈
+- [ ] GDB????????
 - [x] COMP2823 Week 4 quiz

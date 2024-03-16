@@ -1,0 +1,51 @@
+\begin{thebibliography}{1}
+
+\bibitem{Lecture1}
+Lecture1,lecture slides.
+\newblock Canvas.
+
+\bibitem{2-1-1.Hash(1)}
+2-1-1.hash (1),lecture slides.
+\newblock Canvas.
+
+\bibitem{AlibabaCloud2019HighAvailability}
+Alibaba Cloud.
+\newblock How to set up a web server with high availability using server load
+  balancer.
+\newblock
+  \url{https://www.alibabacloud.com/blog/how-to-set-up-a-web-server-with-high-availability-using-server-load-balancer_598769},
+  2019.
+\newblock Accessed: 2024-03-16.
+
+\bibitem{TritonSSLProject}
+{Triton}.
+\newblock Secure socket layer project.
+\newblock \url{https://triton.com/project/secure-socket-layer/}.
+\newblock Accessed: 2024-03-16.
+
+\bibitem{OktaStreamCipher}
+Okta.
+\newblock Stream cipher.
+\newblock
+  \url{https://www.okta.com/au/identity-101/stream-cipher/#:~:text=A%20stream%20cipher%20is%20an,both%20encrypts%20and%20decrypts%20messages.},
+  2024.
+\newblock Accessed: 2024-03-16.
+
+\bibitem{3-1.Symmetric-Crypto}
+3-1.symmetric-crypto,lecture slides.
+\newblock Canvas.
+
+\bibitem{DeepRND_LengthExtension}
+{DeepRND}.
+\newblock Length extension attack.
+\newblock
+  \url{https://deeprnd.medium.com/length-extension-attack-bff5b1ad2f70}, 2019.
+\newblock Accessed: 2024-03-16.
+
+\bibitem{SSLDragonSHA256}
+SSL Dragon.
+\newblock Sha-256 algorithm.
+\newblock 2024.
+\newblock Accessed: 16-Mar-2024.
+
+\end{thebibliography}
