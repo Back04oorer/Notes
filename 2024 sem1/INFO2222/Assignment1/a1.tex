@@ -108,7 +108,7 @@ SHA-1 is considered "broken" for collision resistance \cite{2-1-1.Hash(1)}, mean
 
 \textbf{\textit{Differences}} between SHA-256 and MD5
 \begin{itemize}
-	\item MD5 is produce output faster than SHA256. SHA256 is slower than MD5 due to its more complex algorithm and larger output size.
+	\item MD5 produces output faster than SHA256. SHA256 is slower than MD5 because of its complex algorithm and larger output size\cite{SHA256vsMD5}.
 
 	\item MD5 is broken and insecure for cryptographic use because collision attacks can efficiently produce the same hash for different inputs\cite{2-1-1.Hash(1)}. On the contrary, SHA256 is more secure against such attacks.
 \end{itemize}
@@ -117,7 +117,7 @@ SHA-1 is considered "broken" for collision resistance \cite{2-1-1.Hash(1)}, mean
 
 	\begin{lstlisting}[language=Python]
 	# Suppose s is a string with 1000000 characters
-	
+
 	# Hash by MD5
 	md5_hash = hashlib.md5(s.encode()).hexdigest()
 
@@ -129,7 +129,30 @@ SHA-1 is considered "broken" for collision resistance \cite{2-1-1.Hash(1)}, mean
 	# Hash value: ec21d64624228af3ecd4bdaa8239e32ed943b01e26934cd5610fddb361426dc6
 	\end{lstlisting}
 
-	SHA-256 produce longer hash output and more secure against collision attacks.
+	As the example shown above demonstrates, SHA-256 produces a longer hash output and is more secure against collision attacks.
+
+\subsection{Q5}
+	In this scenario, adminitration can use a hash function and encryption to implement the system.
+
+	Steps:
+
+	\begin{enumerate}
+		\item University generates a Secret Key
+		\begin{itemize}
+    	\item Apply a hash function to the student's SID to produce a hash output.
+    	\item Then encrypt this hash output with master key, which is securely stored and only accessible to administrators. The output of this encryption is the secret key that is distributed to the student.
+		\end{itemize}
+
+		\item Verify the secret key
+		\begin{itemize}
+	    	\item When a student attempts to access the system, they need to provide their SID and the secret key.
+	   		\item System uses the master key to decrypt the secret key to get the hash output.
+	    	\item The system applies the same hash function to the provided SID and compares this hash value to the decrypted hash output.
+	    	\item If they match, the verification is successful, and access is granted.
+		\end{itemize}
+
+		This approach ensures that only the administrator can use and access the master key.
+	\end{enumerate}
 
 
 \bibliographystyle{unsrt}

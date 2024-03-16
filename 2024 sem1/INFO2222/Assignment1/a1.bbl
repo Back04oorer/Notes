@@ -48,4 +48,12 @@ SSL Dragon.
 \newblock 2024.
 \newblock Accessed: 16-Mar-2024.
 
+\bibitem{SHA256vsMD5}
+Linkin community.
+\newblock What advantages and disadvantages does sha-256 have over md5?
+\newblock
+  \url{https://www.linkedin.com/advice/1/what-advantages-disadvantages-sha256-over-md5-sha-skills-encryption},
+  2024.
+\newblock Accessed: 2024-03-16.
+
 \end{thebibliography}
