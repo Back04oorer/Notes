@@ -5,7 +5,7 @@ int main(){
 	int a;//4 bytes
 	int* b = &a;  // 8bytes
 	int* c = NULL; // 8bytes
-	unsigned d; // equals to unsigned int 4bytes
+	unsigned d; // equals to unsigned int 4 bytes
 	short e; // 2 bytes
 	long f; // 8 bytes
 	size_t g; //depends on the architecture 32bits - 4 bytes , 64 bits - 8 bytes

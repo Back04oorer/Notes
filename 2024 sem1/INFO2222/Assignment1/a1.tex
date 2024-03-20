@@ -52,7 +52,6 @@
 	Therefore, while the one-time pad provides perfect secrecy, it is not practical for most scenarios.\\
 
 \newpage
-
 	\textbf{\textit{Stream ciphers}} are encryption algorithms that encrypt and decrypt messages by applying a cryptographic key and algorithm to each binary digit in a data stream, one bit at a time\cite{OktaStreamCipher}.
 
     \begin{figure}[htbp]
@@ -92,7 +91,7 @@
 
 	Compared to MACs, using HMAC for secure communication is like sending a locked box to someone, but with two keys. First, you use a secret code (K1) to lock the box inside another box. Then, you use a different secret code (K2) to lock the outer box. Even if someone figures out the first code (K1), they can't open the outer box without the second code (K2).
 
-	Besides,these two hash operations secure HMAC against a length extension where atttacker can add additional data to a message and generate a valid new hash value without knowing the original message content, only its hash\cite{DeepRND_LengthExtension}.
+	Besides,these two hash operations secure HMAC against a length extension where atttacker can add additional data to a message and generate a valid new hash value without knowing the original message content, only its hash\cite{Length_extension_attack}.
 
 	The shortcomings of hash are the collision resistance and pre-image attacks\cite{2-1-1.Hash(1)}.It is possible for two different messages to produce the same hash output, although the probability is extremely low.Pre-image attack involves attempting to reverse the hash function to determine the original input that generated a particular hash.
 
@@ -108,7 +107,7 @@ SHA-1 is considered "broken" for collision resistance \cite{2-1-1.Hash(1)}, mean
 
 \textbf{\textit{Differences}} between SHA-256 and MD5
 \begin{itemize}
-	\item MD5 produces output faster than SHA256. SHA256 is slower than MD5 because of its complex algorithm and larger output size\cite{SHA256vsMD5}.
+	\item MD5 produces output faster than SHA256. SHA256 is slower than MD5 because of its complex algorithm and larger output size\cite{9573660}.
 
 	\item MD5 is broken and insecure for cryptographic use because collision attacks can efficiently produce the same hash for different inputs\cite{2-1-1.Hash(1)}. On the contrary, SHA256 is more secure against such attacks.
 \end{itemize}
@@ -132,26 +131,65 @@ SHA-1 is considered "broken" for collision resistance \cite{2-1-1.Hash(1)}, mean
 	As the example shown above demonstrates, SHA-256 produces a longer hash output and is more secure against collision attacks.
 
 \subsection{Q5}
-	In this scenario, adminitration can use a hash function and encryption to implement the system.
 
-	Steps:
+	To achieve this, USYD can utilize a Key Derivation Function (KDF) to generate unique keys for students from the master key without the need to store each one. The KDF combines the master key and the SID to generate a unique key\cite{adams2004security}, which each student can use to access Canvas. This method ensures that even if a student's key is compromised, both the master key and the keys of other students remain secure.
+
+
+\section{Part2}
+
+\subsection{Q1}
 
 	\begin{enumerate}
-		\item University generates a Secret Key
-		\begin{itemize}
-    	\item Apply a hash function to the student's SID to produce a hash output.
-    	\item Then encrypt this hash output with master key, which is securely stored and only accessible to administrators. The output of this encryption is the secret key that is distributed to the student.
-		\end{itemize}
+		\item Due to the independence of each attempt, the probability can be calculated by summing the probabilities of each time:
+		\begin{center}
+			$6 \cdot \frac{1}{10000} = \frac{6}{10000}$
+		\end{center}
 
-		\item Verify the secret key
-		\begin{itemize}
-	    	\item When a student attempts to access the system, they need to provide their SID and the secret key.
-	   		\item System uses the master key to decrypt the secret key to get the hash output.
-	    	\item The system applies the same hash function to the provided SID and compares this hash value to the decrypted hash output.
-	    	\item If they match, the verification is successful, and access is granted.
-		\end{itemize}
+		\item 
+		\begin{enumerate}
+	    \item \textbf{Identify Alice's Entry}: A locates the database entry corresponding to Alice, identified by her name and the hash of her password (name; H(pwd)).
+	    \item \textbf{Understand the Hash Function}: A needs to figure out which hash function are used by the email server(e.g. sha-256).
+	    \item \textbf{Use a Rainbow Table or Dictionary Attack}: Since hash functions are irreversible, A can use pre-computed tables, known as rainbow tables, which contain a large number of plaintext passwords and their corresponding hash values, to find a match for the hash value (name; H(pwd)) associated with Alice's password\cite{4_Identification}. If the hash function used includes salt (a random value added to the password before hashing), this approach becomes much more challenging. A dictionary attack involves trying many passwords to see if they match.
+	    \item \textbf{Reconstruct the Password}: Once A finds a match for the hash value using one of the methods above, they can reconstruct Alice's password with 100\% confidence.
+	\end{enumerate}
+\end{enumerate}
+\subsection{Q2}
 
-		This approach ensures that only the administrator can use and access the master key.
+	\begin{itemize}
+		\item \textbf{Advantages}
+		\begin{enumerate}
+			\item \textit{Convenience}: Biometrics such as fingerprints and facial recognition allow for quick identity verification through simple body movement,which typically completed in just a few second,while password verification usually takes longer time.Besides,users don't need to remember passwords or change them regularly to ensure security.
+
+			\item \textit{Security}:Compared with password verification, it is nearly impossible to replicate due to its uniqueness, unlike passwords which can be replicated.
+		\end{enumerate}
+
+		\item \textbf{Disadvantages}
+		\begin{enumerate}
+			\item \textit{Irreversibility}: Once a biometric attribute (e.g., fingerprint, iris pattern) is compromised, it cannot be easily changed or reset like a password.
+			\item \textit{Error Rates}: Biometric systems can mistakenly accept the wrong person or reject the right person. This mistake rate can change due to the technology, surroundings, or changes in a person's biometric features over time, leading to security risks or trouble accessing the system\cite{o2003comparing}.
+		\end{enumerate}
+
+
+	\end{itemize}
+
+
+\subsection{Q3}
+
+	\begin{itemize}
+		\item \textbf{something you have}: 
+		The advantage is its physical security. Even if someone knows your password or personal details, they still can't access your account without the physical item. This method adds an additional layer of security, decreasing the risk of unauthorized access.
+
+		\item \textbf{someone you know}:
+		The benefit lies in convenience and not needing to remember passwords or carry physical items. It uses social networks for authorization, offering an easy way to regain access through known contacts.s.
+
+	\end{itemize}
+
+\subsection{Q4}
+
+	\begin{enumerate}
+		\item \textbf{Q1}: TLS use a 
+
+		\item \textbf{someone you know}:
 	\end{enumerate}
 
 

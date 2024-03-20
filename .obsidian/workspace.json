@@ -4,36 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "378f5785a90a2f61",
+        "id": "b43435f852e29a03",
         "type": "tabs",
         "children": [
           {
-            "id": "004d34c1f7cc0b0a",
+            "id": "8a45db1c6eb7cd5a",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "2024 sem1/info2222-h1-homework-1.pdf"
+                "file": "2024 sem1/COMP2017/Assignment_2-6.pdf"
               }
             }
           },
           {
-            "id": "640abab0eac42b84",
+            "id": "cd11aab4ba09bafb",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "2024 sem1/INFO2222/Assignment1/a1.pdf"
-              }
-            }
-          },
-          {
-            "id": "10b6428e0223fc04",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "2024 sem1/INFO2222/Assignment1/Assignment 1 2024.pdf"
+                "file": "2024 sem1/COMP2017/Assignment 2 😁.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -104,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024 sem1/INFO2222/Assignment1/a1.pdf",
+                "file": "2024 sem1/COMP2017/Assignment 2 😁.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024 sem1/INFO2222/Assignment1/a1.pdf",
+                "file": "2024 sem1/COMP2017/Assignment 2 😁.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024 sem1/INFO2222/Assignment1/a1.pdf"
+                "file": "2024 sem1/COMP2017/Assignment 2 😁.md"
               }
             }
           }
@@ -165,37 +157,39 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "640abab0eac42b84",
+  "active": "cd11aab4ba09bafb",
   "lastOpenFiles": [
-    "2024 sem1/INFO2222/Assignment1/a1.synctex(busy)",
-    "2024 sem1/info2222-h1-homework-1.pdf",
-    "2024 sem1/INFO2222/Assignment1/a1.pdf",
+    "2024 sem1/COMP2017/Assignment_2-6.pdf",
+    "2024 sem1/COMP2017/Assignment 2 😁.md",
+    "2024 sem1/COMP2823/Tut/Wee 4 BST 👈🫵👉.md",
+    "2024 sem1/COMP2823/TutorialSolution/Week 4 - binary search trees (solutions).pdf",
+    "2024 sem1/COMP2823/Tut/Week 2 List 📋.md",
+    "2024 sem1/COMP2823/Tut/week 3 Trees🌲.md",
+    "2024 sem1/COMP2823/Tut/Untitled",
     "2024 sem1/INFO2222/Assignment1/Assignment 1 2024.pdf",
-    "2024 sem1/INFO2222/Lecture 2.md",
-    "2024 sem1/INFO2222/Lecture 1.md",
-    "2024 sem1/INFO2222/Assignment1/graphs/Stream_cipher.jpg",
-    "2024 sem1/INFO2222/Assignment1/graphs",
-    "2024 sem1/INFO2222/Assignment1/Untitled.md",
-    "2024 sem1/INFO2222/Assignment1/a1.pyg",
-    "2024 sem1/INFO2222/Assignment1/a1.blg",
-    "2024 sem1/INFO2222/Assignment1/a1.bbl",
-    "2024 sem1/INFO2222/Assignment1/a1.fls",
+    "2024 sem1/MATH2022/Quizes/PracticeQuiz1Solutions.pdf",
+    "2024 sem1/INFO2222/Assignment1/info2222-h1-homework-1.pdf",
+    "2024 sem1/MATH2022/Notes/Notes.pdf",
+    "2024 sem1/INFO2222/Assignment1/a1.pdf",
+    "2024 sem1/INFO2222/Assignment1/a1.synctex(busy)",
     "2024 sem1/INFO2222/Assignment1/a1.synctex.gz",
     "2024 sem1/Tasks.md",
-    "README.md",
-    "2024 sem1/COMP2823/Tut/week 3 Trees🌲.md",
+    "2024 sem1/INFO2222/Lecture 4.md",
     "2024 sem1/INFO2222/Lecture 3.md",
+    "2024 sem1/INFO2222/Lecture 1.md",
+    "2024 sem1/INFO2222/Lecture 2.md",
+    "2024 sem1/INFO2222/Assignment1/Lecture 4.md",
+    "2024 sem1/INFO2222/Assignment1/graphs/Stream_cipher.jpg",
+    "README.md",
     "2024 sem1/MATH2022/Mistakes/Week 2.md",
     "2024 sem1/MATH2022/Notes/Graphs/Alternative_Group.jpg",
     "2024 sem1/MATH2022/Graphs/Pasted image 20240312230947.png",
     "2024 sem1/MATH2022/Graphs/Pasted image 20240307225840.png",
-    "2024 sem1/COMP2017/Untitled.md",
     "2024 sem1/COMP2123(42)/各个数据结构ADT.md",
     "2024 sem1/COMP2823/Assignment/A1.md",
     "Obsidian Vault/COMP2017/Lec 2 Notes/Lec 2 Notes.md",
     "2024 sem1/COMP2017/Textbook Notes W2/Textbook Notes W2.md",
     "Obsidian Vault/COMP2017/COMP2017.md",
-    "2024 sem1/COMP2823/Tut/Week 2 List 📋.md",
     "Obsidian Vault/COMP2823/Tut/week 3 Trees🌲.md",
     "Obsidian Vault/COMP2823/Tut/Week 2 List 📋.md",
     "Obsidian Vault/INFO2222/Lecture 1.md"

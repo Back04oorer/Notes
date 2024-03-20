@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Lecture1}
 Lecture1,lecture slides.
@@ -35,12 +35,12 @@ Okta.
 3-1.symmetric-crypto,lecture slides.
 \newblock Canvas.
 
-\bibitem{DeepRND_LengthExtension}
-{DeepRND}.
-\newblock Length extension attack.
-\newblock
-  \url{https://deeprnd.medium.com/length-extension-attack-bff5b1ad2f70}, 2019.
-\newblock Accessed: 2024-03-16.
+\bibitem{Length_extension_attack}
+Thomas Peyrin, Yu~Sasaki, and Lei Wang.
+\newblock Generic related-key attacks for hmac.
+\newblock In Xiaoyun Wang and Kazue Sako, editors, {\em Advances in Cryptology
+  -- ASIACRYPT 2012}, pages 580--597, Berlin, Heidelberg, 2012. Springer Berlin
+  Heidelberg.
 
 \bibitem{SSLDragonSHA256}
 SSL Dragon.
@@ -48,12 +48,27 @@ SSL Dragon.
 \newblock 2024.
 \newblock Accessed: 16-Mar-2024.
 
-\bibitem{SHA256vsMD5}
-Linkin community.
-\newblock What advantages and disadvantages does sha-256 have over md5?
-\newblock
-  \url{https://www.linkedin.com/advice/1/what-advantages-disadvantages-sha256-over-md5-sha-skills-encryption},
-  2024.
-\newblock Accessed: 2024-03-16.
+\bibitem{9573660}
+Shwetha~R. Prasanna and B.S. Premananda.
+\newblock Performance analysis of md5 and sha-256 algorithms to maintain data
+  integrity.
+\newblock In {\em 2021 International Conference on Recent Trends on
+  Electronics, Information, Communication \& Technology (RTEICT)}, pages
+  246--250, 2021.
+
+\bibitem{adams2004security}
+Carlisle Adams, Guenther Kramer, Serge Mister, and Robert Zuccherato.
+\newblock On the security of key derivation functions.
+\newblock In {\em International Conference on Information Security}, pages
+  134--145. Springer, 2004.
+
+\bibitem{4_Identification}
+3-1.symmetric-crypto,lecture slides.
+\newblock Canvas.
+
+\bibitem{o2003comparing}
+Lawrence O'Gorman.
+\newblock Comparing passwords, tokens, and biometrics for user authentication.
+\newblock {\em Proceedings of the IEEE}, 91(12):2021--2040, 2003.
 
 \end{thebibliography}
