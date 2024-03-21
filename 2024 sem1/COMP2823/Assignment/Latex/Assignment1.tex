@@ -11,7 +11,7 @@
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 
 \title{Assignment 1}
-\author{Mingyuan Ba \\ SID: 530157791}
+\author{Anonymous}
 \date{\today}
 
 \begin{document}
@@ -30,13 +30,7 @@ so the time complexity per iteration is $O(1)$.
 Thus , the overall time complexity is $O(n^2)$.
 
 \subsection*{b)}
-Assume for simplicity that $n$ is even. To lowerbound the running time, 
-consider only comparisons made during the first half of its execution.
-Since this is part of the full execution, analyzing only this part 
-gives a lower bound on the total running time.  The main observation we 
-need is that for each of the considered iterations, we make at least 
-$\frac{n}{2}$ comparisons, allow us to lower bound the total number 
-of comparisons made:
+Assume that \(n\) is even for the sake of simplicity. To lower bound he algorithm's running time, we focus on the comparisons conducted during the first half of the execution period. This segment of the execution, being a subset of the total, provides a foundational basis for establishing a minimum on the overall running time. The main insight is that, within each iteration under consideration, no fewer than \(\frac{n}{2}\) comparisons occur. This insight facilitates the formulation of a lower bound for the aggregate number of comparisons executed:
 \begin{center}
     $\sum_{i=0}^{n-1} (n-i-1) \geq \sum_{i=0}^{\frac{n}{2} - 1} \frac{n}{2}
     = \frac{n^2}{4} = \Omega{(n^2)}$
