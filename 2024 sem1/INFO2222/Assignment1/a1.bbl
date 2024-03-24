@@ -71,4 +71,8 @@ Lawrence O'Gorman.
 \newblock Comparing passwords, tokens, and biometrics for user authentication.
 \newblock {\em Proceedings of the IEEE}, 91(12):2021--2040, 2003.
 
+\bibitem{5-2.security-protocol}
+5-2.security protocol,lecture slides.
+\newblock Canvas.
+
 \end{thebibliography}

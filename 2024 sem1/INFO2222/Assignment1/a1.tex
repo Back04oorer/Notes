@@ -23,7 +23,7 @@
             \item \textbf{Integrity}: This principle ensures that information keeps accurate during transmission\cite{Lecture1}. It can be implemented by using hash function\cite{2-1-1.Hash(1)} and digital signature to validate the integrity of the data transmitted.
             \item \textbf{Availability}: This principle ensures that users have reliable access to the website and do operations when needed\cite{Lecture1}. Techniques to achieve availability include setting up load balancer\cite{AlibabaCloud2019HighAvailability}, and utilizing robust hardware resources, ensuring that users can do operations when needed.
         \end{itemize}
-
+        
     \item ATM machines
         \begin{itemize}
             \item \textbf{Confidentiality}: This principle ensures that only authorized users and systems can access transaction details and user data\cite{Lecture1}. It can be implemented by encrypting data transmission to secure customer PINs and transaction data from unauthorized access.
@@ -56,7 +56,7 @@
 
     \begin{figure}[htbp]
         \centering % 图片居中
-        \includegraphics[width=0.3\textwidth]{graphs/Stream_cipher.jpg} % 插入图片，并设置图片宽度为文本宽度的80%
+        \includegraphics[width=0.3\textwidth]{graphs/Stream_cipher.jpg} 
     \end{figure}
 
 	\textbf{\textit{Pseudorandom generators}} are needed with stream ciphers to stretch a short key and generate a longer sequence of pseudorandom bits\cite{3-1.Symmetric-Crypto}. 
@@ -153,6 +153,7 @@ SHA-1 is considered "broken" for collision resistance \cite{2-1-1.Hash(1)}, mean
 	    \item \textbf{Reconstruct the Password}: Once A finds a match for the hash value using one of the methods above, they can reconstruct Alice's password with 100\% confidence.
 	\end{enumerate}
 \end{enumerate}
+
 \subsection{Q2}
 
 	\begin{itemize}
@@ -187,13 +188,24 @@ SHA-1 is considered "broken" for collision resistance \cite{2-1-1.Hash(1)}, mean
 \subsection{Q4}
 
 	\begin{enumerate}
-		\item \textbf{Q1}: TLS use a 
+		\item \textbf{Q1}: 
 
-		\item \textbf{someone you know}:
+		During the TLS handshake phase, digital certificates and server authentication are used to prevent impersonation. In this process, the server presents its digital certificate, which is issued by a Certificate Authority (CA) and includes the server's public key. The client verifies the authenticity of the certificate by checking the digital signature against the CA's public key.
+
+		If the certificate is deemed valid and trustworthy, the client can be assured that it is communicating with the actual server. This procedure relies on the fact that attackers cannot forge a valid certificate signed by a trusted CA, nor can they obtain the private key. Thus, without using a pre-master secret, the core of the entire process lies in the role of the CA and the verification of digital certificates
+
+		\item \textbf{Q2}:
+		In TLS, each session generates a new random nonce as a nonce and uses it together with the key\cite{5-2.security-protocol}. This means that even if an attacker replays a previously eavesdropped session, the message will be encrypted into a different ciphertext due to the use of a new random nonce and key, making it impossible to decrypt into the original message. 
+
+		\item \textbf{Q3}:
+			\begin{itemize}
+				\item \textit{SQL injections}: TLS/SSL does not protect against SQL injections, which are a type of attack where an attacker inserts malicious SQL code into a query, allowing them to manipulate or retrieve sensitive data from a database\cite{5-2.security-protocol}.
+
+				\item \textit{Client/Server side vulnerabilities}: TLS/SSL cannot protect against vulnerabilities in the client or server applications themselves\cite{5-2.security-protocol}. If either the client or server has a vulnerability, an attacker can exploit it to gain unauthorized access or manipulate data, regardless of the TLS/SSL encryption in place.
+			\end{itemize}
+
 	\end{enumerate}
 
-
 \bibliographystyle{unsrt}
-\bibliography{references} % Assumes the .bib file is named references.bib
-
+\bibliography{references} 
 \end{document}
