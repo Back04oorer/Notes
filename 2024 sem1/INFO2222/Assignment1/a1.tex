@@ -60,11 +60,7 @@
     \end{figure}
 
 	\textbf{\textit{Pseudorandom generators}} are needed with stream ciphers to stretch a short key and generate a longer sequence of pseudorandom bits\cite{3-1.Symmetric-Crypto}. 
-	\begin{center}
-		\textbf{\textit{a graph here}}
-	\end{center}
 
-\newpage
 
 \subsection{Q3}
 	The main difference between hash functions and MACs is that hash functions don't require a key for their operation. Hash functions produce a hash value for any input without a key. On the other hand, MACs use a secret key alongside data to produce a tag.It ensures the authenticity and integrity of the message for sender\cite{3-1.Symmetric-Crypto}.
@@ -205,6 +201,43 @@ SHA-1 is considered "broken" for collision resistance \cite{2-1-1.Hash(1)}, mean
 			\end{itemize}
 
 	\end{enumerate}
+
+\section{Q3}
+
+\subsection{Q1}
+	\begin{enumerate}
+		\item \textbf{Q1}:
+		Virus signatures help detect and identify malware like viruses\cite{Lenovo2023VirusSignature}. Each virus has unique code features, and these signatures mark those features. By comparing these signatures with file codes, antivirus software can spot and block these threats, quickly protecting against known dangers.
+
+		\item \textbf{Q2}:
+		\textbf{Key methods:}
+			\begin{itemize}
+				\item \textbf{Polymorphism}: This technique involves the virus changing its code or payload with each infection, making it difficult for antivirus software to recognize the virus based on signatures or predefined patterns. Since most antivirus solutions rely on databases of known virus signatures to detect threats, a polymorphic virus can bypass detection by presenting a new signature each time it infects a new system.
+
+				\item \textbf{Obfuscation and Encryption}: Some viruses are designed to encrypt or obfuscate their code in such a way that makes it hard for antivirus programs to analyze and identify the malicious code. This can involve the use of complex encryption algorithms or the insertion of irrelevant code (known as "dead code") to confuse the antivirus software's scanning and heuristic analysis techniques.
+			\end{itemize}
+
+		\textbf{What should we do being an antivirus organization}
+			\begin{itemize}
+				\item \textbf{Regularly Update Virus Definitions}: Ensure that the virus signature database is updated frequently with information about the latest threats. This requires a dedicated research team that constantly monitors new threats and develops signatures for them.
+
+				\item \textbf{Encourage Community Reporting}: Create a platform for users and security researchers to report new threats and share information about potential vulnerabilities. This community-driven approach can help in quickly identifying and responding to new virus outbreaks.
+			\end{itemize}
+	\end{enumerate}
+
+\subsection{Q2}
+	\begin{enumerate}
+		\item \textbf{Security Vulnerabilities:} Granting permissions like "Send SMS messages" and "Access your address-book" can expose your smartphone to security vulnerabilities. Malicious apps could exploit these permissions to conduct scam operations, send malware-infected links via SMS, or even use your device as part of a botnet without your knowledge.
+
+		\item \textbf{Personal Data Exploitation:} These permissions can lead to the exploitation of personal data. For instance, access to your address book can enable an app to collect sensitive information about you and your contacts, which might be used for identity theft, sold to advertisers, or exploited in other privacy-invasive ways.
+
+		\item \textbf{Unexpected Costs and Reputational Damage:} Unauthorized SMS messages sent from your phone may result in unexpected charges on your phone bill. Additionally, if spam or malicious messages are sent to your contacts under your name, it could harm your reputation and relationships.
+	\end{enumerate}
+
+\subsection{Q3}
+	Even if the max cannot be queried, additional related information can be inferred from the sum and count. The average salary can be calculated through sum/count, and with the average salary known, the maximum salary must be greater than or equal to the average.
+
+	For example, if the sum is 20,000 and the count is 20, it means we can infer that the average salary is 2,000. Therefore, the maximum salary among these 20 people must be greater than 2,000. If we know of a salary significantly exceeding 2,000, in the case of a relatively small subset, we can deduce that the remaining people have relatively lower salaries.
 
 \bibliographystyle{unsrt}
 \bibliography{references} 

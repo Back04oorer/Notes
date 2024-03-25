@@ -11,15 +11,36 @@
             "id": "e71157a0e3c55b73",
             "type": "leaf",
             "state": {
+              "type": "pdf",
+              "state": {
+                "file": "2024 sem1/INFO2222/Assignment1/a1.pdf"
+              }
+            }
+          },
+          {
+            "id": "fe88c0ce5981f6c3",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "2024 sem1/INFO2222/Assignment1/Assignment 1 2024.pdf"
+              }
+            }
+          },
+          {
+            "id": "800b576a8dbccfa3",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "2024 sem1/Tasks.md",
+                "file": "2024 sem1/COMP2017/Assignment 2 😁🤡.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -69,7 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 267.50390243530273
+    "width": 243.50390243530273
   },
   "right": {
     "id": "d78c8d55117ae1ea",
@@ -85,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024 sem1/Tasks.md",
+                "file": "2024 sem1/COMP2017/Assignment 2 😁🤡.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024 sem1/Tasks.md",
+                "file": "2024 sem1/COMP2017/Assignment 2 😁🤡.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024 sem1/Tasks.md"
+                "file": "2024 sem1/COMP2017/Assignment 2 😁🤡.md"
               }
             }
           }
@@ -146,22 +167,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e71157a0e3c55b73",
+  "active": "800b576a8dbccfa3",
   "lastOpenFiles": [
-    "2024 sem1/COMP2017/Assignment_2-7.pdf",
-    "2023 sem2/MATH1064/Notes/Notes.pdf",
-    "2024 sem1/COMP2017/Assignment 2 😁🤡.md",
-    "2024 sem1/INFO2222/Assignment1/Assignment 1 2024.pdf",
     "2024 sem1/INFO2222/Assignment1/a1.pdf",
     "2024 sem1/INFO2222/Assignment1/a1.synctex(busy)",
+    "2024 sem1/COMP2017/Assignment_2-7.pdf",
+    "2024 sem1/COMP2017/Assignment 2 😁🤡.md",
+    "2024 sem1/INFO2222/Assignment1/Assignment 1 2024.pdf",
+    "2024 sem1/Tasks.md",
+    "2023 sem2/MATH1064/Notes/Notes.pdf",
     "2024 sem1/COMP2017/Assignment_2-6.pdf",
     "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf",
-    "2024 sem1/Tasks.md",
     "2024 sem1/COMP2823/Assignment/Latex/Assignment1.pdf",
     "2024 sem1/COMP2823/Assignment/Latex/Assignment1.synctex(busy)",
     "2024 sem1/COMP2823/Assignment/A1.md",
     "2024 sem1/COMP2823/Assignment/Latex/Assignment1.fdb_latexmk",
-    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.fls",
     "2024 sem1/COMP2823/Tut/Wee 4 BST 👈🫵👉.md",
     "2024 sem1/COMP2823/Tut/Week 2 List 📋.md",
     "2024 sem1/COMP2823/Tut/week 3 Trees🌲.md",
@@ -172,10 +192,10 @@
     "2024 sem1/INFO2222/Assignment1/Lecture 4.md",
     "2024 sem1/INFO2222/Assignment1/graphs/Stream_cipher.jpg",
     "README.md",
-    "2024 sem1/MATH2022/Mistakes/Week 2.md",
-    "2024 sem1/MATH2022/Notes/Graphs/Alternative_Group.jpg",
-    "2024 sem1/MATH2022/Graphs/Pasted image 20240312230947.png",
-    "2024 sem1/MATH2022/Graphs/Pasted image 20240307225840.png",
+    "2024 sem1/INFO2222/MATH2022/Mistakes/Week 2.md",
+    "2024 sem1/INFO2222/MATH2022/Notes/Graphs/Alternative_Group.jpg",
+    "2024 sem1/INFO2222/MATH2022/Graphs/Pasted image 20240312230947.png",
+    "2024 sem1/INFO2222/MATH2022/Graphs/Pasted image 20240307225840.png",
     "2024 sem1/COMP2123(42)/各个数据结构ADT.md",
     "Obsidian Vault/COMP2017/Lec 2 Notes/Lec 2 Notes.md",
     "2024 sem1/COMP2017/Textbook Notes W2/Textbook Notes W2.md",

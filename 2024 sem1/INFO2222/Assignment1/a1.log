@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.15)  23 MAR 2024 22:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.15)  25 MAR 2024 21:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -351,62 +351,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
  []
 
 [2]
-<graphs/Stream_cipher.jpg, id=82, 583.17876pt x 1080.035pt>
+<graphs/Stream_cipher.jpg, id=98, 583.17876pt x 1080.035pt>
 File: graphs/Stream_cipher.jpg Graphic file (type jpg)
 <use graphs/Stream_cipher.jpg>
 Package pdftex.def Info: graphs/Stream_cipher.jpg  used on input line 59.
 (pdftex.def)             Requested size: 103.50105pt x 191.67871pt.
- [3 <./graphs/Stream_cipher.jpg>]
+
 (/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
 listings/lstlang1.sty
 File: lstlang1.sty 2024/02/21 1.10 listings language file
 )
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 8
-6.
+2.
 
 (/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
 base/omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 86.
-
-Overfull \hbox (10.50056pt too wide) in paragraph at lines 96--97
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 82.
+ [3 <./graphs/Stream_cipher.jpg>]
+Overfull \hbox (10.50056pt too wide) in paragraph at lines 92--93
 []\OT1/cmr/m/n/10 The short-com-ings of hash are the col-li-sion re-sis-tance a
 nd pre-image attacks[[]].It
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
 [4]
-Overfull \hbox (15.00366pt too wide) in paragraph at lines 126--128
+Overfull \hbox (15.00366pt too wide) in paragraph at lines 122--124
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (171.00525pt too wide) in paragraph at lines 128--129
+Overfull \hbox (171.00525pt too wide) in paragraph at lines 124--125
 [][][][][][][][][][][][] 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 145.
+(Font)              <7> on input line 141.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 145.
+(Font)              <5> on input line 141.
 [5]
-Overfull \hbox (16.02844pt too wide) in paragraph at lines 161--162
+Overfull \hbox (16.02844pt too wide) in paragraph at lines 158--159
 \OT1/cmr/m/n/10 al-low for quick iden-tity ver-i-fi-ca-tion through sim-ple bod
 y move-ment,which
  []
 
-[6] (a1.bbl [7]
+[6] [7] (a1.bbl [8]
 Overfull \hbox (86.30208pt too wide) in paragraph at lines 12--19
 \OT1/cmtt/m/n/10 how-[]to-[]set-[]up-[]a-[]web-[]server-[]with-[]high-[]availab
 ility-[]using-[]server-[]load-[]balancer _
@@ -424,22 +424,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--33
 is % 20an ,[] both %
  []
 
-) [8] (a1.aux)
+) [9] (a1.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `a1.out' has not changed.
-(rerunfilecheck)             Checksum: E405B1B6971FDACC9483C2287D0FF4B1;741.
+(rerunfilecheck)             Checksum: 7F23FF204A317978A63CB65653D46715;999.
  ) 
 Here is how much of TeX's memory you used:
- 10661 strings out of 474436
- 165543 string characters out of 5731134
- 1944187 words of memory out of 5000000
- 32819 multiletter control sequences out of 15000+600000
+ 10679 strings out of 474436
+ 165819 string characters out of 5731134
+ 1942187 words of memory out of 5000000
+ 32826 multiletter control sequences out of 15000+600000
  563909 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,79p,616b,1325s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,6n,79p,616b,1928s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/l
 jfour/jknappen/ec/dpi600/tcti1000.pk> </Users/bamingyuan/Library/Application Su
 pport/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk></Users
@@ -457,9 +457,9 @@ ary/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cm
 sy10.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/f
 onts/type1/public/amsfonts/cm/cmti10.pfb></Users/bamingyuan/Library/Application
  Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on a1.pdf (8 pages, 475160 bytes).
+Output written on a1.pdf (9 pages, 483905 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 76 named destinations out of 1000 (max. 500000)
- 94 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 280 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
