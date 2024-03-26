@@ -1,6 +1,3 @@
-
-不能漏啊!!!!再漏就兜不住啦!!!
-
 ASAN
 ```
 gcc -fsanitize=address -g <source .........>
@@ -154,3 +151,17 @@ valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./mtll < te
 
 `tests/Nest/Edge/edge_5.*`
 
+
+
+```
+git log --pretty=format:"%H" | while read commit_hash; do     if git show $commit_hash | grep --color -P "[\x{4e00}-\x{9fa5}]"; then         echo "Found in commit: $commit_hash";     fi; done
+```
+
+
+```
+git filter-branch --force --tree-filter 'for file in *; do
+    if [ -f "$file" ]; then
+        perl -CSD -i -pe "s/[\\x{4e00}-\\x{9fa5}]//g" "$file"
+    fi
+done' HEAD
+```
