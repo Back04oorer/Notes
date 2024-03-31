@@ -1,3 +1,0 @@
-女人是我进步道路上最大的业障 🤡
-Women are the most dangerous animal in the world..................
-

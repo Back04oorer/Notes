@@ -5,7 +5,7 @@ gcc -fsanitize=address -g <source .........>
 
 Valgrind
 ```
-valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./mtll < tests/Nest/Edge/edge_3.in
+valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./mtll < tests/Nest/Edge/edge_1.in
 ```
 
 # Tests
@@ -93,3 +93,11 @@ valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./mtll < te
 4. `tests/Nest/Edge/edge_4.*` - Deletion Leading to Simplification.
 
 5. `tests/Nest/Edge/edge_5.*` - Depth Limit tests (1 & 2) focusing on creating nested lists within other nested lists and inserting a list reference into a nested list.
+
+
+
+
+# MY
+```
+git log --pretty=format:"%H" | while read commit_hash; do if git show $commit_hash | grep --color -P "[\x{4e00}-\x{9fa5}]"; then echo "Found in commit: $commit_hash"; fi; done
+```

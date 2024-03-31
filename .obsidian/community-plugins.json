@@ -1,4 +1,6 @@
 [
   "highlightr-plugin",
-  "obsidian-latex-environments"
+  "obsidian-latex-environments",
+  "dataview",
+  "periodic-para"
 ]

@@ -4,30 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "2bbd793629e079a6",
+        "id": "9ddd1b86e1eb9881",
         "type": "tabs",
         "children": [
           {
-            "id": "8d18bc0d23bb0479",
+            "id": "6693fca85b1d472d",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "2024 sem1/INFO2222/Assignment1/Assignment 1 2024.pdf"
+                "file": "2024 sem1/MATH2022/Notes/Notes.pdf"
               }
             }
           },
           {
-            "id": "b2fb06dd691e3b30",
+            "id": "29b7f92a3dda7746",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "2024 sem1/INFO2222/Assignment1/a1.pdf"
+                "file": "2023 sem1/MATH1021/Notes/Notes.pdf"
+              }
+            }
+          },
+          {
+            "id": "9622bbfb176a9069",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "2023 sem1/MATH1002/Notes/Notes.pdf"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -77,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 372.50390243530273
+    "width": 260.5
   },
   "right": {
     "id": "d78c8d55117ae1ea",
@@ -93,13 +104,13 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024 sem1/INFO2222/Assignment1/Assignment 1 2024.pdf",
+                "file": "2023 sem1/MATH1002/Notes/Notes.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -110,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024 sem1/INFO2222/Assignment1/Assignment 1 2024.pdf",
+                "file": "2023 sem1/MATH1002/Notes/Notes.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +134,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": false
               }
             }
           },
@@ -133,16 +144,24 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024 sem1/INFO2222/Assignment1/Assignment 1 2024.pdf"
+                "file": "2023 sem1/MATH1002/Notes/Notes.pdf"
               }
             }
+          },
+          {
+            "id": "880f63c8d4591cb6",
+            "type": "leaf",
+            "state": {
+              "type": "periodic-para",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 250.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -151,46 +170,54 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "periodic-para:LifeOS": false
     }
   },
-  "active": "8d18bc0d23bb0479",
+  "active": "9622bbfb176a9069",
   "lastOpenFiles": [
-    "2024 sem1/INFO2222/Assignment1/a1.pdf",
-    "2024 sem1/INFO2222/Assignment1/Assignment 1 2024.pdf",
-    "2024 sem1/Assignment 1 2024.pdf",
-    "Assignment 1 2024.pdf",
-    "2024 sem1/INFO2222/Assignment1/info2222-h1-homework-1.pdf",
-    "2024 sem1/COMP2823/Tut/Week 5 Priority Queue 🍡.md",
-    "2024 sem1/COMP2017/Assignment 2.md",
-    "2024 sem1/COMP2823/Assignment/Assignment 1 - Due March 22.pdf",
-    "2024 sem1/COMP2823/Assignment/Latex/Assignment1.pdf",
-    "2023 sem2/INFO1113/assignment/scaffold/build/tmp/compileJava/previous-compilation-data.bin",
-    "2023 sem2/INFO1113/assignment/scaffold/build/classes/java/main/WizardTD/Monsters/Worm.class",
-    "2023 sem2/INFO1113/assignment/scaffold/build/classes/java/main/WizardTD/Monsters/Beetle.class",
+    "2023 sem1/MATH1021/Notes/Notes.pdf",
+    "2023 sem1/MATH1002/Notes/Notes.pdf",
+    "2024 sem1/MATH2022/Notes/Notes.pdf",
+    "Tasks.md",
+    "2024 sem1/INFO2222/Assignment1/a1.synctex(busy)",
+    "2024 sem1/COMP2017/A2/Assignment 2.md",
+    "Home.canvas",
+    "PeriodicNotes/2024/Daily/03/2024-03-31.md",
+    "PeriodicNotes/Templates/Daily.md",
+    "PeriodicNotes/Templates/Monthly.md",
+    "PeriodicNotes/2024/Daily/03/2024-03-30.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-01.md",
+    "PeriodicNotes/Templates/Weekly.md",
+    "PeriodicNotes/Templates/Yearly.md",
+    "PeriodicNotes/Templates/Quarterly.md",
+    "PeriodicNotes/2024/Daily/03",
+    "PeriodicNotes/2024/Daily",
+    "PeriodicNotes/2024",
+    "PeriodicNotes/2023/Daily/06/2023-06-11.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-10.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-09.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-08.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-07.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-06.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-05.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-04.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-03.md",
+    "PeriodicNotes/2023/Daily/06/2023-06-02.md",
+    "PeriodicNotes/2023/Weekly/2023-W23.md",
+    "PeriodicNotes/2023/Weekly/2023-W22.md",
+    "PeriodicNotes/2023/Quarterly/2023-Q2.md",
+    "PeriodicNotes/2023/Quarterly/2023-Q1.md",
+    "PeriodicNotes/2023/Monthly/2023-06.md",
+    "PeriodicNotes/2023/Daily/06",
+    "PeriodicNotes/2023/Weekly",
+    "PeriodicNotes/2023/Quarterly",
+    "PeriodicNotes/2023/Monthly",
+    "2024 sem1/INFO2222/Assignment1/graphs/Stream_cipher_process.png",
     "2024 sem1/COMP2823/Graphs/Pasted image 20240326203549.png",
-    "2024 sem1/COMP2823/Tut/week 3 Trees🌲.md",
-    "2024 sem1/COMP2823/Tut/Week 2 List 📋.md",
-    "2024 sem1/COMP2823/Tut/Week 4 BST 👈🫵👉.md",
-    "2024 sem1/Tasks.md",
-    "2024 sem1/COMP2823/Assignment/A1.md",
-    "2024 sem1/INFO2222/Lecture 4.md",
-    "2024 sem1/INFO2222/Lecture 3.md",
-    "2024 sem1/INFO2222/Lecture 1.md",
-    "2024 sem1/INFO2222/Lecture 2.md",
-    "2024 sem1/INFO2222/Assignment1/Lecture 4.md",
     "2024 sem1/INFO2222/Assignment1/graphs/Stream_cipher.jpg",
-    "README.md",
-    "2024 sem1/MATH2022/Mistakes/Week 2.md",
     "2024 sem1/MATH2022/Notes/Graphs/Alternative_Group.jpg",
     "2024 sem1/MATH2022/Graphs/Pasted image 20240312230947.png",
-    "2024 sem1/MATH2022/Graphs/Pasted image 20240307225840.png",
-    "2024 sem1/COMP2123(42)/各个数据结构ADT.md",
-    "Obsidian Vault/COMP2017/Lec 2 Notes/Lec 2 Notes.md",
-    "2024 sem1/COMP2017/Textbook Notes W2/Textbook Notes W2.md",
-    "Obsidian Vault/COMP2017/COMP2017.md",
-    "Obsidian Vault/COMP2823/Tut/week 3 Trees🌲.md",
-    "Obsidian Vault/COMP2823/Tut/Week 2 List 📋.md",
-    "Obsidian Vault/INFO2222/Lecture 1.md"
+    "2024 sem1/MATH2022/Graphs/Pasted image 20240307225840.png"
   ]
 }

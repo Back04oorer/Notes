@@ -4,11 +4,11 @@
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{graphicx}
-
+\usepackage[T1]{fontenc} % Add this line
 \begin{document}
 
 \title{INFO2222 Assignment 1}
-\author{Mingyuan Ba}
+\author{Mingyuan Ba\\SID:530157791}
 \date{\today}
 \maketitle
 
@@ -39,7 +39,7 @@
 		\textit{Example}:\\
 		Suppose that James and Alex are in Sydney and Melbourne separately.If they send key via internet or e-mail,the key could be intercepted by a third party during transit.Once the key is compromised, the security of the communication can no longer be guaranteed.
 
-		\item Since the key used in a one-time pad must have the same length of the message, managing and storing such long keys becomes hard.
+		\item Since the key used in a one-time pad must have the same length of the message, managing and storing such long keys becomes hard.\\\\
 		\textit{Example}:\\
 		If Rubin needs to send many large files to James, ensuring the keys are sent and managed correctly and securely would be a significant challenge for both parties.
 
@@ -52,15 +52,23 @@
 	Therefore, while the one-time pad provides perfect secrecy, it is not practical for most scenarios.\\
 
 \newpage
-	\textbf{\textit{Stream ciphers}} are encryption algorithms that encrypt and decrypt messages by applying a cryptographic key and algorithm to each binary digit in a data stream, one bit at a time\cite{OktaStreamCipher}.
+	As shown in Fig.~\ref{Stream cipher}\textbf{\textit{Stream ciphers}} are encryption algorithms that encrypt and decrypt messages by applying a cryptographic key and algorithm to each binary digit in a data stream, one bit at a time\cite{OktaStreamCipher}.
 
     \begin{figure}[htbp]
-        \centering % 图片居中
+        \centering 
+        \caption{Diagram redrawn based on \cite{2-2.Symmetric-Enc-1}}
         \includegraphics[width=0.3\textwidth]{graphs/Stream_cipher.jpg} 
+        \label{Stream cipher}
     \end{figure}
 
-	\textbf{\textit{Pseudorandom generators}} are needed with stream ciphers to stretch a short key and generate a longer sequence of pseudorandom bits\cite{3-1.Symmetric-Crypto}. 
+	\textbf{\textit{Pseudorandom generators}} are needed with stream ciphers to stretch a short key and generate a longer sequence of pseudorandom bits. Although PRNGs seem to produce random sequences, they are actually determined by an initial key(seed). For this reason, the initial key can not be reused\cite{3-1.Symmetric-Crypto}.
 
+    \begin{figure}[htbp]
+        \centering 
+        \caption{\cite{phdthesis}}
+        \includegraphics[width=0.6\textwidth]{graphs/Stream_cipher_process.png} 
+        \label{Stream cipher process}
+    \end{figure} 
 
 \subsection{Q3}
 	The main difference between hash functions and MACs is that hash functions don't require a key for their operation. Hash functions produce a hash value for any input without a key. On the other hand, MACs use a secret key alongside data to produce a tag.It ensures the authenticity and integrity of the message for sender\cite{3-1.Symmetric-Crypto}.
@@ -96,7 +104,7 @@
 
 \subsection{Q4}
 
-In SHA-256, the number "256" refers to the bitsize of the output\cite{SSLDragonSHA256}.
+In SHA-256, the number "256" refers to the bitsize of the output.
 
 SHA-1 is considered "broken" for collision resistance \cite{2-1-1.Hash(1)}, meaning that it is possible to find two different inputs that produce the same hash value. This property makes SHA-1 unsuitable for secure applications. In contrast, SHA-256 provides higher performance in collision resistance.\\\\
 
@@ -130,11 +138,9 @@ SHA-1 is considered "broken" for collision resistance \cite{2-1-1.Hash(1)}, mean
 
 	To achieve this, USYD can utilize a Key Derivation Function (KDF) to generate unique keys for students from the master key without the need to store each one. The KDF combines the master key and the SID to generate a unique key\cite{adams2004security}, which each student can use to access Canvas. This method ensures that even if a student's key is compromised, both the master key and the keys of other students remain secure.
 
-
 \section{Part2}
 
 \subsection{Q1}
-
 	\begin{enumerate}
 		\item Due to the independence of each attempt, the probability can be calculated by summing the probabilities of each time:
 		\begin{center}
@@ -143,11 +149,17 @@ SHA-1 is considered "broken" for collision resistance \cite{2-1-1.Hash(1)}, mean
 
 		\item 
 		\begin{enumerate}
-	    \item \textbf{Identify Alice's Entry}: A locates the database entry corresponding to Alice, identified by her name and the hash of her password (name; H(pwd)).
-	    \item \textbf{Understand the Hash Function}: A needs to figure out which hash function are used by the email server(e.g. sha-256).
-	    \item \textbf{Use a Rainbow Table or Dictionary Attack}: Since hash functions are irreversible, A can use pre-computed tables, known as rainbow tables, which contain a large number of plaintext passwords and their corresponding hash values, to find a match for the hash value (name; H(pwd)) associated with Alice's password\cite{4_Identification}. If the hash function used includes salt (a random value added to the password before hashing), this approach becomes much more challenging. A dictionary attack involves trying many passwords to see if they match.
-	    \item \textbf{Reconstruct the Password}: Once A finds a match for the hash value using one of the methods above, they can reconstruct Alice's password with 100\% confidence.
-	\end{enumerate}
+		    \item \textbf{Identify Alice's Entry}: A locates the database entry corresponding to Alice, identified by her name and the hash of her password (name; H(pwd)).
+		    \item \textbf{Understand the Hash Function}: A needs to figure out which hash function are used by the email server(e.g. sha-256).
+
+		    \item \textbf{Check for Salt Usage:} A must checked whether the passwords are salted if they want to use Rainbow Table Attack. If salt is used, and it is stored with the hashes or in a separate accessible location, A needs to consider salt in the attack strategy.
+		    
+		    \item \textbf{Rainbow Table Attack:} If the hash function does not use salt, A could use a rainbow table attack. Rainbow tables are precomputed tables containing plaintext passwords and their corresponding hash values\cite{5-2.security-protocol}. A would search for the hash value in the rainbow table to find the plaintext password. The effectiveness of this method is deceaced if the password is salted, the salt requires the rainbow table to cover all possible salt combinations.
+		    
+		    \item \textbf{Dictionary Attack:} If the password is salted  A may choose dictionary attacks, using a list of common passwords (dictionary attack), adding the salt if necessary, and comparing the resulting hash with the stored hash value\cite{info2222-solutions-week4}.
+		    
+		    \item Once A has a potential password, they can attempt to log in to Alice's account to verify its correctness. Successful login confirms the password is accurate.
+		\end{enumerate}
 \end{enumerate}
 
 \subsection{Q2}
@@ -188,7 +200,7 @@ SHA-1 is considered "broken" for collision resistance \cite{2-1-1.Hash(1)}, mean
 
 		During the TLS handshake phase, digital certificates and server authentication are used to prevent impersonation. In this process, the server presents its digital certificate, which is issued by a Certificate Authority (CA) and includes the server's public key. The client verifies the authenticity of the certificate by checking the digital signature against the CA's public key.
 
-		If the certificate is deemed valid and trustworthy, the client can be assured that it is communicating with the actual server. This procedure relies on the fact that attackers cannot forge a valid certificate signed by a trusted CA, nor can they obtain the private key. Thus, without using a pre-master secret, the core of the entire process lies in the role of the CA and the verification of digital certificates
+		If the certificate is deemed trustworthy, the client can be assured that it is communicating with the actual server. This process relies on the fact that attackers cannot forge a valid certificate signed by a trusted CA, nor can they obtain the private key. Thus, without using a pre-master secret, the core of the entire process lies in the role of the CA and the verification of digital certificates\cite{5-2.security-protocol}.
 
 		\item \textbf{Q2}:
 		In TLS, each session generates a new random nonce as a nonce and uses it together with the key\cite{5-2.security-protocol}. This means that even if an attacker replays a previously eavesdropped session, the message will be encrypted into a different ciphertext due to the use of a new random nonce and key, making it impossible to decrypt into the original message. 
@@ -207,32 +219,36 @@ SHA-1 is considered "broken" for collision resistance \cite{2-1-1.Hash(1)}, mean
 \subsection{Q1}
 	\begin{enumerate}
 		\item \textbf{Q1}:
-		Virus signatures help detect and identify malware like viruses\cite{Lenovo2023VirusSignature}. Each virus has unique code features, and these signatures mark those features. By comparing these signatures with file codes, antivirus software can recognize and block these t, quickly protecting against known dangers.
+		Virus signatures help detect and recognize viruses\cite{Lenovo2023VirusSignature}. Each virus has unique code features, and these signatures mark those features. By comparing these signatures with file codes, antivirus software can recognize and block these t, quickly protecting against known dangers.
 
 		\item \textbf{Q2}:
-		\textbf{Key methods:}
+		\textbf{Methods:}
 			\begin{itemize}
-				\item \textbf{Polymorphism}: This technique involves the virus changing its code or payload with each infection, making it hard for antivirus software to recognize the virus based on signatures. Since most antivirus solutions rely on databases of known virus signatures to detect threats, a polymorphic virus can bypass detection by presenting a new signature each time it infects a new system.
+				\item \textbf{Polymorphism}: This technique involves the virus changing its code or payload with each infection, making it hard for antivirus software to recognize the virus based on signatures. Since most antivirus solutions rely on databases of known virus signatures to detect threats, a polymorphic virus can bypass detection by presenting a new signature each time it infects a new system\cite{7740362}.
 
-				\item \textbf{Obfuscation and Encryption}: Some viruses are designed to encrypt or obfuscate their code in such a way that makes it hard for antivirus programs to analyze and identify the malicious code. This can involve the use of complex encryption algorithms or the insertion of irrelevant code (known as "dead code") to confuse the antivirus software's scanning and heuristic analysis techniques.
+				\item \textbf{Obfuscation and Encryption}: Some viruses are designed to encrypt or obfuscate their code in such a way that makes it hard for antivirus programs to analyze and identify the malicious code. This can involve the use of complex encryption algorithms to confuse the antivirus software's scanning and heuristic analysis techniques\cite{10.1007/978-3-642-17569-5_39}.
+
 			\end{itemize}
 
 		\textbf{What should we do being an antivirus organization}
 			\begin{itemize}
-				\item \textbf{Regularly Update Virus Definitions}: Ensure that the virus signature database is updated frequently with information about the latest threats. This requires a dedicated research team that constantly monitors new threats and develops signatures for them.
+				\item \textbf{Update Virus Database Regularly}: The organization can frequently update the database to ensure that it can recognize the latest viruses or threats.
 
-				\item \textbf{Encourage Community Reporting}: Create a platform for users and security researchers to report new threats and share information about potential vulnerabilities. This community-driven approach can help in quickly identifying and responding to new virus outbreaks.
+				\item \textbf{Encourage Community Reporting}: Create a platform for usersto report new threats and share information about potential vulnerabilities. This community-driven approach can help in quickly identifying and responding to new virus outbreaks.
+
+				\item \textbf{User education}: The organization can educate users about safe online practices, such as avoiding suspicious websites, not opening links from unknown sources, and regularly updating their operating systems and software. 
 			\end{itemize}
 	\end{enumerate}
 
 \subsection{Q2}
 	\begin{enumerate}
-		\item \textbf{Security Vulnerabilities:} Granting permissions like "Send SMS messages" and "Access your address-book" can expose your smartphone to security vulnerabilities. Malicious apps could exploit these permissions to conduct scam operations, send malware-infected links via SMS, or even use your device as part of a botnet without your knowledge.
+		\item \textbf{Security Vulnerabilities:} Granting permissions like "Send SMS messages" and "Access my address-book" can expose my smartphone to security vulnerabilities. Some alicious apps could exploit these permissions to do scam operations, or even send malware-infected links via SMS.
 
-		\item \textbf{Data Exploitation:} These permissions can lead to the exploitation of personal data. For instance, access to your address book can enable an app to collect sensitive information about you and your contacts, which might be used for identity theft, sold to advertisers, or exploited in other privacy-invasive ways.
+		\item \textbf{Data Exploitation:} These permissions can lead to the exploitation of personal data. For instance, access to my address book can enable an app to collect sensitive information about me and my contacts, which might be used for identity theft orsold to advertisers.
 
-		\item \textbf{Unexpected Costs and Reputational Damage:} Unauthorized SMS messages sent from your phone may result in unexpected charges on your phone bill. Additionally, if spam or malicious messages are sent to your contacts under your name, it could harm your reputation and relationships.
+		\item \textbf{Reputational Damage:} Unauthorized SMS messages sent from my phone may result in unexpected charges on my phone bill. Additionally, if spam or malicious messages are sent to my contacts under my name, it could harm my reputation and relationships.
 	\end{enumerate}
+
 
 \subsection{Q3}
 	Even if the max cannot be queried, additional related information can be inferred from the sum and count. The average salary can be calculated through sum/count, and with the average salary known, the maximum salary must be greater than or equal to the average.

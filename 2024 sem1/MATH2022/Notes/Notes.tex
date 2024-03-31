@@ -211,7 +211,7 @@ A \textbf{symmetric group} $S_n$ on a set of $n$ symbols is the group consisting
 
 \section{Week2}
 
-\section*{Week 3}
+\section{Week 3}
 
 \subsection*{Matrix Recap}
 \begin{itemize}
@@ -289,7 +289,7 @@ A \textbf{symmetric group} $S_n$ on a set of $n$ symbols is the group consisting
 
 \newpage
 
-\section*{Week4}
+\section{Week4}
 
 \begin{enumerate}
     \item Elementary matrices: An $n \times n$ matrix is called elementary if it is the result of applying a single elementary row operation to the identity matrix $I_{n}$.
@@ -412,7 +412,78 @@ A \textbf{symmetric group} $S_n$ on a set of $n$ symbols is the group consisting
         \end{center}
     
     \end{itemize}
+
+
 \end{enumerate}
+
+\section{Week 5}
+\begin{enumerate}
+    \item Eigenvalues and eigenvectors: Let $M$ be a square matrix, $\mathbf{x}$ a nonzero column vector and $\lambda$ a scalar such that
+
+    $$
+    M \mathbf{x}=\lambda \mathrm{x}
+    $$
+
+    Then $\lambda$ is called an eigenvalue of $M$ and $\mathbf{x}$ is called an eigenvector of $M$ associated with or corresponding to the eigenvalue $\lambda$.
+
+    \item The eigenspace of a matrix: The eigenspace of a square matrix $M$ associated with an eigenvalue $\lambda$ is the collection
+
+    $$
+    \{\mathbf{v} \mid M \mathbf{v}=\lambda \mathbf{v}\}=\{\mathbf{v} \mid(\lambda I-M) \mathbf{v}=\mathbf{0}\}
+    $$
+
+    comprising all of the eigenvectors of $M$ associated with $\lambda$ and the zero vector (which is never an eigenvector).
+
+    \item Description of eigenvalues in terms of determinants: A scalar $\lambda$ is an eigenvalue of a square matrix $M$ if and only if
+
+    $$
+    \operatorname{det}(\lambda I-M)=0 \text {. }
+    $$
+
+    \item The characteristic polynomial of a square matrix: The expression $\operatorname{det}(\lambda I-M)$ is always a polynomial in $\lambda$ and is called the characteristic polynomial of $M$. Thus the eigenvalues of a square matrix are precisely the roots of its characteristic polynomial.
+
+    \item Finding eigenspaces: Finding the eigenspace corresponding to the eigenvalue $\lambda$ of a matrix $M$ is equivalent to solving the homogeneous system with coefficient matrix $\lambda I-M$. After the eigenspace has been found, substituting particular values of the parameters yields particular eigenvectors.
+
+    \item Eigenvalues of a triangular matrix: The eigenvalues of a triangular matrix are simply the diagonal entries.
+
+    \item The Cayley-Hamilton Theorem: Every square matrix $M$ is the root of its own characteristic polynomial, that is,
+    $$
+    \chi(M)=0
+    $$
+
+    where $\chi(\lambda)=\operatorname{det}(\lambda I-M)$ denotes the characteristic polynomial, $\chi(M)$ is the result of evaluating the matrix expression obtained from $\chi(\lambda)$ by substituting $M$ for the indeterminate $\lambda$ and $I$ for the constant 1 , and 0 denotes the zero matrix.\\
+
+    \item Reflection matrices: A reflection matrix in the real plane has the form
+
+    $$
+    M=\left[\begin{array}{rr}
+    \cos 2 \theta & \sin 2 \theta \\
+    \sin 2 \theta & -\cos 2 \theta
+    \end{array}\right]
+    $$
+
+    for some real $\theta$, and corresponds to reflection in the plane through a line through the origin making an angle $\theta$ with the positive $x$-axis. The eigenvalues of $M$ are $\pm 1$. The eigenspace corresponding to 1 is the line of reflection. The eigenspace corresponding to -1 is the line through the origin perpendicular to the line of reflection.
+
+    \item Rotation matrices: A rotation matrix in the real plane has the form
+
+    $$
+    M=\left[\begin{array}{rr}
+    \cos \theta & -\sin \theta \\
+    \sin \theta & \cos \theta
+    \end{array}\right]
+    $$
+
+    for some real $\theta$, and corresponds to rotation in the plane anticlockwise through an angle $\theta$ about the origin. The eigenvalues of $M$ are the complex numbers
+
+    $$
+    e^{i \theta}=\cos \theta \pm i \sin \theta
+    $$
+
+    where $i=\sqrt{-1}$. The eigenvalues are real if and only if $\theta$ is an integer multiple of $\pi$, in which case all nonzero vectors are eigenvectors, corresponding to eigenvalue 1 if the integer multiple is even, and corresponding to -1 if the integer multiple is odd.
+
+\end{enumerate}
+
+
 
 
 \end{document}
