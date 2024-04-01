@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.15)  30 MAR 2024 20:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.15)  1 APR 2024 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -936,7 +936,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 386--389
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 454--455
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
 
  []
 
@@ -982,9 +982,9 @@ n/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts
 ll/fonts/type1/public/amsfonts/cm/cmti10.pfb></Users/bamingyuan/Library/Applica
 tion Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb>
-Output written on Notes.pdf (12 pages, 692577 bytes).
+Output written on Notes.pdf (12 pages, 695737 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
+ 183 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

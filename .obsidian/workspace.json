@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9ddd1b86e1eb9881",
+        "id": "951f23a224d2e3ef",
         "type": "tabs",
         "children": [
           {
-            "id": "6693fca85b1d472d",
+            "id": "e67893ddfdfc8782",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -18,22 +18,22 @@
             }
           },
           {
-            "id": "29b7f92a3dda7746",
+            "id": "2ac1d325aadb24bd",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "2023 sem1/MATH1021/Notes/Notes.pdf"
+                "file": "2024 sem1/MATH2022/Assignment/A1/Assignment1-1.pdf"
               }
             }
           },
           {
-            "id": "9622bbfb176a9069",
+            "id": "94a096b46238cb34",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "2023 sem1/MATH1002/Notes/Notes.pdf"
+                "file": "2024 sem1/MATH2022/Assignment/A1/A1.pdf"
               }
             }
           }
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023 sem1/MATH1002/Notes/Notes.pdf",
+                "file": "2024 sem1/MATH2022/Assignment/A1/A1.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023 sem1/MATH1002/Notes/Notes.pdf",
+                "file": "2024 sem1/MATH2022/Assignment/A1/A1.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023 sem1/MATH1002/Notes/Notes.pdf"
+                "file": "2024 sem1/MATH2022/Assignment/A1/A1.pdf"
               }
             }
           },
@@ -174,26 +174,31 @@
       "periodic-para:LifeOS": false
     }
   },
-  "active": "9622bbfb176a9069",
+  "active": "94a096b46238cb34",
   "lastOpenFiles": [
-    "2023 sem1/MATH1021/Notes/Notes.pdf",
-    "2023 sem1/MATH1002/Notes/Notes.pdf",
+    "2024 sem1/MATH2022/Assignment/A1/A1.synctex(busy)",
+    "2024 sem1/MATH2022/Assignment/A1/Assignment1-1.pdf",
+    "2024 sem1/MATH2022/Assignment/A1/A1.pdf",
     "2024 sem1/MATH2022/Notes/Notes.pdf",
-    "Tasks.md",
-    "2024 sem1/INFO2222/Assignment1/a1.synctex(busy)",
-    "2024 sem1/COMP2017/A2/Assignment 2.md",
+    "2024 sem1/MATH2022/Assignment/A1/A1.fls",
+    "2024 sem1/MATH2022/Assignment/A1/A1.synctex.gz",
+    "2024 sem1/MATH2022/Assignment/A1/A1.log",
+    "2024 sem1/MATH2022/Assignment/A1/A1.fdb_latexmk",
+    "2024 sem1/MATH2022/Assignment/A1/A1.aux",
+    "2024 sem1/MATH2022/Assignment/A1/A1.tex",
+    "2024 sem1/MATH2022/Assignment/A1.tex",
     "Home.canvas",
-    "PeriodicNotes/2024/Daily/03/2024-03-31.md",
+    "Tasks.md",
+    "PeriodicNotes/2024/Daily/04/2024-04-01.md",
     "PeriodicNotes/Templates/Daily.md",
+    "2024 sem1/COMP2017/A2/Assignment 2.md",
+    "PeriodicNotes/2024/Daily/03/2024-03-31.md",
     "PeriodicNotes/Templates/Monthly.md",
     "PeriodicNotes/2024/Daily/03/2024-03-30.md",
     "PeriodicNotes/2023/Daily/06/2023-06-01.md",
     "PeriodicNotes/Templates/Weekly.md",
     "PeriodicNotes/Templates/Yearly.md",
     "PeriodicNotes/Templates/Quarterly.md",
-    "PeriodicNotes/2024/Daily/03",
-    "PeriodicNotes/2024/Daily",
-    "PeriodicNotes/2024",
     "PeriodicNotes/2023/Daily/06/2023-06-11.md",
     "PeriodicNotes/2023/Daily/06/2023-06-10.md",
     "PeriodicNotes/2023/Daily/06/2023-06-09.md",
@@ -208,11 +213,6 @@
     "PeriodicNotes/2023/Weekly/2023-W22.md",
     "PeriodicNotes/2023/Quarterly/2023-Q2.md",
     "PeriodicNotes/2023/Quarterly/2023-Q1.md",
-    "PeriodicNotes/2023/Monthly/2023-06.md",
-    "PeriodicNotes/2023/Daily/06",
-    "PeriodicNotes/2023/Weekly",
-    "PeriodicNotes/2023/Quarterly",
-    "PeriodicNotes/2023/Monthly",
     "2024 sem1/INFO2222/Assignment1/graphs/Stream_cipher_process.png",
     "2024 sem1/COMP2823/Graphs/Pasted image 20240326203549.png",
     "2024 sem1/INFO2222/Assignment1/graphs/Stream_cipher.jpg",

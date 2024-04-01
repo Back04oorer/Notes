@@ -2,6 +2,7 @@
 - [ ] COMP2017 Week4 Coding Challenge
 - [ ] COMP2823 Tut sheet week 4 😈
 - [ ] COMP2017 Week 4 Tut sheet 😈
+- [ ] MATH2022 Lecture(w5-w6) + Notes + Tut sheet
 
 # QUIZ
 - [ ] COMP2823 Q5 4.8 

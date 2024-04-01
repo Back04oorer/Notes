@@ -424,7 +424,7 @@ A \textbf{symmetric group} $S_n$ on a set of $n$ symbols is the group consisting
     M \mathbf{x}=\lambda \mathrm{x}
     $$
 
-    Then $\lambda$ is called an eigenvalue of $M$ and $\mathbf{x}$ is called an eigenvector of $M$ associated with or corresponding to the eigenvalue $\lambda$.
+    Then $\lambda$ is called an \hl{eigenvalue} of $M$ and $\mathbf{x}$ is called an \hl{eigenvector} of $M$ associated with or corresponding to the eigenvalue $\lambda$.
 
     \item The eigenspace of a matrix: The eigenspace of a square matrix $M$ associated with an eigenvalue $\lambda$ is the collection
 
@@ -432,7 +432,7 @@ A \textbf{symmetric group} $S_n$ on a set of $n$ symbols is the group consisting
     \{\mathbf{v} \mid M \mathbf{v}=\lambda \mathbf{v}\}=\{\mathbf{v} \mid(\lambda I-M) \mathbf{v}=\mathbf{0}\}
     $$
 
-    comprising all of the eigenvectors of $M$ associated with $\lambda$ and the zero vector (which is never an eigenvector).
+    comprising \hl{all} of the eigenvectors of $M$ associated with $\lambda$ and the zero vector (which is never an eigenvector).
 
     \item Description of eigenvalues in terms of determinants: A scalar $\lambda$ is an eigenvalue of a square matrix $M$ if and only if
 
@@ -440,13 +440,18 @@ A \textbf{symmetric group} $S_n$ on a set of $n$ symbols is the group consisting
     \operatorname{det}(\lambda I-M)=0 \text {. }
     $$
 
-    \item The characteristic polynomial of a square matrix: The expression $\operatorname{det}(\lambda I-M)$ is always a polynomial in $\lambda$ and is called the characteristic polynomial of $M$. Thus the eigenvalues of a square matrix are precisely the roots of its characteristic polynomial.
+    \item The characteristic polynomial of a square matrix: The expression $\operatorname{det}(\lambda I-M)$ is always a polynomial in $\lambda$ and is called the \hl{characteristic polynomial} of $M$. Thus the eigenvalues of a square matrix are precisely the roots of its characteristic polynomial.
 
     \item Finding eigenspaces: Finding the eigenspace corresponding to the eigenvalue $\lambda$ of a matrix $M$ is equivalent to solving the homogeneous system with coefficient matrix $\lambda I-M$. After the eigenspace has been found, substituting particular values of the parameters yields particular eigenvectors.
 
     \item Eigenvalues of a triangular matrix: The eigenvalues of a triangular matrix are simply the diagonal entries.
 
-    \item The Cayley-Hamilton Theorem: Every square matrix $M$ is the root of its own characteristic polynomial, that is,
+    \item \textit{Notes}:
+        \begin{itemize}
+            \item Not all real matrices have real Eigenvalues (example later). However, \hl{all complex matrices have complex Eigenvalues}.
+        \end{itemize}
+
+    \item The \hl{Cayley-Hamilton Theorem:} Every square matrix $M$ is the root of its own characteristic polynomial, that is,
     $$
     \chi(M)=0
     $$
@@ -476,11 +481,27 @@ A \textbf{symmetric group} $S_n$ on a set of $n$ symbols is the group consisting
     for some real $\theta$, and corresponds to rotation in the plane anticlockwise through an angle $\theta$ about the origin. The eigenvalues of $M$ are the complex numbers
 
     $$
-    e^{i \theta}=\cos \theta \pm i \sin \theta
+    e^{\pm i \theta}=\cos \theta \pm i \sin \theta
     $$
 
-    where $i=\sqrt{-1}$. The eigenvalues are real if and only if $\theta$ is an integer multiple of $\pi$, in which case all nonzero vectors are eigenvectors, corresponding to eigenvalue 1 if the integer multiple is even, and corresponding to -1 if the integer multiple is odd.
+    where $i=\sqrt{-1}$. The eigenvalues are real if and only if $\theta$ is an integer multiple of $\pi$($\sin \theta = 0$), in which case all nonzero vectors are eigenvectors, corresponding to eigenvalue 1 if the integer multiple is even, and corresponding to -1 if the integer multiple is odd.
 
+    \item Diagonalization
+    \begin{center}
+        $M = PDP^{-1}$
+    \end{center}
+    Let M be an $n \times n$ Matrix with eigenvalues: $\lambda_1,\lambda_2,\lambda_3...\lambda_n$ (all solutions to chracteristic polynomial $ \chi (\lambda) = det(\lambda) I -M)$),with corresponding eigenvectors $v_1,v_2,v_3,v_4......$(respectively).So that:
+    \begin{center}
+        $Mv_i = \lambda_i v_i$ for $i = 1, ... n$
+    \end{center}
+    Let P be the $n \times n$ matrix whose columns are the eigenvectores.So
+    \begin{center}
+        $P = v_1,v_2,v_3,v_4......v_n$
+    \end{center}
+    Then $MP = M[v_1,v_2,v_3...v_n] = PD$\\
+    \hl{If P is invertible} then we can rearrange to $M = PDP^{-1}$
+    We say that M has been diagonalised. Also, M is the conjugate of D by the inverse of P
+    Rearranging again, we see that D is the conjugate of M by P: $D = P^{-1}MP$
 \end{enumerate}
 
 
