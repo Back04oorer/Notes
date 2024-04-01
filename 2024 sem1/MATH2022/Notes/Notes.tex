@@ -486,7 +486,7 @@ A \textbf{symmetric group} $S_n$ on a set of $n$ symbols is the group consisting
 
     where $i=\sqrt{-1}$. The eigenvalues are real if and only if $\theta$ is an integer multiple of $\pi$($\sin \theta = 0$), in which case all nonzero vectors are eigenvectors, corresponding to eigenvalue 1 if the integer multiple is even, and corresponding to -1 if the integer multiple is odd.
 
-    \item Diagonalization
+    \item \textbf{Diagonalization}
     \begin{center}
         $M = PDP^{-1}$
     \end{center}
@@ -501,7 +501,24 @@ A \textbf{symmetric group} $S_n$ on a set of $n$ symbols is the group consisting
     Then $MP = M[v_1,v_2,v_3...v_n] = PD$\\
     \hl{If P is invertible} then we can rearrange to $M = PDP^{-1}$
     We say that M has been diagonalised. Also, M is the conjugate of D by the inverse of P
-    Rearranging again, we see that D is the conjugate of M by P: $D = P^{-1}MP$
+    Rearranging again, we see that D is the conjugate of M by P: $D = P^{-1}MP$\\
+
+    \textbf{Corollary}
+    \begin{center}
+        $M^n = P D^n P^{-1}$
+    \end{center}
+
+
+    \item Perron’s Paradox: Let N be the largest positive integer.If $N > 1$, then $N^2 > N$, contradicting the definition of $N$. Hence $N=1$.
+
+    \item \textbf{Perron’s Theorem}: If $M$ is a square matrix with all positive real entries then $M$ has a positive real eigenvalue,$\lambda$, such that $|\mu| < \lambda$ for all eigenvalues $|\mu|$ of $M$. Furthermore, a corresponding eigenvector with only positive entries exists for $\lambda$.We call $\lambda$ the \hl{dominant eigenvalue}.\\
+
+    \textbf{Method}:We can estimate the dominant eigenvalue by iterating powers of $M$ multiplied by a random non-zero vector.
+        \begin{enumerate}
+            \item choose a starting vector $v_0$
+            \item calculate $v_1 = Mv_0$, $v_2 = Mv_1$... , In general $v_{k+1} = Mv_k$
+            \item At each step in the process we will “normalise” the vector to make comparisons easier. We repeat until the answers converge.
+        \end{enumerate}
 \end{enumerate}
 
 

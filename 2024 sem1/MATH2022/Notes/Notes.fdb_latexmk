@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1711950086.88302 "Notes.tex" "Notes.pdf" "Notes" 1711950087.59484 0
+["pdflatex"] 1711982088.47272 "Notes.tex" "Notes.pdf" "Notes" 1711982089.634 0
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1710564012.09889 82684 3a87f55ef758bc5fe6abfed9a40cca26 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1684553853.94326 11548 f365aee40fdabc40338c14d16370f8ed ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/public/mathabx/dpi600/matha10.pk" 1710396904.02781 24548 3b1a0c9ef04b894edf697f7c19a6bd0e ""
@@ -160,8 +160,8 @@
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xcolor/xcolor.sty" 1710507271.97036 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "Graphs/Alternative_Group.jpg" 1710251226.60841 253103 b327191a19eb64efeeaf6eec0ddcfdbd ""
   "Graphs/Coset.jpg" 1710397470.87752 217876 cc7dd2498b0878fc265b1b74b6a672ca ""
-  "Notes.aux" 1711950087.40945 1028 871783dd124e1ae2a7536c03c8313d33 "pdflatex"
-  "Notes.tex" 1711950085.58302 24368 9e5cb2b9296a22be0fff095a9002d72e ""
+  "Notes.aux" 1711982089.34884 1028 81c9371bb67bbac7f0bc77f9b20863c9 "pdflatex"
+  "Notes.tex" 1711982087.25327 25435 0ccecf72a7e2b6f3817940b74da3e10e ""
   (generated)
   "Notes.aux"
   "Notes.log"
