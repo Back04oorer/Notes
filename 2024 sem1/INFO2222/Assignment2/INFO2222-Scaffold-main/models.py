@@ -10,14 +10,17 @@ Prisma docs also looks so much better in comparison
 or use SQLite, if you're not into fancy ORMs (but be mindful of Injection attacks :) )
 '''
 
-from sqlalchemy import String
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
+from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 from typing import Dict
+
+import db
 
 # data models
 class Base(DeclarativeBase):
     pass
 
+# inherit from a Base, this is a fucking table in db
 # model to store user information
 class User(Base):
     __tablename__ = "user"
@@ -34,11 +37,10 @@ class User(Base):
 # stateful counter used to generate the room id
 class Counter():
     def __init__(self):
-        self.counter = 0
+        pass
     
     def get(self):
-        self.counter += 1
-        return self.counter
+        return db.find_free_room_id()
 
 # Room class, used to keep track of which username is in which room
 class Room():
@@ -50,7 +52,12 @@ class Room():
         self.dict: Dict[str, int] = {}
 
     def create_room(self, sender: str, receiver: str) -> int:
-        room_id = self.counter.get()
+        # try to find this room by 2 uses
+        room_id = db.find_room_id_by_users(sender,receiver)
+        if not room_id:
+            room_id = self.counter.get()
+            db.insert_room(room_id,sender,receiver)
+
         self.dict[sender] = room_id
         self.dict[receiver] = room_id
         return room_id
@@ -68,4 +75,20 @@ class Room():
         if user not in self.dict.keys():
             return None
         return self.dict[user]
+
+
+class RoomInfo(Base):
+    __tablename__ = "RoomInfo"
+
+    room_id = Column(Integer, primary_key=True)
+    user_a = Column(String)
+    user_b = Column(String)
+
+class Message(Base):
+    __tablename__ = "messages"
+
+    id = Column(Integer, primary_key=True)
+    room_id = Column(Integer)
+    sender = Column(String)
+    content = Column(String)
     

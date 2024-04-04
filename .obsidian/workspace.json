@@ -4,30 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "eac7f1f7592dcb4e",
+        "id": "47ccefea5c350b37",
         "type": "tabs",
         "children": [
           {
-            "id": "0457c2a703302d24",
+            "id": "4a3c4e5c10242da9",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "2024 sem1/MATH2022/tut_sheet/tutorial5.pdf"
+                "file": "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/README.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
           {
-            "id": "27651adca3088dfb",
+            "id": "eaa7893fa623a053",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "2024 sem1/MATH2022/Notes/Notes.pdf"
+                "file": "PeriodicNotes/2024/Daily/04/2024-04-04.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024 sem1/MATH2022/tut_sheet/tutorial5.pdf",
+                "file": "PeriodicNotes/2024/Daily/04/2024-04-04.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024 sem1/MATH2022/tut_sheet/tutorial5.pdf",
+                "file": "PeriodicNotes/2024/Daily/04/2024-04-04.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024 sem1/MATH2022/tut_sheet/tutorial5.pdf"
+                "file": "PeriodicNotes/2024/Daily/04/2024-04-04.md"
               }
             }
           },
@@ -150,7 +155,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 250.5
+    "width": 284.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -163,36 +168,39 @@
       "periodic-para:LifeOS": false
     }
   },
-  "active": "0457c2a703302d24",
+  "active": "eaa7893fa623a053",
   "lastOpenFiles": [
-    "2024 sem1/MATH2022/Lecture_notes/5-3b.pdf",
-    "2024 sem1/MATH2022/Notes/Notes.synctex(busy)",
-    "2024 sem1/MATH2022/Notes/Notes.pdf",
-    "2024 sem1/MATH2022/tut_sheet/tutorial5.pdf",
+    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/README.md",
+    "PeriodicNotes/2024/Daily/04/2024-04-04.md",
+    "2024 sem1/INFO2222/Assignment2/Assignment 2.md",
+    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/__pycache__/socket_routes.cpython-311.pyc",
+    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/__pycache__/models.cpython-311.pyc",
+    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/__pycache__/db.cpython-311.pyc",
+    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/__pycache__",
+    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/database/main.db-journal",
+    "PeriodicNotes/2024/Daily/04/2024-04-03.md",
+    "2024 sem1/MATH2022/Worksheet&Solutions/6-pracsol.pdf",
+    "Tasks.md",
+    "2024 sem1/MATH2022/Worksheet&Solutions/6-prac.pdf",
+    "2024 sem1/COMP2017/codes_Pre/W6/Q4.c",
+    "2024 sem1/COMP2017/codes_Pre/W6/Q3.c",
+    "2024 sem1/COMP2017/codes_Pre/W6/Q2.c",
+    "PeriodicNotes/2024/Daily/04/2024-04-02.md",
+    "PeriodicNotes/Templates/Daily.md",
+    "Home.canvas",
+    "2024 sem1/MATH2022/Mistakes/Week 6.md",
     "2024 sem1/MATH2022/Mistakes/Week 5.md",
     "2024 sem1/MATH2022/Mistakes/Week 2.md",
-    "2024 sem1/MATH2022/Notes/A1.pdf",
     "PeriodicNotes/2024/Daily/04/2024-04-01.md",
-    "2024 sem1/INFO2222/Assignment2/Assignment 2.md",
-    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/pip/_vendor/urllib3/packages/backports/__pycache__/makefile.cpython-311.pyc",
-    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/pip/_vendor/urllib3/packages/backports/__pycache__/__init__.cpython-311.pyc",
-    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/pip/_vendor/urllib3/contrib/_securetransport/__pycache__/low_level.cpython-311.pyc",
-    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/pip/_vendor/urllib3/contrib/_securetransport/__pycache__/bindings.cpython-311.pyc",
-    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/pip/_vendor/urllib3/contrib/_securetransport/__pycache__/__init__.cpython-311.pyc",
-    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/setuptools/_vendor/pyparsing/diagram/__pycache__/__init__.cpython-311.pyc",
     "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/more.png",
     "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/less.png",
     "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/console.png",
     "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/ICON_LICENSE.md",
-    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/README.md",
     "INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/more.png",
     "INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/less.png",
     "INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/console.png",
     "INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/ICON_LICENSE.md",
     "INFO2222-Scaffold-main/README.md",
-    "Tasks.md",
-    "Home.canvas",
-    "PeriodicNotes/Templates/Daily.md",
     "2024 sem1/COMP2017/A2/Assignment 2.md",
     "PeriodicNotes/2024/Daily/03/2024-03-31.md",
     "PeriodicNotes/Templates/Monthly.md",
@@ -204,10 +212,6 @@
     "PeriodicNotes/2023/Daily/06/2023-06-11.md",
     "PeriodicNotes/2023/Daily/06/2023-06-10.md",
     "PeriodicNotes/2023/Daily/06/2023-06-09.md",
-    "PeriodicNotes/2023/Daily/06/2023-06-08.md",
-    "PeriodicNotes/2023/Daily/06/2023-06-07.md",
-    "PeriodicNotes/2023/Daily/06/2023-06-06.md",
-    "PeriodicNotes/2023/Daily/06/2023-06-05.md",
     "2024 sem1/INFO2222/Assignment1/graphs/Stream_cipher_process.png",
     "2024 sem1/COMP2823/Graphs/Pasted image 20240326203549.png",
     "2024 sem1/INFO2222/Assignment1/graphs/Stream_cipher.jpg",

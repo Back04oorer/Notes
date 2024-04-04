@@ -521,6 +521,84 @@ A \textbf{symmetric group} $S_n$ on a set of $n$ symbols is the group consisting
         \end{enumerate}
 \end{enumerate}
 
+\newpage
+
+\section{Week 6}
+    \begin{enumerate}
+        \item Diagonal matrices: A square matrix $D$ is diagonal if all entries off the diagonal are zero. If $D$ and $E$ are diagonal then $D E=E D$ is also diagonal, and its diagonal entries are simply the products of corresponding diagonal entries of $D$ and $E$. Thus the diagonal elements of $D^{n}$ are just the $n$th powers of the diagonal elements of $D$. A scalar matrix is a diagonal matrix in which all elements along the diagonal are equal. The scalar matrices commute with all square matrices of the same size.
+
+        \item Diagonalisation: Let $M$ be a square $n \times n$ matrix with eigenvalues $\lambda_{1}, \ldots, \lambda_{n}$ and corresponding eigenvectors $\mathbf{v}_{1}, \ldots, \mathbf{v}_{n}$. Then
+
+            $$
+            M P=P D
+            $$
+
+        where $D$ is the diagonal matrix with eigenvalues down the diagonal and $P$ the matrix with corresponding eigenvectors as columns. \hl{If $P$} is invertible then
+
+            $$
+            M=P D P^{-1} \quad \text { and } \quad D=P^{-1} M P
+            $$
+
+        In this case we say that $M$ is diagonalisable, in which case powers of $M$ can be found easily by the formula
+
+            $$
+            M^{k}=P D^{k} P^{-1} .
+            $$
+
+        If the eigenvalues are all different then $P$ is invertible and $M$ is diagonalisable.
+        \item \textbf{Terminologies}
+            \begin{enumerate}
+                \item Doubly stochastic matrix: has both rows and columns adding to 1
+                \item Idempotent matrix, is a square matrix satisfying: $A^2 = A$
+                    \begin{itemize}
+                        \item Idempotent matrices have eigenvalues 0 and 1 only.
+                        \item If A is an idempotent matrix, $A^n = A$ for all $n \geq 1$
+                    \end{itemize}
+
+            \end{enumerate}
+
+        \item Similar matrices: Two matrices $A$ and $B$ are said to be similar or conjugate if there is an invertible matrix $P$ such that $B=P^{-1} A P$. \hl{Similarity is an equivalence relation (that is, similarity is reflexive, symmetric and transitive)}. \textbf{In particular, a matrix is diagonalisable if and only if it is similar to a diagonal matrix}.
+
+        \item Stochastic matrices: A square matrix $M$ is stochastic if all the entries are nonnegative and the columns add to 1, \hl{and regular if}, further, some positive power of $M$ has all positive entries. A column matrix $\mathbf{v}$ is a probability vector if all of its entries are nonnegative and add to 1, and, further, becomes a steady state vector for $M$ \hl{if $M \mathbf{v}=\mathbf{v}$}.
+
+        \item Existence and uniqueness of a steady state vector: If $M$ is a regular stochastic matrix then there exists a unique steady state vector $\mathbf{v}$ for $M$, in which case, for any probability vector $\mathbf{x}$,
+
+            $$
+            \lim _{k \rightarrow \infty} M^{k} \mathbf{x}=\mathbf{v}
+            $$
+
+        \item More on stochastic matrix:
+            Let A be a stochastic matrix:
+            \begin{enumerate}
+                \item 1 is an eigenvalue of A,and so A has at least one steady-state probabiliry vector $\textbf{v}$, which is fixed by A.
+                    \begin{center}
+                        $A\textbf{v} = 1 \textbf{v}$
+                    \end{center}
+
+                \item All eigenvalues of A are less then or equal to 1 in magnitude
+
+                \item If A is regular (some power of A has all positive entries), then:
+                    \begin{itemize}
+                        \item $\textbf{v}$ is unique
+                        \item             
+                            $$
+                            \lim _{n \rightarrow \infty} A^{n} = \begin{bmatrix} \textbf{v} & \textbf{v} & \textbf{v} & \cdots \end{bmatrix}
+                            $$
+
+                        \item for any probability vector $\textbf{x}$,
+                            $$
+                            \lim _{n \rightarrow \infty} A^n \underline{x}=\underline{v}
+                            $$
+
+                        \item 1 is the dominant eigenvalue.
+
+                    \end{itemize}
+            \end{enumerate}
+
+
+        \item Perron's Theorem and existence of dominant eigenvalues: If $M$ is a square matrix all of whose entries are positive then $M$ has a positive real eigenvalue $\lambda$ such that $|\mu| \leq \lambda$ for all eigenvalues $\mu$ of $M$, and, furthermore, there exists an eigenvector corresponding to $\lambda$, all of whose entries are positive.
+
+    \end{enumerate}
 
 
 

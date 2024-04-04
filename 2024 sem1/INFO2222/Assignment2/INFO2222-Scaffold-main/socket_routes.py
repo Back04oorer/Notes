@@ -45,6 +45,9 @@ def disconnect():
 @socketio.on("send")
 def send(username, message, room_id):
     emit("incoming", (f"{username}: {message}"), to=room_id)
+    db.insert_message(room_id, username, message)
+    
+
     
 # join room event handler
 # sent when the user joins a room
@@ -59,26 +62,37 @@ def join(sender_name, receiver_name):
     if sender is None:
         return "Unknown sender!"
 
-    room_id = room.get_room_id(receiver_name)
+    room_id_current = room.get_room_id(receiver_name)
 
-    # if the user is already inside of a room 
-    if room_id is not None:
-        
-        room.join_room(sender_name, room_id)
-        join_room(room_id)
+    # print History messages when someone entered a room
+    room_id_stored = db.find_room_id_by_users(sender_name, receiver_name)
+    print(room_id_stored)
+    if room_id_stored:
+        for e in db.get_messages_by_room_id(room_id_stored):
+            emit("incoming", (f"{e[0]}: {e[1]}.", "red"))
+
+    if room_id_current is not None:
+        room.join_room(sender_name, room_id_current)
+        join_room(room_id_current)
         # emit to everyone in the room except the sender
-        emit("incoming", (f"{sender_name} has joined the room.", "green"), to=room_id, include_self=False)
+        emit("incoming", (f"{sender_name} has joined the room.", "green"), to=room_id_current, include_self=False)
+        
         # emit only to the sender
         emit("incoming", (f"{sender_name} has joined the room. Now talking to {receiver_name}.", "green"))
-        return room_id
+        return room_id_current
+
 
     # if the user isn't inside of any room, 
     # perhaps this user has recently left a room
     # or is simply a new user looking to chat with someone
-    room_id = room.create_room(sender_name, receiver_name)
-    join_room(room_id)
-    emit("incoming", (f"{sender_name} has joined the room. Now talking to {receiver_name}.", "green"), to=room_id)
-    return room_id
+
+    # it will not create if the room exists
+    room_id_current = room.create_room(sender_name, receiver_name)
+
+    join_room(room_id_current)
+    emit("incoming", (f"{sender_name} has joined the room. Now talking to {receiver_name}.", "green"), to=room_id_current)
+
+    return room_id_current
 
 # leave room event handler
 @socketio.on("leave")
