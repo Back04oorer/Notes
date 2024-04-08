@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1711955537.16148 "A1.tex" "A1.pdf" "A1" 1711955537.59552 0
+["pdflatex"] 1712537506.47058 "A1.tex" "A1.pdf" "A1" 1712537506.95034 0
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1710564012.09889 82684 3a87f55ef758bc5fe6abfed9a40cca26 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1710507425.07267 24243819 9873b88c324e7d4c2fb47d8dfa8007a8 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1678856791.72908 1004 54797486969f23fa377b128694d548df ""
@@ -59,8 +59,8 @@
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/keyval.sty" 1678856793.20508 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/trig.sty" 1678856793.20606 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def" 1710507268.82647 30006 3d512c0edd558928ddea1690180ef77e ""
-  "A1.aux" 1711955537.49616 392 e6614be00b6d690f032c976864b93c39 "pdflatex"
-  "A1.tex" 1711955536.04672 3025 b0c0567a039bebc13e7938e700d0aa7f ""
+  "A1.aux" 1712537506.84188 392 e6614be00b6d690f032c976864b93c39 "pdflatex"
+  "A1.tex" 1712537504.77879 3040 e6ea2d811766e3ce6f23019ae86cf2a7 ""
   (generated)
   "A1.aux"
   "A1.log"

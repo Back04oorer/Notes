@@ -13,8 +13,6 @@
 - parent is at $\lfloor \frac{i-1}{2}\rfloor$ 
 
 
-
-
 ### Building a heap in one go
 
 ```PYTHON
@@ -65,7 +63,7 @@ And with $n$  `remove_min` operations, the time complexity is $O(n log n)$
 
 
 
-
+# Questions
 ### Q5 
 Given an array A with n distinct integers, design an $O(n \log{k})$ time algorithm for finding the kth value in sorted order.
 <mark style="background: #FF5582A6;">Hint: </mark>
