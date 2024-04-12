@@ -4,22 +4,43 @@
     "type": "split",
     "children": [
       {
-        "id": "dc6ee9aed8184549",
+        "id": "be2d74b487d10dc6",
         "type": "tabs",
         "children": [
           {
-            "id": "fc5d35990297f892",
+            "id": "ad0411eb4aadf17c",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "2024 sem1/MATH2022/tut_sheet/Maths Tutorial 7.pdf"
+              }
+            }
+          },
+          {
+            "id": "9d85946ee8cd44e6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024 sem1/COMP2823/Tut/W7 Graph 📊.md",
+                "file": "Tasks.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "f74426caf0d4a309",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "2024 sem1/MATH2022/Notes/Notes.pdf"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 260.5
+    "width": 373.5024719238281
   },
   "right": {
     "id": "d78c8d55117ae1ea",
@@ -85,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024 sem1/COMP2823/Tut/W7 Graph 📊.md",
+                "file": "Tasks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024 sem1/COMP2823/Tut/W7 Graph 📊.md",
+                "file": "Tasks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024 sem1/COMP2823/Tut/W7 Graph 📊.md"
+                "file": "Tasks.md"
               }
             }
           },
@@ -142,7 +163,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -155,27 +176,36 @@
       "periodic-para:LifeOS": false
     }
   },
-  "active": "fc5d35990297f892",
+  "active": "9d85946ee8cd44e6",
   "lastOpenFiles": [
-    "2024 sem1/COMP2823/Guide to written assignments.pdf",
-    "2024 sem1/COMP2823/Tut/W7 Graph 📊.md",
-    "2024 sem1/MATH2022/Assignment/A1/Assignment1-1.pdf",
-    "2024 sem1/INFO2222/Slides/Week 6 Usability Intro.pdf",
-    "2024 sem1/MATH2022/Assignment/A1/A1.pdf",
-    "2024 sem1/MATH2022/Assignment/A1/A1.synctex(busy)",
-    "2024 sem1/INFO2222/Lecture 6.md",
+    "2024 sem1/MATH2022/Notes/Notes.pdf",
+    "2024 sem1/MATH2022/tut_sheet/Maths Tutorial 7.pdf",
+    "2024 sem1/MATH2022/Lecture_notes/7-2b.pdf",
+    "2024 sem1/MATH2022/Maths Tutorial 7.pdf",
+    "Maths Tutorial 7.pdf",
+    "Tasks.md",
+    "2024 sem1/MATH2022/Lecture_notes/6-3b.pdf",
+    "2024 sem1/Maths Tutorial 7.pdf",
+    "2024 sem1/MATH2022/Notes/Maths Tutorial 7.pdf",
+    "2024 sem1/MATH2022/tut_sheet/tutorial7.pdf",
+    "Dc/logs/dead-cells-24-04-12.log",
+    "Dc/save/dc_options.json",
+    "2024 sem1/MATH2022/Mistakes/Week 6.md",
+    "2024 sem1/INFO2222/Assignment2/Symmetric key encryption for chat.md",
+    "2024 sem1/INFO2222/Assignment2/Assignment 2.md",
+    "PeriodicNotes/2024/Daily/04/2024-04-11.md",
+    "PeriodicNotes/2024/Daily/04/2024-04-10.md",
+    "PeriodicNotes/2024/Daily/04/2024-04-09.md",
     "PeriodicNotes/2024/Daily/04/2024-04-08.md",
-    "2024 sem1/COMP2823/TutorialSolution/Week 4 - binary search trees (solutions).pdf",
+    "2024 sem1/COMP2823/Tut/Week 6 Hash ﮫﮫﮫ.md",
+    "2024 sem1/INFO2222/Lecture 1.md",
+    "2024 sem1/COMP2823/Tut/Week 7 Graph 📊.md",
+    "2024 sem1/COMP2823/Tut/week 3 Trees🌲.md",
+    "2024 sem1/COMP2823/Tut/Week 4 BST 👈🫵👉.md",
+    "2024 sem1/COMP2017/Notes/File IO, Function Pointers and Signals.md",
+    "2024 sem1/INFO2222/Lecture 6.md",
     "PeriodicNotes/2024/Daily/04/2024-04-07.md",
     "PeriodicNotes/2024/Daily/04/2024-04-06.md",
-    "2024 sem1/COMP2823/Tut/Week 4 BST 👈🫵👉.md",
-    "2024 sem1/COMP2823/Tut/week 3 Trees🌲.md",
-    "2024 sem1/COMP2017/codes_Pre/W6/Q7.c",
-    "2024 sem1/COMP2017/codes_Pre/W6/Q6",
-    "2024 sem1/COMP2017/codes_Pre/W6/Q6.c",
-    "2024 sem1/COMP2017/Notes/File IO, Function Pointers and Signals.md",
-    "2024 sem1/COMP2017/codes_Pre/W6/Q3",
-    "2024 sem1/COMP2017/codes_Pre/W6/FILE_IO",
     "2024 sem1/COMP2823/Tut/Week 5 Priority Queue 🍡.md",
     "2024 sem1/COMP2823/Tut/Week 2 List 📋.md",
     "2024 sem1/INFO2222/Lecture 3.md",
@@ -184,19 +214,10 @@
     "PeriodicNotes/2024/Daily/04/2024-04-03.md",
     "PeriodicNotes/2024/Daily/04/2024-04-02.md",
     "PeriodicNotes/2024/Daily/04/2024-04-01.md",
-    "PeriodicNotes/2024/Daily/04/2024-04-05.md",
-    "2024 sem1/INFO2222/Assignment2/Assignment 2.md",
-    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/README.md",
-    "Tasks.md",
-    "PeriodicNotes/Templates/Daily.md",
     "Home.canvas",
-    "2024 sem1/MATH2022/Mistakes/Week 6.md",
-    "2024 sem1/MATH2022/Mistakes/Week 5.md",
-    "2024 sem1/MATH2022/Mistakes/Week 2.md",
     "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/more.png",
     "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/less.png",
     "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/console.png",
-    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/ICON_LICENSE.md",
     "INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/more.png",
     "INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/less.png",
     "INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/console.png",

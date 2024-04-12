@@ -600,6 +600,95 @@ A \textbf{symmetric group} $S_n$ on a set of $n$ symbols is the group consisting
 
     \end{enumerate}
 
+\section{Week 7}
+
+    \begin{enumerate}
+        \item Cartesian products of sets and inherited coordinatewise operations: If $A_{1}, A_{2}, \ldots, A_{n}$ are sets then we may form the Cartesian product
+
+        $$
+        A_{1} \times A_{2} \times \ldots \times A_{n}=\left\{\left(a_{1}, a_{2}, \ldots, a_{n}\right) \mid a_{1} \in A_{1}, a_{2} \in A_{2}, \ldots, a_{n} \in A_{n}\right\}
+        $$
+
+        which has coordinate-wise operations inherited from $A_{1}, \ldots, A_{n}$, in the case that these have arithmetic operations of the same type (such as addition or multiplication). In particular, if $F$ is a field and $n \geq 1$ then we may form the Cartesian power
+
+        $$
+        F^{n}=A_{1} \times \ldots \times A_{n}=\left\{\left(a_{1}, \ldots, a_{n}\right) \mid a_{1}, \ldots, a_{n} \in F\right\}
+        $$
+
+        where $A_{1}=\ldots=A_{n}=F$, with coordinatewise addition, multiplication and scalar multiplication. In this case the mapping
+
+        $$
+        \left(a_{1}, \ldots, a_{n}\right) \mapsto\left[\begin{array}{c}
+        a_{1} \\
+        \vdots \\
+        a_{n}
+        \end{array}\right]
+        $$
+
+        is a bijection between $F^{n}$ and the set $V$ of all column vectors over $F$ of length $n$ preserving addition and scalar multiplication. Both $F^{n}$ and $V$ are examples of vector spaces (see later), and the previous statement says that $F^{n}$ and $V$ are vector space isomorphic. We also define $F^{0}=\{0\}$, called the trivial vector space.
+
+        \item Identification of $n$-tuples with row vectors: It is common to make the following identification of an $n$-tuple with the row vector obtained by deleting commas and replacing round brackets with square brackets:
+
+        $$
+        \left(a_{1}, a_{2}, \ldots, a_{n}\right) \equiv\left[a_{1} a_{2} \ldots a_{n}\right]
+        $$
+
+        and then coordinatewise addition and scalar multiplication of $n$-tuples becomes addition and scalar multiplication of row vectors as $1 \times n$ matrices.
+
+        \item Linear transformations (special case): The Cartesian power $F^{n}$ is the prototype structure for an $n$-dimensional vector space (see later for definitions). A function $L: F^{m} \rightarrow F^{n}$, where $m$ and $n$ are nonnegative integers, is called a linear transformation if $L$ respects coordinatewise addition and scalar multiplication, that is, for all $\mathbf{v}, \mathbf{w} \in F^{m}$ and $\lambda \in F$,
+
+        $$
+        L(\mathbf{v}+\mathbf{w})=L(\mathbf{v})+L(\mathbf{w}) \text { and } L(\lambda \mathbf{v})=\lambda L(\mathbf{v})
+        $$
+
+        equivalently, for all $\mathbf{v}, \mathbf{w} \in F^{m}$ and $\lambda, \mu \in F$,
+
+        $$
+        L(\lambda \mathbf{v}+\mu \mathbf{w})=\lambda L(\mathbf{v})+\mu L(\mathbf{w})
+        $$
+
+        and we say that $L$ respects or preserves linear combinations. If $m=n$ then $L$ is called a linear operator. It is traditional to use functional notation for linear transformations and operators and to compose them in the reverse order to which they are written down (from right to left, by contrast with the left to right convention commonly used by algebraists). The composite of linear transformations, when defined, is also a linear transformation.\\
+
+        \item Standard basis: For $1 \leq i \leq n$, let $\mathbf{e}_{i}$ be the $n$-tuple with 0 in each place except for 1 in the $i$ th place. Put $B=\left\{\mathbf{e}_{1}, \ldots, \mathbf{e}_{n}\right\}$, called the standard basis for $F^{n}$. If $\mathbf{v}=\left(v_{1}, \ldots, v_{n}\right) \in F^{n}$ then
+
+        $$
+        \mathbf{v}=v_{1} \mathbf{e}_{1}+\ldots+v_{n} \mathbf{e}_{n}
+        $$
+
+        so that $B$ has the so-called spanning property. Also $B$ is linearly independent (see later).
+
+        \item Matrix of a linear transformation: Let $L: F^{m} \rightarrow F^{n}$ be a linear transformation and let $B_{m}$ be the standard basis for $F^{m}$. Form the $n \times m$ matrix $M_{L}$ where, for $1 \leq i \leq m$, the $i$ th column of $M_{L}$ is $\left(L\left(\mathbf{e}_{i}\right)\right)^{\top}$, the transpose of the row vector $L\left(\mathbf{e}_{i}\right)$. The action of $L$ on row vectors corresponds to matrix multiplication of column vectors by $M_{L}$ in the following sense:
+
+        $$
+        L(\mathbf{v})=\mathbf{w} \text { if and only if } \quad M_{L} \mathbf{v}^{\top}=\mathbf{w}^{\top} .
+        $$
+
+        \item Matrix multiplication corresponds to composition of linear transformations: Let $L_{1}: F^{m} \rightarrow$ $F^{n}$ and $L_{2}: F^{n} \rightarrow F^{q}$ be linear transformations, so that $L_{2} L_{1}=L_{2} \circ L_{1}: F^{m} \rightarrow F^{q}$. Then
+
+        $$
+        M_{L_{2} L_{1}}=M_{L_{2}} M_{L_{1}}
+        $$
+
+        \item Isomorphisms of groups: If $G$ and $H$ are groups then a bijection $\phi: G \rightarrow H$ is called an isomorphism if $\phi$ preserves the group operation, that is, $\left(g_{1} g_{2}\right) \phi=\left(g_{1} \phi\right)\left(g_{2} \phi\right)$ for all $g_{1}, g_{2} \in G$. If there exists an isomorphism between two groups $G$ and $H$ then we say that $G$ and $H$ are isomorphic and write $G \cong H$. Then $\cong$ is an equivalence relation on the class of groups, that is, $\cong$ is reflexive, symmetric and transitive.
+
+        \item Cyclic groups: A group $G$ is called cyclic if there exists an element $g$, called the generator of $G$ such that every element is a power (possibly negative) of $g$ (expressing the group operation multiplicatively). If a cyclic group is finite then every element is a positive power of the chosen generator. Two cyclic groups are isomorphic if and only if they have the same number of elements.
+
+        \item Shear matrices: A (standard) shear matrix is an elementary matrix of the form
+
+        $$
+        \left[\begin{array}{ll}
+        1 & k \\
+        0 & 1
+        \end{array}\right]
+        $$
+
+        for some real number $k$, which corresponds to the shear transformation of the $x y$-plane that fixes the $x$-axis and shifts points sideways proportional to their $y$-coordinates (with factor $k$ of proportionality).
+
+        \item Invertible linear transformations of the plane: Every invertible linear transformation of the plane decomposes as the composite of a shear, a pair of dilations in the $x$ and $y$-directions respectively and a rotation. Equivalently, every invertible $2 \times 2$ real matrix decomposes as a product of a shear matrix, a diagonal matrix and a rotation matrix.
+
+    \end{enumerate}
+
+
 
 
 \end{document}

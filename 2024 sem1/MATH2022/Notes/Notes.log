@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.15)  2 APR 2024 15:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.15)  12 APR 2024 07:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -957,7 +957,12 @@ a square $\OML/cmm/m/it/10 n \U/matha/m/n/10 ^^B \OML/cmm/m/it/10 n$ \OT1/cmr/m
 /n/10 ma-trix with eigen-val-ues $\OML/cmm/m/it/10 ^^U[]; [] ; ^^U[]$
  []
 
-[14] [15] (Notes.aux)
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 650--651
+
+ []
+
+[16] [17] (Notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -970,7 +975,7 @@ Here is how much of TeX's memory you used:
  36185 multiletter control sequences out of 15000+600000
  574804 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,87p,569b,375s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,10n,87p,571b,375s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/l
 jfour/public/mathabx/dpi600/matha5.pk> </Users/bamingyuan/Library/Application S
 upport/MiKTeX/texmfs/data/fonts/pk/ljfour/public/mathabx/dpi600/mathx10.pk> </U
@@ -999,9 +1004,9 @@ n/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts
 ll/fonts/type1/public/amsfonts/cm/cmti10.pfb></Users/bamingyuan/Library/Applica
 tion Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb>
-Output written on Notes.pdf (15 pages, 706941 bytes).
+Output written on Notes.pdf (17 pages, 717235 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
+ 207 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
