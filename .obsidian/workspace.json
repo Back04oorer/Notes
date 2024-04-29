@@ -4,38 +4,40 @@
     "type": "split",
     "children": [
       {
-        "id": "be2d74b487d10dc6",
+        "id": "fb2edb4c8b0275c2",
         "type": "tabs",
         "children": [
           {
-            "id": "ad0411eb4aadf17c",
+            "id": "22825a66b2025746",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "2024 sem1/MATH2022/tut_sheet/Maths Tutorial 7.pdf"
+                "file": "2024 sem1/COMP2017/A3/COMP2017 S1 A3.pdf"
               }
             }
           },
           {
-            "id": "9d85946ee8cd44e6",
+            "id": "3689707b1fde8bb1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tasks.md",
+                "file": "2024 sem1/COMP2017/A3/Untitled.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "f74426caf0d4a309",
+            "id": "cd2e182fffc90ace",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "2024 sem1/MATH2022/Notes/Notes.pdf"
+                "file": "2024 sem1/COMP2017/A3/玛利亚之墙夺还战.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -85,12 +87,20 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "87195bbe9a3f3de7",
+            "type": "leaf",
+            "state": {
+              "type": "periodic-para",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 373.5024719238281
+    "width": 249.5
   },
   "right": {
     "id": "d78c8d55117ae1ea",
@@ -106,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tasks.md",
+                "file": "2024 sem1/COMP2017/A3/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tasks.md",
+                "file": "2024 sem1/COMP2017/A3/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,20 +156,11 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tasks.md"
+                "file": "2024 sem1/COMP2017/A3/Untitled.md"
               }
             }
-          },
-          {
-            "id": "880f63c8d4591cb6",
-            "type": "leaf",
-            "state": {
-              "type": "periodic-para",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -176,54 +177,53 @@
       "periodic-para:LifeOS": false
     }
   },
-  "active": "9d85946ee8cd44e6",
+  "active": "3689707b1fde8bb1",
   "lastOpenFiles": [
-    "2024 sem1/MATH2022/Notes/Notes.pdf",
-    "2024 sem1/MATH2022/tut_sheet/Maths Tutorial 7.pdf",
-    "2024 sem1/MATH2022/Lecture_notes/7-2b.pdf",
-    "2024 sem1/MATH2022/Maths Tutorial 7.pdf",
-    "Maths Tutorial 7.pdf",
+    "2024 sem1/COMP2017/A3/玛利亚之墙夺还战.md",
+    "2024 sem1/COMP2017/A3/Untitled.md",
+    "2024 sem1/COMP2017/A3/COMP2017 S1 A3.pdf",
+    "[.md",
     "Tasks.md",
-    "2024 sem1/MATH2022/Lecture_notes/6-3b.pdf",
-    "2024 sem1/Maths Tutorial 7.pdf",
-    "2024 sem1/MATH2022/Notes/Maths Tutorial 7.pdf",
-    "2024 sem1/MATH2022/tut_sheet/tutorial7.pdf",
-    "Dc/logs/dead-cells-24-04-12.log",
-    "Dc/save/dc_options.json",
-    "2024 sem1/MATH2022/Mistakes/Week 6.md",
-    "2024 sem1/INFO2222/Assignment2/Symmetric key encryption for chat.md",
-    "2024 sem1/INFO2222/Assignment2/Assignment 2.md",
-    "PeriodicNotes/2024/Daily/04/2024-04-11.md",
-    "PeriodicNotes/2024/Daily/04/2024-04-10.md",
-    "PeriodicNotes/2024/Daily/04/2024-04-09.md",
-    "PeriodicNotes/2024/Daily/04/2024-04-08.md",
-    "2024 sem1/COMP2823/Tut/Week 6 Hash ﮫﮫﮫ.md",
-    "2024 sem1/INFO2222/Lecture 1.md",
-    "2024 sem1/COMP2823/Tut/Week 7 Graph 📊.md",
-    "2024 sem1/COMP2823/Tut/week 3 Trees🌲.md",
-    "2024 sem1/COMP2823/Tut/Week 4 BST 👈🫵👉.md",
+    "2024 sem1/INFO2222/Assignment3/Survey.md",
+    "2024 sem1/COMP2017/Tut sheets/Week 9 - More processes, Shared Memory and IPC Communication.pdf",
+    "2024 sem1/COMP2017/Tut sheets/Week 8 Introduction processes.pdf",
+    "2024 sem1/INFO2222/Assignment3/Project Usability 2024.pdf",
+    "2024 sem1/COMP2017/Tut sheets/Week 10 Parallelism POSIX.pdf",
+    "Untitled.md",
+    "2024 sem1/COMP2017/Notes/Wk9 lec.pdf",
+    "2024 sem1/COMP2017/codes_Pre/W10/Q2",
+    "2024 sem1/COMP2017/codes_Pre/W10/Q2.c",
+    "2024 sem1/COMP2017/codes_Pre/W10/Q1",
+    "2024 sem1/COMP2017/codes_Pre/W10/Q1.c",
+    "2024 sem1/COMP2017/Notes/Preprocesser.md",
+    "2024 sem1/COMP2017/Notes/Process.md",
     "2024 sem1/COMP2017/Notes/File IO, Function Pointers and Signals.md",
-    "2024 sem1/INFO2222/Lecture 6.md",
-    "PeriodicNotes/2024/Daily/04/2024-04-07.md",
-    "PeriodicNotes/2024/Daily/04/2024-04-06.md",
-    "2024 sem1/COMP2823/Tut/Week 5 Priority Queue 🍡.md",
-    "2024 sem1/COMP2823/Tut/Week 2 List 📋.md",
-    "2024 sem1/INFO2222/Lecture 3.md",
-    "2024 sem1/INFO2222/Lecture 2.md",
-    "PeriodicNotes/2024/Daily/04/2024-04-04.md",
-    "PeriodicNotes/2024/Daily/04/2024-04-03.md",
-    "PeriodicNotes/2024/Daily/04/2024-04-02.md",
-    "PeriodicNotes/2024/Daily/04/2024-04-01.md",
-    "Home.canvas",
-    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/more.png",
-    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/less.png",
-    "2024 sem1/INFO2222/Assignment2/INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/console.png",
-    "INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/more.png",
-    "INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/less.png",
-    "INFO2222-Scaffold-main/env/lib/python3.11/site-packages/werkzeug/debug/shared/console.png",
-    "2024 sem1/INFO2222/Assignment1/graphs/Stream_cipher_process.png",
-    "2024 sem1/COMP2823/Graphs/Pasted image 20240326203549.png",
-    "2024 sem1/INFO2222/Assignment1/graphs/Stream_cipher.jpg",
-    "2024 sem1/MATH2022/Notes/Graphs/Alternative_Group.jpg"
+    "2024 sem1/MATH2022/Mistakes/Week9.md",
+    "2024 sem1/COMP2823/my_Tut/Week 8 Shortest Path 👶 -> 💀.md",
+    "2024 sem1/COMP2823/Graphs/Pasted image 20240421172245.png",
+    "2024 sem1/COMP2823/my_Tut/Week 6 Hash ﮫﮫﮫ.md",
+    "2024 sem1/COMP2823/Assignment/Assignment3/WTF is Question 3?.md",
+    "info2222/Report/graphs/authenticated_only.jpg",
+    "info2222/Report/graphs/sign_up_xss.jpg",
+    "2024 sem1/COMP2823/my_Tut/week 3 Trees🌲.md",
+    "2024 sem1/COMP2823/my_Tut/Week 7 Graph ™️.md",
+    "2024 sem1/COMP2823/my_Tut/Week 5 Priority Queue 🍡.md",
+    "2024 sem1/COMP2823/my_Tut/Week 4 BST 👈🫵👉.md",
+    "2024 sem1/COMP2823/my_Tut/Week 2 List 📋.md",
+    "2024 sem1/COMP2823/Tut/Week 8 Shortest Path 👶 -> 💀.md",
+    "PeriodicNotes/2024/Daily/04/2024-04-22.md",
+    "PeriodicNotes/2024/Daily/04/2024-04-21.md",
+    "2024 sem1/COMP2823/Tut/Week 7 Graph ™️.md",
+    "info2222/INFO2222-Scaffold-main/node_modules/bn.js/README.md",
+    "2024 sem1/COMP2823/Graphs/Pasted image 20240421174705.png",
+    "2024 sem1/COMP2823/Graphs/Pasted image 20240421172335.png",
+    "2024 sem1/MATH2022/Mistakes/Week 8.md",
+    "2024 sem1/COMP2823/Tut/Week 6 Hash ﮫﮫﮫ.md",
+    "info2222/Report/graphs/login_successful.png",
+    "info2222/Report/graphs/passwd_does_not_match.png",
+    "info2222/Report/graphs/processData.jpg",
+    "info2222/Report/graphs/no_such_user_login.jpg",
+    "info2222/Report/no_such_user_login.jpg",
+    "Home.canvas"
   ]
 }

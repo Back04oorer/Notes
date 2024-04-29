@@ -688,7 +688,181 @@ A \textbf{symmetric group} $S_n$ on a set of $n$ symbols is the group consisting
 
     \end{enumerate}
 
+\section{Week 8}
+    \begin{enumerate}
+        \item Abstract vector spaces: Given a fixed field $F$, a vector space over $F$ is an abelian group $V$ with respect to addition, which is compatible with scalar multiplication by elements of $F$ (denoted by juxtaposition), in the following respects:
+
+        $$
+        \begin{gathered}
+        (\forall \lambda, \mu \in F)(\forall \mathbf{v}, \mathbf{w} \in V) \quad(\lambda+\mu) \mathbf{v}=\lambda \mathbf{v}+\mu \mathbf{v} \quad \text { and } \quad \lambda(\mathbf{v}+\mathbf{w})=\lambda \mathbf{v}+\lambda \mathbf{w} \\
+        (\forall \lambda, \mu \in F)(\forall \mathbf{v} \in V) \quad \lambda(\mu \mathbf{v})=(\lambda \mu) \mathbf{v}
+        \end{gathered}
+        $$
+
+        and
+
+        $$
+        (\forall \mathbf{v} \in V) \quad 1 \mathbf{v}=\mathbf{v}
+        $$
+
+        Here 1 is the multiplicative identity element of $F$ and the addition symbol + has to be read in context, belonging either to $V$ or to $F$. It is an important theorem that $V$ is isomorphic to $F^{n}$ for some $n$ (where $n$ may be infinite, with an appropriate interpretation).
+
+        \item Vector space isomorphism: A mapping $\phi: V \rightarrow W$, where $V$ and $W$ are vector spaces over a field $F$ is called a vector space isomorphism if it is a bijection that preserves addition and scalar multiplication, that is, $\phi(\mathbf{v}+\mathbf{w})=\phi(\mathbf{v})+\phi(\mathbf{w})$ and $\phi(\lambda \mathbf{v})=\lambda \phi(\mathbf{v})$ for all $\mathbf{v}, \mathbf{w} \in V$ and $\lambda \in F$ (or, equivalently, preserves linear combinations).
+
+        \item Important examples of vector spaces: Let $F$ be a field.
+            \begin{itemize}
+                \item The trivial vector space is $F^{0}=\{0\}$, consisting of the zero vector with trivial addition and scalar multiplication.
+
+                \item If $n \geq 1$ then $F^{n}$, the Cartesian power, consisting of all $n$-tuples of elements of $F$, forms a vector space with respect to coordinate-wise addition and scalar multiplication. We may identify $n$-tuples with row vectors of length $n$, in which case the vector addition and scalar multiplication of $n$-tuples become addition and scalar multiplication of row matrices.
+
+                \item If $m, n \geq 1$ then the set Mat ${ }_{m, n}$ of all $m \times n$ matrices forms a vector space with respect to matrix addition and scalar multiplication. In particular, Mat ${ }_{1, n}$, the vector space of row matrices, is identified with $F^{n}$. The vector space Mat ${ }_{m, 1}$ of column matrices of length $m$ is isomorphic to $F^{m}$ under the mapping that takes a matrix to its transpose.
+
+                \item If $n \geq 0$ then the set $\mathbb{P}_{n}$ of all polynomials, with coefficients from $F$, of degree at most $n$ forms a vector space with respect to addition of polynomials and multiplication by constants. Then $\mathbb{P}_{n}$ is isomorphic to $F^{n+1}$.
+
+                \item Let $X$ be a nonempty set. Then the set of all functions from $X$ into $F$, denoted by $F^{X}$, forms a vector space with respect to addition of functions and multiplication of a function by a scalar, defined by the following rules, for $f, g \in F^{X}$ and $\lambda \in F$ :
+
+                $$
+                (f+g)(x)=f(x)+g(x) \quad \text { and } \quad(\lambda f)(x)=\lambda f(x) \quad \text { for all } x \in X
+                $$
+            \end{itemize}
+
+        \item Subspaces: A subspace of a vector space $V$ over a field $F$ is a nonempty subset $S$ of $V$ that is closed under vector addition and scalar multiplication, that is, for all $\mathbf{v}, \mathbf{w} \in S$ and $\lambda \in S$,
+
+        $$
+        \mathbf{v}+\mathbf{w} \in S \quad \text { and } \quad \lambda \mathbf{v} \in S
+        $$
+
+        or, equivalently, $S$ is closed under taking linear combinations, that is,
+
+        $$
+        \left(\forall \mathbf{v}_{1}, \mathbf{v}_{2} \in S\right)\left(\forall \lambda_{1}, \lambda_{2} \in F\right) \quad \lambda_{1} \mathbf{v}_{1}+\lambda_{2} \mathbf{v}_{2} \in S
+        $$
+
+        A subspace $S$ of a vector space $V$ becomes a vector space in its own right, using the vector space operations of $V$ restricted to $S$.
+
+        \item Intersections of subspaces: Let $V$ be a vector space. The intersection of any collection of subspaces of $V$ is also a subspace of $V$. This implies that if $X$ is any subset of $V$ then there exists a smallest subspace of $V$ containing $X$, denoted by $\langle X\rangle$, and referred to also as the span of $X$ (see more below), namely
+
+        $$
+        \langle X\rangle=\bigcap\{S \mid S \text { is a subspace of } V \text { containing } X\}
+        $$
+
+        the intersection of all subspaces of $V$ containing $X$.
+
+        \item Linear combinations: For $k \geq 1$, a linear combination of vectors $\mathbf{v}_{1}, \ldots, \mathbf{v}_{k} \in V$ is an expression of the form
+
+        $$
+        \lambda_{1} \mathbf{v}_{1}+\lambda_{2} \mathbf{v}_{2}+\ldots+\lambda_{k} \mathbf{v}_{k}
+        $$
+
+        for some scalars $\lambda_{1}, \ldots, \lambda_{k}$. If $k=1$ then this is interpreted as a scalar multiple of $\mathbf{v}_{\mathbf{1}}$. Note that since $0 \mathbf{v}=\mathbf{0}$, for any vector $\mathbf{v}$, the zero vector is always a linear combination of any collection of vectors.
+
+        \item The span of a set of vectors: Let $X$ be a subset of a vector space $V$ over a field $F$. The span of $X$, denoted by $\langle X\rangle$ is defined to be $\{\mathbf{0}\}$, the trivial subspace of $V$, if $X=\emptyset$, and otherwise
+
+        $$
+        \langle X\rangle=\{\text { all possible linear combinations of finite collections of vectors from } X\}
+        $$
+
+        It follows, in both cases, that $\langle X\rangle$ is the smallest subspace of $V$ containing $X$ (see above). If $X=\left\{\mathbf{v}_{1}, \ldots, \mathbf{v}_{k}\right\}$ then
+
+        $$
+        \langle X\rangle=\left\{\lambda_{1} \mathbf{v}_{1}+\lambda_{2} \mathbf{v}_{2}+\ldots+\lambda_{k} \mathbf{v}_{k} \mid \lambda_{1}, \ldots, \lambda_{k} \in F\right\}
+        $$
+
+        \item Row and column spaces of a matrix: Let $M$ be an $m \times n$ matrix. The row space of $M$ is the vector space of row vectors of length $n$ spanned by the rows of $M$. The column space of $M$ is the vector space of column vectors of length $m$ spanned by the columns of $M$. Two matrices of the same size have the same row [column] space if and only if they are row [column] equivalent, that is, can be obtained from one another by elementary row [column] operations. The nonzero rows of any row echelon form for $M$ span the row space of $M$ (and in fact form a basis, see later). An analogous statement hold for the column space.
+
+        \item Null space of a matrix: Let $M$ be an $m \times n$ matrix over a field $F$. The null space of $M$ may refer either to the vector space
+
+        $$
+        \{\text { column vectors } \mathbf{v} \text { of length } n \mid M \mathbf{v}=\mathbf{0}\}
+        $$
+
+        or the solution space of the associated homogeneous system of $m$ equations in $n$ variables:
+
+        $$
+        \left\{\mathbf{v} \in F^{n} \mid M \mathbf{v}^{\top}=\mathbf{0}\right\}
+        $$
+    \end{enumerate}
+
+\section{Week9}
+    \begin{enumerate}
+        \item Linear dependence and independence: Let $V$ be a vector space over a field $F$, and $\mathbf{v}_{1}, \ldots, \mathbf{v}_{k} \in$ $V$ for some $k \geq 1$. We call the vectors $\mathbf{v}_{1}, \ldots, \mathbf{v}_{k}$ and the set $X=\left\{\mathbf{v}_{1}, \ldots, \mathbf{v}_{k}\right\}$ linearly independent if, for all $\lambda_{1}, \ldots, \lambda_{k} \in F$,
+
+        $$
+        \lambda_{1} \mathbf{v}_{1}+\ldots+\lambda_{k} \mathbf{v}_{k}=\mathbf{0} \quad \text { implies } \quad \lambda_{1}=\ldots=\lambda_{k}=0
+        $$
+
+        equivalently, in the case $k>1$, \textbf{no vector} from $X$ can be expressed as a linear combination of other vectors from $X$. We say that they are linearly dependent otherwise, that is, if $X=\{\mathbf{0}\}$ or at least one vector from $X$ can be expressed as a linear combination of other vectors from $X$. In particular if $\mathbf{0} \in X$, then $X$ is linearly dependent. If $k=1$ then $X$ is linearly independent if and only if $\mathbf{v}_{1}$ is \textbf{nonzero}. If $k=2$ then $X$ is linearly independent if and only if neither of $\mathbf{v}_{1}$ nor $\mathbf{v}_{2}$ is a scalar multiple of the other. The emptyset $\emptyset$ is declared by definition to be \textbf{linearly independent}. If $Y$ is an infinite subset of $V$ then we say that $Y$ is linearly independent if every finite subset is linearly independent, and otherwise linearly dependent.
+
+        \item Basis and dimension of a vector space: A basis for a vector space $V$ is a \hl{linearly independent} subset $B$ that spans $V$. In particular, the empty set is a basis for the trivial vector space. If follows, when $B$ is nonempty, that every vector in $V$ can be expressed \hl{uniquely} (up to the order of the vectors) as a linear combination of elements of $B$. In applications, a basis $B$ is typically a nonempty finite ordered list of vectors (and order is important with respect to building matrices, see later). It is an important theorem that every vector space $V$ has a basis and every basis for $V$ has the \hl{same size} (even when the size is infinite). The size of any basis for $V$ is called the \hl{dimension} of the vector space and denoted by $\operatorname{dim}(V)$. It is another important theorem that every linearly independent subset can be extended to a basis, and every spanning set contains a basis. It follows that, if $V$ is known to be finite dimensional of dimension $n$, then any linearly independent set or any spanning set of size $n$ is automatically a basis for $V$.
+
+        \item Standard bases: Let $F$ be any field. If $n \geq 1$ then the standard basis for $F^{n}$ is
+
+        $$
+        B=\left\{\mathbf{e}_{1}, \ldots, \mathbf{e}_{n}\right\}
+        $$
+
+        where $\mathbf{e}_{i}=(0, \ldots, 0,1,0 \ldots, 0)$ with $i$ in the $i$ th place, for $i=1, \ldots, n$. In particular, $F^{n}$ has dimension $n$. The empty set $\emptyset$ is the basis for any trivial vector space (such as $F^{0}$ ), so the \hl{dimension of any trivial vector space is zero}. Let $\mathbb{P}_{n}$ denote the vector space of polynomials in $x$ over $F$ of degree at most $n$, where $n \geq 0$. Then the standard basis for $\mathbb{P}_{n}$ is
+
+        $$
+        B=\left\{1, x, \ldots, x^{n}\right\}
+        $$
+
+        In particular, $\mathbb{P}_{n}$ has dimension $n+1$.\\
+        
+        \item Coordinates of a vector with respect to a basis: Let $V$ be a vector space over a field $F$ of dimension $n$ and let $B=\left\{\mathbf{b}_{1}, \ldots, \mathbf{b}_{n}\right\}$ be an ordered basis for $V$. Let $\mathbf{v} \in V$. Then there are unique scalars $\lambda_{1}, \ldots, \lambda_{n} \in F$ such that
+
+        $$
+        \mathbf{v}=\lambda_{1} \mathbf{b}_{1}+\ldots+\lambda_{n} \mathbf{b}_{n}
+        $$
+
+        We define the coordinate vector (coordinates) of $\mathbf{v}$ with respect to $B$ to be the following column vector:
+
+        $$
+        [\mathbf{v}]_{B}=\left[\begin{array}{c}
+        \lambda_{1} \\
+        \vdots \\
+        \lambda_{n}
+        \end{array}\right]
+        $$
+
+        If $V=F^{n}$ and $B$ is the standard basis for $V$ then $[\mathbf{v}]_{B}=\mathbf{v}^{\top}$, for all $\mathbf{v} \in V$.
+
+        \item \hl{Vector spaces with the same dimension are isomorphic}: If $V$ is a vector space over a field $F$ having a basis $B$ with $n \geq 1$ elements, so has dimension $n$, then $V$ is isomorphic to $F^{n}$ under the mapping $\mathbf{v} \mapsto[\mathbf{v}]_{B}^{\top}$ (for $\mathbf{v} \in V$ ), where the row vector $[\mathbf{v}]_{B}^{\top}$ is, as usual, identified with the $n$-tuple in $F^{n}$. Obviously, all trivial vector spaces, that is, vector spaces of dimension zero, are isomorphic to $F^{0}$.
+
+        \item Isomorphic vector spaces have the same dimension: If $V$ and $W$ are isomorphic vector spaces over a field $F$ and $B$ is a basis for $V$, then it follows that the image of $B$ under the isomorphism is a basis for $W$, and so $V$ and $W$ have the same dimension.
+
+        \item \hl{Nonzero rows of a matrix in row echelon form are linearly independent}: The nonzero rows of a matrix $M$ (over a field $F$ ) in row echelon form are linearly independent and therefore form a basis for the row space of any matrix over $F$ that can be row reduced to yield the same nonzero rows as $M$.
+
+        \item Rank of a matrix: It is an important theorem that the row and column spaces of a matrix $M$ have the same dimension, called the rank of $M$, denoted by $\operatorname{rank}(M)$. The rank is the number of nonzero rows when $M$ or $M^{\top}$ is row reduced to row echelon form.
+
+        \item Nullity of a matrix: Let $M$ be an $m \times n$ matrix over a field $F$. Recall that the null space of $M$ may refer either to the vector space
+
+        $$
+        \{\text { column vectors } \mathbf{v} \text { of length } n \mid M \mathbf{v}=\mathbf{0}\}
+        $$
+
+        or the solution space of the associated homogeneous system of $m$ equations in $n$ variables:
+
+        $$
+        \left\{\mathbf{x} \in F^{n} \mid M \mathbf{x}^{\top}=\mathbf{0}\right\}
+        $$
+
+        The dimension of the null space is called the nullity of $M$, denoted by nullity $(M)$. The nullity of $M$ is the number of parameters that need to be introduced to yield the solution of the associated homogeneous system of equations.
+
+        \item Rank-Nullity Theorem for matrices: If $M$ is an $m \times n$ matrix then $\operatorname{rank}(M)+\operatorname{nullity}(M)=n$.
 
 
+        \item \textbf{Relationship between ....}
+            \begin{itemize}
+                \item $dim(Row(M)) = dim(Col(M)) = rank(M)$
+                \item $nollity(M) = dim(Nol(M)) = dim(M^{\perp})$
+                \item to compute nollity of $M$, we reduce $M$ to \textbf{RREF}, then count "free variables" = parameters in the solution set
+
+                \item let $M$ be a $n \times m$ matrix:\\
+                $rank(M) = dim(Row(M))$\\
+                = \#(nonezero rows in echelon form)\\
+                = m - \#(free variables) = $m - nollity(M)$
+            \end{itemize}
+    \end{enumerate}
 
 \end{document}

@@ -1,0 +1,293 @@
+
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{placeins}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\title{Assignment 1}
+\author{Anonymous}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Problem 1}
+\subsection*{a)}
+The number of iterations is 
+\begin{center}
+    $(n-1) + (n-2) + \dots + 1 + 0= \frac{n(n-1)}{2}$
+\end{center}
+which is bounded by $n^2$, For each iteration corresponding to 
+indices $i,j$, we only need to perform a single comparison operation, 
+so the time complexity per iteration is $O(1)$.
+Thus , the overall time complexity is $O(n^2)$.
+
+\subsection*{b)}
+Assume that \(n\) is even for the sake of simplicity. To lower bound he algorithm's running time, we focus on the comparisons conducted during the first half of the execution period. This segment of the execution, being a subset of the total, provides a foundational basis for establishing a minimum on the overall running time. The main insight is that, within each iteration under consideration, no fewer than \(\frac{n}{2}\) comparisons occur. This insight facilitates the formulation of a lower bound for the aggregate number of comparisons executed:
+\begin{center}
+    $\sum_{i=0}^{n-1} (n-i-1) \geq \sum_{i=0}^{\frac{n}{2} - 1} \frac{n}{2}
+    = \frac{n^2}{4} = \Omega{(n^2)}$
+\end{center}
+
+\newpage
+
+\section*{Problem 2}
+
+\subsection*{Sum()}
+
+When a new element get pushed or poped, the sum need to be updated.
+The \textbf{Sum} operation return the value of variable \textbf{sum},
+which takes O(1) time.\\
+We modified the push and pop operations. 
+Adding the new element to the sum takes O(1) time, so push still runs 
+in O(1) time. Similarly, subtracting the removed element from the 
+sum takes O(1) time, so pop still runs in O(1) time.
+
+
+\begin{algorithm*}
+    \begin{algorithmic}[1]
+    
+    \Function{NewPush}{e}
+        \State $sum \gets sum + e$
+        \State \Call{push}{e}
+    \EndFunction
+    
+    \end{algorithmic}
+\end{algorithm*}
+
+\begin{algorithm*}
+    \begin{algorithmic}[1]
+    
+    \Function{NewPop}{}
+        \State $e \gets \Call{pop}{}$
+        \State $sum \gets sum - e$
+    \EndFunction
+    
+    \end{algorithmic}
+\end{algorithm*}
+
+\begin{algorithm}
+    \begin{algorithmic}[1]
+    
+    \Function{Sum}{}
+        \State \Return{sum}
+    \EndFunction
+    
+    \end{algorithmic}
+\end{algorithm}
+
+\newpage
+\subsection*{Min()}
+To fulfill the equirement,I used a new stack(\textit{minStack}) to keep track 
+of the minimum value within the main stack (\textit{mainStack}).Here's an 
+explanation and analysis of each operation along with their time complexity:
+
+\begin{itemize}
+    \item \textit{NewPush}:\\
+    For each \textit{Newpush} operation, an element x is pushed onto the
+    \textit{mainStack}. Simultaneously, x is compared with the top 
+    element of \textit{minStack} (the current minimum value). If x is smaller or 
+    equal, or if \textit{minStack} is empty, x will be pushed onto \textit{minStack}. 
+    This ensures that the top of minStack always holds the minimum value 
+    of all elements in \textit{mainStack}.\\
+    Since the \textit{NewPush} operation itself and the conditional update 
+    of \textit{minStack} are constant time operations, the time complexity is $O(1)$.
+    
+    \item \textit{NewPop}:\\
+    When performing a pop operation, the top element is popped from 
+    \textit{mainStack}. Then, if this popped element is equal to the top element 
+    of minStack (the current minimum value), it is also popped from minStack. 
+    This maintains the correctness of \textit{mainStack} to reflect the new 
+    minimum value of mainStack after the pop operation.\\
+    As both popping the element and updating minStack are constant time operations,
+    the time complexity is $O(1)$.
+
+    \item \textit{Min}:\\
+    The top element of \textit{minStack} always represents the minimum value 
+    among all elements in \textit{mainStack}, returning the top element of 
+    \textit{minStack} retrieves the minimum value in O(1) time.
+\end{itemize}
+
+\begin{algorithm*}
+    \begin{algorithmic}[1]
+    \Function{NewPush}{$x$}
+        \State $mainStack.push(x)$
+        \If{$minStack.isEmpty()$ or $x \leq minStack.top()$}
+            \State $minStack.push(x)$
+        \EndIf
+    \EndFunction
+    \end{algorithmic}
+\end{algorithm*}
+    
+\begin{algorithm*}
+    \begin{algorithmic}[1]
+    \Function{NewPop}{void}
+        \If{not $mainStack.isEmpty()$}
+            \State $x \gets mainStack.pop()$
+            \If{$x = minStack.top()$}
+                \State $minStack.pop()$
+            \EndIf
+            \State \Return $x$
+        \Else
+            \State \Return Error \Comment{Stack is empty}
+        \EndIf
+    \EndFunction
+    \end{algorithmic}
+\end{algorithm*}
+
+\begin{algorithm*}
+    \begin{algorithmic}[1]
+    \Function{Min}{void}
+        \If{not $minStack.isEmpty()$}
+            \State \Return $minStack.top()$
+        \Else
+            \State \Return Error \Comment{Stack is empty}
+        \EndIf
+    \EndFunction
+    \end{algorithmic}
+\end{algorithm*}
+
+\newpage
+
+\subsection*{PopSmaller}   
+
+\begin{algorithm}
+    \caption{PopSmaller(e) Function}
+    \begin{algorithmic}[1]
+    \Function{PopSmaller}{$e$}
+        \While{! isEmpty(stack) \textbf{and} peek(stack) $\leq e$}
+            \State pop(stack)
+        \EndWhile
+        \State push(stack, $e$)
+    \EndFunction
+    \end{algorithmic}
+\end{algorithm}
+
+Assume a sequence of $n$ operations consists of combination of 
+\texttt{push}, \texttt{pop}, and $\texttt{PopSmaller}(e)$ operations. 
+For every element, the maximum number of times it can be involved 
+in a pop operation (whether it's a regular pop or part of 
+$\texttt{PopSmaller}(e)$) is once, because once it's popped, it's 
+not pushed back unless explicitly done by another operation. 
+Therefore, each element is pushed once and popped at most once, 
+leading to a total cost of $2n$ for $n$ elements 
+(considering the worst-case scenario where all elements are 
+eventually popped). Thus, the total work done for $n$ operations 
+is $O(n)$, and the average work done per operation, or the 
+amortized cost, is $O(n) / n = O(1)$.
+
+
+Following the definition of amortized time complexity, where a 
+sequence of $n$ operations has $O(f(n))$ amortized time if the total 
+work is $O(nf(n))$, we have shown that for a sequence of $n$ operations 
+involving $\texttt{PopSmaller}(e)$, the total work is $O(n)$, making 
+the amortized time complexity $O(1)$ per operation. This satisfies 
+the condition without increasing the complexity of other stack 
+operations.
+
+To elucidate further , 
+assuming that when an element is pushed onto the stack, 
+we charge 3 dollars, with 1 dollar allocated for the actual 
+time consumption of the \textit{push} operation and the 
+remaining 2 dollars reserved for potential future operations 
+within \textit{PopSmaller}, such as comparisons and pops($O(1)$).
+
+In this approach, each \textit{push} operation incurs
+an amortized cost of 3 dollars, with one unit covering the actual 
+\textit{push} operation and the other two saved for potential 
+future comparisons and pops within \textit{PopSmaller}. 
+Conversely, the pop and comparison actions within \textit{PopSmaller}
+do not incur additional cost, as they are covered by the extra dollars
+from preceding push operations.
+In conclusion, as each push operation incurs an amortized cost of 
+3 dollars while pop and comparison operations entail no additional cost, 
+it can be concluded that PopSmaller is effectively amortized $O(1)$.
+
+\newpage
+
+\section*{Problem 3}
+
+\subsection*{a)}
+\begin{algorithm}
+    \begin{algorithmic}[1]
+    \Function{A}{$B, m$}
+        \State $n \gets sizeof(B)$
+        \State $j \gets n - 1$
+        \State $i \gets 0$
+        \State $counts \gets 0$
+        \While{$i < j$}
+            \If{$B[i] + B[j] \geq m$}
+                \State $counts \gets counts + (j - i)$
+                \State $j \gets j - 1$
+            \Else
+                \State $i \gets i + 1$
+            \EndIf
+        \EndWhile
+        \State \Return $counts$
+    \EndFunction
+    \end{algorithmic}
+\end{algorithm}
+
+
+
+\subsection*{b)}
+\textbf{Theorem}: For B, m given above,the algorithm $A$ should correctly
+calculate the number of index pairs $i, j$ such that $B[i] + B[j] \geq m$
+for all $i < j$.\\\\
+\textbf{Base Case}: \\
+$n = 2$,B has only 2 element $B[0], B[1]$. The algorithm A compares $B[0]
++ B[1]$ with m. If $B[0] + B[1] \geq m$, $A$ sets $counts$ to 1 which is 
+correct. Else, there is no valid index pair.\\\\
+\textbf{Inductive Step}:\\
+Assume that for any array $B$ of length $k$ algorithm $A$ works correctly.
+We need to prove that for an array $B$ of length $k+1$, the algorithm $A$
+can also correctly calculate the number of satisfying index pairs.\\
+\textit{Proof}:
+
+The algorithm $A$ starts checking from $i = 0$ and $j = k$.
+\begin{itemize}
+    \item If $B[0] + B[k] \geq m$ , given the sorted property,  all elements 
+    between $B[0]$ and $B[k]$ also sum up to be greater than or equal to m. $k-i$ correctly counts the number of pairs
+    with $B[k]$.Then, algorithm decrease $j$ by 1(which is $k-1$ now).
+    Based on the assumption, the algorithm has already calculated all 
+    valid index pairs within the indexes from $0$ to $k-1$.Thus, algorithm finds all 
+    valid index pairs for an array $B$ of length $k+1$.
+
+    \item If $B[0] + B[k] < m$, the algorithm increments \(i\) 
+    by 1 in a loop until \(B[i] + B[k] \geq m\) is satisfied. 
+    At this point, \(k-i\) is added to the counts, or the loop continues 
+    until \(i = j\) (indicating there are no valid index pairs). In both 
+    cases, we have found all valid pairs involving $B[k]$. Based 
+    on the assumption, we have found all valid pair involving B[k-1].
+    Thus the algorithm finds all valid index pairs for an 
+    array $B$ of length $k+1$.
+    
+
+    \end{itemize}
+\textbf{Conclusion}\\\\
+Therefore, by induction, we conclude that for any sorted array $B$ of 
+length $n$ and any positive integer m, the algorithm $A(B, m)$ correctly 
+calculates the number of index pairs $(i, j)$ such that $B[i] + B[j] 
+\geq m$.
+
+\subsection*{c)}
+
+\textit{Line 2-5, 7,11,14} all consist of assignments, simple comparisons, 
+simple math operations and the return statements return booleans, all 
+of which takes O(1) time.Each iteration of the while loop on 
+\textit{line 6-13} perform O(1) time operations.And either i is incremented 
+by 1(\textit{line 11}),or j is decremented by 1(\textit{line 9}),Hence, 
+each iteration decreases the distance between i and j by 1.Given that 
+the initial distance between i and j is $n - 1$ (where n is the length 
+of the array B), the loop can run at most $n - 1$ times.Thus,the loop takes 
+at most $O(1) \cdot O(n)$ or $O(n)$ time.. Since we saw that the operations 
+outside the loop all take constant time, the loop dominates the running 
+time, which comes down to $O(n)$ time in total, as required.
+\end{document}

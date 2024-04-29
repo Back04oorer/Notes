@@ -11,6 +11,6 @@
   "dailyRecordAPI": "",
   "dailyRecordToken": "",
   "useDailyRecord": false,
-  "usePeriodicNotes": true,
+  "usePeriodicNotes": false,
   "usePARANotes": false
 }

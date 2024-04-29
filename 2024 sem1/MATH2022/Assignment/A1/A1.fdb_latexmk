@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1712537506.47058 "A1.tex" "A1.pdf" "A1" 1712537506.95034 0
+["pdflatex"] 1713088513.16049 "A1.tex" "A1.pdf" "A1" 1713088513.59789 0
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1710564012.09889 82684 3a87f55ef758bc5fe6abfed9a40cca26 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1710507425.07267 24243819 9873b88c324e7d4c2fb47d8dfa8007a8 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1678856791.72908 1004 54797486969f23fa377b128694d548df ""
@@ -29,10 +29,13 @@
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1678856791.77715 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1678856791.78314 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1678856791.78456 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1678856791.78776 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1678856791.79039 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1678856791.81585 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1678856791.82181 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1678856791.83095 36118 fad905eba93cff5bce1e185fe980a177 ""
+  "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1678856791.89802 31764 459c573c03a4949a528c2cc7f557e217 ""
+  "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1678856791.90647 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/mkii/supp-pdf.mkii" 1678856797.88552 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generic/iftex/iftex.sty" 1678856793.66827 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generic/iftex/ifvtex.sty" 1678856793.66839 1057 525c2192b5febbd8c1f662c9468335bb ""
@@ -59,8 +62,8 @@
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/keyval.sty" 1678856793.20508 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/trig.sty" 1678856793.20606 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def" 1710507268.82647 30006 3d512c0edd558928ddea1690180ef77e ""
-  "A1.aux" 1712537506.84188 392 e6614be00b6d690f032c976864b93c39 "pdflatex"
-  "A1.tex" 1712537504.77879 3040 e6ea2d811766e3ce6f23019ae86cf2a7 ""
+  "A1.aux" 1713088513.49223 392 e6614be00b6d690f032c976864b93c39 "pdflatex"
+  "A1.tex" 1713088512.3023 4003 06ec4b7bc560a80ef44289ba4f1711e7 ""
   (generated)
   "A1.aux"
   "A1.log"
