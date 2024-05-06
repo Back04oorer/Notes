@@ -36,18 +36,8 @@
               "type": "markdown",
               "state": {
                 "file": "2024 sem1/COMP2017/A3/玛利亚之墙夺还战.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "94a129144eba6ba1",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "2024 sem1/COMP2017/A3/COMP2017 S1 A3 (1).pdf"
               }
             }
           },
@@ -55,11 +45,19 @@
             "id": "46bcbb6898523c7d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "2024 sem1/COMP2017/A3/立体机动装置.md",
-                "mode": "source",
-                "source": false
+                "file": "2024 sem1/MATH2022/Notes/Notes.pdf"
+              }
+            }
+          },
+          {
+            "id": "2c23852131a3f16b",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "2024 sem1/MATH2022/Assignment/A2/A2.pdf"
               }
             }
           }
@@ -138,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024 sem1/COMP2017/A3/立体机动装置.md",
+                "file": "2024 sem1/MATH2022/Assignment/A2/A2.pdf",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -155,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024 sem1/COMP2017/A3/立体机动装置.md",
+                "file": "2024 sem1/MATH2022/Assignment/A2/A2.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024 sem1/COMP2017/A3/立体机动装置.md"
+                "file": "2024 sem1/MATH2022/Assignment/A2/A2.pdf"
               }
             }
           }
@@ -200,27 +198,29 @@
       "periodic-para:LifeOS": false
     }
   },
-  "active": "46bcbb6898523c7d",
+  "active": "2c23852131a3f16b",
   "lastOpenFiles": [
+    "2024 sem1/MATH2022/Assignment/A2/A2.synctex(busy)",
+    "2024 sem1/MATH2022/Notes/Notes.pdf",
+    "2024 sem1/MATH2022/Assignment/A2/A2.synctex.gz",
+    "2024 sem1/MATH2022/Assignment/A2/A2.pdf",
+    "2024 sem1/MATH2022/Assignment/A2/A2.fls",
+    "2024 sem1/MATH2022/Assignment/A2/A2.out",
+    "2024 sem1/MATH2022/Assignment/A2/A2.log",
+    "2024 sem1/MATH2022/Assignment/A2/A2.fdb_latexmk",
+    "2024 sem1/MATH2022/Assignment/A2/A2.aux",
+    "2024 sem1/MATH2022/Assignment/A2/A2.tex",
+    "2024 sem1/MATH2022/Assignment/A2",
     "2024 sem1/COMP2017/A3/玛利亚之墙夺还战.md",
-    "2024 sem1/COMP2017/A3/COMP2017 S1 A3 (1).pdf",
-    "2024 sem1/COMP2017/A3/立体机动装置.md",
-    "2024 sem1/INFO2222/Assignment3/Project Usability 2024.pdf",
+    "2024 sem1/COMP2017/A3/立体机动装置(一些有用的命令).md",
+    "2024 sem1/COMP2017/A3/Copy.md",
     "2024 sem1/COMP2017/A3/Battle for the Recapture of Maria Wall(玛利亚之墙夺还战).md",
-    "info2222/Report/main.pdf",
     "info2222/Report/models_friendship.png",
-    "2024 sem1/COMP2017/A3/COMP2017 S1 A3.pdf",
-    "2024 sem1/COMP2017/A3/COMP2017_2024_S1_A3.pdf",
     "2024 sem1/COMP2823/my_Tut/Week 8 Shortest Path 👶 -> 💀.md",
-    "2024 sem1/COMP2017/Tut sheets/Week 10 Parallelism POSIX.pdf",
-    "2023 sem1/MATH1021/Notes/Notes.pdf",
     "[.md",
     "Tasks.md",
     "2024 sem1/INFO2222/Assignment3/Survey.md",
-    "2024 sem1/COMP2017/Tut sheets/Week 9 - More processes, Shared Memory and IPC Communication.pdf",
-    "2024 sem1/COMP2017/Tut sheets/Week 8 Introduction processes.pdf",
     "Untitled.md",
-    "2024 sem1/COMP2017/Notes/Wk9 lec.pdf",
     "2024 sem1/COMP2017/Notes/Preprocesser.md",
     "2024 sem1/COMP2017/Notes/Process.md",
     "2024 sem1/COMP2017/Notes/File IO, Function Pointers and Signals.md",
@@ -242,7 +242,6 @@
     "info2222/INFO2222-Scaffold-main/node_modules/bn.js/README.md",
     "2024 sem1/COMP2823/Graphs/Pasted image 20240421174705.png",
     "2024 sem1/COMP2823/Graphs/Pasted image 20240421172335.png",
-    "2024 sem1/MATH2022/Mistakes/Week 8.md",
     "info2222/Report/graphs/login_successful.png",
     "info2222/Report/graphs/passwd_does_not_match.png",
     "info2222/Report/graphs/processData.jpg",
