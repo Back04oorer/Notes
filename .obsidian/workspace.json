@@ -4,65 +4,97 @@
     "type": "split",
     "children": [
       {
-        "id": "fb2edb4c8b0275c2",
+        "id": "99464e5380ca6a35",
         "type": "tabs",
         "children": [
           {
-            "id": "3689707b1fde8bb1",
+            "id": "67d4e25777088d39",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "2024 sem1/COMP2017/A3/COMP2017 S1 A3.pdf"
+              }
+            }
+          },
+          {
+            "id": "ade472a1bd38a232",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024 sem1/COMP2017/A3/Battle for the Recapture of Maria Wall(玛利亚之墙夺还战).md",
+                "file": "2024 sem1/COMP2823/my_Tut/Week 8 Shortest Path 👶 -> 💀.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "bd05722b56b948bc",
+            "id": "b7c6f0c77347c0a8",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "2024 sem1/INFO2222/Assignment3/Project Usability 2024.pdf"
+                "file": "2024 sem1/COMP2823/Assignment/Assignment5/Due May 24.pdf"
               }
             }
           },
           {
-            "id": "d660d4cc9a50cc5f",
+            "id": "06cc685ef3e1a2c3",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "2024 sem1/COMP2823/Assignment/Assignment5/main.pdf"
+              }
+            }
+          },
+          {
+            "id": "e196af735dd23cd4",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "2024 sem1/MATH2022/Lecture_notes/9-2b.pdf"
+              }
+            }
+          },
+          {
+            "id": "a43025ffff2d7297",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024 sem1/COMP2017/A3/玛利亚之墙夺还战.md",
-                "mode": "preview",
+                "file": "2024 sem1/COMP2823/my_Tut/Week 5 Priority Queue 🍡.md",
+                "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "46bcbb6898523c7d",
+            "id": "de8e7127d26f8f3f",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "2024 sem1/MATH2022/Notes/Notes.pdf"
+                "file": "2024 sem1/MATH2022/Quizes/sample_quiz_3.pdf"
               }
             }
           },
           {
-            "id": "2c23852131a3f16b",
+            "id": "b75889826140e05c",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "2024 sem1/MATH2022/Assignment/A2/A2.pdf"
+                "file": "2024 sem1/COMP2017/A3/立体机动装置(一些有用的命令).md",
+                "mode": "source",
+                "source": false
               }
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -107,20 +139,12 @@
               "type": "bookmarks",
               "state": {}
             }
-          },
-          {
-            "id": "87195bbe9a3f3de7",
-            "type": "leaf",
-            "state": {
-              "type": "periodic-para",
-              "state": {}
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 281.5
   },
   "right": {
     "id": "d78c8d55117ae1ea",
@@ -136,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024 sem1/MATH2022/Assignment/A2/A2.pdf",
+                "file": "2024 sem1/COMP2823/Assignment/Assignment5/main.pdf",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -153,7 +177,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024 sem1/MATH2022/Assignment/A2/A2.pdf",
+                "file": "2024 sem1/COMP2823/Assignment/Assignment5/main.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,7 +200,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024 sem1/MATH2022/Assignment/A2/A2.pdf"
+                "file": "2024 sem1/COMP2823/Assignment/Assignment5/main.pdf"
               }
             }
           }
@@ -185,7 +209,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -198,28 +223,35 @@
       "periodic-para:LifeOS": false
     }
   },
-  "active": "2c23852131a3f16b",
+  "active": "06cc685ef3e1a2c3",
   "lastOpenFiles": [
-    "2024 sem1/MATH2022/Assignment/A2/A2.synctex(busy)",
-    "2024 sem1/MATH2022/Notes/Notes.pdf",
-    "2024 sem1/MATH2022/Assignment/A2/A2.synctex.gz",
-    "2024 sem1/MATH2022/Assignment/A2/A2.pdf",
-    "2024 sem1/MATH2022/Assignment/A2/A2.fls",
-    "2024 sem1/MATH2022/Assignment/A2/A2.out",
-    "2024 sem1/MATH2022/Assignment/A2/A2.log",
-    "2024 sem1/MATH2022/Assignment/A2/A2.fdb_latexmk",
-    "2024 sem1/MATH2022/Assignment/A2/A2.aux",
-    "2024 sem1/MATH2022/Assignment/A2/A2.tex",
-    "2024 sem1/MATH2022/Assignment/A2",
-    "2024 sem1/COMP2017/A3/玛利亚之墙夺还战.md",
+    "2024 sem1/COMP2823/Assignment/Assignment5/main.synctex(busy)",
+    "2024 sem1/COMP2823/Assignment/Assignment5/Due May 24.pdf",
+    "2024 sem1/COMP2823/Assignment/Assignment5/main.pdf",
     "2024 sem1/COMP2017/A3/立体机动装置(一些有用的命令).md",
-    "2024 sem1/COMP2017/A3/Copy.md",
-    "2024 sem1/COMP2017/A3/Battle for the Recapture of Maria Wall(玛利亚之墙夺还战).md",
-    "info2222/Report/models_friendship.png",
+    "2024 sem1/MATH2022/Quizes/sample_quiz_3.pdf",
+    "2024 sem1/COMP2017/A3/COMP2017 S1 A3.pdf",
     "2024 sem1/COMP2823/my_Tut/Week 8 Shortest Path 👶 -> 💀.md",
+    "2024 sem1/COMP2823/my_Tut/Week 5 Priority Queue 🍡.md",
+    "2024 sem1/MATH2022/Lecture_notes/9-2b.pdf",
+    "2024 sem1/COMP2823/Assignment/Assignment5/main 2.synctex(busy)",
+    "2024 sem1/COMP2823/Assignment/Assignment5/main.synctex.gz",
+    "2024 sem1/COMP2823/Assignment/Assignment5/Last 2 fight.md",
+    "2024 sem1/MATH2022/Notes/Notes.pdf",
+    "2024 sem1/COMP2017/A2/Assignment 2.md",
+    "2024 sem1/COMP2823/Assignment/Assignment5/main.fls",
+    "2024 sem1/COMP2017/A3/aa.md",
+    "2024 sem1/INFO2222/Assignment3/PACT.md",
+    "2024 sem1/COMP2017/A3/A3Tests.md",
+    "2024 sem1/INFO2222/Assignment3/Process.md",
+    "2024 sem1/COMP2017/A3/玛利亚之墙夺还战.md",
+    "2024 sem1/COMP2017/A3/Battle for the Recapture of Maria Wall(玛利亚之墙夺还战).md",
+    "2024 sem1/COMP2017/A3/Copy.md",
+    "2024 sem1/INFO2222/Assignment3/Survey.md",
+    "2024 sem1/INFO2222/Assignment3/Card Sorting.md",
+    "info2222/Report/models_friendship.png",
     "[.md",
     "Tasks.md",
-    "2024 sem1/INFO2222/Assignment3/Survey.md",
     "Untitled.md",
     "2024 sem1/COMP2017/Notes/Preprocesser.md",
     "2024 sem1/COMP2017/Notes/Process.md",
@@ -232,14 +264,6 @@
     "info2222/Report/graphs/sign_up_xss.jpg",
     "2024 sem1/COMP2823/my_Tut/week 3 Trees🌲.md",
     "2024 sem1/COMP2823/my_Tut/Week 7 Graph ™️.md",
-    "2024 sem1/COMP2823/my_Tut/Week 5 Priority Queue 🍡.md",
-    "2024 sem1/COMP2823/my_Tut/Week 4 BST 👈🫵👉.md",
-    "2024 sem1/COMP2823/my_Tut/Week 2 List 📋.md",
-    "2024 sem1/COMP2823/Tut/Week 8 Shortest Path 👶 -> 💀.md",
-    "PeriodicNotes/2024/Daily/04/2024-04-22.md",
-    "PeriodicNotes/2024/Daily/04/2024-04-21.md",
-    "2024 sem1/COMP2823/Tut/Week 7 Graph ™️.md",
-    "info2222/INFO2222-Scaffold-main/node_modules/bn.js/README.md",
     "2024 sem1/COMP2823/Graphs/Pasted image 20240421174705.png",
     "2024 sem1/COMP2823/Graphs/Pasted image 20240421172335.png",
     "info2222/Report/graphs/login_successful.png",

@@ -100,4 +100,12 @@ valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./mtll < te
 # MY
 ```
 git log --pretty=format:"%H" | while read commit_hash; do if git show $commit_hash | grep --color -P "[\x{4e00}-\x{9fa5}]"; then echo "Found in commit: $commit_hash"; fi; done
+
+
+git filter-branch --tree-filter 'rm -f ./tests/bin/btide' HEAD
+git filter-branch --tree-filter 'rm -f ./tests/part2/btide' HEAD
+
+git filter-branch -f --tree-filter 'rm -f ./tests/part2/bin/btide' HEAD
+
+git log --all --full-history --name-status | grep btide
 ```

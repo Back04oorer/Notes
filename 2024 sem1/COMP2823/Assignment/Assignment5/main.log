@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.15)  8 MAY 2024 18:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.15)  24 MAY 2024 08:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./A2.tex
-(A2.tex
+**./main.tex
+(main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 
@@ -998,27 +998,27 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip153
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (A2.aux)
-\openout1 = `A2.aux'.
+) (main.aux)
+\openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
 
 (/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/contex
 t/base/mkii/supp-pdf.mkii
@@ -1054,10 +1054,10 @@ G,.JBIG2,.JB2,.eps]
 00miktex/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 67.
- (A2.out) (A2.out)
+Package hyperref Info: Link coloring OFF on input line 66.
+ (main.out) (main.out)
 \@outlinefile=\write4
-\openout4 = `A2.out'.
+\openout4 = `main.out'.
 
 
 *geometry* driver: auto-detecting
@@ -1095,139 +1095,136 @@ Package hyperref Info: Link coloring OFF on input line 67.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 7
-3.
+1.
 
 (/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
 psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-73.
+71.
 
 (/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
 psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-73.
+71.
 
 (/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
 psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-73.
+71.
 
 (/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
 psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-73.
+71.
 
 (/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
 psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 73.
+(Font)              scaled to size 12.50409pt on input line 71.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 73.
+(Font)              scaled to size 9.37807pt on input line 71.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 73.
+(Font)              scaled to size 7.29405pt on input line 71.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 73.
+(Font)              scaled to size 12.50409pt on input line 71.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 73.
+(Font)              scaled to size 9.37807pt on input line 71.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 73.
+(Font)              scaled to size 7.29405pt on input line 71.
+LaTeX Font Info:    Trying to load font information for TS1+pplj on input line 
+80.
 
-Overfull \hbox (25.50095pt too wide) detected at line 171
-[]
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+psnfss/ts1pplj.fd
+File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
+)
+Overfull \hbox (21.56337pt too wide) in paragraph at lines 88--90
+\OML/zplm/m/it/12 a \OT1/zplm/m/n/12 = \OT1/ppl/m/n/12 2$ \T1/pplj/m/n/12 , $\O
+ML/zplm/m/it/12 b \OT1/zplm/m/n/12 = \OT1/ppl/m/n/12 2$ \T1/pplj/m/n/12 , $\OML
+/zplm/m/it/12 f\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 n\OT1/zplm/m/n/12 ) = \OML/z
+plm/m/it/12 nlog\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 n\OT1/zplm/m/n/12 )$ \T1/pp
+lj/m/n/12 , $\OML/zplm/m/it/12 log[]a \OMS/zplm/m/n/12 ! \OML/zplm/m/it/12 log[
+]\OT1/ppl/m/n/12 2 \OT1/zplm/m/n/12 = \OT1/ppl/m/n/12 1$\T1/pplj/m/n/12 ; so $\
+OML/zplm/m/it/12 f\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 n\OT1/zplm/m/n/12 ) = ^^B
+ []$\T1/pplj/m/n/12 (case
  []
 
 
-Overfull \hbox (68.07407pt too wide) detected at line 251
-[]
+Overfull \hbox (9.78343pt too wide) in paragraph at lines 91--93
+\OML/zplm/m/it/12 a \OT1/zplm/m/n/12 = []$ \T1/pplj/m/n/12 , $\OML/zplm/m/it/12
+ b \OT1/zplm/m/n/12 = \OT1/ppl/m/n/12 2$ \T1/pplj/m/n/12 , $\OML/zplm/m/it/12 f
+\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 n\OT1/zplm/m/n/12 ) = [](\OML/zplm/m/it/12 
+n\OT1/zplm/m/n/12 )$ \T1/pplj/m/n/12 , $\OML/zplm/m/it/12 log[]a \OMS/zplm/m/n/
+12 ! \OML/zplm/m/it/12 log[][] \OT1/zplm/m/n/12 = []$\T1/pplj/m/n/12 ; so $\OML
+/zplm/m/it/12 f\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 n\OT1/zplm/m/n/12 ) = \OML/z
+plm/m/it/12 O\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 n[]\OT1/zplm/m/n/12 )$\T1/pplj
+/m/n/12 (case
  []
 
 [1{/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/map/p
 dftex/pdftex.map}
 
-]
-LaTeX Font Info:    Trying to load font information for TS1+pplj on input line 
-281.
+] [2] [3]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
+04.
 
 (/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
-psnfss/ts1pplj.fd
-File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
-) [2] [3]
-Overfull \hbox (7.59285pt too wide) in paragraph at lines 392--394
-\T1/pplj/m/n/12 Since $\OML/zplm/m/it/12 S\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 p
-\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 x\OT1/ppl/m/n/12 , \OML/zplm/m/it/12 y\OT1/
-zplm/m/n/12 ) + \OML/zplm/m/it/12 q\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 x\OT1/pp
-l/m/n/12 , \OML/zplm/m/it/12 y\OT1/zplm/m/n/12 )) = \OML/zplm/m/it/12 p\OT1/zpl
-m/m/n/12 (\OML/zplm/m/it/12 x\OT1/ppl/m/n/12 , \OML/zplm/m/it/12 y\OT1/zplm/m/n
-/12 ) + \OML/zplm/m/it/12 q\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 x\OT1/ppl/m/n/12
- , \OML/zplm/m/it/12 y\OT1/zplm/m/n/12 )$\T1/pplj/m/n/12 , we con-clude that $\
-OML/zplm/m/it/12 p\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 x\OT1/ppl/m/n/12 , \OML/z
-plm/m/it/12 y\OT1/zplm/m/n/12 ) + \OML/zplm/m/it/12 q\OT1/zplm/m/n/12 (\OML/zpl
-m/m/it/12 x\OT1/ppl/m/n/12 , \OML/zplm/m/it/12 y\OT1/zplm/m/n/12 ) \OMS/zplm/m/
-n/12 2
- []
-
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
-426.
-
-(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
-psnfss/ufplmbb.fd
-File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+base/t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-Overfull \hbox (38.49353pt too wide) in paragraph at lines 426--427
-[]\T1/pplj/m/n/12 Considering the equa-tion $\OML/zplm/m/it/12 ^^U[] \OT1/zplm/
-m/n/12 + \OML/zplm/m/it/12 ^^U[]\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 x \OT1/zplm
-/m/n/12 + \OML/zplm/m/it/12 y\OT1/zplm/m/n/12 ) + \OML/zplm/m/it/12 ^^U[]\OT1/z
-plm/m/n/12 (\OML/zplm/m/it/12 x[] \OT1/zplm/m/n/12 + \OML/zplm/m/it/12 y[]\OT1/
-zplm/m/n/12 ) + \OML/zplm/m/it/12 ^^U[]xy \OT1/zplm/m/n/12 = \OT1/ppl/m/n/12 0$
-\T1/pplj/m/n/12 , where $\OML/zplm/m/it/12 ^^U[]\OT1/ppl/m/n/12 , \OML/zplm/m/i
-t/12 ^^U[]\OT1/ppl/m/n/12 , \OML/zplm/m/it/12 ^^U[]\OT1/ppl/m/n/12 , \OML/zplm/
-m/it/12 ^^U[] \OMS/zplm/m/n/12 2
+Overfull \hbox (7.36658pt too wide) in paragraph at lines 234--235
+[]\T1/pplj/m/n/12 Using the Mas-ter The-o-rem for divide-and-conquer re-cur-ren
+ces of the form $\OML/zplm/m/it/12 T\OT1/zplm/m/n/12 (\OML/zplm/m/it/12 n\OT1/z
+plm/m/n/12 ) =
  []
 
-[4] (A2.aux)
+[4] [5] [6] [7] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `A2.out' has not changed.
+Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24653 strings out of 474436
- 469189 string characters out of 5731134
- 1981187 words of memory out of 5000000
+ 24681 strings out of 474436
+ 469696 string characters out of 5731134
+ 1950187 words of memory out of 5000000
  46491 multiletter control sequences out of 15000+600000
- 591059 words of font info for 99 fonts, out of 8000000 for 9000
+ 587938 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 126i,13n,135p,541b,521s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/en
-c/dvips/base/8r.enc}</Users/bamingyuan/Library/Application Support/MiKTeX/texmf
-s/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/bamingyuan/Library/
-Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.
-pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></Users/bamingyuan/Library/Application Supp
-ort/MiKTeX/texmfs/install/fonts/type1/public/fpl/fplbj8a.pfb></Users/bamingyuan
-/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/mathpazo/
-fplmbb.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install
-/fonts/type1/public/mathpazo/fplmri.pfb></Users/bamingyuan/Library/Application 
-Support/MiKTeX/texmfs/install/fonts/type1/public/fpl/fplrc8a.pfb></Users/baming
-yuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/palatino
-/uplb8a.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/instal
-l/fonts/type1/urw/palatino/uplr8a.pfb></Users/bamingyuan/Library/Application Su
-pport/MiKTeX/texmfs/install/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on A2.pdf (4 pages, 126664 bytes).
+ 126i,12n,135p,915b,541s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/l
+jfour/jknappen/ec/dpi600/ectt1200.pk>{/Users/bamingyuan/Library/Application Sup
+port/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Users/bamingyuan/Libra
+ry/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cme
+x10.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb></Users/bamingyuan/Library/Application 
+Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/
+bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/t
+exmfs/install/fonts/type1/public/fpl/fplbj8a.pfb></Users/bamingyuan/Library/App
+lication Support/MiKTeX/texmfs/install/fonts/type1/public/mathpazo/fplmr.pfb></
+Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/
+public/mathpazo/fplmri.pfb></Users/bamingyuan/Library/Application Support/MiKTe
+X/texmfs/install/fonts/type1/public/fpl/fplrc8a.pfb></Users/bamingyuan/Library/
+Application Support/MiKTeX/texmfs/install/fonts/type1/urw/palatino/uplb8a.pfb><
+/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1
+/urw/palatino/uplr8a.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/
+texmfs/install/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (7 pages, 163416 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 12 named destinations out of 1000 (max. 500000)
+ 155 PDF objects out of 1000 (max. 8388607)
+ 40 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -11,8 +11,7 @@ Given an edge weighted graph and two vertices u and v, we want to find a path of
 ## Dijkstra‘ algorithm
 ```PYTHON
 def Dijkstra(Graph, source):
-    # Graph包含节点和边；source是起点
-    # 初始化距离和前驱节点
+
     D = {v: ∞ for v in Graph}  # 所有节点的距离估计初始化为无穷大
     parent = {v: None for v in Graph}  # 前驱节点
     D[source] = 0  # 起点的距离为0
