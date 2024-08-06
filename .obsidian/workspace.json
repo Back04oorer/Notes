@@ -4,97 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "99464e5380ca6a35",
+        "id": "806e93ddfa2c3b89",
         "type": "tabs",
         "children": [
           {
-            "id": "67d4e25777088d39",
+            "id": "8997f05c6f506582",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "2024 sem1/COMP2017/A3/COMP2017 S1 A3.pdf"
-              }
-            }
-          },
-          {
-            "id": "ade472a1bd38a232",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2024 sem1/COMP2823/my_Tut/Week 8 Shortest Path 👶 -> 💀.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b7c6f0c77347c0a8",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "2024 sem1/COMP2823/Assignment/Assignment5/Due May 24.pdf"
-              }
-            }
-          },
-          {
-            "id": "06cc685ef3e1a2c3",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "2024 sem1/COMP2823/Assignment/Assignment5/main.pdf"
-              }
-            }
-          },
-          {
-            "id": "e196af735dd23cd4",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "2024 sem1/MATH2022/Lecture_notes/9-2b.pdf"
-              }
-            }
-          },
-          {
-            "id": "a43025ffff2d7297",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2024 sem1/COMP2823/my_Tut/Week 5 Priority Queue 🍡.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "de8e7127d26f8f3f",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "2024 sem1/MATH2022/Quizes/sample_quiz_3.pdf"
-              }
-            }
-          },
-          {
-            "id": "b75889826140e05c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2024 sem1/COMP2017/A3/立体机动装置(一些有用的命令).md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -139,12 +60,20 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "97d4fd8157e03687",
+            "type": "leaf",
+            "state": {
+              "type": "periodic-para",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 281.5
+    "width": 258.50390243530273
   },
   "right": {
     "id": "d78c8d55117ae1ea",
@@ -160,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024 sem1/COMP2823/Assignment/Assignment5/main.pdf",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -177,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024 sem1/COMP2823/Assignment/Assignment5/main.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -199,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "2024 sem1/COMP2823/Assignment/Assignment5/main.pdf"
-              }
+              "state": {}
             }
           }
         ],
@@ -223,53 +148,53 @@
       "periodic-para:LifeOS": false
     }
   },
-  "active": "06cc685ef3e1a2c3",
+  "active": "773fbf53c2a163b1",
   "lastOpenFiles": [
-    "2024 sem1/COMP2823/Assignment/Assignment5/main.synctex(busy)",
-    "2024 sem1/COMP2823/Assignment/Assignment5/Due May 24.pdf",
-    "2024 sem1/COMP2823/Assignment/Assignment5/main.pdf",
-    "2024 sem1/COMP2017/A3/立体机动装置(一些有用的命令).md",
-    "2024 sem1/MATH2022/Quizes/sample_quiz_3.pdf",
-    "2024 sem1/COMP2017/A3/COMP2017 S1 A3.pdf",
-    "2024 sem1/COMP2823/my_Tut/Week 8 Shortest Path 👶 -> 💀.md",
-    "2024 sem1/COMP2823/my_Tut/Week 5 Priority Queue 🍡.md",
-    "2024 sem1/MATH2022/Lecture_notes/9-2b.pdf",
-    "2024 sem1/COMP2823/Assignment/Assignment5/main 2.synctex(busy)",
-    "2024 sem1/COMP2823/Assignment/Assignment5/main.synctex.gz",
-    "2024 sem1/COMP2823/Assignment/Assignment5/Last 2 fight.md",
+    "2024 sem1/INFO2222/Lecture 6.md",
+    "2024 sem1/INFO2222/Lecture 1.md",
+    "2024 sem1/INFO2222/Lecture 2.md",
+    "2024 sem1/INFO2222/NEW RECORD.md",
+    "2024 sem1/INFO2222/Notes_FIET.pdf",
+    "2024 sem1/INFO2222/Lecture 3.md",
+    "2024 sem1/MATH2022/tut_sheet/Maths Tutorial 8.pdf",
+    "2024 sem1/MATH2022/Quizes/PracticeQuiz1.pdf",
     "2024 sem1/MATH2022/Notes/Notes.pdf",
+    "2024 sem1/MATH2022/tut_sheet/tutorial10.pdf",
+    "2024 sem1/MATH2022/tut_sheet/Maths Solution 9.pdf",
+    "2024 sem1/MATH2022/tut_sheet/tutorial9.pdf",
+    "2024 sem1/MATH2022/tut_sheet/tutorial5.pdf",
+    "2024 sem1/MATH2022/tut_sheet/tutorial4.pdf",
+    "2024 sem1/MATH2022/tut_sheet/tutorial3.pdf",
+    "2024 sem1/2022 MAIN.md",
+    "2024 sem1/COMP2017/Notes/Process.md",
+    "2024 sem1/INFO2222/Lecture 4.md",
+    "2024 sem1/MATH2022/Mistakes/FINAL RECAP.md",
+    "2024 sem1/COMP2823/my_Tut/Week 8 Shortest Path 👶 -> 💀.md",
+    "2024 sem1/COMP2823/my_Tut/Week 7 Graph ™️.md",
+    "2024 sem1/COMP2823/Practice Exam.md",
+    "2024 sem1/COMP2823/my_Tut/Week 4 BST 👈🫵👉.md",
+    "2024 sem1/COMP2823/my_Tut/Week 5 Priority Queue 🍡.md",
+    "2024 sem1/Recap Plan.md",
+    "2024 sem1/COMP2823/my_Tut/week 3 Trees🌲.md",
+    "2024 sem1/COMP2123(42)/Week1-Analysis/Week1-Analysis.md",
+    "2024 sem1/COMP2123(42)/错题/错题.md",
+    "2024 sem1/COMP2017/A3/立体机动装置(一些有用的命令).md",
+    "2024 sem1/COMP2823/my_Tut/Week 2 List 📋.md",
+    "2024 sem1/MATH2022/Notes/Graphs/2024_05_26_7d8792d442ce21068082g-1.jpg",
+    "2024 sem1/MATH2022/Graphs/2024_05_26_7d8792d442ce21068082g-1.jpg",
+    "2024 sem1/COMP2823/Assignment/Assignment5/Last 2 fight.md",
     "2024 sem1/COMP2017/A2/Assignment 2.md",
-    "2024 sem1/COMP2823/Assignment/Assignment5/main.fls",
     "2024 sem1/COMP2017/A3/aa.md",
     "2024 sem1/INFO2222/Assignment3/PACT.md",
     "2024 sem1/COMP2017/A3/A3Tests.md",
-    "2024 sem1/INFO2222/Assignment3/Process.md",
-    "2024 sem1/COMP2017/A3/玛利亚之墙夺还战.md",
-    "2024 sem1/COMP2017/A3/Battle for the Recapture of Maria Wall(玛利亚之墙夺还战).md",
-    "2024 sem1/COMP2017/A3/Copy.md",
-    "2024 sem1/INFO2222/Assignment3/Survey.md",
-    "2024 sem1/INFO2222/Assignment3/Card Sorting.md",
     "info2222/Report/models_friendship.png",
-    "[.md",
-    "Tasks.md",
-    "Untitled.md",
-    "2024 sem1/COMP2017/Notes/Preprocesser.md",
-    "2024 sem1/COMP2017/Notes/Process.md",
-    "2024 sem1/COMP2017/Notes/File IO, Function Pointers and Signals.md",
-    "2024 sem1/MATH2022/Mistakes/Week9.md",
     "2024 sem1/COMP2823/Graphs/Pasted image 20240421172245.png",
-    "2024 sem1/COMP2823/my_Tut/Week 6 Hash ﮫﮫﮫ.md",
-    "2024 sem1/COMP2823/Assignment/Assignment3/WTF is Question 3?.md",
     "info2222/Report/graphs/authenticated_only.jpg",
     "info2222/Report/graphs/sign_up_xss.jpg",
-    "2024 sem1/COMP2823/my_Tut/week 3 Trees🌲.md",
-    "2024 sem1/COMP2823/my_Tut/Week 7 Graph ™️.md",
     "2024 sem1/COMP2823/Graphs/Pasted image 20240421174705.png",
     "2024 sem1/COMP2823/Graphs/Pasted image 20240421172335.png",
     "info2222/Report/graphs/login_successful.png",
     "info2222/Report/graphs/passwd_does_not_match.png",
-    "info2222/Report/graphs/processData.jpg",
-    "info2222/Report/graphs/no_such_user_login.jpg",
     "Home.canvas"
   ]
 }

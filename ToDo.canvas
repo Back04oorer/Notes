@@ -1,0 +1,10 @@
+{
+	"nodes":[
+		{"id":"17fa6cfc6e4e24f3","type":"file","file":"Notes/2024 sem2/ISYS2120/ISYS2120.md","x":-600,"y":-660,"width":320,"height":560},
+		{"id":"d914eac325dfccb7","type":"file","file":"Notes/2024 sem2/COMP2022/COMP2022.md","x":-280,"y":-660,"width":480,"height":560},
+		{"id":"6ed64357788e32e9","type":"file","file":"Notes/2024 sem2/SOFT2412/SOFT2412.md","x":-600,"y":-100,"width":320,"height":500},
+		{"id":"c4299e659fcc58e5","type":"file","file":"Notes/2024 sem2/MATH1062/Calculate/MATH1023.md","x":-280,"y":-100,"width":480,"height":280},
+		{"id":"c0e37ad9cb8a964a","type":"file","file":"Notes/2024 sem2/MATH1062/Stats/MATH1005.md","x":-280,"y":180,"width":480,"height":220}
+	],
+	"edges":[]
+}

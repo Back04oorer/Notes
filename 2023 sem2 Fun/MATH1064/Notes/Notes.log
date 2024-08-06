@@ -1,0 +1,1928 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2023.10.31)  22 FEB 2024 13:36
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./Notes.tex
+(Notes.tex
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-10-23>
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+base/size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/soul/soul.sty
+Package: soul 2023-06-14 v3.1 Permit use of UTF-8 characters in soul (HO)
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/soul/soul-ori.sty
+Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
+\SOUL@word=\toks17
+\SOUL@lasttoken=\toks18
+\SOUL@syllable=\toks19
+\SOUL@cmds=\toks20
+\SOUL@buffer=\toks21
+\SOUL@token=\toks22
+\SOUL@syllgoal=\dimen141
+\SOUL@syllwidth=\dimen142
+\SOUL@charkern=\dimen143
+\SOUL@hyphkern=\dimen144
+\SOUL@dimen=\dimen145
+\SOUL@dimeni=\dimen146
+\SOUL@minus=\count194
+\SOUL@comma=\count195
+\SOUL@apo=\count196
+\SOUL@grave=\count197
+\SOUL@spaceskip=\skip50
+\SOUL@ttwidth=\dimen147
+\SOUL@uldp=\dimen148
+\SOUL@ulht=\dimen149
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)))
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+amsmath/amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen150
+))
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen151
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count198
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count199
+\leftroot@=\count266
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count267
+\DOTSCASE@=\count268
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen152
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count269
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count270
+\dotsspace@=\muskip16
+\c@parentequation=\count271
+\dspbrk@lvl=\count272
+\tag@help=\toks24
+\row@=\count273
+\column@=\count274
+\maxfields@=\count275
+\andhelp@=\toks25
+\eqnshift@=\dimen153
+\alignsep@=\dimen154
+\tagshift@=\dimen155
+\tagwidth@=\dimen156
+\totwidth@=\dimen157
+\lineht@=\dimen158
+\@envbody=\toks26
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks28
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen159
+\Gin@req@width=\dimen160
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+pgf/frontendlayer/tikz.sty
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+pgf/basiclayer/pgf.sty
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+pgf/utilities/pgfrcs.sty
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks29
+\pgfutil@tempdima=\dimen161
+\pgfutil@tempdimb=\dimen162
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box53
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/utilities/pgfrcs.code.tex
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+pgf/basiclayer/pgfcore.sty
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+pgf/systemlayer/pgfsys.sty
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks32
+))
+\pgf@x=\dimen163
+\pgf@y=\dimen164
+\pgf@xa=\dimen165
+\pgf@ya=\dimen166
+\pgf@xb=\dimen167
+\pgf@yb=\dimen168
+\pgf@xc=\dimen169
+\pgf@yc=\dimen170
+\pgf@xd=\dimen171
+\pgf@yd=\dimen172
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count276
+\c@pgf@countb=\count277
+\c@pgf@countc=\count278
+\c@pgf@countd=\count279
+\t@pgf@toka=\toks33
+\t@pgf@tokb=\toks34
+\t@pgf@tokc=\toks35
+\pgf@sys@id@count=\count280
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count281
+\pgfsyssoftpath@bigbuffer@items=\count282
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/math/pgfmath.code.tex
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/math/pgfmathutil.code.tex)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen173
+\pgfmath@count=\count283
+\pgfmath@box=\box54
+\pgfmath@toks=\toks36
+\pgfmath@stack@operand=\toks37
+\pgfmath@stack@operation=\toks38
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/math/pgfmathfunctions.code.tex)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/math/pgfmathfunctions.basic.code.tex)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/math/pgfmathfunctions.trigonometric.code.tex)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/math/pgfmathfunctions.random.code.tex)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/math/pgfmathfunctions.comparison.code.tex)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/math/pgfmathfunctions.base.code.tex)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/math/pgfmathfunctions.round.code.tex)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/math/pgfmathfunctions.misc.code.tex)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/math/pgfmathfunctions.integerarithmetics.code.tex)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/math/pgfmathcalc.code.tex)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count284
+))
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/math/pgfint.code.tex)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen174
+\pgf@picmaxx=\dimen175
+\pgf@picminy=\dimen176
+\pgf@picmaxy=\dimen177
+\pgf@pathminx=\dimen178
+\pgf@pathmaxx=\dimen179
+\pgf@pathminy=\dimen180
+\pgf@pathmaxy=\dimen181
+\pgf@xx=\dimen182
+\pgf@xy=\dimen183
+\pgf@yx=\dimen184
+\pgf@yy=\dimen185
+\pgf@zx=\dimen186
+\pgf@zy=\dimen187
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen188
+\pgf@path@lasty=\dimen189
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen190
+\pgf@shorten@start@additional=\dimen191
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box55
+\pgf@hbox=\box56
+\pgf@layerbox@main=\box57
+\pgf@picture@serial@count=\count285
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen192
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen193
+\pgf@pt@y=\dimen194
+\pgf@pt@temp=\dimen195
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen196
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen197
+\pgf@sys@shading@range@num=\count286
+\pgf@shadingcount=\count287
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box58
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box59
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen198
+\pgf@nodesepend=\dimen199
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+pgf/utilities/pgffor.sty
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+pgf/utilities/pgfkeys.sty
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/utilities/pgfkeys.code.tex))
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+pgf/math/pgfmath.sty
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/math/pgfmath.code.tex))
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen256
+\pgffor@skip=\dimen257
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
+))
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count288
+\pgfplotmarksize=\dimen258
+)
+\tikz@lastx=\dimen259
+\tikz@lasty=\dimen260
+\tikz@lastxsaved=\dimen261
+\tikz@lastysaved=\dimen262
+\tikz@lastmovetox=\dimen263
+\tikz@lastmovetoy=\dimen264
+\tikzleveldistance=\dimen265
+\tikzsiblingdistance=\dimen266
+\tikz@figbox=\box60
+\tikz@figbox@bg=\box61
+\tikz@tempbox=\box62
+\tikz@tempbox@bg=\box63
+\tikztreelevel=\count289
+\tikznumberofchildren=\count290
+\tikznumberofcurrentchild=\count291
+\tikz@fig@count=\count292
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count293
+\pgfmatrixcurrentcolumn=\count294
+\pgf@matrix@numberofcolumns=\count295
+)
+\tikz@expandcount=\count296
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generi
+c/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count297
+\l__pdf_internal_box=\box64
+) (Notes.aux)
+\openout1 = `Notes.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/contex
+t/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count298
+\scratchdimen=\dimen267
+\scratchbox=\box65
+\nofMPsegments=\count299
+\nofMParguments=\count300
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count301
+\MPscratchDim=\dimen268
+\MPnumerator=\count302
+\makeMPintoPDFobject=\count303
+\everyMPtoPDFconversion=\toks42
+)
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+00miktex/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
+
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
+
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 42--43
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[1
+
+{/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdf
+tex/pdftex.map}]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 44--45
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--79
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--92
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 93--94
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[2]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 95--96
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 155--156
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[3]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 157--158
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Overfull \hbox (541.11377pt too wide) in paragraph at lines 173--174
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[4]
+Overfull \hbox (541.11377pt too wide) in paragraph at lines 175--176
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Overfull \hbox (8.39342pt too wide) in paragraph at lines 203--205
+\OT1/cmr/m/n/10 The nega-tion of this state-ment is log-i-cally equiv-a-lent to
+: $\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 D; 
+\OMS/cmsy/m/n/10 :\OML/cmm/m/it/10 Q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr
+/m/n/10 )$ 
+ []
+
+
+Overfull \hbox (8.15802pt too wide) in paragraph at lines 208--210
+\OT1/cmr/m/n/10 The nega-tion of this state-ment is log-i-cally equiv-a-lent to
+: $\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 D; 
+\OMS/cmsy/m/n/10 :\OML/cmm/m/it/10 R\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr
+/m/n/10 )$ 
+ []
+
+
+Overfull \hbox (573.1138pt too wide) in paragraph at lines 248--249
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[5]
+Overfull \hbox (573.1138pt too wide) in paragraph at lines 250--251
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 306--307
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[6]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 308--309
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--324
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--327
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 341--342
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[7]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 343--344
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--375
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--395
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--398
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--402
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 403--406
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--410
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--414
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 415--419
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 420--422
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 453--456
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--463
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 469--472
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--474
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--478
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 479--480
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[10]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 481--482
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--498
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--500
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 519--520
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 521--522
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[11]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 523--524
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--527
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 527--532
+
+ []
+
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 5
+34.
+
+(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
+base/omscmr.fd
+File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 534.
+
+Underfull \hbox (badness 10000) in paragraph at lines 533--537
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 547--549
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 549--554
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 554--559
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 559--566
+\OT1/cmr/m/n/10 ===============================================================
+================================================= 
+ []
+
+[12]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 567--568
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 568--573
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--577
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 582--585
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 588--592
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 594--600
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 613--614
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[13]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 615--620
+[]\OT1/cmr/m/n/10 =============================================================
+===================================================
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 642--643
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 666--667
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[14]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 668--670
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 670--682
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 670--682
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 684--687
+
+ []
+
+<graph/1.jpg, id=60, 1497.595pt x 1037.8775pt>
+File: graph/1.jpg Graphic file (type jpg)
+<use graph/1.jpg>
+Package pdftex.def Info: graph/1.jpg  used on input line 707.
+(pdftex.def)             Requested size: 192.00192pt x 133.06007pt.
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 707--710
+\OT1/cmr/m/n/10 ===============================================================
+================================================= 
+ []
+
+[15 <./graph/1.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 711--714
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--714
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 714--726
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 714--726
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 714--726
+
+ []
+
+<graph/2.jpg, id=64, 1656.1875pt x 1150.2975pt>
+File: graph/2.jpg Graphic file (type jpg)
+<use graph/2.jpg>
+Package pdftex.def Info: graph/2.jpg  used on input line 727.
+(pdftex.def)             Requested size: 256.00095pt x 177.80281pt.
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 727--730
+\OT1/cmr/m/n/10 ===============================================================
+================================================= 
+ []
+
+[16 <./graph/2.jpg>]
+Overfull \hbox (543.336pt too wide) in paragraph at lines 731--732
+[]\OT1/cmr/m/n/10 =============================================================
+================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 735--740
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 750--752
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 760--764
+
+ []
+
+
+Overfull \hbox (573.1138pt too wide) in paragraph at lines 765--766
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[17]
+<graph/3.jpg, id=71, 988.69376pt x 600.2425pt>
+File: graph/3.jpg Graphic file (type jpg)
+<use graph/3.jpg>
+Package pdftex.def Info: graph/3.jpg  used on input line 768.
+(pdftex.def)             Requested size: 297.99997pt x 180.91676pt.
+<graph/4.jpg, id=73, 1698.345pt x 1250.6725pt>
+File: graph/4.jpg Graphic file (type jpg)
+<use graph/4.jpg>
+Package pdftex.def Info: graph/4.jpg  used on input line 769.
+(pdftex.def)             Requested size: 297.99997pt x 219.44348pt.
+
+Overfull \hbox (573.1138pt too wide) in paragraph at lines 767--770
+[]\OT1/cmr/m/n/10 =============================================================
+===================================================
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 773--774
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[18 <./graph/3.jpg> <./graph/4.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 775--776
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 805--816
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 819--822
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 827--828
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[19]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 829--831
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 831--833
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 834--835
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 836--838
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 872--875
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 885--886
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[20]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 887--888
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 896--902
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 913--914
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[21]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 915--916
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 946--947
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[22]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 948--949
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 957--958
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 987--988
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 993--994
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[23]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 995--996
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1004--1005
+
+ []
+
+<graph/7.jpg, id=98, 913.4125pt x 600.2425pt>
+File: graph/7.jpg Graphic file (type jpg)
+<use graph/7.jpg>
+Package pdftex.def Info: graph/7.jpg  used on input line 1007.
+(pdftex.def)             Requested size: 383.99898pt x 252.33826pt.
+
+Overfull \hbox (63.99901pt too wide) in paragraph at lines 1006--1009
+[]
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1006--1009
+\OT1/cmr/m/n/10 ===============================================================
+================================================= 
+ []
+
+[24 <./graph/7.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1010--1011
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1012--1013
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1025--1026
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[25]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1027--1029
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+<graph/5.jpg, id=106, 1640.1275pt x 574.145pt>
+File: graph/5.jpg Graphic file (type jpg)
+<use graph/5.jpg>
+Package pdftex.def Info: graph/5.jpg  used on input line 1032.
+(pdftex.def)             Requested size: 319.99997pt x 112.01477pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1031--1033
+
+ []
+
+<graph/6.jpg, id=107, 1065.9825pt x 387.4475pt>
+File: graph/6.jpg Graphic file (type jpg)
+<use graph/6.jpg>
+Package pdftex.def Info: graph/6.jpg  used on input line 1042.
+(pdftex.def)             Requested size: 319.99997pt x 116.30608pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1041--1045
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1041--1045
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1053--1054
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[26 <./graph/5.jpg> <./graph/6.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1055--1056
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1065--1067
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1089--1090
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[27]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1091--1092
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1120--1121
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1134--1135
+\OT1/cmr/m/n/10 ===============================================================
+================================================= 
+ []
+
+[28]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1136--1137
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1176--1177
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[29]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1178--1179
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+<graph/8.jpg, id=120, 1240.635pt x 851.18pt>
+File: graph/8.jpg Graphic file (type jpg)
+<use graph/8.jpg>
+Package pdftex.def Info: graph/8.jpg  used on input line 1198.
+(pdftex.def)             Requested size: 319.99997pt x 219.53522pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1194--1199
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1209--1210
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[30 <./graph/8.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1211--1212
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1232--1236
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1262--1265
+\OT1/cmr/m/n/10 ===============================================================
+================================================= 
+ []
+
+[31]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1266--1267
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1272--1273
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1282--1283
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[32]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1284--1285
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1334--1335
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[33]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1336--1337
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1336--1337
+
+ []
+
+<graph/9.jpg, id=134, 1634.105pt x 1094.0875pt>
+File: graph/9.jpg Graphic file (type jpg)
+<use graph/9.jpg>
+Package pdftex.def Info: graph/9.jpg  used on input line 1338.
+(pdftex.def)             Requested size: 319.99997pt x 214.23935pt.
+<graph/10.jpg, id=135, 1379.1525pt x 1132.23pt>
+File: graph/10.jpg Graphic file (type jpg)
+<use graph/10.jpg>
+Package pdftex.def Info: graph/10.jpg  used on input line 1339.
+(pdftex.def)             Requested size: 319.99997pt x 262.70518pt.
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1338--1341
+\OT1/cmr/m/n/10 ===============================================================
+================================================= 
+ []
+
+[34 <./graph/9.jpg> <./graph/10.jpg>]
+<graph/11.jpg, id=139, 1397.22pt x 1114.1625pt>
+File: graph/11.jpg Graphic file (type jpg)
+<use graph/11.jpg>
+Package pdftex.def Info: graph/11.jpg  used on input line 1343.
+(pdftex.def)             Requested size: 319.99997pt x 255.16394pt.
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1342--1344
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1342--1344
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1348--1349
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[35 <./graph/11.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1350--1351
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1350--1351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1394--1395
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1396--1397
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[36]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1398--1399
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1398--1399
+
+ []
+
+<graph/12.jpg, id=146, 2111.89pt x 1069.9975pt>
+File: graph/12.jpg Graphic file (type jpg)
+<use graph/12.jpg>
+Package pdftex.def Info: graph/12.jpg  used on input line 1409.
+(pdftex.def)             Requested size: 319.99997pt x 162.12538pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1408--1410
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1408--1410
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1411--1412
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[37 <./graph/12.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1413--1414
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1413--1414
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1423--1428
+
+ []
+
+<graph/13.jpg, id=151, 1790.69pt x 644.4075pt>
+File: graph/13.jpg Graphic file (type jpg)
+<use graph/13.jpg>
+Package pdftex.def Info: graph/13.jpg  used on input line 1452.
+(pdftex.def)             Requested size: 256.00095pt x 92.12401pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1448--1453
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1455--1456
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[38 <./graph/13.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1457--1458
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1457--1458
+
+ []
+
+File: graph/13.jpg Graphic file (type jpg)
+<use graph/13.jpg>
+Package pdftex.def Info: graph/13.jpg  used on input line 1462.
+(pdftex.def)             Requested size: 383.99898pt x 138.18109pt.
+
+Overfull \hbox (63.99901pt too wide) in paragraph at lines 1459--1463
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1459--1463
+
+ []
+
+<graph/15.jpg, id=155, 1726.45pt x 823.075pt>
+File: graph/15.jpg Graphic file (type jpg)
+<use graph/15.jpg>
+Package pdftex.def Info: graph/15.jpg  used on input line 1467.
+(pdftex.def)             Requested size: 383.99898pt x 183.06139pt.
+
+Overfull \hbox (63.99901pt too wide) in paragraph at lines 1464--1468
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1464--1468
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1469--1470
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[39 <./graph/15.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1471--1472
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1471--1472
+
+ []
+
+<graph/16.jpg, id=159, 1491.5725pt x 315.1775pt>
+File: graph/16.jpg Graphic file (type jpg)
+<use graph/16.jpg>
+Package pdftex.def Info: graph/16.jpg  used on input line 1476.
+(pdftex.def)             Requested size: 383.99898pt x 81.14107pt.
+
+Overfull \hbox (63.99901pt too wide) in paragraph at lines 1473--1480
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1473--1480
+
+ []
+
+<graph/17.jpg, id=160, 1449.415pt x 666.49pt>
+File: graph/17.jpg Graphic file (type jpg)
+<use graph/17.jpg>
+Package pdftex.def Info: graph/17.jpg  used on input line 1484.
+(pdftex.def)             Requested size: 256.00095pt x 117.71548pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1484--1487
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1500--1501
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[40 <./graph/16.jpg> <./graph/17.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1502--1503
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1502--1503
+
+ []
+
+<graph/18.jpg, id=164, 1461.46pt x 1180.41pt>
+File: graph/18.jpg Graphic file (type jpg)
+<use graph/18.jpg>
+Package pdftex.def Info: graph/18.jpg  used on input line 1505.
+(pdftex.def)             Requested size: 256.00095pt x 206.75496pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1504--1506
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1518--1519
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[41 <./graph/18.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1520--1521
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1520--1521
+
+ []
+
+<graph/19.jpg, id=168, 1160.335pt x 748.7975pt>
+File: graph/19.jpg Graphic file (type jpg)
+<use graph/19.jpg>
+Package pdftex.def Info: graph/19.jpg  used on input line 1524.
+(pdftex.def)             Requested size: 192.00192pt x 123.90045pt.
+<graph/20.jpg, id=169, 1148.29pt x 742.775pt>
+File: graph/20.jpg Graphic file (type jpg)
+<use graph/20.jpg>
+Package pdftex.def Info: graph/20.jpg  used on input line 1525.
+(pdftex.def)             Requested size: 192.00192pt x 124.19598pt.
+<graph/21.jpg, id=170, 1228.59pt x 656.4525pt>
+File: graph/21.jpg Graphic file (type jpg)
+<use graph/21.jpg>
+Package pdftex.def Info: graph/21.jpg  used on input line 1526.
+(pdftex.def)             Requested size: 192.00192pt x 102.58046pt.
+<graph/22.jpg, id=171, 1246.6575pt x 668.4975pt>
+File: graph/22.jpg Graphic file (type jpg)
+<use graph/22.jpg>
+Package pdftex.def Info: graph/22.jpg  used on input line 1527.
+(pdftex.def)             Requested size: 192.00192pt x 102.953pt.
+<graph/23.jpg, id=172, 1180.41pt x 758.835pt>
+File: graph/23.jpg Graphic file (type jpg)
+<use graph/23.jpg>
+Package pdftex.def Info: graph/23.jpg  used on input line 1528.
+(pdftex.def)             Requested size: 192.00192pt x 123.41922pt.
+[42 <./graph/19.jpg> <./graph/20.jpg> <./graph/21.jpg> <./graph/22.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1539--1540
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[43 <./graph/23.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1541--1542
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1541--1542
+
+ []
+
+<graph/24.jpg, id=180, 1565.85pt x 1170.3725pt>
+File: graph/24.jpg Graphic file (type jpg)
+<use graph/24.jpg>
+Package pdftex.def Info: graph/24.jpg  used on input line 1562.
+(pdftex.def)             Requested size: 192.00192pt x 143.49243pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1560--1563
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1565--1566
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[44 <./graph/24.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1567--1568
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1567--1568
+
+ []
+
+<graph/25.jpg, id=184, 1758.57pt x 770.88pt>
+File: graph/25.jpg Graphic file (type jpg)
+<use graph/25.jpg>
+Package pdftex.def Info: graph/25.jpg  used on input line 1576.
+(pdftex.def)             Requested size: 297.99997pt x 130.6244pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1575--1577
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1604--1606
+\OT1/cmr/m/n/10 ===============================================================
+================================================= 
+ []
+
+[45 <./graph/25.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1607--1608
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1607--1608
+
+ []
+
+<graph/28.jpg, id=188, 1326.9575pt x 925.4575pt>
+File: graph/28.jpg Graphic file (type jpg)
+<use graph/28.jpg>
+Package pdftex.def Info: graph/28.jpg  used on input line 1633.
+(pdftex.def)             Requested size: 319.99997pt x 223.17343pt.
+[46 <./graph/28.jpg>]
+<graph/26.jpg, id=192, 686.565pt x 530.98375pt>
+File: graph/26.jpg Graphic file (type jpg)
+<use graph/26.jpg>
+Package pdftex.def Info: graph/26.jpg  used on input line 1648.
+(pdftex.def)             Requested size: 192.00192pt x 148.48808pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1651--1655
+
+ []
+
+<graph/27.jpg, id=193, 1595.9625pt x 646.415pt>
+File: graph/27.jpg Graphic file (type jpg)
+<use graph/27.jpg>
+Package pdftex.def Info: graph/27.jpg  used on input line 1656.
+(pdftex.def)             Requested size: 256.00095pt x 103.68495pt.
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1666--1667
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[47 <./graph/26.jpg> <./graph/27.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1668--1669
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1668--1669
+
+ []
+
+<graph/29.jpg, id=198, 1322.9425pt x 704.6325pt>
+File: graph/29.jpg Graphic file (type jpg)
+<use graph/29.jpg>
+Package pdftex.def Info: graph/29.jpg  used on input line 1678.
+(pdftex.def)             Requested size: 238.40088pt x 126.96815pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1681--1683
+
+ []
+
+<graph/30.jpg, id=199, 698.61pt x 554.07pt>
+File: graph/30.jpg Graphic file (type jpg)
+<use graph/30.jpg>
+Package pdftex.def Info: graph/30.jpg  used on input line 1684.
+(pdftex.def)             Requested size: 208.59906pt x 165.43602pt.
+
+Overfull \hbox (573.1138pt too wide) in paragraph at lines 1687--1688
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[48 <./graph/29.jpg> <./graph/30.jpg>]
+Overfull \hbox (573.1138pt too wide) in paragraph at lines 1689--1690
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1690
+
+ []
+
+<graph/31.jpg, id=203, 600.2425pt x 592.2125pt>
+File: graph/31.jpg Graphic file (type jpg)
+<use graph/31.jpg>
+Package pdftex.def Info: graph/31.jpg  used on input line 1692.
+(pdftex.def)             Requested size: 208.59906pt x 205.80453pt.
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1696--1697
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[49 <./graph/31.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1698--1699
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1698--1699
+
+ []
+
+
+Overfull \hbox (5.23447pt too wide) in paragraph at lines 1711--1716
+\OT1/cmr/m/n/10 A more vi-sual rep-re-sen-ta-tion of a fi-nite state ma-chine $
+\OML/cmm/m/it/10 M \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 S; I; O; f; g; s\OT1/cmr
+/m/n/10 0)$,
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1738--1739
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[50]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1740--1741
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1740--1741
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1752--1765
+
+ []
+
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1767--1768
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[51]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1769--1770
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1769--1770
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1773
+
+ []
+
+<graph/32.jpg, id=214, 1463.4675pt x 925.4575pt>
+File: graph/32.jpg Graphic file (type jpg)
+<use graph/32.jpg>
+Package pdftex.def Info: graph/32.jpg  used on input line 1775.
+(pdftex.def)             Requested size: 192.00192pt x 121.41516pt.
+<graph/33.jpg, id=215, 945.5325pt x 287.0725pt>
+File: graph/33.jpg Graphic file (type jpg)
+<use graph/33.jpg>
+Package pdftex.def Info: graph/33.jpg  used on input line 1779.
+(pdftex.def)             Requested size: 275.20016pt x 83.55551pt.
+
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1782--1783
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+[52 <./graph/32.jpg> <./graph/33.jpg>]
+Overfull \hbox (551.1138pt too wide) in paragraph at lines 1784--1785
+[]\OT1/cmr/m/n/10 =============================================================
+=================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1784--1785
+
+ []
+
+<graph/36.jpg, id=219, 1387.1825pt x 473.77pt>
+File: graph/36.jpg Graphic file (type jpg)
+<use graph/36.jpg>
+Package pdftex.def Info: graph/36.jpg  used on input line 1789.
+(pdftex.def)             Requested size: 275.20016pt x 93.98602pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1792--1793
+
+ []
+
+<graph/35.jpg, id=220, 1471.4975pt x 933.4875pt>
+File: graph/35.jpg Graphic file (type jpg)
+<use graph/35.jpg>
+Package pdftex.def Info: graph/35.jpg  used on input line 1794.
+(pdftex.def)             Requested size: 275.20016pt x 174.57266pt.
+[53 <./graph/36.jpg> <./graph/35.jpg>] (Notes.aux)
+ ***********
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-10-23>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 13654 strings out of 474718
+ 280531 string characters out of 5737631
+ 1944033 words of memory out of 5000000
+ 35465 multiletter control sequences out of 15000+600000
+ 566273 words of font info for 68 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,10n,87p,388b,363s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/l
+jfour/jknappen/ec/dpi600/tcrm1000.pk></Users/bamingyuan/Library/Application Sup
+port/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/ba
+mingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/tex
+mfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/bamingyuan/Librar
+y/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fon
+ts/type1/public/amsfonts/cm/cmmi5.pfb></Users/bamingyuan/Library/Application Su
+pport/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/ba
+mingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/a
+msfonts/cm/cmr10.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texm
+fs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/bamingyuan/Library/
+Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.
+pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/
+type1/public/amsfonts/cm/cmr5.pfb></Users/bamingyuan/Library/Application Suppor
+t/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/bamingy
+uan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/i
+nstall/fonts/type1/public/amsfonts/cm/cmsy7.pfb></Users/bamingyuan/Library/Appl
+ication Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm1
+0.pfb>
+Output written on Notes.pdf (53 pages, 4621986 bytes).
+PDF statistics:
+ 291 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 183 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,3 @@
+- [ ] redundancy 冗余
+- [ ] Agenda 议程
+- [ ] parenthesis 括号

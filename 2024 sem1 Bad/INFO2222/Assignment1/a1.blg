@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: a1.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: unsrt.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Database file #1: references.bib
+You're missing a field name---line 138 of file references.bib
+ :   year = {2023},  
+ :                   % Update this with the actual year of publication
+I'm skipping whatever remains of this entry
+Warning--empty school in phdthesis
+You've used 17 entries,
+            1791 wiz_defined-function locations,
+            534 strings with 6084 characters,
+and the built_in function-call counts, 3464 in all, are:
+= -- 316
+> -- 114
+< -- 5
++ -- 46
+- -- 29
+* -- 149
+:= -- 474
+add.period$ -- 51
+call.type$ -- 17
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 18
+duplicate$ -- 167
+empty$ -- 400
+format.name$ -- 29
+if$ -- 844
+int.to.chr$ -- 0
+int.to.str$ -- 17
+missing$ -- 6
+newline$ -- 85
+num.names$ -- 15
+pop$ -- 94
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 120
+stack$ -- 0
+substring$ -- 167
+swap$ -- 61
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 28
+width$ -- 19
+write$ -- 170
+(There was 1 error message)

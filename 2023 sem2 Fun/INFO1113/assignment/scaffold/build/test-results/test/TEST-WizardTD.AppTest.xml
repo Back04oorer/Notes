@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WizardTD.AppTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-10-26T07:22:30" hostname="bamingyuandeMacBook-Air.local" time="5.604">
+  <properties/>
+  <testcase name="test_key_release()" classname="WizardTD.AppTest" time="1.382"/>
+  <testcase name="test_draw()" classname="WizardTD.AppTest" time="1.05"/>
+  <testcase name="test_reverse_pause()" classname="WizardTD.AppTest" time="1.048"/>
+  <testcase name="test_drawButtons1()" classname="WizardTD.AppTest" time="1.059"/>
+  <testcase name="Test_key_press()" classname="WizardTD.AppTest" time="1.062"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

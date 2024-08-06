@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WizardTD.ManagerTest" tests="11" skipped="1" failures="0" errors="0" timestamp="2023-10-26T07:22:48" hostname="bamingyuandeMacBook-Air.local" time="46.232">
+  <properties/>
+  <testcase name="test_Set_time_multiplier()" classname="WizardTD.ManagerTest" time="1.67"/>
+  <testcase name="testHasPlayerWon()" classname="WizardTD.ManagerTest" time="2.278"/>
+  <testcase name="testSpawnMonsters_Inf_monsterSpawnFrequency()" classname="WizardTD.ManagerTest" time="2.465"/>
+  <testcase name="testCreate_tower()" classname="WizardTD.ManagerTest" time="3.033"/>
+  <testcase name="testShowTower()" classname="WizardTD.ManagerTest" time="2.734"/>
+  <testcase name="testSpawnMonsters_Inf_newWave()" classname="WizardTD.ManagerTest" time="3.382"/>
+  <testcase name="test_loop_Normal1()" classname="WizardTD.ManagerTest" time="14.887"/>
+  <testcase name="testDisplayWaveInfoNormal()" classname="WizardTD.ManagerTest" time="3.387"/>
+  <testcase name="testLoopInf()" classname="WizardTD.ManagerTest" time="6.121"/>
+  <testcase name="testSpawnMonsters_Inf_monsterAttributes()" classname="WizardTD.ManagerTest" time="4.168"/>
+  <testcase name="test_upgrade_range()" classname="WizardTD.ManagerTest" time="2.104">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[60.0
+true
+20.0
+true
+0.0
+true
+60.0
+true
+20.0
+true
+0.0
+true
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

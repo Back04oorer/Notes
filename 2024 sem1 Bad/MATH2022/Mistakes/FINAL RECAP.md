@@ -1,0 +1,3 @@
+- how to find disjoint cycle?
+- stochastic matrix?
+- 

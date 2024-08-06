@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\title{MATH2022 Assignment 1}
+\author{SID:530157791}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Q1}
+	In group $G$, for each element $\alpha \neq e$, there is a unique inverse $\alpha^{-1}$ such that $\alpha \alpha^{-1} = e$ (\textit{Inverse Element,according to the definition of Group}). Since $G$ has an even number of elements, the total number of non-identity elements is odd. This means that if we try to partition them into pairs like $(\alpha,\alpha^{-1})$, there must be at least one element that cannot be paired with a distinct element. The unpaired element must therefore be its own inverse, implying $\alpha = \alpha^{-1}$. For this $\alpha$, it follows that $\alpha^2 = \alpha \alpha = e$.
+
+\section{Q2}
+	\subsection*{(a)}
+		$$
+		\begin{aligned}
+		\operatorname{det}(A) & =-2\left|\begin{array}{ll}
+		1 & 1 \\
+		1 & 2
+		\end{array}\right|+4\left|\begin{array}{ll}
+		1 & 3 \\
+		1 & 1
+		\end{array}\right| \\
+		& =-2+4 \cdot(-2) \\
+		& =-10 \\
+		& =0 (mod \; 5)
+		\end{aligned}
+		$$
+		Therefore, Matrix A is not invertible over $Z_5$.
+
+	\subsection*{(b)}
+		$$
+		\begin{aligned}
+		& \left[\begin{array}{ccc|c}
+		1 & 3 & 1 & 2 \\
+		1 & 1 & 2 & 3 \\
+		0 & 2 & 4 & 4
+		\end{array}\right] 
+		\xrightarrow{R_2 = R_1 - R_2} 
+		\left[\begin{array}{ccc|c}
+		1 & 3 & 1 & 2 \\
+		0 & 2 & 4 & 4 \\
+		0 & 2 & 4 & 4
+		\end{array}\right] \\
+		& \xrightarrow{R_3 = R_2 - R_3}
+		\left[\begin{array}{ccc|c}
+		1 & 3 & 1 & 2 \\
+		0 & 2 & 4 & 4 \\
+		0 & 0 & 0 & 0
+		\end{array}\right] \\
+		& \xrightarrow{\substack{R_1 = R_1 + R_2 \\ R_2 = \frac{1}{2}R_2}}
+		\left[\begin{array}{ccc|c}
+		1 & 0 & 0 & 1 \\
+		0 & 1 & 2 & 2 \\
+		0 & 0 & 0 & 0
+		\end{array}\right] \\
+		\end{aligned}
+		$$
+		we have: $\left\{\begin{array}{l}
+		x=1 \\
+		y + 2z = 2 
+		\end{array}\right.$, let $z = t, t \in Z_5$,the solution is :
+		$$
+		\therefore \left\{\begin{array}{l}
+		x=1 \\
+		y=2-2t \mod 5 \\
+		z=t
+		\end{array}\right., \quad t \in \mathbb{Z}_5
+		$$
+
+		Since $z$ can take any value in $Z_5 = {0,1,2,3,4}$,and for each $z$,there is exactly 1 solution for $x$ and $y$.Thus,there are 5 solutions for this system.
+
+\section{Q3}
+	\subsection*{(a)}
+		True. To perform the conjugation $\beta^{-1} \alpha \beta$, we simply replace each $\alpha_i$ in every cycle with $\alpha_i \beta$:
+		\begin{center}
+			$\beta^{-1} \alpha \beta = (\beta^{-1} \alpha_1 \beta) (\beta^{-1} \alpha_2 \beta) (\beta^{-1} \alpha_3 \beta) \ldots (\beta^{-1} \alpha_k \beta)$
+		\end{center}
+		where $k$ represents the number of cycles in $\alpha$, and $k$ is odd.
+		It doesn't change the number of elements in a permutation.The conjugation is also odd.
+	\subsection*{(b)}
+		False.If $C = \textbf{0}$,the statement "If $AC = BC$, then $A = B$" still holds true when $A \neq B$.
+	\subsection*{(c)}
+		\text{True. We have} \(\det(A) = \det(A^T)\)\text{. If } \(A^T = -A\)\text{, then } \(\det(A) = \det(-A)\)\text{, and since } \(\det(-A) = (-1)^n \det(A)\) \text{ for an } \(n \times n\) \text{ matrix, where } \(n = 3\) \text{ in this case, it follows that } \(\det(A) = -\det(A)\)\
+		\\ which indicates that  \(\det(A) = 0\)\text{.}
+
+\section{Q4}
+	Assume that the eigenvalue of eigenvector $\textbf{v}$ is $\lambda$,so that by the description above, we have:
+	\begin{center}
+		$A \textbf{v} = \lambda \textbf{v}$
+	\end{center}
+	To prove that \(B\mathbf{v}\) is also an eigenvector of \(A\) with the same eigenvalue \(\lambda\) as \(\mathbf{v}\), we need to show that \(A(B\mathbf{v}) = \lambda (B\mathbf{v})\).
+
+	\textbf{Proof}
+	\begin{center}
+		$A(B\textbf{v})$\\
+		$=(AB)\textbf{v}$\\
+		$=B(A\textbf{v})$\\
+		$=B\lambda \textbf{v}$\\
+		$= \lambda (B\textbf{v})$\\
+	\end{center}
+	We have \(A(B\mathbf{v}) = \lambda (B\mathbf{v})\). Thus, the product \(B\mathbf{v}\) is also an eigenvector of \(A\) with eigenvalue \(\lambda\).
+
+
+\end{document}
