@@ -360,3 +360,74 @@ Instead, the entity instances are distinguished in part by knowing which entity 
 Call this the <mark style="background: #FF5582A6;">identifying relationship </mark>(and the other type is called the <mark style="background: #FF5582A6;">identifying entity type</mark>).Also called “owning relationship and owning type"
 
 ![w2_17](Graphs/w2_17.png)
+
+
+##### Enhanced E-R Model(啥也不是,屁话还多)
+ER model in its original form did not support 
+- SPECIALIZATION/ GENERALIZATION 
+- ABSTRACTIONS (‘aggregation’) 
+- These concepts are widespread now in object-oriented languages
+
+This let to development of ‘Enhanced’ ER mode
+- Includes all modeling concepts of basic ER 
+- Additional some object-oriented-like concepts: subclasses/superclasses, specialization/generalization, categories, attribute inheritance 
+- The resulting model is sometimes called the enhanced-ER or Extended ER (E2R or EER) model 
+- used to model applications more completely and accurately if needed
+
+##### Generalization / Specialization
+Arranging of entity types in a type hierarchy
+- Determine entity types whose instance entities are (always) also instances of another entity type, and therefore <mark style="background: #FF5582A6;">have all the attributes </mark>of the more general type (perhaps with others)
+
+Definition Generalization / Specialization / Inheritance
+Two entity types E and F are in an <mark style="background: #FF5582A6;">ISA-relationship</mark> (”F is a E”),即F是E的一种, if:
+- the set of attributes of F is a <mark style="background: #FF5582A6;">superset</mark> of the set of attributes of E
+-  the entity set F is a subset of the entity set of E (“each f is an e”)
+
+One says that F is a specialization of E (F is subclass) and E is a generalization of F (E is superclass)
+
+Depicted by a triangle labeled IsA, with lines to superclass and subclass
+- By convention, aim that superclass is higher in diagram than triangle, and subclass is lower in diagram
+懒得放图了,就是一个里面是写ISA的三角形,上方指向superclass
+
+
+##### Attribute and relationship inheritance
+
+A subclass entity type inherits all the attributes of its superclass.
+
+A subclass entity type inherits all the <mark style="background: #FF5582A6;">relationship</mark> participations of its superclass.
+- We only show on a rectangle, the attributes and relationships which it <mark style="background: #FF5582A6;">has not inherited</mark> (those that are not found in superclass)! The inherited ones are shown on the superclass
+
+![w2_18](Graphs/w2_18.png)
+
+##### Constraints on ISA Hierarchies
+We can specify overlap and covering constraints for ISA hierarchies:
+
+Overlap Constraints
+- Disjoint
+	- A higher-level entity instance can belong to at most one lower-level entity set, 一个人只能是“学生”或“员工”中的一个
+	- Noted in E-R diagram by writing disjoint next to the ISA triangle
+- Overlapping (state this explicitly on the diagram)
+	-  A higher-level entity instance can belong to more than one lower-level entity set
+
+Covering Constraints
+- Total
+	- A higher-level entity instance must belong to at least one of the lower-level entity set
+	- Denoted with a <mark style="background: #FF5582A6;">thick line</mark> between the ISA-triangle and the superclass
+	- 所有高层实体都必须在低层实体中找到对应的分类
+-  Partial (the default)
+	- A higher-level entity instance need not belong to one of the lower-level entity sets
+	- 一个高层实体实例不必属于任何一个低层实体集合
+
+##### Aggregation 挺废话的,看图就行
+Relationship sets works-on and manages represent overlapping information
+- Every manages relationship corresponds to a works-on relationship
+- <mark style="background: #FF5582A6;">However, some works-on relationships may not correspond to any manages relationships</mark> . So we can’t discard the works-on relationship
+
+Eliminate this redundancy via aggregation
+- Aggregation allows an relationship set to be treated as an (abstract) entity set for the purpose of participating in another relationships
+- Allows relationships between relationships 
+- Abstraction of relationship into new entity
+
+![w2_19](Graphs/w2_19.png)
+
+![w2_20](Graphs/w2_20.png)
