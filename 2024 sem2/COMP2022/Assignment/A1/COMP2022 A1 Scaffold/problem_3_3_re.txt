@@ -1,0 +1,1 @@
+(a(Sigma*)a(Sigma*)a(Sigma*)a)|(b(Sigma*)b(Sigma*)b(Sigma*)b)

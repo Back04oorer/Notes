@@ -1,0 +1,397 @@
+---
+title: "MATH1062 Stats Note All IN 1"
+author: "MINGYUAN BA"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+    number_sections: true
+    theme: cerulean
+    css: styles.css
+---
+
+<style>
+/* 修改目录的文字颜色和背景颜色 */
+.toc {
+    color: #ffffff; /* 白色文字 */
+    background-color: #C29E64; /* 薰草黄背景 */
+}
+
+/* 修改目录项的悬停效果 */
+.tocify-item:hover {
+    color:rgb(90, 164, 74); /* 薰草黄文字 */
+    background-color: #e0e0e0; /* 浅灰色背景 */
+}
+
+/* 修改当前激活目录项的背景颜色和文字颜色 */
+.tocify-focus {
+    color: #ffffff; /* 白色文字 */
+    background-color: #4C7543; /* 松绿背景 */
+}
+</style>
+
+# Topic 1
+
+## Read In Data
+**header = TRUE**: The first row is treated as the **header row**, and the values in that row are used as column names.
+
+**header = FALSE**: If you set header = FALSE, R will treat the first row as **regular data** and not as column names. In this case, R will automatically assign default column names such as V1, V2, V3, ...
+
+```{r}
+data = read.csv("data/2023fatalities.csv", header = TRUE)
+```
+
+
+## Initial data analysis (IDA)
+### Definition
+Data is **informaion** about the set of subjects being studied (like road fatalities). Most commonly, data refers to the **sample**, not the population.
+
+**Initial data analysis** is a first general look at the data, without formally answering the research questions.
+
+- IDA helps you to see whether the data can answer your research questions
+
+- IDA may pose other research questions
+
+- IDA can
+  - identify the data’s main qualities
+  - suggest the population from which a sample derives
+
+### IDA commonly involves
+
+Initial Data Analysis commonly involves:
+
+  - data background: checking the quality and integrity of the data
+  
+  - data structure: what information has been collected?
+  
+  - data wrangling: scraping, cleaning, tidying, reshaping, splitting, combining
+  
+  - data summaries: graphical and numerical
+
+## Identifying variables
+
+### Number of variables
+
+&nbsp;
+
+| 1 variables | 2 variables | 2+ variables |
+|----------|----------|----------|
+| Univariate   | Bivariate   | Multivariate   |
+
+### Types of variables
+
+
+- **Qualitative or Categorical (Categories)**
+  - **IN R: Factor or Character**
+  - **Ordinal (ordered)**
+    - Binary (2 categories)
+    - 3+ categories
+  - **Nominal (non-ordered)**
+    - Binary (2 categories)
+    - 3+ categories
+- **Quantitative or Numerical (Measurements)**
+  - **IN R: Numeric**
+  - **Discrete**
+    - R: Integer (int)
+    - Binary (2 categories)
+    - 3+ categories
+  - **Continuous**
+    - R: Double
+
+### Change variable types in R
+&nbsp;
+
+**Structure of Data**
+
+```{r}
+str(data, vec.len = 2)
+```
+
+**From Numerical to Categorical**
+```{r}
+# Change type of Variables 
+data$Crash.ID = as.factor(data$Crash.ID) 
+data$Month = as.factor(data$Month)
+
+# 显示转化后数据的结构
+# list.len 参数用于指定要显示的列表元素的最大数量。
+# vec.len 参数用于指定要显示的向量元素的最大数量。
+str(data, list.len = 5, vec.len = 2)
+```
+
+**From Categorical to Numerical**
+
+```{r}
+data$Speed.Limit = as.numeric(data$Speed.Limit)
+
+# New structure of Data display the 5 variables using list.len 
+# 第11到第15个变量
+str(data[c(11, 12, 13, 14, 15)], vec.len = 2)
+```
+
+
+
+## Graphical summaries
+这个还没教完,可以先看看
+
+| **Variables**                       | **Graphical summaries**    | **Numerical summaries**              |
+|-------------------------------------|----------------------------|--------------------------------------|
+| **1 Qualitative**                   | Bar plot                   | Frequency table                      |
+|                                     |                            | Most popular category                |
+| **2 Qualitative**                   | Stacked bar plot           | Contingency table                    |
+|                                     |                            | Most popular category                |
+| **1 Quantitative**                  | Histogram                  | Mean, median, SD, IQR, range         |
+|                                     | Boxplot                    |                                      |
+| **2 Quantitative**                  | Scatter plot               | Linear model                         |
+|                                     |                            | Correlation coefficient              |
+| **1 Qualitative + 1 Quantitative**  | Side by side boxplot       |                                      |
+
+
+### Barplot
+
+**Step 1: Build the frequency table**
+```{r}
+# Select the DayWeek variable from the whole data frame 
+Dayweek = data$Dayweek 
+
+# Produce a frequency table of fatalities per day of the week 
+table(Dayweek)
+
+# Order days
+Dayweek = factor(Dayweek, levels = c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"))
+table(Dayweek)
+```
+
+**Step 2: Produce the barplot**
+```{r}
+barplot(table(Dayweek))
+```
+
+
+### Double barplot
+
+```{r}
+# Select DayWeek and Gender variables 
+Dayweek = data$Dayweek 
+Gender = data$Gender
+# Produce a double frequency table (contingency table) 
+data1 = table(Gender, Dayweek) 
+data1
+```
+#### Stacked barplot
+```{r}
+barplot(data1, main = "Fatalities by Day of the Week and Gender", xlab = "Day of the week", col = c("red", "lightblue", "lightgreen", "orange"), legend = rownames(data1))
+
+```
+
+
+#### Side-by-side barplot
+
+```{r}
+barplot(data1, main = "Fatalities by Day of the Week and Gender", xlab = "Day of the week", col = c("red", "lightblue", "lightgreen", "orange"), legend = rownames(data1), beside = TRUE)
+```
+
+#### Side-by-side barplot ignoring ‘-9’, ‘M’, ‘U’ and ‘Unspecified
+
+```{r}
+barplot(data1[-c(1, 3, 5, 6), ], main = "Fatalities by Day of the Week and Gender", xlab = "Day of the week", col = c("lightblue", "lightgreen"), legend = rownames(data1[-c(1, 3, 5, 6), ]), beside = TRUE)
+```
+
+
+### Histogram
+
+The frequency table can also be used to summarise a set of **quantitative** data, by collecting the datq into class intervals (or ‘bins’). A histogram highlights the frequency of data in one class interval compared to another.
+
+```{r}
+hist(data$Age, xlab = "Age", ylab = "Frequency", main = "Histogram for Age of Road Fatalities")
+```
+
+```{r}
+# Select the variable Age 
+Age = data$Age 
+# Define end points for class intervals 
+breaks = c(-10, 18, 25, 70, 101) 
+# Build frequency table 
+table(cut(Age, breaks, right = F))
+```
+
+```{r}
+hist(Age, br = breaks, right = F, freq = F, xlab = "Age (years)", ylab = "Density", main = "Histogram for Age of Road Fatalities in Australia 1989-2023")
+```
+
+The area of each block represents the proportion of subjects in that particular class interval.
+
+#### DATA Cleaning
+It's better to replace the '-9' entries to NA 
+```{r}
+# Replacing the '-9' entries 
+data$Age[data$Age == -9] = NA
+
+hist(data$Age, br = breaks, freq = F, right = F, xlab = "Age", ylab = "Density", main = "Histogram for Age of Road Fatalities in Australia 1989-2023")
+```
+
+#### Details of density-scale histograms
+The area of the whole histogram on the density scale is one (or, in percentage, 100%).
+
+**area (proportion) of each block** = 
+
+\[
+\frac{\text{number of subjects in the class interval}}{\text{total number of subjects}}
+\]
+
+**height (density) of each block** = 
+
+\[
+\frac{\text{proportion of the block}}{\text{length of the class interval}}
+\]
+
+For continuous (quantitative) data, we need an endpoint convention for data points that fall on the border of two class intervals.
+
+Number of class intervals
+
+```{r}
+Age = data$Age
+par(mfrow = c(1, 2)) # This puts the graphic output in 1 row with 2 columns 
+
+breaks = seq(0, 102, 2) 
+hist(Age, br = breaks, freq = F, right = F, xlab = "Age", ylab = "Density")
+
+breaks = c(0, 18, 25, 70, 101) 
+hist(Age, br = breaks, freq = F, right = F, xlab = "Age", ylab = "Density")
+```
+
+#### Produce a histogram by hand
+
+**Step 1**: Construct the distribution table.
+
+| Class intervals | Number of subjects in the interval | %   | Height of block |
+|-----------------|------------------------------------|------|-----------------|
+| [0,18)          | 5747                               | 10.4 | 0.0058          |
+| [18,25)         | 11541                              | 20.8 | 0.0298          |
+| [25,70)         | 30566                              | 55.2 | 0.0123          |
+| [70,101)        | 7504                               | 13.6 | 0.0044          |
+| **Total**       | **55360**                          | **100** |                 |
+
+**Step 2**: Draw the horizontal axis and blocks
+
+
+**Quick Way In R** :
+
+- freq=F produces the histogram on the density scale.
+
+- right=F makes the intervals right-open
+
+### Other graphical summaries
+
+#### Scatter Plot 
+```{r}
+#### Scatter Plot 
+Year = data$Year 
+plot(Age, Year)
+```
+
+#### Heatmap
+
+```{r}
+heatmap(table(Age, Year), Rowv = NA, Colv = NA, scale = "none", main = "Heatmap of frequencies")
+```
+
+#### Boxplot
+
+```{r}
+Age = data$Age 
+summary(Age)
+
+par(mfrow = c(1, 2)) 
+boxplot(Age) 
+boxplot(Age, horizontal = T)
+```
+
+
+#### Comparitive box plots
+```{r}
+data$Gender = factor(data$Gender, levels = c("Female", "Male"))
+Gender = data$Gender 
+boxplot(Age ~ Gender, horizontal = T)
+```
+
+
+
+
+
+
+## Logical operators
+
+
+| Symbol | Description                 |
+|--------|-----------------------------|
+| `>`    | greater than                |
+| `>=`   | greater than or equal to    |
+| `<`    | less than                   |
+| `<=`   | less than or equal to       |
+| `==`   | equal to                    |
+| `!=`   | not equal to                |
+
+
+# Topic 2
+```{r}
+data = read.csv("data/NewtownJune2017.csv",header=T)
+str(data)
+```
+
+## Numerical Summaryies
+
+### Sample Mean
+
+The sample mean is the **average** of the data.
+
+\[
+\text{sample mean} = \frac{\text{sum of data}}{\text{size of data}}
+\]
+
+or
+
+\[
+\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}
+\]
+
+### Deviation from the mean
+
+Given a data point \( x_i \), its deviation from the sample mean \( \bar{x} \) is
+
+\[
+D_i = x_i - \bar{x}
+\]
+
+### Sample mean as a balancing point
+
+The sample mean is the point at which the data is **balanced** in the sense the sum of the **absolute deviations** for values to the left of the mean is the same as the sum of absolute deviations to the right of the mean.
+
+\[
+\sum_{x_i < \bar{x}} |x_i - \bar{x}| = \sum_{x_i > \bar{x}} |x_i - \bar{x}|
+\]
+
+### Sample mean on the histogram
+
+The sample mean is the balancing point on the histogram: **the area of the histogram to the left of the mean equals the area to the right of the mean**.
+
+
+```{r}
+hist(data$Sold, main="Newtown properties", xlab="Price (in 1000s)") 
+
+abline(v=mean(data$Sold),col="green")
+```
+
+```{r}
+hist(data$Sold[data$Type=="House" & data$Bedrooms=="4"], main="Newtown 4 Bedrooms", xlab="Price (in 1000s)" )
+
+abline(v=mean(data$Sold[data$Type=="House" & data$Bedrooms=="4"]),col="green")
+```
+
+
+
+

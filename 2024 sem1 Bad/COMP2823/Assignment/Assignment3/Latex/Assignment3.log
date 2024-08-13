@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.15)  25 APR 2024 18:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.15)  9 AUG 2024 13:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1094,89 +1094,19 @@ Package hyperref Info: Link coloring OFF on input line 67.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 7
-0.
+! Undefined control sequence.
+l.69 \solution
+              {1}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
-psnfss/ot1ppl.fd
-File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
-)
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-70.
+[1{/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/map/p
+dftex/pdftex.map}
 
-(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
-psnfss/omlzplm.fd
-File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
-)
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-70.
-
-(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
-psnfss/omszplm.fd
-File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
-)
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-70.
-
-(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
-psnfss/omxzplm.fd
-File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
-)
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-70.
-
-(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
-psnfss/ot1zplm.fd
-File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
-)
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 70.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 70.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 70.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 70.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 70.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 70.
-LaTeX Font Info:    Trying to load font information for TS1+pplj on input line 
-84.
-
-(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
-psnfss/ts1pplj.fd
-File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
-) [1{/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/map
-/pdftex/pdftex.map}
-
-]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 100.
- [2]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-73.
-
-(/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
-base/t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [3] [4]
-Overfull \hbox (6.37025pt too wide) in paragraph at lines 213--214
-[]\T1/pplj/m/n/12 When \T1/cmtt/m/n/12 addNewMainDish(name, price) \T1/pplj/m/n
-/12 or \T1/cmtt/m/n/12 addNewSideDish(name, price) \T1/pplj/m/n/12 is called,
- []
-
-
-Overfull \hbox (2.38388pt too wide) in paragraph at lines 213--214
-\T1/pplj/m/n/12 the dish is in-serted into the ap-pro-pri-ate AVL tree and the 
-count in \T1/cmtt/m/n/12 MainArray[price]
- []
-
-[5]
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 223.
- [6] [7] (Assignment3.aux)
+] (Assignment3.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1185,30 +1115,20 @@ Package rerunfilecheck Info: File `Assignment3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24828 strings out of 474436
- 474106 string characters out of 5731134
- 1945187 words of memory out of 5000000
- 46661 multiletter control sequences out of 15000+600000
- 592539 words of font info for 93 fonts, out of 8000000 for 9000
+ 24450 strings out of 474436
+ 465762 string characters out of 5731134
+ 1928187 words of memory out of 5000000
+ 46355 multiletter control sequences out of 15000+600000
+ 565381 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 126i,11n,135p,1007b,919s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/l
-jfour/jknappen/ec/dpi600/ectt1200.pk>{/Users/bamingyuan/Library/Application Sup
-port/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Users/bamingyuan/Libra
-ry/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb></Users/bamingyuan/Library/Application S
-upport/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/
-bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public
-/fpl/fplbj8a.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/i
-nstall/fonts/type1/public/fpl/fplrc8a.pfb></Users/bamingyuan/Library/Applicatio
-n Support/MiKTeX/texmfs/install/fonts/type1/urw/palatino/uplb8a.pfb></Users/bam
-ingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/palat
-ino/uplr8a.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/ins
-tall/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Assignment3.pdf (7 pages, 151078 bytes).
+ 126i,11n,135p,550b,482s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/en
+c/dvips/base/8r.enc}</Users/bamingyuan/Library/Application Support/MiKTeX/texmf
+s/install/fonts/type1/public/fpl/fplrc8a.pfb></Users/bamingyuan/Library/Applica
+tion Support/MiKTeX/texmfs/install/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on Assignment3.pdf (1 page, 31706 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
+ 25 PDF objects out of 1000 (max. 8388607)
+ 2 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

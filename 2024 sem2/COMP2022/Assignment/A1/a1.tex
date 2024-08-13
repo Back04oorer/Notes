@@ -1,10 +1,10 @@
 \documentclass[12pt]{article}
 
-% UPDATE THESE PARAMETERS
-
+%%% UPDATE THESE PARAMETERS
 \newcommand{\sid}{530157791}
 \newcommand{\assignment}{1}
-
+\newcommand{\uos}{comp2022}
+%%%
 
 \NeedsTeXFormat{LaTeX2e}
 \usepackage[osf]{mathpazo}
@@ -37,7 +37,7 @@
 \addtolength{\headheight}{2.5pt}
 \pagestyle{fancy}
 \fancyhead{} 
-\fancyhead[L]{\sc comp2022} % Replace with comp2123 or comp2823
+\fancyhead[L]{\sc \uos} 
 \renewcommand{\headrulewidth}{0.75pt}
 
 % update these headers
@@ -66,7 +66,32 @@
 
 \begin{document}
 
-\solution{1} 
+\solution{4.1} 
+The idea is that each state in \( Q' \) not only stores the state in \( Q \) but also tracks the current letter position (1st, 2nd, 3rd). Specifically, we extend each state \( q \in Q \) to \( (q,0) \), \( (q,1) \), and \( (q,2) \), representing every first, second, and third letter. For the first and second characters, we only update the number in the tuple. For example, \( (q_0,0) \) becomes \( (q_0,1) \) after receiving the first character. When the third letter is received (i.e., the number in the tuple is 2), the number resets to 0, and \( q_0 \) transitions according to the original transition function in $\delta$. For example:
+\[
+(q_0,2) \xrightarrow{a} (q_1,0)
+\]
+The accept states are set to \( (q_f, 0) \), \( (q_f, 1) \), and \( (q_f, 2) \) for all \( q_f \in F \).\\
+
+
+
+\solution{4.2} 
+For DFA B, we have DFA B $= (Q',\Sigma,q_0',\delta',F')$:
+
+\begin{itemize}
+  \item $Q' = Q \times \{0,1,2\}$
+  \item $q_0' = (q_0,0)$
+  \item $\delta' = \delta'((q,n),l) = \left\{
+      \begin{array}{ll}
+      \text{$(q,n+1)$} & \text{$n = 0,1$} \\
+      \text{$(\delta(q,l),0)$} & \text{$n = 2$}
+      \end{array}
+      \right.$, $q \in Q$, $l \in \Sigma$
+  \item $F' = (q,n),q \in F,n \in \{0,1,2\}$
+
+\end{itemize}
+
+
 
 
 \end{document}
