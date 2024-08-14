@@ -313,12 +313,8 @@ git branch testing
 - Git knows which branch is the current by maintaining a special pointer called <mark style="background: #FF5582A6;">“HEAD”</mark>
 - Creating a branch in Git does not switch the HEAD to the new branch
 ![[Graphs/w2_7.png]]
-##### Git - Switching to another Branch (1)
-
-You can switch to an existing branch using Git checkout command
-```shell
-git checkout testing
-```
+##### Git - Switching / Merge 
+去看Slides啦,晚点再更新图
 
 
 

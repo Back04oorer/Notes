@@ -61,3 +61,12 @@ tr:nth-child(even) td {
     background-color: rgba(90, 164, 74, 0.2); /* 天水碧的浅色调，带轻微透明度 */
 }
 
+#toc ul ul {
+  display: none;
+}
+
+#toc ul li:hover > ul {
+  display: block;
+}
+
+

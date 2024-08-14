@@ -1,10 +1,10 @@
 {
 	"nodes":[
-		{"id":"17fa6cfc6e4e24f3","type":"file","file":"Notes/2024 sem2/ISYS2120/ISYS2120.md","x":-660,"y":-680,"width":380,"height":580},
-		{"id":"d914eac325dfccb7","type":"file","file":"Notes/2024 sem2/COMP2022/COMP2022.md","x":-280,"y":-680,"width":480,"height":580},
-		{"id":"6ed64357788e32e9","type":"file","file":"Notes/2024 sem2/SOFT2412/SOFT2412.md","x":-660,"y":-100,"width":380,"height":520},
-		{"id":"c4299e659fcc58e5","type":"file","file":"Notes/2024 sem2/MATH1062/Calculas/MATH1023.md","x":-280,"y":-100,"width":480,"height":280},
-		{"id":"c0e37ad9cb8a964a","type":"file","file":"Notes/2024 sem2/MATH1062/Stats/MATH1005.md","x":-280,"y":160,"width":480,"height":260}
+		{"id":"17fa6cfc6e4e24f3","type":"file","file":"Notes/2024 sem2/ISYS2120/ISYS2120.md","x":-660,"y":-680,"width":380,"height":640},
+		{"id":"d914eac325dfccb7","type":"file","file":"Notes/2024 sem2/COMP2022/COMP2022.md","x":-280,"y":-680,"width":480,"height":640},
+		{"id":"6ed64357788e32e9","type":"file","file":"Notes/2024 sem2/SOFT2412/SOFT2412.md","x":-660,"y":-40,"width":380,"height":540},
+		{"id":"c4299e659fcc58e5","type":"file","file":"Notes/2024 sem2/MATH1062/Calculas/MATH1023.md","x":-280,"y":-40,"width":480,"height":300},
+		{"id":"c0e37ad9cb8a964a","type":"file","file":"Notes/2024 sem2/MATH1062/Stats/MATH1005.md","x":-280,"y":260,"width":480,"height":240}
 	],
 	"edges":[]
 }

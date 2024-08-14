@@ -1,6 +1,6 @@
 ---
-title: "MATH1062 Stats Note All IN 1"
-author: "MINGYUAN BA"
+title: "MATH1062 Stats Note"
+author: "back04oorer"
 date: "`r Sys.Date()`"
 output: 
   html_document:
@@ -34,7 +34,7 @@ output:
 }
 </style>
 
-# Topic 1
+# DATA&Graphical Summaries
 
 ## Read In Data
 **header = TRUE**: The first row is treated as the **header row**, and the values in that row are used as column names.
@@ -103,7 +103,6 @@ Initial Data Analysis commonly involves:
     - R: Double
 
 ### Change variable types in R
-&nbsp;
 
 **Structure of Data**
 
@@ -337,13 +336,51 @@ boxplot(Age ~ Gender, horizontal = T)
 | `!=`   | not equal to                |
 
 
-# Topic 2
+# Numerical Summaries
+
+## Import Data
 ```{r}
 data = read.csv("data/NewtownJune2017.csv",header=T)
 str(data)
 ```
 
-## Numerical Summaryies
+## Notations 
+Observations of a single variable of size \( n \) can be represented by
+
+  \( x_1, x_2, \dots, x_n \)
+
+The ranked observations (ordered from smallest to largest) are
+
+  \( x_{(1)}, x_{(2)}, \dots, x_{(n)} \)
+
+  such that \( x_{(1)} \leq x_{(2)} \leq \dots \leq x_{(n)} \)
+
+The sum of the observations is
+
+  \[
+  \sum_{i=1}^{n} x_i
+  \]
+
+## Numerical Summaries Intro
+
+A numerical summary reduces all the data to one simple number (“statistic”).
+
+- This loses a lot of information
+
+- However it allows easy communication and comparisons.
+
+**Major features** that we can summarise numerically are:
+
+- Maximum
+
+- Minimum
+
+- Centre[sample mean,median]
+
+- Spread[standard deviation,range,interquartile range]
+
+
+## Centre
 
 ### Sample Mean
 
@@ -392,6 +429,215 @@ hist(data$Sold[data$Type=="House" & data$Bedrooms=="4"], main="Newtown 4 Bedroom
 abline(v=mean(data$Sold[data$Type=="House" & data$Bedrooms=="4"]),col="green")
 ```
 
+### Sample median
+
+The sample median \( \tilde{x} \) is the **middle data point**, when the observations are ordered from smallest to largest.
+
+- For an odd-sized number of observations:
+
+  \[
+  \text{sample median} = \text{the unique middle point} = x_{\left(\frac{n+1}{2}\right)}
+  \]
+
+- For an even-sized number of observations:
+
+  \[
+  \text{sample median} = \text{average of the 2 middle points} = \frac{x_{\left(\frac{n}{2}\right)} + x_{\left(\frac{n}{2}+1\right)}}{2}
+  \]
 
 
+### Sample Median In R
+(i)Sort and Observe
+```{r}
+sort(data$Sold)
+length(data$Sold)
+```
+(28th + 29th)/2 = 1387.5
+
+(ii)Directly use function `median()`
+```{r}
+median(data$Sold)
+```
+
+### Sample median on the histogram
+The sample median is the **half way point** on the histogram - i.e., 50% of the houses sold are below and above $1.3875 million.
+
+```{r}
+hist(data$Sold) 
+abline(v=mean(data$Sold),col="green")
+abline(v=median(data$Sold),col="purple")
+```
+
+### Sample mean and median on the boxplot
+
+**The sample median is the centre line on the boxplot.**
+
+```{r}
+boxplot(data$Sold[data$Type=="House" & data$Bedrooms=="4"], main = "Newtown 4B Properties") 
+
+abline(h=mean(data$Sold[data$Type=="House" & data$Bedrooms=="4"]),col="green")
+
+abline(h=median(data$Sold[data$Type=="House" & data$Bedrooms=="4"]),col="purple")
+```
+
+## Robustness
+
+### Sample Mean vs Median
+The difference between the sample mean and the sample median can be an indication of the **shape** of the data.
+
+- For symmetric data, the sample mean and sample median are the same: \( \bar{x} = \tilde{x} \).
+
+- For left skewed data (the most frequent data are concentrated on the right, with a left tail), the sample mean is smaller than the sample median: \( \bar{x} < \tilde{x} \).
+
+- For right skewed data (the most frequent data are concentrated on the left, with a right tail), the sample mean is larger than the sample median: \( \bar{x} > \tilde{x} \).
+
+
+```{r, echo=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("Graphs/w2_1.png")
+```
+
+### Optimal Choice
+
+- As the **sample median is robust**, it is preferable for data which is skewed or has many outliers.
+
+- The sample mean is helpful for data which is **basically symmetric**, with not too many outliers, and for theoretical analysis.
+
+## Spread
+
+### Standard deviation (SD)
+**Root mean square (RMS)**
+
+  \[
+  \text{RMS(numbers)} = \sqrt{\text{sample mean}\left(\text{numbers}^2\right)}
+  \]
+  
+
+The standard deviation measures the **spread** of the data.
+  
+  \[
+  \text{SD}_{\text{pop}} = \text{RMS of (deviations from the mean)}
+  \]
+  
+  Formally,
+  
+  \[
+  \text{SD}_{\text{pop}} = \sqrt{\text{Mean of (deviations from the mean)}^2} = \sqrt{\frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n}}
+  \]
+
+### Sd_pop vs Sd_sample
+
+There are **two** different formulas for the standard deviation, depending on whether the data is the **population** or a **sample**.
+
+The `sd` command in R always gives the **sample** version, as we most commonly have samples.
+
+Formally,
+
+```{r, echo=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("Graphs/w2_2.png")
+```
+
+| Summary                            | Formula                                     | In R                           |
+|------------------------------------|---------------------------------------------|--------------------------------|
+| **Population or Sample mean**      | Sample Mean (Average)                       | `mean(data)`                  |
+| **Population standard deviation**  | RMS of gaps from the sample mean            | `sd(data) * sqrt((n-1)/n)`     |
+| **Sample standard deviation**      | Adjusted RMS of gaps from the sample mean   | `sd(data)`                    |
+
+The squared standard deviation is called the **variance**: \(\text{SD}^2\).
+
+The population standard deviation is always smaller than a sample standard deviation, \(\text{SD}_{\text{pop}} \leq \text{SD}_{\text{sample}}\), why? Extra variability due to sampling.
+
+*Note*: **For large sample sizes, the difference becomes negligible**
+
+### Population data or Sample data ? 
+
+If we are just interested in the Newtown property prices during April-June 2017, then the `data` is the whole population.
+
+If we are studying the property prices during April-June 2017 as a **window into more general property prices** (for the rest of the year or for the Inner West area) , then the data could be considered a sample
+
+
+### Standard Units
+
+**Standard units of a data point** = how many standard deviations is it below or above the mean
+
+\[
+\text{standard units} = \frac{\text{data point} - \text{mean}}{\text{SD}}
+\]
+
+This means that
+
+\[
+\text{data point} = \text{mean} + \text{SD} \times \text{standard units}
+\]
+
+It gives the relative location of a data point in the data set. It also has other benefits in data modelling (see later lectures).
+
+
+### Interquartile range
+
+**IQR** = range of the middle 50% of the data
+
+- More formally, **IQR** = \(Q_3 - Q_1\), where
+  - \(Q_1\) is the 25% percentile (1st quartile) and \(Q_3\) is the 75% percentile (3rd quartile).
+  - The median is the 50% percentile, or 2nd quartile \(\tilde{x} = Q_2\).
+
+### Quantile, quartile, percentile
+
+The set of **q-quantiles** divides the ordered data into equal size sets (in terms of percentage of data).
+
+- **quartiles**: If q = 4, then the data set will be divided into 4 equal parts, each representing 25% of data.
+
+- If q = 100, the data is divided into 100 equal parts, each containing 1% of the data. These are known as **percentiles**.
+
+```{r}
+summary(data$Sold)
+```
+```{r}
+summary(data$Sold)[5] - summary(data$Sold)[2] # one way to calculate IQR
+```
+
+```{r}
+IQR(data$Sold)
+```
+
+- IDR is **robust**
+
+### IQR on the boxplot and outliers
+
+The IQR is the **length** of the box in the boxplot. It represents the span of the middle 50% of the houses sold.
+
+The **lower** and **upper thresholds** are a distance of 1.5IQR from the 1st and 3rd quartiles (by convention).
+
+\[
+LT = Q_1 - 1.5 \times IQR
+\]
+
+and
+
+\[
+UT = Q_3 + 1.5 \times IQR
+\]
+
+Data outside these thresholds is considered an **outlier** ("extreme reading").
+
+```{r}
+boxplot(data$Sold, horizontal=T) 
+iqr=quantile(data$Sold)[4] - quantile(data$Sold)[2]
+abline(v=median(data$Sold),col="green") 
+abline(v=quantile(data$Sold)[2],col="red") # 25%
+abline(v=quantile(data$Sold)[4],col="red") # 75%
+abline(v=quantile(data$Sold)[2]- 1.5*iqr,col="purple") # out of the plot
+abline(v=quantile(data$Sold)[4]+ 1.5*iqr,col="purple")
+```
+
+**R uses the convention**
+
+\[
+LT = \text{max}(\text{min}(x), Q_1 - 1.5 \times IQR)
+\]
+
+and
+
+\[
+UT = \text{min}(\text{max}(x), Q_3 + 1.5 \times IQR)
+\]
 
