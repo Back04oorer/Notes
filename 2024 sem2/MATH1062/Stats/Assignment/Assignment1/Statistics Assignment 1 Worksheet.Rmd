@@ -1,0 +1,266 @@
+---
+title: "MATH1062 (Part B) / MATH1005 Assignment 1 Worksheet"
+author: "© University of Sydney MATH1062 (Statistics) / MATH1005"
+date: '`r format(Sys.Date(), "%d %B %Y")`'
+output:
+  html_document:
+    fig_caption: yes
+    number_sections: yes
+    self_contained: yes
+    theme: flatly
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    code_folding: show
+---
+
+
+# Instruction {-}
+
+There are **several** questions. Each question may contain multiple tasks. To receive a full mark in this part, you should correctly solve all tasks, justify your solution in the space provided in case necessary, and add appropriate labels to your graphical summaries. 
+
+Do **NOT** modify the header of this file. Do **NOT** delete or alter any text description from this file. Only work in the space provided.
+
+**Format:** All assignment tasks have either a field for writing embedded R code, an answer field marked by the prompt **`Answer to Task x.x`**, or both. You should enter your solution either as embedded R code or as text after the prompt **`Answer to Task x.x`**.
+
+**Submission:** Upon completion, you must render this worksheet (using `Knit` in R Studio) into an html file and submit the html file. Make sure the file extension "html" is in lower case. Your html file **MUST** contain all the R code you have written in the worksheet. 
+
+
+## **`Task 0.0:`** The data story of Chick Weight {-}
+
+    This is a sample task demonstrating how to answer assignment questions using this R Markdown worksheet. Please read this data story carefully. You do NOT need to answer the question in this task. Your tasks start at Question 1 below. 
+
+In this assignment, we will use the `ChickWeight` data, which is a built-in data set in R. This dataset records the body weights of chicks at birth and every second day thereafter until day 20, with additional measurements taken on day 21. The chicks were divided into four groups based on different protein diets. We will focus on the following three variables for this assignment:
+
+- the variable `weight` contains the measured body weights of chicks in grams. 
+- the variable `Time` records the number of days since birth when the measurement was made.
+- the variable `Diet` records the group of protein diet.
+
+The variables `weight` and `Time` are numerical. The variable `Diet` is categorical. **Note that the variable names and the dataframe name are case sensitive.**
+
+Write R code in the following code block to display the dimension of the data, variable names, and the first several rows of the data set. How many variables in this data set? What is the sample size? Write your comment after the **`Answer to Task 0.0`** prompt provided below.
+
+```{r}
+### Write your code here. The code is completed in Task 1.0 for demonstration.
+dim(ChickWeight) # the dimension of the ChickWeight data set
+names(ChickWeight) # display variable names
+head(ChickWeight) # display the first several variables
+```
+
+**`Answer to Task 0.0:`** (Write your answer here.) There are 4 variables. The sample size is 578.
+
+
+**====START OF ASSIGNMENT QUESTIONS====**
+
+# Barplot, histogram, and skewness
+
+## **`Task 1.1`** {-}
+
+Produce a frequency table and a barplot for the variable `Diet`. Write your code in the following code block. Among all diet groups, which one has the highest frequency? Write your comment after the **`Answer to Task 1.1`** prompt provided below.
+
+```{r}
+### Code for Task 1.1. Write your code here
+###
+table(ChickWeight$Diet)
+
+barplot(table(ChickWeight$Diet))
+
+```
+
+**`Answer to Task 1.1:`** (Write your answer here.) The diet group 1 has the highest frequency among all diet groups.
+
+
+## **`Task 1.2`** {-}
+
+The overall aim of this task is to use sample mean and median to determine the shape of a data distribution.  
+
+In the following code block, create an appropriate histogram for the variable `weight` on the **density scale**. Here you can use the default number of class intervals. Calculate the sample mean and the sample median of the variable `weight`,  and then use `abline` to indicate the locations of the sample median and the sample mean on the histogram. 
+
+Based on your findings, comment on the skewness of the variable `weight` and justify your answer. Write your answer after the **`Answer to Task 1.2`** prompt provided below.
+
+```{r}
+### Code for Task 1.2. Write your code here
+###
+weight = ChickWeight$weight 
+mean(weight)
+median(weight)
+
+hist(weight,freq = FALSE)
+abline(v=mean(weight),col="green")
+abline(v=median(weight),col="red")
+```
+
+**`Answer to Task 1.2:`** (Write your answer here.) The histogram shows that most of the chicks have lower to mid-range weights. Additionally, the sample mean (indicated by the green line) is greater than the median (indicated by the red line). Based on these observations, it can be concluded that the weight variable shows right skewness.
+
+
+# Boxplot, data selection, and outliers
+
+## **`Task 2.1`** {-}
+
+We want to understand the effectiveness of the `Diet` on the `weight` of the chicks using the comparative boxplot. Here we consider the weight of chicks **after 18 days (including day 18) since birth**. In the following code block, first select data points in the `Diet` and `weight` variables corresponding to 18 days and later (see the `Time` variable). Then, make a comparative boxplot for the selected data points from `weight` by splitting it by the corresponding `Diet`. 
+
+Based on the **reported centres** of the comparative boxplot, comment on which diet group is most effective on chick weight and justify your answer. Write your answer after the **`Answer to Task 2.1`** prompt provided below.
+
+```{r}
+### Code for Task 2.1. Write your code here
+###
+
+ChickWeight_18 = ChickWeight[ChickWeight$Time >= 18, ]
+
+weight_18 = ChickWeight_18$weight
+diet_18 = ChickWeight_18$Diet
+
+boxplot(weight_18 ~ diet_18, main = "Comparative Boxplot of Weight by Diet", xlab = "Weight",ylab = "Diet",col = c("blue", "green", "pink", "yellow"))
+
+```
+
+**`Answer to Task 2.1:`** (Write your answer here.) According to the comparative boxplot, it shows that Diet group 3 is the most effective in increasing the weight of the chicks. This is shown by the higher median weight of chicks in this diet group 3 compared to those in the other groups. 
+
+## **`Task 2.2`** {-}
+
+The rest of this question is to check your understanding of the boxplot, numerical summaries used for constructing a boxplot, and how to identify outliers. We will focus on the variable `weight`. 
+
+- Calculate median of `weight` and the quartiles used for identifying the middle 50\% of data points. 
+- Make a boxplot (preferbaly a horizontal one). 
+- Use `abline` to indicate the location of the sample median and the interquartile range on the boxplot.
+
+```{r}
+### Code for Task 2.2.  Write your code here
+###
+
+median(weight)
+
+# 25%
+summary(weight)[2]
+
+# 75%
+summary(weight)[5]
+
+boxplot(weight ~ ChickWeight$Diet,horizontal = TRUE ,main = "Comparative Boxplot of Weight by Diet", xlab = "Weight",ylab = "Diet",col = c("blue", "green", "pink", "yellow"))
+
+abline(v = median(weight), col = "green")  # median
+abline(v = summary(weight)[2], col = "red")    # 1st Quantile
+abline(v = summary(weight)[5], col = "red")    # 3st QUantile
+
+```
+
+## **`Task 2.3`** {-}
+
+Are there any outliers? Write your answer after the **`Answer to Task 2.3`** prompt provided below.
+
+**`Answer to Task 2.3:`** (Write your answer here.) Yes.
+
+In the following code block, write R code to count the number of outliers in this data set if there is any. **Hint:** you may need to calculate the location of the whiskers in the boxplot (the lower and upper thresholds in Tukey's convention) first. 
+
+```{r}
+### Code for Task 2.3.  Write your code here
+###
+
+weight_summary = summary(ChickWeight$weight)
+
+# extract 1st,3rd quantile
+q1 <- weight_summary["1st Qu."]
+q3 <- weight_summary["3rd Qu."]
+iqr <- q3 - q1
+
+# Calculate upper and lower threshold
+lower_threshold <- q1 - 1.5 * iqr
+upper_threshold <- q3 + 1.5 * iqr
+
+outliers <- ChickWeight$weight[ChickWeight$weight < lower_threshold | ChickWeight$weight > upper_threshold]
+number_of_outliers = length(outliers)
+
+# print
+lower_threshold
+upper_threshold
+outliers
+number_of_outliers
+
+```
+
+# Normal curve
+
+## **`Task 3.1`** {-}
+
+We consider the population of chicks aged between 18 and 21 days (inclusive of day 18 and day 21) after birth. We want to apply the normal curve to estimate the proportion of chicks in this population weighing **above** 400 grams. The data selected in **`Task 2.1`** will serve as the sample drawn from this population.
+
+In the following code block, calculate the sample mean and sample standard deviation. Construct a normal curve using these values, and subsequently determine the proportion of chicks weighing above 400 grams. What percentage of chicks will weigh above 400 grams? Please also write your answer after the **`Answer to Task 3.1`** prompt provided below, rounding your answer (in percentage) to two decimal places.
+
+**Hint:** If you encountered difficulties selecting data in **`Task 2.1`**, you can use the sample mean $206$ and the sample SD $66$ instead. You will not be penalised for using these values in this question.
+
+```{r}
+### Code for Task 3.1.  Write your code here
+###
+
+ChickWeight_18_21 <- ChickWeight[ChickWeight$Time >= 18 & ChickWeight$Time <= 21, ]
+
+sample_mean = mean(ChickWeight_18_21$weight)
+sample_sd = sd(ChickWeight_18_21$weight)
+
+sample_mean
+sample_sd
+
+sample_mean <- 206
+sample_sd <- 66
+
+proportion_above_400 = pnorm(400, sample_mean, sample_sd,lower.tail = FALSE)
+
+percentage_above_400 = round(proportion_above_400 * 100, 2)
+
+percentage_above_400
+
+
+```
+
+**`Answer to Task 3.1:`** (Write your answer here.) 
+
+## **`Task 3.2`** {-}
+
+In the following code block, calculate the 30% percentile of the population of chick weights based on the normal curve constructed above. Please also provide your answer after the **`Answer to Task 3.2`** prompt provided below, rounding your answer (in percentage) to two decimal places.
+
+```{r}
+### Code for Task 3.2.  Write your code here
+###
+
+percentile_30 <- qnorm(0.30, mean = sample_mean, sd = sample_sd)
+
+percentile_30 <- round(percentile_30, 2)
+
+percentile_30
+
+```
+
+**`Answer to Task 3.2:`** (Write your answer here.)  171.39.
+
+## **`Task 3.3`** {-}
+
+In our lectures, we learned about the distinction between the population standard deviation (SD) and the sample SD. Additionally, we learned that variance = SD$^2$. R has built-in functions `sd()` and `var()` for computing the sample SD and the sample variance. Here we want to write our own R function to compute the **population variance** and apply it to the `ChickWeight` data set. 
+
+In the following, we provide the function definition for `my_pop_var(X)`, where `X` is the input data. Complete this function so it can compute the population variance for the input data `X`. 
+
+```{r}
+### Code for Task 3.3. 
+###
+
+my_pop_var = function(X){
+
+  mu = mean(X)
+  
+  pop_variance = sum((X - mu)^2) / length(X)
+  
+  return(pop_variance)
+}
+
+```
+
+## **`Task 3.4`** {-}
+
+Apply your function written above to compute the population variance of the variable `weight` in `ChickWeight`. 
+
+```{r}
+### Code for Task 3.4.  Write your code here
+###
+my_pop_var(ChickWeight$weight)
+```
+
+**====END OF THE WORKSHEET====**

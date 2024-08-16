@@ -641,3 +641,5 @@ and
 UT = \text{min}(\text{max}(x), Q_3 + 1.5 \times IQR)
 \]
 
+# Normal Curve
+**Updating......**

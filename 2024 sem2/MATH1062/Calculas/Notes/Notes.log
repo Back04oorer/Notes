@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.15)  9 AUG 2024 13:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.15)  16 AUG 2024 02:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -576,36 +576,69 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
 (/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/
 amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+Overfull \hbox (0.75456pt too wide) in paragraph at lines 39--40
+[]\OT1/cmr/bx/n/10 Initial Con-di-tion\OT1/cmr/m/n/10 : An ini-tial con-di-tion
+ is a pair $(\OML/cmm/m/it/10 x[]; y[]\OT1/cmr/m/n/10 )$ such that $\OML/cmm/m/
+it/10 y\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) =
+ []
+
+[1
 
 {/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdf
-tex/pdftex.map}] (Notes.aux)
+tex/pdftex.map}]
+<Graphs/direction_field.png, id=20, 578.16pt x 578.16pt>
+File: Graphs/direction_field.png Graphic file (type png)
+<use Graphs/direction_field.png>
+Package pdftex.def Info: Graphs/direction_field.png  used on input line 58.
+(pdftex.def)             Requested size: 319.99997pt x 320.0004pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
+
+ []
+
+[2 <./Graphs/direction_field.png>]
+Overfull \hbox (4.74986pt too wide) in paragraph at lines 102--103
+[]\OT1/cmr/bx/n/10 Exponential Growth\OT1/cmr/m/n/10 : The ex-po-nen-tial growt
+h model as-sumes the growth
+ []
+
+[3] [4] (Notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 13383 strings out of 474436
- 276357 string characters out of 5731134
- 1929187 words of memory out of 5000000
- 35479 multiletter control sequences out of 15000+600000
- 566245 words of font info for 68 fonts, out of 8000000 for 9000
+ 13395 strings out of 474436
+ 276681 string characters out of 5731134
+ 1941187 words of memory out of 5000000
+ 35490 multiletter control sequences out of 15000+600000
+ 566580 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,87p,388b,220s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/ty
-pe1/public/amsfonts/cm/cmbx10.pfb></Users/bamingyuan/Library/Application Suppor
-t/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/bamin
-gyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsf
-onts/cm/cmmi10.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs
-/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/bamingyuan/Library/Ap
-plication Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pf
-b></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/ty
-pe1/public/amsfonts/cm/cmr12.pfb></Users/bamingyuan/Library/Application Support
-/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on Notes.pdf (1 page, 84607 bytes).
+ 84i,6n,87p,388b,280s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/l
+jfour/jknappen/ec/dpi600/tcrm1000.pk></Users/bamingyuan/Library/Application Sup
+port/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/ba
+mingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/tex
+mfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/bamingyuan/Librar
+y/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fon
+ts/type1/public/amsfonts/cm/cmmi7.pfb></Users/bamingyuan/Library/Application Su
+pport/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/ba
+mingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/a
+msfonts/cm/cmr12.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texm
+fs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></Users/bamingyuan/Library/
+Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr5.p
+fb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb></Users/bamingyuan/Library/Application Support
+/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/baming
+yuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfo
+nts/cm/cmsy7.pfb>
+Output written on Notes.pdf (4 pages, 247156 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
