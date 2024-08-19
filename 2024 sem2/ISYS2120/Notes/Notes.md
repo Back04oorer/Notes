@@ -564,7 +564,7 @@ Each weak entity type is captured in schema by a separate table
 - PK of this table is composite: the combination with both
 	- Discriminator of weak entity
 	- Foreign key column(s) which references the PK of relation from owning entity 
-![w2_19](Graphs/w3_1.png)
+![w2_19](Notes/2024%20sem2/ISYS2120/Notes/Graphs/w3_1.png)
 
 ### Mapping of relationship Types
 

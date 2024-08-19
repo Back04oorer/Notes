@@ -1,91 +1,110 @@
 ```SQL
--- Then, create the Customer table
-
 CREATE TABLE Agent(
     AgentID INT PRIMARY KEY,
-    AFirstName VARCHAR(255),
-    ALastName VARCHAR(255),
-    APhone VARCHAR(255)
+    AFirstName VARCHAR(255) NOT NULL,
+    ALastName VARCHAR(255) NOT NULL,
+    APhone VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE Customer (
     CustomerID INT PRIMARY KEY,
-    CFirstName VARCHAR(20),
-    CLastName VARCHAR(20),
-    CMailAddress VARCHAR(20),
-    CPhone VARCHAR(20),
-
-    KnownToAgent INT REFERENCES Agent(AgentID)
+    CFirstName VARCHAR(20) NOT NULL,
+    CLastName VARCHAR(20) NOT NULL,
+    CMailAddress VARCHAR(20) NOT NULL,
+    CPhone VARCHAR(20) NOT NULL
 );
 
+
+CREATE TABLE CustomerAgent (
+
+    -- The ER diagram indicates that every customer should be known by at least one agent.
+    -- However, this constraint cannot be directly enforced using standard SQL constraints.
+    -- It requires additional mechanisms to ensure that every customer is indeed associated with at least one agent.
+
+    CustomerID INT REFERENCES Customer(CustomerID),
+    AgentID INT REFERENCES Agent(AgentID),
+    LatestContactDate DATE,
+    PRIMARY KEY(CustomerID,AgentID)
+);
 
 CREATE TABLE Owner (
-    TFN VARCHAR(20),
+    CustomerID INT PRIMARY KEY REFERENCES Customer(CustomerID),
+
+    -- The TFN is an 8 (older numbers) or 9-digit number 
+    TFN VARCHAR(9), 
     BankAcct VARCHAR(20),
-    MgtFeeRate FLOAT,
-    CustomerID INT PRIMARY KEY REFERENCES Customer(CustomerID)
+    MgtFeeRate FLOAT
 );
 
-CREATE TABLE Complex (
-    NumberOfApts INT,
-    Address VARCHAR(20),
-    Suburb VARCHAR(20),
-    OwnerID_IS_SECRETARY INT REFERENCES Owner(CustomerID),
-    PRIMARY KEY (Address, Suburb)
-);
-
-
--- Now, create the Renter table
 CREATE TABLE Renter (
     CustomerID INT PRIMARY KEY REFERENCES Customer(CustomerID),
     BALANCE FLOAT
 );
 
--- Finally, create the Apartment table
+
+CREATE TABLE Complex (
+    PRIMARY KEY (Address, Suburb),
+    NumberOfApts INT NOT NULL,
+    Address VARCHAR(255),
+    Suburb VARCHAR(32),
+    OwnerID INT REFERENCES Owner(CustomerID) NOT NULL,
+    EndDate DATE NOT NULL
+);
+
+CREATE TABLE Facility(
+    PRIMARY KEY (Address,Suburb,FacilityName),
+    Address VARCHAR(255),
+    Suburb VARCHAR(32),
+    FacilityName VARCHAR(255),
+    FOREIGN KEY (Address, Suburb) REFERENCES Complex(Address, Suburb)
+);
+
+
 CREATE TABLE Apartment (
-    ANumber INT,
+    -- Apartment's attributes
+    ANumber INT ,
     Bedrooms INT,
-    Area VARCHAR(20),
+    Area VARCHAR(128),
 
-    -- Complex
-    Address VARCHAR(20),
-    Suburb VARCHAR(20),
-    Floor VARCHAR(20),
+    -- Strong Entity: Complex
+    Address VARCHAR(255),
+    Suburb VARCHAR(32),
+    AptFloor VARCHAR(20) NOT NULL, -- Relation LocateIn
 
+    -- Weak Entity: Combine Strong entity's pk with discriminator As its PK
     PRIMARY KEY (ANumber, Address, Suburb),
     FOREIGN KEY (Address, Suburb) REFERENCES Complex(Address, Suburb),
 
     -- Owner
-    CustomerID_OWNER INT,
-    FOREIGN KEY (CustomerID_OWNER) REFERENCES Owner(CustomerID),
+    OwnerID INT REFERENCES Owner(CustomerID) NOT NULL,
 
     -- Renter
-    CustomerID_RENTS INT,
+    RenterID INT,
     EndDate DATE,
     WeeklyRent FLOAT,
-    FOREIGN KEY (CustomerID_RENTS) REFERENCES Renter(CustomerID)
-);
+    FOREIGN KEY (RenterID) REFERENCES Renter(CustomerID),
 
-CREATE TABLE Facility(
-    Address VARCHAR(20),
-    Suburb VARCHAR(20),
-    FacilityName VARCHAR(255),
-    PRIMARY KEY (Address,Suburb,FacilityName),
-    FOREIGN KEY (Address, Suburb) REFERENCES Complex(Address, Suburb)
+    -- Agent
+    AgentID INT REFERENCES Agent(AgentID) NOT NULL
 );
 
 
 CREATE TABLE DaysWorking(
     AgentID INT REFERENCES Agent(AgentID),
-    DAYS VARCHAR(255),
-    PRIMARY KEY (AgentID,DAYS)
+    Days VARCHAR(32),
+    PRIMARY KEY (AgentID,Days)
 );
 
 CREATE TABLE OffersFor(
-    Renter_ID INT,
+    Duration VARCHAR(32) NOT NULL,
+    OfferedRent FLOAT NOT NULL,
+
+    PRIMARY KEY(RenterID,Address,Suburb,ANumber),
+    RenterID INT REFERENCES Renter(CustomerID),
     Address VARCHAR(20),
     Suburb VARCHAR(20),
     ANumber INT,
+
     FOREIGN KEY (Address,Suburb,ANumber) REFERENCES Apartment(Address,Suburb,ANumber)
 )
 

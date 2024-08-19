@@ -1,0 +1,310 @@
+---
+title: "MATH1062 Lab3 Worksheet"
+subtitle: "Introduction to R"
+author: "© University of Sydney MATH1062"
+date: '`r format(Sys.Date(), "%d %B %Y")`'
+output:
+  html_document:
+    fig_caption: yes
+    number_sections: yes
+    self_contained: yes
+    theme: flatly
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    code_folding: show
+---
+<style>
+h2 { /* Header 2 */
+    font-size: 22px
+}
+</style>
+
+# <i class="fa fa-crosshairs"></i> Aim of Lab3 {-}
+
+**Learning Outcome** 
+
+LO1. apply mathematical logic and statistical thinking to solve problems
+
+LO3. identify appropriate methods to describe, summarise and visualise a given data set
+
+LO5. apply statistical software such as R to analyse example sets of data
+
+By now, you should already be able to:
+
+- Import a given data-set into R
+- Visualise variables by choosing an appropriate graphical summary
+
+
+At the end of this Lab, you should be able to:
+
+- Present and interpret graphical/numerical summaries of variables and understand their limitations
+- Write a function in R
+- Model a variable by a Normal curve, and explain how to find areas under the curve and percentiles.
+- Use R to calculate areas under the Normal curve and percentiles.
+
+# Import data and IDA
+
+
+- Save the data-file `math1005_cleaned.csv`  in your data folder within your MATH1062 folder.
+
+- **Import** the data into a variable called `math1005`:
+
+```{r}
+math1005 = read.csv("math1005_cleaned.csv")
+```
+
+This data was collected from an **optional survey** for MATH1005 students at the start of 2022 Semester 2. There are a total of **928 students** enrolled in this course.
+
+- How many survey **responses** are there? How many **variables** are there?
+
+```{r}
+### write code here
+dim(math1005)
+```
+
+- What are the **columns** of your data and what are their **type**? Are they classified correctly?
+    - *Hint: Use the function `str `. Other useful functions are `names` and`head`*.
+     
+```{r}
+### write code here
+str(math1005)
+math1005$Country
+```
+
+
+# Quantitative Data
+
+## Height
+
+- Create a **graphical summary** for the **height** distribution of the cohort. Comment on the distribution, are there any **outliers**? Are there any issues with the data?
+
+```{r}
+### write code here
+
+boxplot(math1005$Height,horizontal = TRUE)
+```
+
+**Answer**: The height distribution seems roughly symmetric with one outlier!
+
+- Calculate some **numerical summaries** for the **heights**. Briefly summarise your findings. Here you may need to remove `NA`s in the variable before proceed.  
+
+```{r}
+### write code here
+height_cleaned = math1005$Height[!is.na(math1005$Height)]
+summary(height_cleaned)
+```
+
+
+## Write a function in R to compute the population standard deviation
+
+In the lectures, we learned how to write a function in R. Here is your turn, we want to write a function to compute the **population standard deviation** of a data set. Let's name the function `sdpop`. 
+
+- Complete the function in the following.
+
+```{r}
+# complete the following function
+sdpop <- function(X){
+  ### write your code here
+  sdpop = sqrt(sum((X-mean(X))^2)/length(X))
+  return(sdpop)
+
+}
+```
+
+- Calculate the population SD of height and check if it is correct. 
+
+```{r}
+### Apply your function sdpop here to height and check its correctness
+sdpop(height_cleaned)
+sd(height_cleaned) * sqrt((length(height_cleaned)-1)/length(height_cleaned))
+```
+
+## Age
+
+- Create a **graphical summary** for the **age** distribution of the cohort. Comment on the distribution, are there any **outliers**? Are there any issues with the data? 
+
+```{r}
+### write code here
+boxplot(math1005$Age,horizontal = TRUE)
+```
+
+
+- Calculate some **numerical summaries** for the **ages**. Briefly summarise your findings.
+
+```{r}
+### write code here
+summary(math1005$Age)
+```
+
+
+## Shoe Size
+
+- Create a **graphical summary** for the **shoe size** distribution of the cohort. Comment on the distribution, are there any **outliers**? Are there any issues with the data? **Hint:** Some might response using a different shoe size convention, perhaps using EU instead of US.
+
+```{r}
+### write code here
+boxplot(math1005$ShoeSize)
+
+convert_to_us <- function(size) {
+  # Use ifelse to handle vectors
+  us_size <- ifelse(size > 45, size - 33, size)
+  return(us_size)
+}
+
+
+boxplot(convert_to_us(math1005$ShoeSize))
+```
+
+- Perform any appropriate **data cleaning**. You may also need to remove `NA`s here. 
+
+```{r}
+### write code here
+shoesize_cleaned = math1005$ShoeSize[!is.na(math1005$ShoeSize)]
+shoesize_cleaned
+boxplot(convert_to_us(shoesize_cleaned))
+```
+
+
+- Calculate some **numerical summaries** for the **shoe sizes**. Briefly summarise your findings.
+  
+```{r}
+### write code here
+summary(shoesize_cleaned)
+```
+
+Since Mean is much higher thatn median, the distribution might be right-skewed
+
+# Normal curve
+
+We treat the collected heights as a sample of heights of students in U Syd. We want to fit a normal curve to the histogram of this height sample using the sample mean and sample SD (see Task 2.1). 
+
+## Plot normal curve
+
+The code `curve(dnorm(x, m, s), xlim = c(a, b), add=TRUE)` plots a normal curve with mean m and SD s in the domain $(a,b)$ on the x axis. The option `add=TRUE` let you add a normal curve to an existing plot. See the following for an example. 
+
+```{r}
+### here is an example
+curve(dnorm(x, 0, 0.5), xlim = c(-10, 5), col = "red")
+curve(dnorm(x, -2, 2), xlim = c(-10, 5), col = "blue", add=TRUE)
+```
+
+- Now, plot the histogram of height and then plot the normal curve (defined by the sample mean and sample SD) on top of it. Is the normal curve a reasonable approximation to the histogram in this example? 
+
+```{r}
+### Write your code here
+
+hist(height_cleaned, probability = TRUE, main = "Histogram with Normal Curve", xlab = "Height")
+curve(dnorm(x, mean = mean(height_cleaned), sd = sd(height_cleaned)), 
+      col = "blue", 
+      xlim = c(140,200), 
+      add = TRUE)
+
+```
+
+
+
+## Proportion and quantiles under normal curve
+
+- Under the normal curve, are there more students under 160 cm than students taller than 190 cm? Write R code in the following to calculate this. 
+
+```{r}
+### Write your code here
+#
+pnorm(160,mean(height_cleaned),sd(height_cleaned))
+1-pnorm(190,mean(height_cleaned),sd(height_cleaned))
+```
+
+- Under the normal curve, what is the 23% percentile of the student heights? Write R code in the following to calculate this. 
+
+```{r}
+### Write your code here
+#
+qnorm(0.23,mean(height_cleaned),sd(height_cleaned))
+```
+
+
+
+# Qualitative Data
+
+## International
+
+- Create a **graphical summary** for the distribution of **domestic and international students** in the cohort. 
+  - *Hint: what type of graphical summary would be the most appropriate? You can refer to code in previous lectures and labs*.
+
+```{r}
+### write code here
+
+barplot(table(math1005$International))
+
+```
+
+- What is the **proportion** of **international students**? Briefly summarise your findings.
+  - *Hint: `math1005$International == "International"` creates a list of `TRUE` and `FALSE` of whether each student is international or not. R can interpret `TRUE` as 1 and `FALSE` as 0.*
+```{r}
+### write code here
+
+sum(math1005$International == "International")/length(math1005$International)
+
+```
+
+## Gender
+
+- Create a **graphical summary** for the **gender** distribution of the cohort.
+
+```{r}
+### write code here
+barplot(table(math1005$Gender))
+```
+
+
+- What is the **proportion** of **females**? Briefly summarise your findings
+
+```{r}
+### write code here
+
+sum(math1005$Gender=="Female")/length(math1005$Gender)
+```
+
+
+## Country
+
+This task contains some additional visualisation techniques not covered in lectures. These are not mandatory for learning other topics of this unit but can be useful in real life.  
+
+- Create a **barplot** for the **Country** that the students in the cohort were born in. Is it meaningful? Are there any issues with the data? How could this be improved?
+
+```{r}
+### write code here
+barplot(table(math1005$Country),las=2,cex.names = 0.6)
+```
+
+- Make a barplot of the **top 10 countries** among the cohort. Briefly summarise your findings. 
+  - *Hint: the `sort` function might be useful!*
+
+```{r}
+### write code here
+
+math1005$Country = tolower(math1005$Country)
+
+country_counts = table(math1005$Country)
+sorted_country_counts = sort(country_counts,decreasing = TRUE)
+
+top_10_countries = head(sorted_country_counts, 10)
+
+barplot(top_10_countries,cex.names=0.5)
+```
+
+
+- **Extension**: make a **word cloud** of all the majors. Briefly summarise your findings.
+
+You will need to first **install the** `wordcloud` **and** `tm` **packages**. To do this, you can run the first line without the `#`. Once installed, they will remain on your computer and you do not need to run this line ever again. But in each document you want to make a word cloud, you will need to include `library(wordcloud)` to **load the package**. 
+
+```{r, warning = F, message = F}
+library(wordcloud)
+wordcloud(math1005$Country, min.freq = 1)
+```
+
+
+
+
+
