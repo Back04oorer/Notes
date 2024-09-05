@@ -118,6 +118,67 @@ Where $q_1 \in Q_1, q_2 \in Q_2, \sigma \in \Sigma_1 \cup \Sigma_2, f_1 \in F$ a
 
 
 
+# Tutorial 5
+### P6
+$S \rightarrow MN$
+$M \rightarrow \Sigma M \Sigma$
+$N \rightarrow \Sigma N \Sigma$
+$M \rightarrow 0$
+$N \rightarrow 1$
 
+## P7?
+
+## P8
+(1) Every rule either adds a 'a' and a 'b' , or maintains the numbers of 'a's and 'b's
+(2) aabb ab bbaa
+
+### P13
+$S \rightarrow A$
+$A \rightarrow NAN$
+$A \rightarrow 0\#1 | 1\#0$
+$\# \rightarrow N\#N$
+$N \rightarrow A | B$
+
+
+### P14
+right regular ?
+$A \rightarrow a$
+$A \rightarrow c$
+$A \rightarrow bB$
+$b \rightarrow bB$
+$B \rightarrow c$
+
+left regular
+$A \rightarrow a$
+$A \rightarrow Bc$
+$B \rightarrow \epsilon$
+$B \rightarrow Bb$
+
+
+
+
+### P16 ？
+
+
+
+# Tutorial 6
+
+### q3
+#### My answer:
+- 1. Initialize an empty set Z which stores all variables that can derive $\epsilon$
+- 2. Go through every rule in R
+	- If the RHS of the rule only contains variables in Z or a $\epsilon$ , add the variable into set Z
+- 3. Repeat step 2 util there is no new variable added to Z
+
+
+### q4
+
+#### My answer:
+- 1. apply the method in q3 to store all variables that can derive $\epsilon$ in set Z
+- 2. Initialize an empty set M with initial variable $\{X\}$ which stores all variables that can derive X.
+- 3. Go through every rule in R
+	- if the RHS of the rule contains exactly 1 variable that in set M and other variables  are in set Z, then add the variable on the LHS to set X
+	
+- 4. Repeat step 3 util there is now new variable added to X 
 
 

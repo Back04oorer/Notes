@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1723471785.75058 "a1.tex" "a1.pdf" "a1" 1723471786.42156 0
+["pdflatex"] 1724127100.80805 "a1.tex" "a1.pdf" "a1" 1724127101.4769 0
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1715773750.44061 84440 4cb442eb2b994e0c3de64aa9fad60308 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1710507425.07267 24243819 9873b88c324e7d4c2fb47d8dfa8007a8 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc" 1678856792.83247 4993 1194fb36dfcb11d9ae9802f2b00b60a3 ""
@@ -202,9 +202,9 @@
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xstring/xstring.sty" 1710564009.63973 123 a302f2c651a95033260db60e51527ae8 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/zref/zref-abspage.sty" 1713089312.52586 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/zref/zref-base.sty" 1713089312.52596 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "a1.aux" 1723471786.27156 197 71f4fb026895227b6a3e1ee641983ed2 "pdflatex"
-  "a1.out" 1723471786.25027 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "a1.tex" 1723471784.86348 2561 d92f4af092663ef4b798a75b3dad4a72 ""
+  "a1.aux" 1724127101.33501 197 71f4fb026895227b6a3e1ee641983ed2 "pdflatex"
+  "a1.out" 1724127101.31189 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "a1.tex" 1724127099.8174 2537 06e4e7d4ad8759f150cbb31016f912a9 ""
   (generated)
   "a1.aux"
   "a1.log"

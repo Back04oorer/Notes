@@ -213,6 +213,17 @@ INPUT ./Graphs/direction_field.png
 INPUT ./Graphs/direction_field.png
 INPUT ./Graphs/direction_field.png
 INPUT ./Graphs/direction_field.png
+INPUT ./Graphs/w5_1.png
+INPUT ./Graphs/w5_1.png
+INPUT ./Graphs/w5_1.png
+INPUT ./Graphs/w5_1.png
+INPUT ./Graphs/w5_1.png
+INPUT ./Graphs/w5_1.png
+INPUT ./Graphs/w5_1.png
+INPUT ./Graphs/direction_field.png
+INPUT ./Graphs/direction_field.png
+INPUT ./Graphs/direction_field.png
+INPUT ./Graphs/direction_field.png
 INPUT Notes.aux
 INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk
 INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk
@@ -222,8 +233,12 @@ INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/
 INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cmextra/cmex7.pfb
+INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cmextra/cmex7.pfb
 INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb
+INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb
 INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb
@@ -240,3 +255,5 @@ INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/
 INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+INPUT /Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb

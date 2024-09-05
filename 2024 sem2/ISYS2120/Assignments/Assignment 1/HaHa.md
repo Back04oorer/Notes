@@ -79,7 +79,7 @@ CREATE TABLE Apartment (
     OwnerID INT REFERENCES Owner(CustomerID) NOT NULL,
 
     -- Renter
-    RenterID INT,
+    RenterID INT UNIQUE,
     EndDate DATE,
     WeeklyRent FLOAT,
     FOREIGN KEY (RenterID) REFERENCES Renter(CustomerID),
@@ -107,7 +107,6 @@ CREATE TABLE OffersFor(
 
     FOREIGN KEY (Address,Suburb,ANumber) REFERENCES Apartment(Address,Suburb,ANumber)
 )
-
 
 
 ```

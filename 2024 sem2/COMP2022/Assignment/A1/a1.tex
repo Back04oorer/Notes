@@ -67,11 +67,11 @@
 \begin{document}
 
 \solution{4.1} 
-The idea is that each state in \( Q' \) not only stores the state in \( Q \) but also tracks the current letter position (1st, 2nd, 3rd). Specifically, we extend each state \( q \in Q \) to \( (q,0) \), \( (q,1) \), and \( (q,2) \), representing every first, second, and third letter. For the first and second characters, we only update the number in the tuple. For example, \( (q_0,0) \) becomes \( (q_0,1) \) after receiving the first character. When the third letter is received (i.e., the number in the tuple is 2), the number resets to 0, and \( q_0 \) transitions according to the original transition function in $\delta$. For example:
+The idea is that each state in \( Q' \) not only stores the state in \( Q \) but also tracks the current letter position (1st, 2nd, 3rd). Specifically, we extend each state \( q \in Q \) to $\{(q,0) , (q,1) , (q,2) \}$, representing every first, second, and third letter respectively. For the first and second characters, we only update the number in the tuple. For example, \( (q_0,0) \) becomes \( (q_0,1) \) after receiving the first character. When the third letter is received (the number in the tuple is 2), the number resets to 0, and \( q_0 \) transitions according to the original transition function in $\delta$. For example:
 \[
 (q_0,2) \xrightarrow{a} (q_1,0)
 \]
-The accept states are set to \( (q_f, 0) \), \( (q_f, 1) \), and \( (q_f, 2) \) for all \( q_f \in F \).\\
+The final states are set to $\{(q_f, 0), (q_f, 1), (q_f, 2)\}$for all \( q_f \in F \).\\
 
 
 

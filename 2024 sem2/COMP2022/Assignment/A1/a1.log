@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.15)  13 AUG 2024 00:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.3.15)  20 AUG 2024 14:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1170,7 +1170,7 @@ Here is how much of TeX's memory you used:
  46480 multiletter control sequences out of 15000+600000
  586452 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 126i,13n,135p,730b,482s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 126i,13n,135p,724b,482s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/en
 c/dvips/base/8r.enc}</Users/bamingyuan/Library/Application Support/MiKTeX/texmf
 s/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/bamingyuan/Library/
@@ -1186,7 +1186,7 @@ uan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/palatino/
 uplb8a.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install
 /fonts/type1/urw/palatino/uplr8a.pfb></Users/bamingyuan/Library/Application Sup
 port/MiKTeX/texmfs/install/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on a1.pdf (1 page, 109785 bytes).
+Output written on a1.pdf (1 page, 109824 bytes).
 PDF statistics:
  65 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)

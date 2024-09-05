@@ -740,5 +740,251 @@ $standard unit = \frac{data point- samplemean}{sample SD}$ or $z = \frac{x-\mu}{
 
 `qnorm(x, mu, sigma)`
 
+# Correlation and linear model
+
+## Scatter plot & Bivariate data
+
+### Bivariate data
+
+Bivariate data involves a pair of variables. We are interested in the relationship between
+the two variables. **Can one variable be used to predict the other?.**
+
+- Formally, we have $(x_i,y_i)$ for $i=1,2,3,4...,n$
+
+- $X$ and $Y$ can have the same role. 
+
+- $X$ and $Y$ may have different roles; for example, $X$ can be an $independent$ variable (or explanatory variable, predictor or regressor) which we use to explain or predict $Y$, the $dependenet$ variable (or response variable)
+
+### Summary bivariate data
+- sample mean and sample SD of $X$ ($\overline{x}$,SD_x)
+
+- sample mean and sample SD of $Y$ ($\overline{y}$,SD_y)
+
+- correlation coefficient($r$)
+
+### correlation coefficient
+
+- a numeric summary measures of how points are spread around the line
+
+- It indicates both the sigh and the strength of the **linear association**
+
+- It is defined as the **mean** of the **product** of the variables in **standard units**
+
+That is 
+
+\[
+r = \frac{1}{n-1} \sum_{i=1}^{n} \left(\frac{x_i - \overline{X}}{SD_{\text{sample}}(X)}\right) \left(\frac{y_i - \overline{Y}}{SD_{\text{sample}}(Y)}\right)
+\] by sample sd 
+
+or
+
+\[
+r = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \overline{X}}{SD_{\text{pop}}(X)}\right) \left(\frac{y_i - \overline{Y}}{SD_{\text{pop}}(Y)}\right)
+\] by pop sd 
 
 
+or
+
+```
+cor(x,y)
+```
+in R
+
+
+### Properties and Warnings
+
+
+- Warning 1
+
+  - Mistake 1
+  $r = 0.8$ means that 80% of the points are tightly closed around the line
+  
+  - Mistake 2
+  $r = 0.8$ means that 80% of the points are twice as tightly closed as $r = 0.4%$
+
+
+- Warning 2
+
+  - Outliers can overly influence the correlation coefficient
+
+- Warning 3
+
+  - Nonlinear association can’t be detected by the correlation coefficient
+  - **We should always use correlation coefficient together with the scatter plot.**
+
+- Warning 4
+
+  - The same correlation coefficient can arise from very different data
+  
+## Regression Line
+
+**Goal: summary data with a line**
+
+### SD line (no good)
+
+The **SD line** might look like a good candidate as it connects the point of averages \((\overline{x}, \overline{y})\) to \((\overline{x} + SD_x, \overline{y} + SD_y)\) .
+
+This model **does not use the correlation coefficient**, so it is **insensitive to the amount of clustering around the line.**
+
+### Regression Line (Best option)
+
+| Feature    | Regression Line \( y \sim x \) (\( y = a + bx \))                    |
+|------------|---------------------------------------------------------------------|
+| Connects   | \( (\overline{x}, \overline{y}) \) to \( (\overline{x} + SD_x, \overline{y} + rSD_y) \) |
+| Slope (b)  | \( \frac{r \cdot SD_y}{SD_x} \)                                      |
+| Intercept (a) | \( \overline{y} - b\overline{x} \)                                 |
+
+**Optimality**: We can derive the regression line using calculus, by minimising the sum of squares of the residuals
+
+### Rgerssion Line in R
+
+```
+lm(y ~ x)
+
+model = lm(y ~ x) 
+
+model$coeff
+```
+
+Then y = model\$coeff[1] + model\$coeff[2]x
+
+
+```
+abline(lm(y ~ x), col = "red")
+```
+
+## Prediction
+
+### Baseline prediction
+
+If we don't use the information of the independent variable $x$ at all, a basic prediction of $y$ would be the **average** of y for **all** the x values in the data.
+
+### Regression line prediction
+
+A better prediction is based on the regression line $y = slope \times x + intercept$
+
+
+**Warning**
+
+If we want to use $Y$ to predict $X$, we need to **refit** the model
+
+
+```{r, echo=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("Graphs/w4_1.png")
+```
+
+In R:  `lm(y~x)` != `lm(x~y)`
+
+## Residuals and properties
+
+### Residuals(prediction error)
+
+- A **residual** is the vertical distance of a point above or below the regression line
+
+- A residual represents the error between the actual value and the prediction
+
+- The regression line is the **best**(optimal) linear model: it provides the best fit to the data as the sum of the squared residuals is as small as it can be
+
+
+### Summary of Residuals
+| Feature  | Regression Line \( y \sim x \) ( \( y = a + bx \) ) |
+|----------|-----------------------------------------------------|
+| Connects | \( (\bar{x}, \bar{y}) \) to \( (\bar{x} + SD_x, \bar{y} + rSD_y) \) |
+| Slope (b) | \( r \frac{SD_y}{SD_x} \) |
+| Intercept (a) | \( \bar{y} - b \bar{x} \) |
+| Residual | \( e_i = y_i - a - bx_i \) |
+
+- \( y = a + bx \) is the best line that minimizes the sum of squared residuals \( \sum_{i=1}^n e_i^2 \).
+- The average residual of the regression line is zero: \( \bar{e} = \frac{1}{n} \sum_{i=1}^n e_i = 0 \).
+
+## Coefficient of determination
+
+### Idea
+```{r, echo=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("Graphs/w4_2.png")
+```
+
+- **A**: Data for which all variation is explained, All the points fall exactly on a straight line.In this case, all (100%) of the sample variation in y can be attributed to the fact that x 
+and y are linearly related in combination woth variation in x.
+
+- **B**: Data for which most variation is explained. The points do not fall exantly on a line, but compared to overall **y** variability, the residuals from the regression line are small. It is reasonable to conclude in this case that much of the observed **y**  variation can be attributed to the linear regression model.
+
+- **C**: Data for which little variation is explained. There is substantial variation in the points about the regression line relative to overall **y** variation, so the linear regression model fails to explain variation in **y** by relating **y** to **x**. 
+
+### SSE vs SST
+
+**(i)** The Sum of Squared Errors (SSE) is given by:
+
+\[
+\text{SSE} = \sum_{i=1}^{n} e_i^2 = \sum_{i=1}^{n} (y_i - a - bx_i)^2
+\]
+
+where:
+
+- \( y_i \) is the observed value,
+
+- \( a \) is the intercept,
+
+- \( b \) is the slope, and
+
+- \( x_i \) is the predictor value.
+
+**SSE** measures variation in y left unexplained by the regression line.
+
+
+**(ii)** A quantitative measure of **the total amount of variation in observed y values** is given by the total sum of squares (sum of squared deviations about sample mean)
+
+
+The Total Sum of Squares (SST) is given by:
+
+\[
+\text{SST} = \sum_{i=1}^{n} (y_i - \bar{y})^2
+\]
+
+where:
+
+- \( y_i \) is the observed value,
+
+- \( \bar{y} \) is the mean of the observed values,
+
+- \( n \) is the number of observations.
+
+measures variation in left unexplained by the **baseline prediction**.
+
+
+**SST $\geq$ SSE**: The regression is optimal for sum of squared errors, so SSE (regression line) cannot be worse than SST (baseline).
+
+
+### Coefficient of determination
+
+The ratio \(\frac{\text{SSE}}{\text{SST}}\) is the proportion of total variation that cannot be explained by the simple linear regression model, and the coefficient of determination is
+
+\[
+1 - \frac{\text{SSE}}{\text{SST}} = r^2
+\]
+
+which is the **squared correlation coefficient** (a number between 0 and 1) giving the proportion of observed \( y \) variation explained by the model.
+
+- The higher the value of $r^2$, the more successful is the simple linear regression model in explaining y variation
+
+- If SSE = 0 , then $r^2 = 1$
+
+## Diagnostics
+
+### Residual plot
+
+- A residual plot graphs the residuals vs $x$
+
+- If the linear fit is appropriate for the data, it should show no pattern (random points arount 0)
+
+- By checking the patterns of the residuals, the residual plot is a diagnostic plot to check the appropriateness of a linear model
+
+### Homoscedasticity and Heteroscedasticity
+
+In linear models and regression analysis generally, we need to check the homogeneity of the spread of the response variable (or the residuals). We can divide the scatter plot or the residual plot into vertical strips.
+
+- If the vertical strips on the scatter plot show equal spread in the y direction, then the data is **homoscedastic**.
+  - The regression line could be used for predictions.
+  
+- If the vertical strips don’t show equal spread in the y direction, then the data is **heteroscedastic**.
+  - The regression line should not be used for predictions.

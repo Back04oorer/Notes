@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1723741057.90071 "Notes.tex" "Notes.pdf" "Notes" 1723741058.48929 0
+["pdflatex"] 1724947735.60985 "Notes.tex" "Notes.pdf" "Notes" 1724947736.32249 0
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1715773750.44061 84440 4cb442eb2b994e0c3de64aa9fad60308 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1684553853.94326 11548 f365aee40fdabc40338c14d16370f8ed ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1710507425.07267 24243819 9873b88c324e7d4c2fb47d8dfa8007a8 ""
@@ -30,6 +30,7 @@
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1678856791.74646 32080 340ef9bf63678554ee606688e7b5339d ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1678856791.76104 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1678856791.76888 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1678856791.77235 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1678856791.77583 36281 c355509802a035cadc5f15869451dcee ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1678856791.7817 35752 024fb6c41858982481f6968b5fc26508 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1678856791.78314 32722 d7379af29a190c3f453aba36302ff5a9 ""
@@ -38,6 +39,8 @@
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1678856791.78906 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1678856791.81585 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1678856791.82003 32716 08e384dc442464e7285e891af9f45947 ""
+  "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cmextra/cmex7.pfb" 1678856791.85386 30457 bc0868ebece724ed7c3d37e3d9bff7bd ""
+  "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1678856791.90647 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/mkii/supp-pdf.mkii" 1678856797.88552 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generic/etexcmds/etexcmds.sty" 1678856959.54103 7734 b98cbb34c81f667027c1e3ebdbfce34b ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/generic/iftex/iftex.sty" 1678856793.66827 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
@@ -131,8 +134,9 @@
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/pgf/utilities/pgfrcs.sty" 1678856798.23852 325 f9f16d12354225b7dd52a3321f085955 ""
   "/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xcolor/xcolor.sty" 1710507271.97036 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "Graphs/direction_field.png" 1723735389.26471 120846 bda74e618ebe247361424dd4e7df7862 ""
-  "Notes.aux" 1723741058.37484 765 0b46684872de03d4b0c8394b2d7d13a9 "pdflatex"
-  "Notes.tex" 1723741056.27674 4907 e841a791f88ba5cd40a44e9336503d8a ""
+  "Graphs/w5_1.png" 1724944527.08428 51754 73177832c702586491965007e4081ecd ""
+  "Notes.aux" 1724947736.19571 1337 e7080693df572c8f8e1b13c82b8e8bde "pdflatex"
+  "Notes.tex" 1724947734.20216 14763 afe105d9e174d2c8f20ae57e483388c5 ""
   (generated)
   "Notes.aux"
   "Notes.log"

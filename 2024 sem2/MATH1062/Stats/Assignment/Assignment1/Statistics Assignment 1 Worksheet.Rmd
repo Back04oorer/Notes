@@ -60,9 +60,11 @@ Produce a frequency table and a barplot for the variable `Diet`. Write your code
 
 ```{r}
 ### Code for Task 1.1. Write your code here
-###
+
+### produce the frequency table
 table(ChickWeight$Diet)
 
+### produce the barplot
 barplot(table(ChickWeight$Diet))
 
 ```
@@ -82,10 +84,17 @@ Based on your findings, comment on the skewness of the variable `weight` and jus
 ### Code for Task 1.2. Write your code here
 ###
 weight = ChickWeight$weight 
+
+# sample mean
 mean(weight)
+
+# sample median
 median(weight)
 
+# create the histgram
 hist(weight,freq = FALSE)
+
+# locations of the sample median and sample mean
 abline(v=mean(weight),col="green")
 abline(v=median(weight),col="red")
 ```
@@ -103,13 +112,14 @@ Based on the **reported centres** of the comparative boxplot, comment on which d
 
 ```{r}
 ### Code for Task 2.1. Write your code here
-###
 
+# select records that have 18+ days
 ChickWeight_18 = ChickWeight[ChickWeight$Time >= 18, ]
 
 weight_18 = ChickWeight_18$weight
 diet_18 = ChickWeight_18$Diet
 
+# produce the comparative boxplot
 boxplot(weight_18 ~ diet_18, main = "Comparative Boxplot of Weight by Diet", xlab = "Weight",ylab = "Diet",col = c("blue", "green", "pink", "yellow"))
 
 ```
@@ -126,21 +136,23 @@ The rest of this question is to check your understanding of the boxplot, numeric
 
 ```{r}
 ### Code for Task 2.2.  Write your code here
-###
 
+# sample median
 median(weight)
 
-# 25%
-summary(weight)[2]
+# calculate the 25th and 75th percentiles (first and third quartiles)
+q1 = quantile(weight, 0.25)
+q3 = quantile(weight, 0.75)
 
-# 75%
-summary(weight)[5]
+# produce the boxplot
+boxplot(weight,horizontal = TRUE , xlab = "Weight")
 
-boxplot(weight ~ ChickWeight$Diet,horizontal = TRUE ,main = "Comparative Boxplot of Weight by Diet", xlab = "Weight",ylab = "Diet",col = c("blue", "green", "pink", "yellow"))
+# add a line for the sample median
+abline(v = median(weight), col = "yellow")  # median
 
-abline(v = median(weight), col = "green")  # median
-abline(v = summary(weight)[2], col = "red")    # 1st Quantile
-abline(v = summary(weight)[5], col = "red")    # 3st QUantile
+# add lines for the 1st Quartile and 3rd Quartile
+abline(v = q1, col = "red")  # 1st quartile (Q1)
+abline(v = q3, col = "red")  # 3rd quartile (Q3)
 
 ```
 
@@ -148,33 +160,37 @@ abline(v = summary(weight)[5], col = "red")    # 3st QUantile
 
 Are there any outliers? Write your answer after the **`Answer to Task 2.3`** prompt provided below.
 
-**`Answer to Task 2.3:`** (Write your answer here.) Yes.
+**`Answer to Task 2.3:`** (Write your answer here.) Yes,there are 9 outliers.
 
 In the following code block, write R code to count the number of outliers in this data set if there is any. **Hint:** you may need to calculate the location of the whiskers in the boxplot (the lower and upper thresholds in Tukey's convention) first. 
 
 ```{r}
 ### Code for Task 2.3.  Write your code here
-###
 
-weight_summary = summary(ChickWeight$weight)
 
-# extract 1st,3rd quantile
-q1 <- weight_summary["1st Qu."]
-q3 <- weight_summary["3rd Qu."]
+# Calculate the IQR
 iqr <- q3 - q1
 
 # Calculate upper and lower threshold
 lower_threshold <- q1 - 1.5 * iqr
 upper_threshold <- q3 + 1.5 * iqr
 
-outliers <- ChickWeight$weight[ChickWeight$weight < lower_threshold | ChickWeight$weight > upper_threshold]
-number_of_outliers = length(outliers)
+outliers = ChickWeight$weight[ChickWeight$weight < lower_threshold | ChickWeight$weight > upper_threshold]
+
 
 # print
+
+# lower threshold
 lower_threshold
+
+# upper threshold
 upper_threshold
+
+# print all outliers
 outliers
-number_of_outliers
+
+# number of outliers
+length(outliers)
 
 ```
 
@@ -190,47 +206,55 @@ In the following code block, calculate the sample mean and sample standard devia
 
 ```{r}
 ### Code for Task 3.1.  Write your code here
-###
 
-ChickWeight_18_21 <- ChickWeight[ChickWeight$Time >= 18 & ChickWeight$Time <= 21, ]
+# filter the ChickWeight dataset for records where Time is between 18 and 21 (inclusive)
+ChickWeight_18_21 = ChickWeight[ChickWeight$Time >= 18 & ChickWeight$Time <= 21, ]
 
+# calculate the sample mean and sample standard deviation
 sample_mean = mean(ChickWeight_18_21$weight)
 sample_sd = sd(ChickWeight_18_21$weight)
 
+# Print sample mean and sample sd
 sample_mean
 sample_sd
 
-sample_mean <- 206
-sample_sd <- 66
+# Draw the normal curve with the calculated mean and sd
+curve(dnorm(x, sample_mean, sample_sd), xlim = c(0,500), col = "red",xlab = "Weight", ylab = "Density")
 
-proportion_above_400 = pnorm(400, sample_mean, sample_sd,lower.tail = FALSE)
+abline(v = 400, col = "lightgreen", lwd = 2)
 
-percentage_above_400 = round(proportion_above_400 * 100, 2)
+# calculate the proportion above 400
+proportion_above_400 = pnorm(400, sample_mean, sample_sd, lower.tail = FALSE)
 
+# calculate the percentage above 400
+percentage_above_400 <- round(proportion_above_400 * 100, 2)
+
+# print the percentage above 400
 percentage_above_400
-
 
 ```
 
-**`Answer to Task 3.1:`** (Write your answer here.) 
+**`Answer to Task 3.1:`** The percentage of chicks weighing above 400 grams is: 0.16%.
 
 ## **`Task 3.2`** {-}
 
-In the following code block, calculate the 30% percentile of the population of chick weights based on the normal curve constructed above. Please also provide your answer after the **`Answer to Task 3.2`** prompt provided below, rounding your answer (in percentage) to two decimal places.
+In the following code block, calculate the 30% percentile of the population of chick weights based on the normal curve constructed above. Please also provide your answer after the **`Answer to Task 3.2`** prompt provided below, rounding your answer to two decimal places.
 
 ```{r}
 ### Code for Task 3.2.  Write your code here
 ###
 
-percentile_30 <- qnorm(0.30, mean = sample_mean, sd = sample_sd)
+percentile_30 = qnorm(0.30, sample_mean, sample_sd)
 
-percentile_30 <- round(percentile_30, 2)
+# round to 2 decimals
+percentile_30 = round(percentile_30, 2)
 
+# print 
 percentile_30
 
 ```
 
-**`Answer to Task 3.2:`** (Write your answer here.)  171.39.
+**`Answer to Task 3.2:`** (Write your answer here.)  The 30th percentile of the chick weights, based on the normal distribution, is approximately 171.39 grams.
 
 ## **`Task 3.3`** {-}
 

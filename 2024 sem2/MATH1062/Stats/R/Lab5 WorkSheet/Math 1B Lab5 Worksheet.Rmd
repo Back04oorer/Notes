@@ -1,0 +1,403 @@
+---
+title: "MATH1062 Lab 5 Worksheet"
+subtitle: "Introduction to R"
+author: "© University of Sydney MATH1062"
+date: '`r format(Sys.Date(), "%d %B %Y")`'
+output:
+  html_document:
+    fig_caption: yes
+    number_sections: yes
+    self_contained: yes
+    theme: flatly
+    css: 
+      - https://use.fontawesome.com/releases/v5.0.6/css/all.css
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    code_folding: show
+---
+<style>
+h2 { /* Header 2 */
+    font-size: 22px
+}
+</style>
+
+# <i class="fa fa-crosshairs"></i> Aim of Lab 5 {-}
+
+**Learning Outcome** 
+
+LO1. apply mathematical logic and statistical thinking to solve problems
+    
+LO3. identify appropriate methods to describe, summarise and visualise a given data set
+
+LO4. identify and apply appropriate methods of inference for a variety of data types
+
+LO5. apply statistical software such as R to analyse example sets of data
+
+
+# Linear regression 
+
+## Preparation {-}
+
+We start the lab by replicating the regression line and other linear functions we have seen in the lecture. The following commands read Pearson's data set into R as a data frame `data`. We will use Father's height (`fheight`) as the indepdent variable and Son's height (`sheight`) as the dependent variable. 
+
+```{r, echo=F, messages=F,warning=F}
+# You may need to install the package UsingR
+# install.packages("UsingR")  
+suppressMessages(library(UsingR))
+library(UsingR) # Loads another collection of datasets
+data(father.son) # This is Pearson's data.
+data = father.son
+str(data)
+```
+
+```{r}
+### the following code draw a scatter plot with transparent data points 
+plot(data$fheight, data$sheight, xlab="Father height (inches)", ylab="Son height (inches)", col=adjustcolor("black", alpha.f = 0.35))
+### the following plot a line with intercept a = 10, and slope b = 0.8
+abline(a = 10, b = 0.8, col = "purple", lwd = 2) 
+```
+
+## Find the slope and intercept of the SD line
+
+Recall that the SD line connects the point of averages $(\bar{x}, \bar{y})$ to $(\bar{x} + \mbox{SD}_x, \bar{y} + \mbox{SD}_y)$. Work out the intercept and slope of the SD line on pen and paper, and then plot the SD line on top of the scatter plot.
+
+**Hint:** the line must pass those two points, so you can first work out the slope, and then identify the intercept. 
+
+```{r}
+### Write your code here 
+
+x_mean = mean
+sd_y = sd(data$sheight)
+sd_x = sd(data$fheight)
+slope = sd_y / sd_x
+
+plot(data$sheight~data$fheight)
+intercept = mean(data$sheight)  - slope * mean(data$fheight)
+abline(a = intercept,b = slope,lwd = 2, col="green")
+
+
+```
+
+
+
+## The regression line
+
+Draw the following three plots. First, plot the regression line on top of the scatter plot. Second, a separate figure will be created that draws the scatter plot of the residual and the independent variable. Using the visualisation to justify if the residuals are homoscedastic? 
+
+```{r}
+### write your code here
+
+plot(data$sheight~data$fheight)
+model = lm(sheight~fheight,data = data)
+abline(model, col="red", lwd=2)
+
+plot(residuals(model)~data$fheight)
+abline(h=0, col="green", lwd=2)
+model
+
+```
+
+
+## Sum of squared residuals
+
+- Now write a function that can compute the sum of squared residuals for any line specified by  intercept and slope. Complete your function using the following function definition.
+
+```{r}
+sosr <- function(x, y, alpha, beta){
+  # x: the independent variable
+  # y: the dependent variable
+  # alpha: intercept
+  # beta:  slope
+  #
+  ### write your code here
+  
+  predict_value = alpha + beta * x
+  residuals = predict_value - y
+  
+  sosr = sum(residuals^2)
+
+  return(sosr)
+  
+}
+```
+
+## Comparing the SD line with the regression line and the baseline prediction
+
+Apply the function you wrote to compute the sum of squared residuals of the SD line, the regression line, and the baseline prediction. 
+
+```{r}
+### write your code here
+
+## SD line
+sd_sosr = sosr(data$fheight, data$sheight, intercept, slope)
+
+regre_sosr = sosr(data$fheight, data$sheight, coef(model)[1], coef(model)[2])
+
+base_sosr = sosr(data$fheight, data$sheight,mean(data$sheight),0)
+
+sd_sosr
+regre_sosr
+base_sosr
+
+
+```
+
+## Coefficient of determination
+
+First, compute the coefficient of determination of the linear regression model using your code written above, and then verify that it agrees with $r^2$ (the squared correlation coefficient). What is the proportion of variation in the response variable that can be explained by the linear regression model? 
+
+
+```{r}
+### write your code here
+cor(data$sheight,data$fheight)^2
+
+1 - regre_sosr/base_sosr
+
+```
+
+# ChickWeight data 
+
+## Preparation {-}
+
+Now we want to repeat Q1.2, Q1.3, Q1.4, and Q1.5 on the ChickWeight data set. We want to use the `Time` as the independent variable and `weight` as the dependent variable. 
+
+
+```{r}
+x = ChickWeight$Time
+y = ChickWeight$weight
+plot(x, y)
+```
+
+Now we can work with `x` (the time) and `y` (the weight)
+
+## Find the slope and intercept of the SD line
+
+
+```{r}
+### Write your code here
+
+sd_y = sd(y)
+sd_x = sd(x)
+
+slope = sd_y / sd_x
+intercept = mean(y) - slope * mean(x)
+
+```
+
+## The regression line
+
+Draw the following three plots. First, plot the regression line on top of the scatter plot. Second, a separate figure will be created that draws the scatter plot of the residual and the independent variable. Using the visualisation to justify if the residuals are homoscedastic?
+
+```{r}
+### write your code here
+model = lm(y~x)
+plot(y~x)
+abline(model,col="red",lwd = 2)
+
+residuals = y - (model$coefficients[2] * x + model$coefficients[1])
+plot(residuals~x)
+
+abline(h=0,col = "green",lwd = 2)
+
+```
+
+
+
+## Comparing the SD line with the regression line and the baseline prediction
+
+Apply the function you wrote to compute the sum of squared residuals of the SD line, the regression line, and the baseline prediction.
+
+```{r}
+### write your code here
+
+sd_sosr = sosr(x, y, intercept, slope)
+
+regre_sosr = sosr(x, y, coef(model)[1], coef(model)[2])
+
+base_sosr = sosr(x, y,mean(y),0)
+
+sd_sosr
+regre_sosr
+base_sosr
+
+```
+
+
+
+## Coefficient of determination
+
+First, compute the coefficient of determination of the linear regression model using your code written above, and then verify that it agrees with $r^2$ (the squared correlation coefficient). What is the proportion of variation in the response variable that can be explained by the linear regression model?
+
+
+```{r}
+### write your code here
+
+cor(y,x)^2
+
+1 - regre_sosr / base_sosr
+```
+
+
+
+
+# MATH1005 data set
+
+## Preparation {-}
+
+Now we want to repeat Q1.2, Q1.3, Q1.4, and Q1.5 on the MATH1005 data set. We want to use the `ShoeSize` as the independent variable and `Height` as the dependent variable. 
+
+- Read in the MATH1005 data set (used the cleaned version)
+
+```{r}
+math1005 = read.csv("math1005_cleaned.csv")
+```
+
+- From the last lab, we know there are clear outliers in the shoesize, where some responses are probably using a different shoe size convention, perhaps using EU instead of US. This is quite misleading, so perhaps it is best to remove these values (or convert these to the right format).
+
+```{r}
+ShoeSize_clean = math1005$ShoeSize[math1005$ShoeSize < 20]  # only keep shoe sizes < 20
+Height_clean = math1005$Height[math1005$ShoeSize < 20]  # only keep heights for students with shoe sizes < 20
+#
+NA_ind = which(is.na(ShoeSize_clean) | is.na(Height_clean))  # index of any NA entries
+x = ShoeSize_clean[-NA_ind]
+y = Height_clean[-NA_ind]
+plot(x, y)
+```
+
+Now we can work with `x` (the cleaned shoesize) and `y` (the cleaned height)
+
+
+## Find the slope and intercept of the SD line
+
+```{r}
+### Write your code here
+
+```
+
+
+
+## The regression line
+
+Draw the following three plots. First, plot the regression line on top of the scatter plot. Second, a separate figure will be created that draws the scatter plot of the residual and the independent variable. Using the visualisation to justify if the residuals are homoscedastic?
+
+```{r}
+### write your code here
+
+```
+
+
+
+## Comparing the SD line with the regression line and the baseline prediction
+
+Apply the function you wrote to compute the sum of squared residuals of the SD line, the regression line, and the baseline prediction.
+
+```{r}
+### write your code here
+
+```
+
+
+
+## Coefficient of determination
+
+First, compute the coefficient of determination of the linear regression model using your code written above, and then verify that it agrees with $r^2$ (the squared correlation coefficient). What is the proportion of variation in the response variable that can be explained by the linear regression model? 
+
+
+```{r}
+### write your code here
+
+```
+
+
+# Coefficient of determination
+
+Recall that the coefficient of determination of the regression line is
+\[
+1 - \frac{\text{SSE}}{\text{SST}}, \quad \text{SSE} = \sum_{i = 1}^n (y_i - a - b x_i)^2, \quad \text{SST} = \sum_{i = 1}^n (y_i - \bar{y})^2
+\]
+where $a$ and $b$ are the intercept and the slope of the regression line, respectively. We want to show that the coefficient of determination can be indeed be written as squared correlation coefficient ($r^2$). The following steps demonstrate one of many ways (with a statistical interpretation) to show this. You can go through these steps and numerically verify those steps using R. **The overall derivation is not examinable, however, going through these steps will be beneficial for understanding the properties of linear regression and correlation. **
+
+## Properties of residuals
+
+Let $\hat{y}_i = a + b x_i$ denote the predicted value of the regression line, and let $\hat{e}_i = y_i - \hat{y}_i$ denote the residual of the regression line. Recall the sum of squared residual function for any line specified by the intercept $\alpha$ and slope $\beta$: 
+\[
+f(\alpha, \beta) = \sum_{i =1}^n (y_i - \alpha + \beta x_i)^2
+\]
+and the conditions for the stationary point $(a,b)$ of $f$ (page 52 of topic 4):
+\[
+\frac{\partial f}{\partial \alpha}(a,b) = 0 \quad \Leftrightarrow \quad  \sum_{i=1}^n \hat{e}_i = 0,
+\]
+and
+\[
+\frac{\partial f}{\partial \beta}(a,b) = 0 \quad \Leftrightarrow \quad  \sum_{i=1}^n \hat{e}_i x_i = 0.
+\]
+In the first step, we want to verify (by derivation) that the sum of product of the residuals and the differences between regression line and the baseline prediction is zero, i.e.,
+\[
+\sum_{i=1}^n \hat{e}_i (\hat{y}_i - \bar{y}) = 0.
+\]
+
+You can also use the `x` and `y` variables from the previous example to verify this numerically. 
+
+```{r}
+### Write your code here
+
+```
+
+
+
+## Sum of squared differences between regression and baseline
+
+In the second step, we consider the sum of squared differences between the regression line and the baseline prediction: 
+\[
+\text{SSR} = \sum_{i=1}^n (\hat{y}_i - \bar{y})^2.
+\]
+We want to verify  \( \text{SST} = \text{SSR} + \text{SSE} \), so that **SSR represents the variability explained by the regression model**.
+
+**Hint:** for each $y_i$, we can first consider the decomposition:
+\[
+y_i - \bar{y} = (\hat{y}_i - \bar{y}) + (y_i - \hat{y}_i)
+\]
+where \( \hat{y}_i \) is the predicted value from the regression, and \( y_i - \hat{y}_i \) is the residual (error) for that observation. Then, you can take the sum of squares of both sides and apply the result of the previous step to verify this.
+
+
+You can continue using the `x` and `y` variables from the previous example to verify this in R. 
+
+
+```{r}
+### write your code here
+
+```
+
+
+## Correlation between the prediction of the regression line and the response variable
+
+In step three, we want to verify that 
+\[
+\text{cor}(\hat{y}, y)^2 = \frac{SSR}{SST} = 1 - \frac{\text{SSE}}{\text{SST}} 
+\]
+so that the correlation coefficient between the predicted values of the regression line $\hat{y}$ and the response variable $y$ gives the coefficient of determination. 
+
+**Hint:** you need to use the definition of the correlation coefficient, and the fact that $\bar{y}$ is also the mean of $\hat{y}$ (why? using the formula of the intercept). 
+
+
+You can continue using the `x` and `y` variables from the previous example to verify this in R. 
+
+
+```{r}
+### write your code here
+
+```
+
+
+
+## Putting the results together
+
+Applying the invariant property of the correlation coefficient and step three, verify that
+\[
+\text{cor}(x, y)^2 =  \frac{\text{SSR}}{\text{SST}}.
+\]
+
+
+
+
