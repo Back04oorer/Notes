@@ -1076,9 +1076,25 @@ body .markdown-body
 .highlight .vi{color:teal}
 .highlight .il{color:#009999}
 .highlight .gc{color:#999;background-color:#EAF2F5}
-</style><title>艹搞 Testing</title></head><body><article class="markdown-body"><h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link"></a></h2>
-<h3 id="1-jacoco-test-report">1. Jacoco Test Report<a class="headerlink" href="#1-jacoco-test-report" title="Permanent link"></a></h3>
-<h3 id="2-documented-test-cases">2. Documented Test cases<a class="headerlink" href="#2-documented-test-cases" title="Permanent link"></a></h3>
+</style><title>艹搞 Testing</title></head><body><article class="markdown-body"><h2 id="test">Test<a class="headerlink" href="#test" title="Permanent link"></a></h2>
+<h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link"></a></h3>
+<h4 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link"></a></h4>
+<p>In this test, I created a test class for each class except the main class to perform testing. The following outlines the main content of each test class:
+- <code>JsonParserTest</code> tests whether the <code>JsonParser</code> can read, write, and manage JSON files, providing usable interfaces for core functionality.
+- <code>AdminTest</code> tests the unique features available to administrators.
+- <code>UserTest</code> tests the features common to all users.
+- <code>CurrencyConverterTest</code> tests the functionality of currency conversion.</p>
+<h4 id="instruction">Instruction<a class="headerlink" href="#instruction" title="Permanent link"></a></h4>
+<p>To execute all test cases, run <code>gradle test</code>. The results will be available at <code>build/reports/tests/test</code>.</p>
+<p>To generate the code coverage test report, run <code>gradle jacocoTestReport</code>. The report can be found at <code>build/reports/jacoco/test</code>.</p>
+<h3 id="incorporating-code-coverage">Incorporating Code Coverage<a class="headerlink" href="#incorporating-code-coverage" title="Permanent link"></a></h3>
+<p>In this project, we use JaCoCo to measure test coverage. The specific workflow is as follows:
+- Write unit tests
+- Run <code>gradle test</code> to execute the tests.
+- Run <code>gradle jacocoTestReport</code> to generate the test coverage report.
+- Review the generated report to ensure that most of the code logic is covered. If certain parts are not covered, write additional tests to improve the coverage.</p>
+<h3 id="junit-test-cases">JUnit Test Cases<a class="headerlink" href="#junit-test-cases" title="Permanent link"></a></h3>
+<p>This section explains the rationale behind the design of each JUnit test, the types of tests (Normal, Edge), the inputs, and the expected outputs. All test cases that are expected to fail have been temporarily disabled in the code (using <code>@Disabled</code>) in order to generate the JaCoCo test report.</p>
 <h4 id="jsonparsertest">JsonParserTest<a class="headerlink" href="#jsonparsertest" title="Permanent link"></a></h4>
 <h5 id="dateconvertertest1">dateConverterTest1<a class="headerlink" href="#dateconvertertest1" title="Permanent link"></a></h5>
 <p><strong>TestType</strong>: Normal
@@ -1431,7 +1447,7 @@ Expected</code>src/test/resources/JsonParserTest/writeToFileRate_2.json`:
 **Expected Output**: The rate for</code>CNY-JPY<code>on</code>02-01-2024<code>should be updated to</code>0.3`.
 <strong>Result</strong>: Pass</p>
 <h5 id="updateexchangeratetest2">updateExchangeRateTest2<a class="headerlink" href="#updateexchangeratetest2" title="Permanent link"></a></h5>
-<p><strong>TestType</strong>: Edge Case<br />
+<p><strong>TestType</strong>: Edge
 <strong>Description</strong>: Test whether the function can add a new currency pair (CNY to MBA) when it doesn&rsquo;t exist and assign a new exchange rate.
 <strong>Input</strong>:
 - <code>"src/test/resources/AdminTest/updateExchangeRate_2.json"</code> (initial data)
@@ -1462,7 +1478,7 @@ Expected</code>src/test/resources/JsonParserTest/writeToFileRate_2.json`:
   "Standard Deviation: 4.15\n"</code>
  <strong>Result</strong>: Pass</p>
 <h5 id="viewratehistorytest2">viewRateHistoryTest2<a class="headerlink" href="#viewratehistorytest2" title="Permanent link"></a></h5>
-<p><strong>TestType</strong>: Edge Case<br />
+<p><strong>TestType</strong>: Edge 
 <strong>Description</strong>: Test whether the function correctly handles a single day rate history request between <code>CNY-JPY</code>.<br />
 <strong>Input</strong>:
 - <code>src/test/resources/AdminTest/viewRateHistory.json</code>
@@ -1557,4 +1573,14 @@ Expected</code>src/test/resources/JsonParserTest/writeToFileRate_2.json`:
     - <code>target</code>: <code>EUR</code>
     - <code>amount</code>: <code>62.5</code>
 <strong>Expected Output</strong>: <code>"Invalid currency or conversion rate."</code>
-<strong>Result</strong>: Pass</p></article></body></html>
+<strong>Result</strong>: Pass</p>
+<h4 id="jacoco-test-report">Jacoco Test Report<a class="headerlink" href="#jacoco-test-report" title="Permanent link"></a></h4>
+<p>Since the Main contains only UI-related code and does not involve the actual functional logic, and according to Ed&rsquo;s post <code>#274</code>, the final generated test report <strong>excludes</strong> <code>Main</code>.
+<img alt="Test coverage report" src="https://github.com/Back04oorer/Notes/blob/main/2024%20sem2/SOFT2412/A1/jacocoReport.png?raw=true" /></p>
+<h5 id="overall-coverage">Overall Coverage<a class="headerlink" href="#overall-coverage" title="Permanent link"></a></h5>
+<ul>
+<li><strong>Instruction Coverage</strong>: 94% of the executable instructions in the code have been covered by the tests.</li>
+<li><strong>Branch Coverage</strong>: 88% of the conditional branches have been tested.</li>
+<li><strong>Missed Lines</strong>: There are 21 lines of code that have not been executed during testing.</li>
+<li><strong>Missed Methods</strong>: Only 1 method was missed, out of a total of 26 methods across the tested classes.</li>
+</ul></article></body></html>

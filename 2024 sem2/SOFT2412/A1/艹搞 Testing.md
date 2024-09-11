@@ -541,7 +541,9 @@ Expected `src/test/resources/JsonParserTest/writeToFileRate_2.json`:
 
 #### Jacoco Test Report
 Since the Main contains only UI-related code and does not involve the actual functional logic, and according to Ed's post `#274`, the final generated test report **excludes** `Main`.
-![Test coverage report](https://example.com/image.png)
+![Test coverage report](https://github.com/Back04oorer/Notes/blob/main/2024%20sem2/SOFT2412/A1/jacocoReport.png?raw=true)
+
+
 ##### Overall Coverage
 - **Instruction Coverage**: 94% of the executable instructions in the code have been covered by the tests.
 - **Branch Coverage**: 88% of the conditional branches have been tested.
