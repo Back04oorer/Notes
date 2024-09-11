@@ -399,5 +399,11 @@ Applying the invariant property of the correlation coefficient and step three, v
 \]
 
 
+```{r}
+l = lm(Orange$circumference ~ Orange$age)
+plot(Orange$age, l$residuals)
+```
+
+
 
 

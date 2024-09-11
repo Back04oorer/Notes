@@ -988,3 +988,5 @@ In linear models and regression analysis generally, we need to check the homogen
   
 - If the vertical strips don’t show equal spread in the y direction, then the data is **heteroscedastic**.
   - The regression line should not be used for predictions.
+  
+

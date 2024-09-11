@@ -1,0 +1,441 @@
+\documentclass{article}
+\usepackage{soul}
+\usepackage{xcolor}
+\sethlcolor{pink}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+
+\title{MATH1023/MATH1062 Calculas}
+\author{Usyd Mingyuan Ba}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Week1}
+  \subsection{Differential Equation}
+  \begin{enumerate}
+
+    \item \textbf{Differential Equation(DE)}: A differential equation (DE) is a mathmatical equation that relates some \hl{function with its derivatives}
+
+    \item \textbf{Order}: The order of a differential equation equals to a \hl{highest derivative} occuring in it.
+      \begin{itemize}
+        \item $\frac{dy}{dx} = -ky$ has order \hl{$1$}
+        \item $\frac{dy}{dx} = y^{18} + \frac{d^5y}{dx^2}y + x^2$ has order \hl{5}
+      \end{itemize}
+
+    \item \textbf{Standard Form}: The standard form of a \hl{first-order differential equation} is
+      \begin{center}
+        $\frac{dy}{dx} = f(x,y)$
+      \end{center}
+
+    \item \textbf{General Solution}: A \hl{general solution} is a solution incoprating all constants of integration.
+
+    \item \textbf{Initial Condition}: An initial condition is a pair $(x_0,y_0)$ such that $y(x_0) = y_0$
+
+
+  \end{enumerate}
+
+
+\section{Week2}
+  \subsection{Direction Field}
+  \begin{enumerate}
+    \item \textbf{Definition}: A direction field of a DE
+      \begin{center}
+        $y' = f(x,y)$
+      \end{center}
+    consists of a grid of short line segments with slope $f(a,b)$ drawn at points $(a,b)$.So the line segment at $(a,b)$ is \hl{tangent} to any solution passing through $(a,b)$
+
+    \item \textbf{Example}:Draw some solution curves on the given direction field for the DE:
+      \begin{center}
+        $y' = xy$
+      \end{center}
+    \includegraphics[width=\linewidth]{Graphs/direction_field.png}
+  \end{enumerate}
+
+  \subsection{Separable equations}
+
+  \begin{enumerate}
+    \item \textbf{Definition}: A first-order DE $y' = f(x,y)$ is called \hl{separable} if there are functions $g(x)$ and $h(y)$ such that \hl{$f(x,y) = g(x)h(y)$}, so a separable DE can be written
+    \begin{center}
+      \hl{$y' = g(x)h(y)$}
+    \end{center}
+
+    \item \textbf{Goal}: We want to find a method for solving separable DEs
+
+    \item \textbf{Method}: We can solve a separable DE:
+      \begin{center}
+        $\frac{dy}{dx} = g(x)h(y)$
+      \end{center}
+    by separating variables.\\
+
+    Dividing both sides by $h(y)$ gives 
+      \begin{center}
+        $\frac{1}{h(y)} \frac{dy}{dx} = g(x)$
+      \end{center}
+
+    Intergrating both sides gives:
+      \begin{center}
+        $\int \frac{1}{h(y)} = \int g(x) dx$ 
+      \end{center}
+
+    If we can find antiderivatives $H(y)$ for $\frac{1}{h(y)}$ and $G(x)$ for $g(x)$, then we have
+      \begin{center}
+        $H(y) = G(x) + C$ 
+      \end{center}
+  \end{enumerate}
+
+  \section{Week3}
+    \subsection{Modelling Population Growth}
+      \begin{enumerate}
+        \item \textbf{Constant Growth}: This occurs when the population $x$ increases at a constant rate. The DE is 
+          \begin{center}
+            $\frac{dx}{dt} = k$
+          \end{center}
+          where k is constant
+
+        \item \textbf{Exponential Growth}: The exponential growth model assumes the growth rate is proportional to the size of the population.
+
+        The general form of a DE modelling exponential growth is 
+          \begin{center}
+            $\frac{dx}{dt} = kx$
+          \end{center}
+          where k is constant
+
+        \item \textbf{Logistic Growth}: Exponential growth is \hl{not} a realistic growth model for all values of $t$. \hl{A small animal population} with unlimited resources of food and space \hl{may show exponential growth initially}
+
+        As the population gets larger there will be food shortages, overcrowding, and other factors that \hl{slow down the growth rate}.
+
+        \hl{The growth rate k should decrease as the population x increases.}
+
+        Since k is no longer constant, we write $k=g(x)$, so the DE becomes 
+          \begin{center}
+            $\frac{dx}{dt} = g(x)x$
+          \end{center}
+
+        A small population can growth exponentially, se we want \hl{$g(x) \approx k$} when \hl{$x \approx 0$}. But \hl{as x increases $g(x)$ should decrease.}
+
+        The simplest formula with this behaviour is 
+          \begin{center}
+            $g(x) = k - ax$
+          \end{center}
+
+        So the DE becomes 
+          \begin{center}
+            $\frac{dx}{dt} = (k-ax)x$
+          \end{center}
+
+        We introduce a new constant $b = \frac{k}{a}$ so
+          \begin{center}
+            $(k-ax)x = ax (\frac{k}{a}-x) = ax(b-x)$
+          \end{center}
+
+        Let $\frac{b}{a} = b$, the logistic DE is then given by
+
+          \begin{center}
+            $\frac{dx}{dt} = ax(b-x)$
+          \end{center}
+      \end{enumerate}
+
+  \section{week4}
+
+    \subsection{First-order linear DEs}
+      \begin{enumerate}
+        \item \textbf{First-order linear differential equation}: A first-order linear differential equation is a DE of the form:
+          \begin{center}
+            $\frac{dy}{dx} + p(x) y = q(x)$
+          \end{center}
+          \textbf{$\frac{dy}{dx}$ and $y$ occur only linearly}
+
+        \item \textbf{How to solve first-order linear DEs ?}: The idea is multiplying the DE by a function $r(x)$ give:
+          \begin{center}
+            $r(x) \frac{dy}{dx} + r(x)p(x) = r(x)q(x)$
+          \end{center}
+
+          If we can find $r(x)$ such that:
+          \begin{center}
+            $r(x) \frac{dy}{dx} + r(x)p(x) =$ \hl{$ \frac{d}{dx}(r(x)y(x))$}
+          \end{center}
+
+          then the DE becomes:
+          \begin{center}
+            \hl{$\frac{d}{dx}(r(x)y(x))$} $= r(x)q(x)$
+          \end{center}
+
+          Integrating with respect to x gives:
+          \begin{center}
+            $\int \frac{d}{dx}(r(x)y(x))dx = \int (r(x)q(x))dx$ \\
+            $\rightarrow$ \\
+            $r(x)y(x) = \int r(x)q(x)dx + C$
+
+          \end{center}
+
+          so the general solution is
+
+          \begin{center}
+            $y = \frac{1}{r(x)} [\int r(x)q(x) dx + C]$
+          \end{center}
+
+        \item \textbf{Integrating factor}: The function
+          \begin{center}
+            $r(x) = e^{\int p(x) dx}$
+          \end{center}
+          is an intergrating factor for the first-order linear DE
+
+          \begin{center}
+            $\frac{dy}{dx} + p(x)y = q(x)$
+          \end{center}
+
+        \item \textbf{General Solution } the general solution of the DE is 
+          \begin{center}
+            $y = \frac{1}{r(x)} [\int r(x)q(x) dx + C]$
+          \end{center}
+
+      \end{enumerate}
+
+
+  \section{week5}
+
+    \subsection{Higher order differential equations}
+
+      Higher order DEs involve higher order derivatives.For example, the DE:
+
+      \begin{center}
+        $\frac{d^2 y}{dx^2} + f(x,y) \frac{dy}{dx} = g(x,y)$
+      \end{center}
+      is a \hl{second-order differential} equation.
+
+      \begin{enumerate}
+        \item Solving higher-order DEs is harder.
+        \item The general solution of a second-order DE has 2 degrees of freedom, so needs two initial conditions.
+        \item The general solution of an \hl{nth-order DE has n degrees of freedom}, so \hl{needs n initial conditions}.
+      \end{enumerate}
+
+    \subsection{Second-order linear DEs with constant coefficients}
+      \begin{enumerate}
+        \item \textbf{Definition} A \hl{second-order linear differential equation} is a DE that can be expressed in the form:
+        \begin{center}
+          $\frac{d^2y}{dx} + f_1(x)\frac{dy}{dx} + f_0(x)y = g(x)$
+        \end{center}
+
+        \hl{The DE is linear in $y$ and its derivatives.}
+
+        \item \textbf{homogeneous/inhomogeneous}
+            \begin{itemize}
+              \item The DE is homogeneous if $g(x) = 0$
+              \item The DE is inhomogeneous if $g(x) \neq 0$
+            \end{itemize}
+
+        If \hl{$g(x) = 0,f_0(x) = a, f_1(x) = b$ for $a,b \in \mathbb{R}$}, then we have a \hl{homogeneous second-order linear differential equation} with constant coefficient:
+
+        \begin{center}
+          $\frac{d^2 y}{dx^2} + a \frac{dy}{dx} + by = 0$
+        \end{center}
+
+        \item Solve the above DE : 
+        \begin{center}
+          $\frac{d^2 y}{dx^2} + a \frac{dy}{dx} + by = 0$
+        \end{center}
+
+        
+        \begin{itemize}
+          \item \textbf{Observation 1}: y is a linear combination of its first two derivatives, so we try:
+          \begin{center}
+            $y(x) = e^{mx}$
+          \end{center} 
+
+          We have
+
+          \begin{center}
+            $\frac{dy}{dx} = me^{mx}, \frac{d^2y}{dx^2} = m^2e^{mx}$
+          \end{center} 
+
+          \item \textbf{Observation 2}: Find m such that $y = Ce^{mx}$ satisfies the DE
+          \begin{center}
+            $\frac{d^2y}{dx^2} + a\frac{dy}{dx} + by = 0$
+          \end{center}
+          substituting y and its derivatives we get:
+          \begin{center}
+            $Cm^2e^{mx} + aCme^{mx} + bCe^{mx} = 0$\\
+            $\Rightarrow Ce^{mx}(m^2+am+ b) = 0$\\
+            $\Rightarrow m = \frac{-a \pm \sqrt{a^2 - ab}}{2} $
+          \end{center}
+
+          So we have  2 solutions
+
+          \begin{center}
+            $m_1 = \frac{-a + \sqrt{a^2 - ab}}{2}, m_2 = \frac{-a - \sqrt{a^2 - ab}}{2}$
+          \end{center}       
+
+          \item \textbf{Observation 3:} Show that if $m = m_1,m_2$ are solutions of $m^2 + am +b$,then \hl{$y = C_1e^{m_1x} + C_2e^{m_2x}$}, satisfies the DE
+
+          \begin{center}
+            $\frac{d^2y}{dx^2} + a\frac{dy}{dx} + by = 0$
+          \end{center}
+
+          we have 
+          \begin{center}
+            $y = C_1e^{m_1x} + C_2e^{m_2x}$\\
+            $\Rightarrow \frac{dy}{dx} = m_1C_1e^{m_1x} + m_2C_2e^{m_2x}$\\
+            $\Rightarrow \frac{d^2y}{dx^2} = m_1^2C_1e^{m_1x} + m_2^2C_2e^{m_2x}$
+          \end{center}
+
+          substituting into the DE we get
+
+          \begin{center}
+            $2$\\
+            $\Rightarrow \frac{dy}{dx} = m_1C_1e^{m_1x} + m_2C_2e^{m_2x}$\\
+            $\Rightarrow \frac{d^2y}{dx^2} = m_1^2C_1e^{m_1x} + m_2^2C_2e^{m_2x}$
+          \end{center}
+
+          substituting into the DE we get 
+
+          \begin{align*}
+            \frac{d^2 y}{dx^2} + a \frac{dy}{dx} + by &= m_1^2 C_1 e^{m_1 x} + m_2^2 C_2 e^{m_2 x} + a \left( m_1 C_1 e^{m_1 x} + m_2 C_2 e^{m_2 x} \right) + b \left( C_1 e^{m_1 x} + C_2 e^{m_2 x} \right) \\
+            &= C_1 e^{m_1 x} \left( m_1^2 + a m_1 + b \right) + C_2 e^{m_2 x} \left( m_2^2 + a m_2 + b \right) \\
+            &= 0
+          \end{align*}
+
+
+          \item \textbf{formal solution:} 
+            We now have a good candidate for a general solution of the DE:
+            \begin{center}
+              $y =C_1e^{m_1x} + C_2e^{m_2x}$ 
+            \end{center}
+            Where $m_1 = \frac{-a + \sqrt{a^2-4b}}{2}$,$m_2 = \frac{-a - \sqrt{a^2-4b}}{2}$ are solutions of $m^2 + am +b = 0$. We have 3 cases to consider:
+
+
+
+            \begin{itemize}
+                \item \textbf{Case 1}: For \hl{$a^2 > 4b$} we have 2 distinct real solutions
+                \begin{center}
+                  $m_1 \neq m_2, m_1,m_2 \in \mathbb{R}$
+                \end{center}
+                The general solution is 
+                \begin{center}
+                  $y =C_1e^{m_1x} + C_2e^{m_2x}$
+                \end{center}
+
+
+                \includegraphics[width=\linewidth]{Graphs/w5_1.png}
+
+
+                \item \textbf{Case 2}: For \hl{$a^2 < 4b$} we have 2 distinct complex solutions:
+                \begin{center}
+                  $m_1,m_2 = \frac{-a \pm \sqrt{a^2-4b}}{2} = \frac{-a \pm 2ik}{2} = - \frac{a}{2} \pm ik$\\
+                  where \hl{$k = \frac{1}{2} \sqrt{4b-a^2} > 0$}
+                \end{center}
+                Using Euler's formula:
+                \begin{center}
+                  $e^{ikx} = cos(kx) + isin(kx)$
+                \end{center}
+                
+                We have
+
+                \[
+                y = C_1 e^{m_1 x} + C_2 e^{m_2 x}
+                \]
+
+                \[
+                = C_1 e^{\left(-\frac{a}{2} + ik\right)x} + C_2 e^{\left(-\frac{a}{2} - ik\right)x}
+                \]
+
+                \[
+                = e^{-\frac{a}{2}x} \left( C_1 e^{ikx} + C_2 e^{-ikx} \right)
+                \]
+
+                \[
+                = e^{-\frac{a}{2}x} \left( C_1 \left(\cos(kx) + i\sin(kx)\right) + C_2 \left(\cos(kx) - i\sin(kx)\right) \right)
+                \]
+
+                \[
+                = e^{-\frac{a}{2}x} \left( \left(C_1 + C_2\right) \cos(kx) + i \left(C_1 - C_2\right) \sin(kx) \right)
+                \]
+
+                \[
+                = e^{-\frac{a}{2}x} \left( D_1 \cos(kx) + D_2 \sin(kx) \right)
+                \]
+
+                So the general solution is:
+                \hl{$y = e^{-\frac{a}{2}x} \left( D_1 \cos(kx) + D_2 \sin(kx) \right)$}
+
+                \includegraphics[width=\linewidth]{Graphs/direction_field.png}
+
+
+                \item \textbf{Case 3}: For $a^2 = 4b$ we have 1 real solution:
+                  \begin{center}
+                    \( m_1 = m_2 = \frac{-a \pm \sqrt{a^2 - 4b}}{2} = -\frac{a}{2} \)
+                  \end{center}
+                  Our solution becomes
+
+                  \[
+                  y = C_1 e^{-\frac{a}{2}x} + C_2 e^{-\frac{a}{2}x}
+                  \]
+
+                  \[
+                  = \left( C_1 + C_2 \right) e^{-\frac{a}{2}x}
+                  \]
+
+                  \[
+                  = D e^{-\frac{a}{2}x}
+                  \]
+
+                  Here, \( D \) is a constant (\( D = C_1 + C_2 \)), which means we only have \hl{1 degree of freedom, so this is not a general solution}.
+
+                  \newpage
+
+                  We look for a general solution of the form
+                  \begin{center}
+                    $y = f(x)e^{-\frac{a}{2}x}$
+                  \end{center}
+
+                  Substituting \( y \) and its derivatives into the differential equation (DE)
+
+                  \[
+                  \frac{d^2y}{dx^2} + a\frac{dy}{dx} + by = 0
+                  \]
+
+                  gives
+
+                  \[
+                  e^{-\frac{a}{2}x} \left( f''(x) + \frac{1}{4}(4b - a^2)f(x) \right) = 0 \quad \text{(exercise)}
+                  \]
+
+                  Since \( e^{-\frac{a}{2}x} \neq 0 \),
+
+                  \[
+                  f''(x) = \frac{1}{4}(a^2 - 4b)f(x) = 0
+                  \]
+
+                  which implies
+
+                  \[
+                  f'(x) = C_2
+                  \]
+
+                  \[
+                  f(x) = C_2 x + C_1
+                  \]
+
+                  Hence, the general solution is
+
+                  \[
+                  y = (C_1 + C_2 x) e^{-\frac{a}{2}x}
+                  \]
+
+
+            \end{itemize}
+        \end{itemize}
+
+      \end{enumerate}
+
+
+
+
+\end{document}
+
