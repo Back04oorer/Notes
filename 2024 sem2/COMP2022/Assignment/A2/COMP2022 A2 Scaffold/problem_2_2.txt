@@ -1,0 +1,8 @@
+V = S A X Y Z
+T = a b
+start = S
+S -> AXA
+A -> epsilon | AA | a | b
+X -> aYa | bYb
+Y -> aZa | bZb
+Z -> aa | bb

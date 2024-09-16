@@ -1,0 +1,6 @@
+V = S L R
+T = a b
+start = S
+S -> LaR
+L -> b | aLaa
+R -> b | aaaRa

@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 \usepackage{cancel}
 \usepackage{graphicx}
+\usepackage{CJKutf8} % 引入 CJK 宏包
 \usepackage{tikz}
 
 
@@ -434,8 +435,109 @@
 
       \end{enumerate}
 
+  \newpage
 
+  \section{week6}
+    % \begin{CJK}{UTF8}{gbsn} % 开始中文环境，gbsn是简体中文宋体
+    % 你好，世界！ % 在这里可以输入中文
+    % \end{CJK}
+    \subsection*{Simple harmonic motion}
+    \begin{itemize}
+      \item Periodic bhaviour \hl{without} damping is modelled by the DE
+        \begin{center}
+        $\frac{d^2x}{dt^2} + bx = 0,b>0$\\
+        or\\
+        $\ddot{x} + w_{0}^2x = 0$
+        \end{center}
 
+      \item We can express the solution as 
+        \begin{center}
+          $x = Acos(w_0t + \phi)$
+        \end{center}
+        \begin{itemize}
+          \item $A$ = amplitude
+          \item $w_0$ = frequency
+          \item $\phi$ =  phase
+          \item $T = \frac{2 \pi}{w_0}$ = period
+        \end{itemize}
+    \end{itemize}
+
+    \subsection*{Damped harmonic oscillator}
+    \begin{itemize}
+      \item Periodic behaviour \hl{with} damping is  modelled by the DE:
+        \begin{center}
+          $\frac{d^2x}{dt^2} + a \frac{dx}{dt} + bx = 0$
+        \end{center}
+
+        with $a = 2 \gamma$,$b = \omega_0^2$, or
+        \begin{center}
+          $\ddot{x} + 2 \gamma \dot{x} + \omega_0^{2}x = 0$
+        \end{center}
+
+      \item The characteristic equation is 
+        \begin{center}
+          $m^2 + am + b = 0$
+        \end{center}
+        which has solution 
+        \begin{center}
+          $ m = \frac{-a \pm \sqrt{a^2 - 4b}}{2} = - \gamma \pm \sqrt{\gamma^2 - \omega_0^2}$
+        \end{center}
+
+    \end{itemize}
+
+    \subsection*{Inhomogeneous second-order linear DEs with constant coefficients}
+
+    \begin{itemize}
+      \item An \hl{inhomogeneous scond-order linear differential equation} with constant coefficients is a DE that can be expressed in the form:
+      \begin{center}
+        $\frac{d^2y}{dx^2} + a\frac{dy}{dx} + by = g(x)$
+      \end{center}
+
+      \item \textbf{theorem}: Let $y_p(x)$ be a particular solution of an \hl{inhomogeneous linear DE} and let $y_h(x)$ be the \hl{general solution} of the corresponding homogeneous DE. Then the general solution of the inhomogeneous DE is the
+      \begin{center}
+        $y(x) = y_h(x) + y_p(x)$
+      \end{center}
+
+      \item \hl{systems of first-order linear DEs with constant coefficients}: A system of two first-order DEs with constant coefficients has the form:
+
+      \begin{center}
+        $\frac{dx}{dt} = ax + by$ \texttt{(*)},\\
+        $\frac{dy}{dt} = cx + fy$ \texttt{(**)}
+      \end{center}
+
+      to solve this system, we follow the following steps:
+      \begin{enumerate}
+        \item Differentiate \texttt{(*)}
+          \begin{center}
+            $\frac{d^2x}{dt^2} = a\frac{dx}{dt} +$ \hl{$b \frac{dy}{dt}$} \texttt{(I)}
+          \end{center}
+
+        \item Substitude the right hand side of of \texttt{(**)} into \texttt{(I)}
+          \begin{center}
+            $\frac{d^2x}{dt^2} = a\frac{dx}{dt} +$ \hl{$b(cx + fy)$} \texttt{(II)}
+          \end{center}
+
+        \item Rearrange \texttt{(*)} to make y the subject
+          \begin{center}
+            $y = \frac{1}{b} (\frac{dx}{dt} - ax)$ \texttt{(III)}
+          \end{center} 
+        \item Substitude the right hand side of \texttt{(III)} into \texttt{(II)} 
+          \begin{center}
+            $\frac{d^2x}{dt^2} = a \frac{dx}{dt} + b(cx + 
+            \frac{f}{b}(\frac{dx}{dt}-ax)) \rightarrow \frac{d^2x}{dt^2} = (a+f)\frac{dx}{dt} + (bx - af)x$
+          \end{center}
+
+        \item Solve the DE   
+          \begin{center}
+            $\frac{d^2x}{dt^2} - (a+f)\frac{dx}{dt} - (bc-af)x = 0$ for x.
+          \end{center}
+        \item Substitute x into \texttt{(**)} and solve the \hl{first-order linear DE} for y
+        \begin{center}
+          $\frac{dy}{dt} = cx + fy \rightarrow \frac{dy}{dt} + p(t)y = q(t)$
+
+        \end{center}       
+      \end{enumerate}
+    \end{itemize}
 
 \end{document}
 

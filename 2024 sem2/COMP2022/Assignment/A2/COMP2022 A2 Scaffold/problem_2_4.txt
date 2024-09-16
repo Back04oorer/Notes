@@ -1,0 +1,8 @@
+V = S T A U
+T = a b
+start = S
+S -> epsilon | TTAU
+A -> TTAU
+T -> a | b
+U -> b
+A -> epsilon

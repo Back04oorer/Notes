@@ -17,37 +17,66 @@ In this project, we use JaCoCo to measure test coverage. The specific workflow i
 - Run `gradle test` to execute the tests.
 - Run `gradle jacocoTestReport` to generate the test coverage report.
 - Review the generated report to ensure that most of the code logic is covered. If certain parts are not covered, write additional tests to improve the coverage.
+
 ### JUnit Test Cases
 This section explains the rationale behind the design of each JUnit test, the types of tests (Normal, Edge), the inputs, and the expected outputs. All test cases that are expected to fail have been temporarily disabled in the code (using `@Disabled`) in order to generate the JaCoCo test report.
+
 #### JsonParserTest
-##### dateConverterTest1
+##### \[1\] dateConverterTest1
 **TestType**: Normal
+
 **Description**: Test whether a String formatted as `dd-MM-yyyy` can be correctly converted into a `Date` Object.
+
 **Input**: `"01-09-2024"`
+
 **Expected Output**: The Date object corresponds to September 1, 2024
+
 **Result**: Pass
-##### dateConverterTest2
+
+
+##### \[2\] dateConverterTest2
 **TestType**: Edge
+
 **Description**: Test whether a empty String can be correctly handled.
+
 **Input**: `""`
+
 **Expected Output**: Null
+
 **Result**: Pass
-##### dateConverterTest3
+
+
+##### \[3\] dateConverterTest3
 **TestType**: Edge
+
 **Description**: Test whether a String with invalid format can be correctly handled.
+
 **Input**: `"32-13-2024"`
+
 **Expected Output**: Null
+
 **Result**: Failed
-##### dateConverterTest3
+
+
+##### \[4\] dateConverterTest3
 **TestType**: Edge
+
 **Description**: Test whether a Null can be correctly handled.
+
 **Input**: Null
+
 **Expected Output**: Null
+
 **Result**: Failed
-##### readRateJsonTest1
+
+
+##### \[5\] readRateJsonTest1
 **TestType**: Normal
+
 **Description**: Test whether the function can correctly read a `JSON` file and return a `JSONArray`
+
 **Input**: `src/test/resources/JsonParserTest/readRateJson_1.json`
+
 **Expected Output**: 
 ```JSON
 [
@@ -72,10 +101,15 @@ This section explains the rationale behind the design of each JUnit test, the ty
 ]
 
 ```
+
 **Result**: Pass
-##### getConvertJsonObjectTest1
+
+
+##### \[6\] getConvertJsonObjectTest1
 **TestType**: Normal
+
 **Description**: Test whether the function can correctly search and return a `JSON` object with specified currency type.
+
 **Input**: 
 ```JSON
 [
@@ -112,10 +146,14 @@ This section explains the rationale behind the design of each JUnit test, the ty
 }
 
 ```
+
 **Result**: Pass
-##### getConvertJsonObjectTest2
+
+##### \[7\] getConvertJsonObjectTest2
 **TestType**: Edge
+
 **Description**: Test whether the function can handle the case when the specified data does not exist in the `JSONArray`.
+
 **Input**: 
 ```JSON
 [
@@ -140,152 +178,265 @@ This section explains the rationale behind the design of each JUnit test, the ty
 ```
 
 **Expected Output**:Null
+
 **Result**: Pass
-##### getRateTest1
+
+
+##### \[8\] getRateTest1
 **TestType**: Normal
+
 **Description**: Test whether the function can find the correct rate with specified data and currency type.
+
 **Input**: `"src/test/resources/JsonParserTest/getRate_1.json"`
+
 **Expected Output**: `0.81`,`0.75`
+
 **Result**: Pass
-##### getRateTest2
+
+
+##### \[9\] getRateTest2
 **TestType**: Edge
+
 **Description**: Test whether the function can return `0` with nonexistent data and currency type.
+
 **Input**: `"src/test/resources/JsonParserTest/getRate_1.json"`
+
 **Expected Output**: `0`
+
 **Result**: Pass
-##### getRateRangeTest1
+
+
+##### \[10\] getRateRangeTest1
 **TestType**: Normal
+
 **Description**: Test whether the function can find all the rates within a specified time period for a given currency conversion type.
+
 **Input**: 
 - `src/test/resources/JsonParserTest/getRateRange_1.json` 
+
 - Arguments
-	- `origin_in`: `USD
+	- `origin_in`: `USD`
+  
 	- `target_in`: `EUR`
+  
 	- `start_date_in`: `31-08-2024`
+  
 	- `end_date_in`: `03-09-2024`
+  
 **Expected Output**: `[0.85, 0.82, 0.83]`
+
 **Result**: Pass
-##### getRateRangeTest2
+
+
+##### \[11\] getRateRangeTest2
 **TestType**: Edge
+
 **Description**: Test whether the function can correctly handle the case when there is no data within the specified time range.
+
 **Input**: 
 - `src/test/resources/JsonParserTest/getRateRange_1.json`
+
 - Arguments
-	- `origin_in`: `USD
+	- `origin_in`: `USD`
+  
 	- `target_in`: `EUR`
+  
 	- `start_date_in`: `09-09-2024`
+  
 	- `end_date_in`: `10-09-2024`
+
 **Expected Output**: `[]`
-##### getRateRangeTest3
+
+
+##### \[12\] getRateRangeTest3
 **TestType**: Edge
+
 **Description**: Test whether the function can correctly return results when the time range is within the same day.
+
 **Input**: 
 - `src/test/resources/JsonParserTest/getRateRange_1.json` 
+
 - Arguments
-	- `origin_in`: `USD
+
+	- `origin_in`: `USD`
+  
 	- `target_in`: `GBP`
+  
 	- `start_date_in`: `01-09-2024`
-	- `end_date_in`: `01-09-2024
+  
+	- `end_date_in`: `01-09-2024`
+
 **Expected Output**: `[0.75]`
+
 **Result**: Pass
-##### writeToFileRateTest1
+
+##### \[13\]writeToFileRateTest1
 **TestType**: Normal
+
 **Description**: Test whether the function successfully adds a record to the JSON file when the existing data does not already exist in the file.
+
 **Input**: 
 - `src/test/resources/JsonParserTest/writeToFileRate_src.json`
+
 - Arguments
-	- `origin_in`: `USD
+
+	- `origin_in`: `USD`
+  
 	- `target_in`: `EUR`
+  
 	- `date_in`: `04-09-2024`
+  
 	- `rate_in`: `0.76`
+
 **Expected Output**: A new record `{"date":"04-09-2024","rate":0.76}` should be added into `USD-EUR` currency type.
+
 **Result**: Pass
-##### writeToFileRateTest2
+
+##### \[14\] writeToFileRateTest2
 **TestType**: Normal
+
 **Description**: Test whether the function updates the JSON file with new data when existing data is already present in the file.
+
 **Input**: 
 - `src/test/resources/JsonParserTest/writeToFileRate_src.json`
+
 - Arguments
-	- `origin_in`: `USD
+	- `origin_in`: `USD`
+  
 	- `target_in`: `EUR`
+  
 	- `date_in`: `03-09-2024`
+  
 	- `rate_in`: `0.76`
+  
 **Expected Output**: 
+
 Expected `src/test/resources/JsonParserTest/writeToFileRate_2.json`:
 ```JSON
 [{"origin":"USD","rates":[{"date":"01-09-2024","rate":0.86},{"date":"02-09-2024","rate":0.81},{"date":"03-09-2024","rate":0.76}],"target":"EUR"},{"origin":"USD","rates":[{"date":"01-09-2024","rate":0.75},{"date":"02-09-2024","rate":0.76},{"date":"03-09-2024","rate":0.77}],"target":"GBP"}]
 ```
 **Result**: Pass
-##### writeToFileRateTest3
+
+##### \[15\] writeToFileRateTest3
 **TestType**:Normal
+
 **Description**: Test whether the function should add a new currency pair and write the data when the specified currency pair does not exist in the JSON file.
+
 **Input**: 
 - `src/test/resources/JsonParserTest/writeToFileRate_src.json`
+
 - Arguments
 	- `origin_in`: `USD
 	- `target_in`: `JPY`
 	- `date_in`: `03-09-2024`
 	- `rate_in`: `0.76`
+
 **Expected Output**: 
 Expected `src/test/resources/JsonParserTest/writeToFileRate_2.json`:
 ```JSON
 [{"origin":"USD","rates":[{"date":"01-09-2024","rate":0.86},{"date":"02-09-2024","rate":0.81},{"date":"03-09-2024","rate":0.87}],"target":"EUR"},{"origin":"USD","rates":[{"date":"01-09-2024","rate":0.75},{"date":"02-09-2024","rate":0.76},{"date":"03-09-2024","rate":0.77}],"target":"GBP"},{"origin":"USD","rates":[{"date":"03-09-2024","rate":0.76}],"target":"JPY"}]
 ```
+
 **Result**: Pass
-##### writeToFileRateTest4
+
+##### \[16\] writeToFileRateTest4
 **TestType**:Edge
+
 **Description**: Test whether the function can correctly handle the case when the JSON file does not exist.
+
 **Input**: 
 - `invalid_path/<>?/config2.json`
+
 - Arguments
-	- `origin_in`: `USD
+
+	- `origin_in`: `USD`
+  
 	- `target_in`: `EUR`
+  
 	- `date_in`: `01-09-2024`
+  
 	- `rate_in`: `0.85`
+  
 **Expected Output**: An exception
+
 **Result**: Pass
-##### readPopularJsonTest1
+
+##### \[17\] readPopularJsonTest1
 **TestType**:Normal
+
 **Description**: Test whether the function can correctly read the most 4 popular currency pairs.
+
 **Input**: 
+
 - `src/test/resources/JsonParserTest/readPopularJson_1.json`
+
 **Expected Output**: `HashSet: ["AUD","CNY","EUR","USD"]`
+
 **Result**: Pass
-##### readPopularJsonTest2
+
+##### \[18\] readPopularJsonTest2
+
 **TestType**:Edge
+
 **Description**: Test whether the function can successfully read the JSON file when there are fewer than 4 currencies stored.
+
 **Input**: 
+
 - `src/test/resources/JsonParserTest/readPopularJson_2.json`
+
 **Expected Output**: Null
+
 **Result**: Pass
-##### getPreviousRateTest1
+
+##### \[19\] getPreviousRateTest1
+
 **TestType**:Normal
+
 **Description**: Test whether the function can find the most recent rate for the specified currency pair.
+
 **Input**: 
+
 - `src/test/resources/JsonParserTest/getPreviousRate.json`
+
 - Arguments
-	- `origin_in`: `USD
+
+	- `origin_in`: `USD`
+  
 	- `target_in`: `AUD`
+  
 **Expected Output**: 0.5
 **Result**: Pass
 
-##### getPreviousRateTest1
+##### \[20\] getPreviousRateTest1
 **TestType**:Edge
+
 **Description**: Test whether the function can handle the case of nonexistent exchange rate data.
+
 **Input**: 
 - `src/test/resources/JsonParserTest/getPreviousRate.json`
+
 - Arguments
+
 	- `origin_in`: `CNY`
+  
 	- `target_in`: `JPY`
+  
 **Expected Output**: 0
+
 **Result**: Pass
 
-##### generatePopularCurrenciesJSONTest1
+##### \[21\] generatePopularCurrenciesJSONTest1
+
 **TestType**:Normal
+
 **Description**: Test whether the function can search for and return a `JSON` object that contains the 4 most popular currencies and their corresponding exchange rate data.
+
 **Input**: 
+
 - `"src/test/resources/JsonParserTest/generatePopularCurrenciesJSON_1_rate.json"`
+
 - `"src/test/resources/JsonParserTest/generatePopularCurrenciesJSON_1_pop.json"`
+
 **Expected Output**: 
 ```JSON
 {
@@ -356,78 +507,134 @@ Expected `src/test/resources/JsonParserTest/writeToFileRate_2.json`:
 }
 
 ```
+
 **Result**: Pass
 
-##### readAllCurrencyTest1
+##### \[22\] readAllCurrencyTest1
+
 **TestType**: Normal
+
 **Description**: Test whether the function can return all possible currency types and remove duplicates.
+
 **Input**: 
 - `src/test/resources/JsonParserTest/readAllCurrency_1.json`
+
 **Expected Output**: 
 ```JSON
 [USD,EUR,CNY]
 ```
+
 **Result**: Pass
 
 #### AdminTest
-##### addCurrencyTest1
+##### \[1\] addCurrencyTest1
 **TestType**: Normal  
+
 **Description**: Test whether the function can add a new currency (AUD to JPY) with a specific rate and date into the JSON file.
+
 **Input**:
 - `src/test/resources/AdminTest/addCurrency_1.json` (initial data)
+
 - Argument:
+
 	- `origin`: `AUD`
+  
 	- `target`: `JPY`
+  
 	- `date`: `01-01-1998`
+  
 	- `rate`: `0.1`
+  
 **Expected Output**: The newly added rate for `AUD-JPY` on `01-01-1998` should be `0.1`.
+
 **Result**: Pass
-##### addCurrencyTest2
+
+##### \[2\] addCurrencyTest2
 **TestType**: Edge Case  
+
 **Description**: Test whether the function correctly handles the case where the currency pair already exists in the JSON file.
+
 **Input**:
+
 - `src/test/resources/AdminTest/addCurrency_2.json` (initial data already contains USD to AUD)
+
 - Argument:
+
 	- `origin`: `USD`
+  
 	- `target`: `AUD`
+  
 	- `date`: `01-01-1998`
-	- `rate`: `0.1
+  
+	- `rate`: `0.1`
+  
 **Expected Output**: `"Currency already exists.\n"`
+
 **Result**: Pass
-##### updateExchangeRateTest1
+
+##### \[3\] updateExchangeRateTest1
 **TestType**: Normal  
+
 **Description**: Test whether the function can update the exchange rate for an existing currency pair on a specific date.  
+
 **Input**:
+
 - `src/test/resources/AdminTest/updateExchangeRate_1.json` (initial data)
+
 - Argument:
 	- `origin`: `CNY`
+  
 	- `target`: `JPY`
+  
 	- `date`: `02-01-2024`
-	- `new_rate`: `0.3
+  
+	- `new_rate`: `0.3`
+  
 **Expected Output**: The rate for `CNY-JPY` on `02-01-2024` should be updated to `0.3`.
+
 **Result**: Pass
-##### updateExchangeRateTest2
+
+##### \[4\] updateExchangeRateTest2
 **TestType**: Edge
+
 **Description**: Test whether the function can add a new currency pair (CNY to MBA) when it doesn't exist and assign a new exchange rate.
+
 **Input**:
 - `"src/test/resources/AdminTest/updateExchangeRate_2.json"` (initial data)
+
 - Argument:
+
 	- `origin`: `CNY`
+  
 	- `target`: `MBA`
+  
 	- `date`: `02-01-2024`
-	- `new_rate`: `0.2
+  
+	- `new_rate`: `0.2`
+
 **Expected Output**: A new currency pair (`CNY-MBA`) should be added with the rate `0.2` for the date `"02-01-2024"`.
+
 **Result**: Pass
-##### viewRateHistoryTest1
+
+##### \[5\] viewRateHistoryTest1
 **TestType**: Normal  
+
 **Description**: Test whether the function can retrieve the rate history between `CNY-JPY` for a specific date range. 
+
 **Input**:
+
 - `src/test/resources/AdminTest/viewRateHistory.json`
+
 - Argument:
+
 	- `origin`: `CNY`
+  
 	- `target`: `JPY`
+  
 	- `start_date`: `20-01-2023`
+  
 	- `end_date`: `13-02-2024`
+  
  **Expected Output**: 
  ```
   "Rate history for CNY to JPY:\n" +
@@ -438,18 +645,29 @@ Expected `src/test/resources/JsonParserTest/writeToFileRate_2.json`:
   "Max rate: 12.00\n" +
   "Standard Deviation: 4.15\n"
 ```
+
  **Result**: Pass
-##### viewRateHistoryTest2
+
+##### \[6\] viewRateHistoryTest2
 **TestType**: Edge 
+
 **Description**: Test whether the function correctly handles a single day rate history request between `CNY-JPY`.  
+
 **Input**:
+
 - `src/test/resources/AdminTest/viewRateHistory.json`
+
 - Argument:
 	- `origin`: `CNY`
+  
 	- `target`: `JPY`
+  
 	- `start_date`: `02-01-2024`
-	- `end_date`: `02-01-2024
+  
+	- `end_date`: `02-01-2024`
+  
 **Expected Output**
+
 ```
 "Rate history for CNY to JPY:\n" +  
                 "All rates: [1.0]\n" +  
@@ -459,84 +677,167 @@ Expected `src/test/resources/JsonParserTest/writeToFileRate_2.json`:
                 "Max rate: 1.00\n" +  
                 "Standard Deviation: 0.00\n"
 ```
+
 **Result**: Pass
-##### viewRateHistoryTest3
+
+##### \[7\] viewRateHistoryTest3
+
 **TestType**: Edge Case  
+
 **Description**: Test whether the function handles the case where no rates are found for a given date range.  
+
 **Input**:
+
 - `src/test/resources/AdminTest/viewRateHistory.json`
+
 - Argument:
+
 	- `origin`: `CNY`
+  
 	- `target`: `JPY`
+  
 	- `start_date`: `20-01-2025`
+  
 	- `end_date`: `13-02-2026`
+  
 **Expected Output** : `No rates found during this period\n`
-##### viewRateHistoryTest4
+
+**Result**: Pass
+
+##### \[8\] viewRateHistoryTest4
+
 **TestType**: Edge Case
+
 **Description**: Test whether the function handles the case where no currency pairs are found for a given date range.  
+
 **Input**:
+
 - `src/test/resources/AdminTest/viewRateHistory.json`
+
 - Argument:
+
 	- `origin`: `CCC`
+  
 	- `target`: `CCC`
+  
 	- `start_date`: `20-01-2025`
+  
 	- `end_date`: `13-02-2026`
+  
 **Expected Output** : `No rates found during this period\n`
+
+**Result**: Pass
+
 #### CurrencyConverterTest
-##### convertTest1
+##### \[1\] convertTest1
+
 **TestType**: Normal  
+
 **Description**: Test whether the function can correctly convert an amount from USD to AUD using the exchange rate from the provided JSON file.  
+
 **Input**:
+
 - `src/test/resources/CurrencyConverterTest/convert_1.json`
+
 - Argument:
+
 	- `origin`: `USD`
+  
 	- `target`: `AUD`
+  
 	- `amount`: `64.02`
+  
 **Expected Output**: `32.01`
-##### convertTest2
+
+**Result**: Pass
+
+##### \[2\] convertTest2
+
 **TestType**: Edge Case  
+
 **Description**: Test whether the function correctly handles a case where the target currency does not exist in the `JSON` file.  
+
 **Input**:
+
 - `src/test/resources/CurrencyConverterTest/convert_1.json`
+
 - Argument:
+
 	- `origin`: `USD`
+  
 	- `target`: `NotExist`
+  
 	- `amount`: `64.02`
+  
 **Expected Output**: `-1`
-##### convertTest3
-**TestType**: Edge Case  
-**Description**: Test whether the function correctly handles a case where both the origin and target currencies are not found in the JSON file.  
+
+**Result**: Pass
+
+##### \[3\] convertTest3
+
+**TestType**: Edge
+
+**Description**: Test whether the function correctly handles a case where both the origin and target currencies are not found in the JSON file.
+
 **Input**:
+
 - `src/test/resources/CurrencyConverterTest/convert_1.json`
+
 -  Argument:
+
 	- `origin`: `JPY`
+  
 	- `target`: `CNY`
+  
 	- `amount`: `64.02`
+  
 **Expected Output**: `-1`
+
 **Result**: Pass
 
 #### UserTest
-##### convertCurrencyTest1
+##### \[1\]  convertCurrencyTest1
+
 **TestType**: Normal
-**Description**: Test whether the function can correctly convert an amount from USD to EUR using the exchange rate from the provided JSON file.  
+
+**Description**: Test whether the function can correctly convert an amount from USD to EUR using the exchange rate from the provided JSON file. 
+
 **Input**:
+
 - `src/test/resources/UserTest/convertCurrency_1.json`
+
 - Argument:
+
 	- `origin`: `USD`
+  
 	- `target`: `EUR`
+  
 	- `amount`: `62.5`
+  
 **Expected Output**: `"62.50 USD = 25.00 EUR"`
+
 **Result**: Pass
-##### convertCurrencyTest2
+
+##### \[2\] convertCurrencyTest2
+
 **TestType**: Edge
+
 **Description**: Test whether the function handles the case where the origin currency does not exist in the JSON file.
+
 **Input**:
+
 - `src/test/resources/UserTest/convertCurrency_1.json`
+
 - Argument:
+  
 	- `origin`: `CCC`
+  
 	- `target`: `EUR`
+  
 	- `amount`: `62.5`
+  
 **Expected Output**: `"Invalid currency or conversion rate."`
+
 **Result**: Pass
 
 ### Jacoco Test Report
