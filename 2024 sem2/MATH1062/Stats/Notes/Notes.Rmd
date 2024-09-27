@@ -34,6 +34,7 @@ output:
 }
 </style>
 
+
 # DATA&Graphical Summaries
 
 ## Read In Data
@@ -989,4 +990,198 @@ In linear models and regression analysis generally, we need to check the homogen
 - If the vertical strips don’t show equal spread in the y direction, then the data is **heteroscedastic**.
   - The regression line should not be used for predictions.
   
+# Probability
+
+## probability models
+
+```{r, echo=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("Graphs/w5_1.png")
+```
+```{r, echo=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("Graphs/w5_2.png")
+```
+
+**De Morgan's Law**
+
+- $(A \cup B)^c = A^c \cap B^c$
+
+- $(A \cap B)^c = A^c \cup B^c$
+
+
+## Properties
+
+### “Classical” probability”
+Too easy
+
+### Probabilities are between 0 (impossible) and 1 (certain)
+Ben Dan 
+
+### Complement
+Bu Xiang Xue Xi Zen Me Ban
+
+### Mutually exclusive
+Two events $A$ and $B$ are mutually exclusive if
+
+$$
+P(A \cup B) = 0
+$$
+
+
+### Independence
+Two events A and B are independent if and only if
+$$
+P( A \cap B) = P(A)P(B)
+$$
+
+```{r,echo=FALSE}
+knitr::kable(
+  data.frame(
+    Term = c("Mutually exclusive", "Independence"),
+    Definition = c("the occurrence of Event B prevents Event A from occurring", 
+                   "the occurrence of Event B does not change the chance of Event A occurring")
+  ), 
+  col.names = c("Term", "Definition"),
+  caption = "Difference between Mutually Exclusive and Independence"
+)
+```
+
+## Conditional probability
+For events $A$ and $B \in \Omega$ where $P(B) \neq 0$, the conditional probability of $A$ given $B$ is 
+
+$$
+P(A|B) = \frac{P(A \cap B)}{P(B)}
+$$
+
+Two events $A$ and $B$ are independent if and only if
+
+$$
+P(A|B) = P(A)
+$$
+
+## Multiplication and Addition Rule
+
+- **Multiplication rule**: The probability that A and B occur is $P(A)$ multiplied by the conditional probability
+
+$$
+P(A \cap B) = P(A)P(B|A)
+$$
+
+- **Addition rule**: The probability at least one of A and B occurs is $P(A)$ **plus** $P(B)$ minus the probabiliry that both events occur.
+
+$$
+P(A \cup B) = P(A) + P(B) - P(A \cap B)
+$$
+
+## The prosecutor's fallacy
+The prosecutor’s fallacy is a mistake in statistical thinking, whereby it is assumed that the probability of a random match is equal to the probability that the defendant is innocent.
+
+认为随机匹配的概率等于被告人无罪的概率。
+
+
+# Counting and Simulating Chance
+
+## Sample without replacement
+Use R and simulate throwing 2 dice times $x$ and record the findings.
+
+```{r}
+set.seed(23)
+totals = sample(1:6, 1000, rep = T) + sample(1:6, 1000, rep=T)
+table(totals)
+```
+
+## Box model
+Many counting and probability problems can be reduced to a box model. In a box model, there are tickets in a box, and we draw tickets from the box.
+
+## Methods
+
+### Write a list manually
+ez
+
+### Summarise in a tree diagram
+
+ez
+
+### Simulate in R
+- using a function
+```{r}
+gameA <- function(){
+  rolls = sample(1:6,size = 4,replace = TRUE)
+  condition = sum(rolls == 1) > 0
+  return(condition)
+}
+simsA = replicate(100000,gameA())
+sum(simsA)/length(simsA)
+```
+
+## Multiplication Principle of Counting
+
+If a task can be performed in $n_1$ ways, and for each of these ways, a second task can be performed in $n_2$ ways, then the two tasks can be performed together in a total of $n_1 \times n_2$ ways. If there are tasks in such a sequence, then k tasks can be performed together in a total of $n_1 \times n_2 \times n_3 ... \times n_k$ ways.
+
+
+# The box model
+
+## Definition
+
+The box model is a very **simple** statistical model for representing a population. The box model can be thought of as:
+
+- A collection of N objects, e.g. tickets,balls is imagined "in a box"
+
+- Each object bears a number
+
+- A **random sample** of a certain number **n** of the objects is taken
+
+- The sampling may be **with** or **without** replacement
+
+## Random samples and Random draws
+
+- **Random Sample:** Consider all possible ways of selecting objects from the box. A **random sample** is when each possible of these selection is equally likely.
+
+- A **random draw** is a random sample with $n=1$
+  - is a single draw is taken, theneach object in the box has an equal chance of being picked
+  
+  
+## Using `outer`
+The R function `outer()` forms a two-way array by applying an operation to each pair of elements from two vectors:
+
+```{r}
+bx = c(1, 2, 3) 
+by = c(2, 4) 
+bs = outer(bx, by, "+") 
+bs
+```
+```{r}
+mean(bs)
+```
+
+## Expected Value and Standard Error of Sum
+- expected value of sum is sum of expected value
+
+- squared SE of the sum is the sum of squared SEs
+
+## Computing Formula for SD
+$SD^2 = \frac{1}{M} \sum_{i=1}^{M} (x_i - \bar{x})^2 = \left( \frac{1}{M} \sum_{i=1}^{M} x_i^2 \right) - \bar{x}^2$
+
+That is : the **mean square minus the square of the mean** (This is the population sd)
+
+## Random samples with replacement of size 𝑛 = 2
+
+When we have a single box, but take 2 random draws with replacement.
+
+- This means each of the $N^2$ possible pairs $(x_1,x_1), (x_1,x_n)...$ is equally like.
+
+In this case, we have:
+
+- $E(X) = E(Y)$
+
+- $SE(X) = SE(Y)$
+
+Suppose that the mean of the box is $\mu$, the SD of the box is $sigma$ and the sum $S$ of two random draws. We have:
+
+- $E(S) = E(X) + E(Y) = 2 \mu$
+
+- $SE(S)^2 = SE(X)^2 + SE(Y)^2 = 2 \sigma^2 \implies SE(S) = \sqrt{2} \mu$ 
+
+
+
+## Sums and averages of random samples of size 𝑛
 

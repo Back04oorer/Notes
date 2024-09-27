@@ -69,4 +69,12 @@ tr:nth-child(even) td {
   display: block;
 }
 
+.tocify-item:hover {
+    color: rgb(90, 164, 74); /* 薰草黄文字 */
+    background-color: #e0e0e0; /* 浅灰色背景 */
+    transform: scale(1.05); /* 悬停时轻微放大 */
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease; /* 添加缩放和颜色的过渡效果 */
+}
+
+
 

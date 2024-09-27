@@ -169,10 +169,7 @@ $B \rightarrow Bb$
 - 2. Go through every rule in R
 	- If the RHS of the rule only contains variables in Z or a $\epsilon$ , add the variable into set Z
 - 3. Repeat step 2 util there is no new variable added to Z
-
-
 ### q4
-
 #### My answer:
 - 1. apply the method in q3 to store all variables that can derive $\epsilon$ in set Z
 - 2. Initialize an empty set M with initial variable $\{X\}$ which stores all variables that can derive X.
@@ -181,4 +178,8 @@ $B \rightarrow Bb$
 	
 - 4. Repeat step 3 util there is now new variable added to X 
 
+# Tut9
+
+## P2
+$\frac{n^2}{2} + n + 1$
 

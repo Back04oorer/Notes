@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.9.13)  16 SEP 2024 20:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.9.13)  26 SEP 2024 19:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -737,10 +737,14 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
 amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (0.75456pt too wide) in paragraph at lines 40--41
-[]\OT1/cmr/bx/n/10 Initial Con-di-tion\OT1/cmr/m/n/10 : An ini-tial con-di-tion
- is a pair $(\OML/cmm/m/it/10 x[]; y[]\OT1/cmr/m/n/10 )$ such that $\OML/cmm/m/
-it/10 y\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) =
+<Graphs/w8_1.png, id=4, 462.528pt x 346.896pt>
+File: Graphs/w8_1.png Graphic file (type png)
+<use Graphs/w8_1.png>
+Package pdftex.def Info: Graphs/w8_1.png  used on input line 635.
+(pdftex.def)             Requested size: 345.0178pt x 227.62346pt.
+
+Overfull \hbox (25.01784pt too wide) in paragraph at lines 635--636
+[] 
  []
 
 
@@ -749,99 +753,85 @@ it/10 y\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) =
 
 {/Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdf
 tex/pdftex.map}]
-<Graphs/direction_field.png, id=20, 578.16pt x 578.16pt>
-File: Graphs/direction_field.png Graphic file (type png)
-<use Graphs/direction_field.png>
-Package pdftex.def Info: Graphs/direction_field.png  used on input line 59.
-(pdftex.def)             Requested size: 319.99997pt x 320.0004pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
-
- []
-
-
-
-[2 <./Graphs/direction_field.png>]
-Overfull \hbox (4.74986pt too wide) in paragraph at lines 103--104
-[]\OT1/cmr/bx/n/10 Exponential Growth\OT1/cmr/m/n/10 : The ex-po-nen-tial growt
-h model as-sumes the growth
- []
+<Graphs/w8_2.png, id=20, 433.62pt x 433.62pt>
+File: Graphs/w8_2.png Graphic file (type png)
+<use Graphs/w8_2.png>
+Package pdftex.def Info: Graphs/w8_2.png  used on input line 650.
+(pdftex.def)             Requested size: 320.01363pt x 170.71892pt.
+<Graphs/w8_3.png, id=21, 433.62pt x 433.62pt>
+File: Graphs/w8_3.png Graphic file (type png)
+<use Graphs/w8_3.png>
+Package pdftex.def Info: Graphs/w8_3.png  used on input line 652.
+(pdftex.def)             Requested size: 320.01363pt x 170.71892pt.
 
 
-
-[3]
-
-[4]
-
-[5]
-Overfull \hbox (122.32494pt too wide) detected at line 303
-[]
- []
+[2 <./Graphs/w8_1.png> <./Graphs/w8_2.png>]
+<Graphs/w8_4.png, id=27, 433.62pt x 433.62pt>
+File: Graphs/w8_4.png Graphic file (type png)
+<use Graphs/w8_4.png>
+Package pdftex.def Info: Graphs/w8_4.png  used on input line 654.
+(pdftex.def)             Requested size: 320.01363pt x 170.71892pt.
 
 
-
-[6]
-<Graphs/w5_1.png, id=41, 854.19125pt x 428.60126pt>
-File: Graphs/w5_1.png Graphic file (type png)
-<use Graphs/w5_1.png>
-Package pdftex.def Info: Graphs/w5_1.png  used on input line 326.
-(pdftex.def)             Requested size: 279.3pt x 140.1374pt.
-
-
-[7 <./Graphs/w5_1.png>]
-File: Graphs/direction_field.png Graphic file (type png)
-<use Graphs/direction_field.png>
-Package pdftex.def Info: Graphs/direction_field.png  used on input line 368.
-(pdftex.def)             Requested size: 279.3pt x 279.29568pt.
+[3 <./Graphs/w8_3.png> <./Graphs/w8_4.png>]
+<Graphs/w8_5.png, id=36, 433.62pt x 433.62pt>
+File: Graphs/w8_5.png Graphic file (type png)
+<use Graphs/w8_5.png>
+Package pdftex.def Info: Graphs/w8_5.png  used on input line 690.
+(pdftex.def)             Requested size: 320.01363pt x 170.71892pt.
+<Graphs/w8_6.png, id=37, 433.62pt x 433.62pt>
+File: Graphs/w8_6.png Graphic file (type png)
+<use Graphs/w8_6.png>
+Package pdftex.def Info: Graphs/w8_6.png  used on input line 693.
+(pdftex.def)             Requested size: 320.01363pt x 170.71892pt.
 
 
-[8]
+[4 <./Graphs/w8_5.png>]
+<Graphs/w8_7.png, id=42, 433.62pt x 433.62pt>
+File: Graphs/w8_7.png Graphic file (type png)
+<use Graphs/w8_7.png>
+Package pdftex.def Info: Graphs/w8_7.png  used on input line 695.
+(pdftex.def)             Requested size: 320.01363pt x 170.71892pt.
 
-[9]
 
-[10]
+[5 <./Graphs/w8_6.png> <./Graphs/w8_7.png>]
 
-[11] (Notes.aux)
+[6] (Notes.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-16>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 14677 strings out of 473899
- 291930 string characters out of 5715680
- 1946957 words of memory out of 5000000
- 37286 multiletter control sequences out of 15000+600000
- 566748 words of font info for 70 fonts, out of 8000000 for 9000
+ 14701 strings out of 473899
+ 292410 string characters out of 5715680
+ 1942957 words of memory out of 5000000
+ 37311 multiletter control sequences out of 15000+600000
+ 566580 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,9n,92p,388b,425s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,6n,92p,388b,343s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/l
 jfour/jknappen/ec/dpi600/tcrm1000.pk></Users/bamingyuan/Library/Application Sup
 port/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/ba
 mingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/a
 msfonts/cm/cmbx12.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/tex
 mfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/bamingyuan/Librar
-y/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cmextra
-/cmex7.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/bamingyuan/Library/Applicati
-on Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb></Use
-rs/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/pub
-lic/amsfonts/cm/cmmi7.pfb></Users/bamingyuan/Library/Application Support/MiKTeX
-/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/bamingyuan/Lib
-rary/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/c
-mr12.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/f
-onts/type1/public/amsfonts/cm/cmr17.pfb></Users/bamingyuan/Library/Application 
-Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr5.pfb></Users/b
-amingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/
-amsfonts/cm/cmr7.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texm
-fs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/bamingyuan/Library
-/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7
-.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts
-/type1/public/amsfonts/cm/cmtt10.pfb></Users/bamingyuan/Library/Application Sup
-port/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Notes.pdf (11 pages, 342227 bytes).
+y/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fon
+ts/type1/public/amsfonts/cm/cmmi7.pfb></Users/bamingyuan/Library/Application Su
+pport/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/ba
+mingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/a
+msfonts/cm/cmr12.pfb></Users/bamingyuan/Library/Application Support/MiKTeX/texm
+fs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></Users/bamingyuan/Library/
+Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.p
+fb></Users/bamingyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></Users/bamingyuan/Library/Application Suppo
+rt/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></Users/bamin
+gyuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsf
+onts/symbols/msbm10.pfb>
+Output written on Notes.pdf (6 pages, 815305 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
+ 104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
