@@ -1,0 +1,82 @@
+0 * * * P0
+0 _ _ * halt-reject
+
+P0 * * R P0
+P0 _ # L P1
+
+P1 * * L P1
+P1 _ _ R T0
+
+T0 a A R T1
+T0 b B R T2
+T0 c C R T3
+T0 * * R T0
+T0 # # R halt-accept
+
+T1 a a R T1
+T1 b B R T6
+T1 c C R T5
+T1 * * R T1
+T1 # # L S0
+
+T2 a A R T6
+T2 b b R T2
+T2 c C R T4
+T2 * * R T2
+T2 # # L S0
+
+T3 a A R T5
+T3 b B R T4
+T3 c c R T3
+T3 * * R T3
+T3 # # L S0
+
+T4 a A * T7
+T4 # # L S0
+T4 * * R T4
+
+T5 b B * T7
+T5 # # L S0
+T5 * * R T5
+
+T6 c C * T7
+T6 * * R T6
+T6 # # L S0
+
+T7 * * L T7
+T7 X X R T0
+T7 Y Y R T0
+T7 Z Z R T0
+T7 _ _ R T0
+
+S0 A a L S0
+S0 B b L S0
+S0 C c L S0
+
+S0 a a L S0
+S0 b b L S0
+S0 c c L S0
+
+S0 _ _ R S1
+S0 X X R S1
+S0 Y Y R S1
+S0 Z Z R S1
+
+S1 a X R TP0
+S1 b Y R TP0
+S1 c Z R TP0
+
+TP0 # # L TP1
+TP0 * * * T0
+
+TP1 * # L TP2
+
+TP2 Z c L TP3
+TP2 Y b L TP3
+TP2 X a L TP3
+TP2 _ _ R halt-reject
+
+TP3 Z c L TP3
+TP3 Y b L TP3
+TP3 X a L TP3
+TP3 _ _ R T0

@@ -1,0 +1,2 @@
+b,abab,abba,abaa,abbb
+epsilon,ab,a,aa,aaa

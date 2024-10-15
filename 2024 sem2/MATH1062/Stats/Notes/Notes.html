@@ -11,7 +11,7 @@
 
 <meta name="author" content="back04oorer" />
 
-<meta name="date" content="2024-09-18" />
+<meta name="date" content="2024-10-08" />
 
 <title>MATH1062 Stats Note</title>
 
@@ -1559,7 +1559,7 @@ font-size: 0.95em;
 
 <h1 class="title toc-ignore">MATH1062 Stats Note</h1>
 <h4 class="author">back04oorer</h4>
-<h4 class="date">2024-09-18</h4>
+<h4 class="date">2024-10-08</h4>
 
 </div>
 
@@ -3145,8 +3145,11 @@ replacement.</p>
 possible pairs <span class="math inline">\((x_1,x_1),
 (x_1,x_n)...\)</span> is equally like.</li>
 </ul>
-<p>In this case, we have: - <span class="math inline">\(E(X) =
-E(Y)\)</span> - <span class="math inline">\(SE(X) = SE(Y)\)</span></p>
+<p>In this case, we have:</p>
+<ul>
+<li><p><span class="math inline">\(E(X) = E(Y)\)</span></p></li>
+<li><p><span class="math inline">\(SE(X) = SE(Y)\)</span></p></li>
+</ul>
 <p>Suppose that the mean of the box is <span class="math inline">\(\mu\)</span>, the SD of the box is <span class="math inline">\(sigma\)</span> and the sum <span class="math inline">\(S\)</span> of two random draws. We have:</p>
 <ul>
 <li><p><span class="math inline">\(E(S) = E(X) + E(Y) = 2
@@ -3154,6 +3157,101 @@ E(Y)\)</span> - <span class="math inline">\(SE(X) = SE(Y)\)</span></p>
 <li><p><span class="math inline">\(SE(S)^2 = SE(X)^2 + SE(Y)^2 = 2
 \sigma^2 \implies SE(S) = \sqrt{2} \mu\)</span></p></li>
 </ul>
+</div>
+<div id="sumaverages-of-random-samples-of-size-n" class="section level2" number="7.7">
+<h2><span class="header-section-number">7.7</span> Sum&amp;Averages of
+random samples of size <span class="math inline">\(n\)</span></h2>
+<div id="the-sum-s" class="section level3" number="7.7.1">
+<h3><span class="header-section-number">7.7.1</span> The Sum <span class="math inline">\(S\)</span></h3>
+<ul>
+<li><p>Suppose we have a box <span class="math inline">\(X\)</span> such
+that <span class="math inline">\(E(X_1) = \mu\)</span> and <span class="math inline">\(SE(X_1) = \sigma\)</span></p></li>
+<li><p>Expected value of sum is sum of expected values: <span class="math inline">\(E(S) = \mu n\)</span></p></li>
+<li><p><span class="math inline">\(SE(S) = \sqrt{n}
+\sigma\)</span></p></li>
+</ul>
+</div>
+<div id="the-average-barx" class="section level3" number="7.7.2">
+<h3><span class="header-section-number">7.7.2</span> The Average <span class="math inline">\(\bar{X}\)</span></h3>
+<ul>
+<li><p><span class="math inline">\(E(\bar{X}) = \mu\)</span></p></li>
+<li><p><span class="math inline">\(SE(\bar{X}) =
+\frac{\sigma}{\sqrt{n}}\)</span></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="central-limit-theorem" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Central Limit
+Theorem</h1>
+<div id="definition-2" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Definition</h2>
+<p>Given <span class="math inline">\(S = X_1 + \cdots + X_n\)</span>,
+where a random sample of size <span class="math inline">\(n\)</span> is
+taken from a population with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>, for large <span class="math inline">\(n\)</span>, we have:</p>
+<p><span class="math display">\[
+P(S \leq s) = P\left( \frac{S - n\mu}{\sigma\sqrt{n}} \leq \frac{s -
+n\mu}{\sigma\sqrt{n}} \right) \approx \Phi\left( \frac{s -
+n\mu}{\sigma\sqrt{n}} \right)
+\]</span></p>
+<p>where <span class="math inline">\(\Phi(z)\)</span> represents the
+cumulative distribution function of the standard normal
+distribution.</p>
+</div>
+<div id="understanding" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Understanding</h2>
+<p>It states that when we take samples from a population, regardless of
+the shape of the population distribution, as long as the sample size is
+large enough, the distribution of the sample sum or sample mean will
+approach a normal distribution.</p>
+</div>
+</div>
+<div id="unknown-properties" class="section level1" number="9">
+<h1><span class="header-section-number">9</span> Unknown Properties</h1>
+<div id="the-0-1-box" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> The 0-1 box</h2>
+<ul>
+<li><p>Let <span class="math inline">\(p\)</span> denotes the proportion
+of <span class="math inline">\(1\)</span>s in the box, and <span class="math inline">\(N\)</span> the number of tickets.</p></li>
+<li><p><span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> only depend on <span class="math inline">\(p\)</span> now</p></li>
+<li><p>the mean of the box <span class="math inline">\(\mu =
+p\)</span></p></li>
+<li><p>the SD of the box is <span class="math inline">\(\sigma =
+\sqrt{p(1-p)}\)</span></p></li>
+</ul>
+</div>
+<div id="prediction-intervals" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Prediction
+intervals</h2>
+<div id="questionintro" class="section level3" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span>
+Question&amp;Intro</h3>
+<ul>
+<li>A 100 <span class="math inline">\(\gamma\)</span>% (two-sideed)
+prediction interval for the sample sum <span class="math inline">\(S\)</span> is an interval <span class="math inline">\([a,b]\)</span> in which there is a 100 <span class="math inline">\(\gamma\)</span>% chance that <span class="math inline">\(S\)</span> lands in <span class="math inline">\([a,b]\)</span>: <span class="math display">\[
+P(a \leq S \leq b) = \gamma
+\]</span></li>
+<li>A 100 <span class="math inline">\(\gamma\)</span>% (two-sideed)
+prediction interval for the sample average <span class="math inline">\(\bar{X}\)</span> is an interval <span class="math inline">\([a,b]\)</span> in which there is a 100 <span class="math inline">\(\gamma\)</span>% chance that <span class="math inline">\(\bar{X}\)</span> lands in <span class="math inline">\([a,b]\)</span>: <span class="math display">\[
+P(a \leq \bar{X} \leq b) = \gamma
+\]</span></li>
+</ul>
+</div>
+<div id="calculate-ab" class="section level3" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Calculate a,b</h3>
+<p>Too long, See Topic 9, page 11</p>
+</div>
+<div id="size-of-prediction-intervals" class="section level3" number="9.2.3">
+<h3><span class="header-section-number">9.2.3</span> Size of prediction
+intervals</h3>
+<ul>
+<li><p>For a binary box, the <strong>variability</strong> in the sample
+proportion gets smaller as the in the box gets further from
+0.5.</p></li>
+<li><p>This is precisely reflected in <span class="math inline">\(SE(\bar{X}) =
+\sqrt{\frac{p(1-p)}{n}}\)</span></p></li>
+</ul>
+</div>
 </div>
 </div>
 

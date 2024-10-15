@@ -1183,5 +1183,72 @@ Suppose that the mean of the box is $\mu$, the SD of the box is $sigma$ and the 
 
 
 
-## Sums and averages of random samples of size 𝑛
+## Sum&Averages of random samples of size $n$
 
+### The Sum $S$
+
+- Suppose we have a box $X$ such that $E(X_1) = \mu$ and $SE(X_1) = \sigma$
+
+- Expected value of sum is sum of expected values: $E(S) = \mu n$
+
+- $SE(S) = \sqrt{n} \sigma$
+
+### The Average $\bar{X}$
+
+- $E(\bar{X}) = \mu$
+
+- $SE(\bar{X}) = \frac{\sigma}{\sqrt{n}}$
+
+# Central Limit Theorem
+
+## Definition
+
+Given \( S = X_1 + \cdots + X_n \), where a random sample of size \( n \) is taken from a population with mean \( \mu \) and standard deviation \( \sigma \), for large \( n \), we have:
+
+\[
+P(S \leq s) = P\left( \frac{S - n\mu}{\sigma\sqrt{n}} \leq \frac{s - n\mu}{\sigma\sqrt{n}} \right) \approx \Phi\left( \frac{s - n\mu}{\sigma\sqrt{n}} \right)
+\]
+
+where \( \Phi(z) \) represents the cumulative distribution function of the standard normal distribution.
+
+## Understanding
+
+It states that when we take samples from a population, regardless of the shape of the population distribution, as long as the sample size is large enough, the distribution of the sample sum or sample mean will approach a normal distribution.
+
+# Unknown Properties
+
+## The 0-1 box
+
+- Let $p$ denotes the proportion of $1$s in the box, and $N$ the number of tickets.
+
+- $\mu$ and $\sigma$ only depend on $p$ now
+
+- the mean of the box $\mu = p$
+
+- the SD of the box is $\sigma = \sqrt{p(1-p)}$
+
+## Prediction intervals
+
+### Question&Intro
+
+- A 100 $\gamma$% (two-sideed) prediction interval for the sample sum $S$ is an interval $[a,b]$
+in which there is a 100 $\gamma$% chance that $S$ lands in $[a,b]$:
+$$
+P(a \leq S \leq b) = \gamma
+$$
+- A 100 $\gamma$% (two-sideed) prediction interval for the sample average $\bar{X}$ is an interval $[a,b]$
+in which there is a 100 $\gamma$% chance that $\bar{X}$ lands in $[a,b]$:
+$$
+P(a \leq \bar{X} \leq b) = \gamma
+$$
+
+### Calculate a,b
+Too long, See Topic 9, page 11
+
+### Size of prediction intervals
+
+- For a binary box, the **variability** in the sample proportion gets smaller as the in the box gets further from 0.5.
+
+- This is precisely reflected in  $SE(\bar{X}) = \sqrt{\frac{p(1-p)}{n}}$
+
+## Confidence intervals
