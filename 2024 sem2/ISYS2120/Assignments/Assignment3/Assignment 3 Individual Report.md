@@ -1,4 +1,11 @@
+###### ISYS2120 Sem2, 2024
 
+**SID**:
+```
+###########################
+#       530157791         #
+###########################
+```
 ## Part A
 ### `database.py`
 ```Python
@@ -1369,13 +1376,23 @@ On the Airport Manage page, end-users can view all airport information through t
 Each time a page is requested, the backend retrieves the corresponding data from the database but only returns a limited number of records. To control pagination, a `page` parameter is passed to specify the current page number. In the backend, the query to the database uses a pagination function to limit the number of records returned per request.
 
 On the frontend, a pagination navigation bar displays page number links, allowing users to click buttons to switch between different pages. The data for the current page is passed to the template and displayed in the HTML table.
+
+![p1](https://github.com/Back04oorer/Notes/blob/main/2024%20sem2/ISYS2120/Assignments/Assignment3/graphs/pagination1.png?raw=true)
+![p1](https://github.com/Back04oorer/Notes/blob/main/2024%20sem2/ISYS2120/Assignments/Assignment3/graphs/pagination2.png?raw=true)
 #### Dropdown menu
 For update, delete, or fetch operations, a dropdown menu is used to let the user select an airport ID. This is implemented by creating a `<select>` element in the HTML form, where the options are populated with all the airport data from the database. Each time the page loads, the server passes the list of all airports to the template, which then generates the dropdown options for the user to choose the corresponding airport.
+
+![p3](https://github.com/Back04oorer/Notes/blob/main/2024%20sem2/ISYS2120/Assignments/Assignment3/graphs/list1.png?raw=true)
+
 #### Sort And Pie Chart
 On the airport report page, the records in the table can be sorted in ascending or descending order by country name or the number of airports. To achieve this, airport data is first retrieved from the database, and then Python's sorting functionality is used to sort by country name or airport count. The corresponding pie chart is generated using the JavaScript library `Chart.js` to display the distribution of airports across different countries.
+
+![p4](https://github.com/Back04oorer/Notes/blob/main/2024%20sem2/ISYS2120/Assignments/Assignment3/graphs/pie_chart1.png?raw=true)
+![p4](https://github.com/Back04oorer/Notes/blob/main/2024%20sem2/ISYS2120/Assignments/Assignment3/graphs/pie_chart2.png?raw=true)
+
 #### Input Validation
 When the Admin tries to add an airport, the app will block invalid inputs, such as ensuring the IATA code must be exactly 3 characters long. This is achieved using Flask-WTF by adding validators (like DataRequired and Length) to the form fields. Flask-WTF automatically checks if the user's input meets the requirements.
-
+![p6](https://github.com/Back04oorer/Notes/blob/main/2024%20sem2/ISYS2120/Assignments/Assignment3/graphs/input_validation1.png?raw=true)
 ### Learning Outcome
 
 #### Flask-WTF Form Handling
