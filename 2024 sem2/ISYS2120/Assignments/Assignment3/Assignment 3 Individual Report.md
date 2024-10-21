@@ -1,248 +1,3 @@
-###### ISYS2120 Sem2, 2024
-
-**SID**:
-```
-###########################
-#       530157791         #
-###########################
-```
-## Part A
-### `database.py`
-```Python
-def get_all_airports():
-    conn = database_connect()
-    if conn is None:
-        return None
-    cur = conn.cursor()
-    
-    sql = "SELECT * FROM airports;"
-    try:
-        result = dictfetchall(cur, sql)
-    except Exception as e:
-        print("Error fetching all airports:", e)
-        result = None
-    finally:
-        cur.close()
-        conn.close()
-    return result
-
-def get_airport_by_id(airportid):
-    conn = database_connect()
-    if conn is None:
-        return None
-    cur = conn.cursor()
-
-    sql = "SELECT * FROM airports WHERE airportid = %s;"
-    try:
-        cur.execute(sql, (airportid,))
-        row = cur.fetchone()
-        if row:
-            return {
-                'airportid': row[0],
-                'name': row[1],
-                'iatacode': row[2],
-                'city': row[3],
-                'country': row[4]
-            }
-        else:
-            return None
-    except Exception as e:
-        print("Error fetching airport by ID:", e)
-        return None
-    finally:
-        cur.close()
-        conn.close()
-
-
-def add_airport(airportid, name, iatacode, city, country):
-    conn = database_connect()
-    if conn is None:
-        return None
-    cur = conn.cursor()
-
-    sql = """
-    INSERT INTO airports (airportid, name, iatacode, city, country)
-    VALUES (%s, %s, %s, %s, %s);
-    """
-    try:
-        cur.execute(sql, (airportid, name, iatacode, city, country))
-        conn.commit()
-        return "Airport added successfully!"
-    except Exception as e:
-        print("Error adding airport:", e)
-        conn.rollback()
-        return None
-    finally:
-        cur.close()
-        conn.close()
-
-def update_airport(airportid, name=None, iatacode=None, city=None, country=None):
-    conn = database_connect()
-    if conn is None:
-        return None
-    cur = conn.cursor()
-
-    set_clauses = []
-    params = []
-    
-    if name:
-        set_clauses.append("name = %s")
-        params.append(name)
-    if iatacode:
-        set_clauses.append("iatacode = %s")
-        params.append(iatacode)
-    if city:
-        set_clauses.append("city = %s")
-        params.append(city)
-    if country:
-        set_clauses.append("country = %s")
-        params.append(country)
-
-    if not set_clauses:
-        return "No fields to update."
-
-    sql = f"UPDATE airports SET {', '.join(set_clauses)} WHERE airportid = %s"
-    params.append(airportid)
-    
-    try:
-        cur.execute(sql, params)
-        conn.commit()
-        if cur.rowcount == 0:
-            # No rows were updated, airportid does not exist
-            return False
-        else:
-            return True
-    except Exception as e:
-        print(f"Error updating airport with id {airportid}:", e)
-        conn.rollback()
-        return None
-    finally:
-        cur.close()
-        conn.close()
-
-
-def delete_airport(airportid):
-    conn = database_connect()
-    if conn is None:
-        return None
-    cur = conn.cursor()
-
-    sql = "DELETE FROM airports WHERE airportid = %s;"
-    try:
-        cur.execute(sql, [airportid])
-        conn.commit()
-        if cur.rowcount == 0:
-            return False
-        else:
-            return True
-    except Exception as e:
-        print(f"Error deleting airport with id {airportid}:", e)
-        conn.rollback()
-        return None
-    finally:
-        cur.close()
-        conn.close()
-
-
-def get_airports_by_country(sort_by='country', sort_dir='asc', limit=10, offset=0):
-
-    allowed_sort_columns = {'country': 'country', 'airport_count': 'airport_count'}
-    sort_column = allowed_sort_columns.get(sort_by, 'country')
-    sort_direction = 'ASC' if sort_dir.lower() == 'asc' else 'DESC'
-
-    conn = database_connect()
-    if conn is None:
-        return []
-    cur = conn.cursor()
-
-    sql = f"""
-    SELECT country, COUNT(*) as airport_count
-    FROM airports
-    GROUP BY country
-    ORDER BY {sort_column} {sort_direction}
-    LIMIT %s OFFSET %s;
-    """
-    try:
-        cur.execute(sql, (limit, offset))
-        rows = cur.fetchall()
-        # Convert to list of dictionaries
-        result = [{'country': row[0], 'airport_count': row[1]} for row in rows]
-    except Exception as e:
-        print(f"Error fetching airport report by country: {e}")
-        result = []
-    finally:
-        cur.close()
-        conn.close()
-    return result
-
-def count_airports_by_country():
-    conn = database_connect()
-    if conn is None:
-        return 0
-    cur = conn.cursor()
-    sql = """
-    SELECT COUNT(DISTINCT country)
-    FROM airports;
-    """
-    try:
-        cur.execute(sql)
-        count = cur.fetchone()[0]
-    except Exception as e:
-        print(f"Error counting countries: {e}")
-        count = 0
-    finally:
-        cur.close()
-        conn.close()
-    return count
-
-
-
-def get_airports_paginated(page, per_page):
-    offset = (page - 1) * per_page
-    query = "SELECT * FROM airports LIMIT %s OFFSET %s"
-    
-    conn = database_connect()
-    if conn is None:
-        return None
-    cur = conn.cursor()
-    
-    try:
-        cur.execute(query, (per_page, offset))
-        result = cur.fetchall()
-        columns = [desc[0] for desc in cur.description]
-        result = [dict(zip(columns, row)) for row in result]
-    except Exception as e:
-        print("Error fetching paginated airports:", e)
-        result = None
-    finally:
-        cur.close() 
-        conn.close() 
-    
-    return result
-
-def count_airports():
-    query = "SELECT COUNT(*) FROM airports"
-    
-    conn = database_connect()  
-    if conn is None:
-        return 0
-    cur = conn.cursor()
-    
-    try:
-        cur.execute(query)
-        result = cur.fetchone() 
-    except Exception as e:
-        print("Error counting airports:", e)
-        result = None
-    finally:
-        cur.close() 
-        conn.close() 
-    
-    return result[0] if result else 0 
-
-
-```
-
 ### `routes.py`
 
 ```python
@@ -1367,6 +1122,254 @@ class AddAirportForm(FlaskForm):
     add_airport = SubmitField('Add Airport')
 ```
 
+### `database.py`
+```python
+def get_all_airports():
+    conn = database_connect()
+    if conn is None:
+        return None
+    cur = conn.cursor()
+    
+    sql = "SELECT * FROM airports;"
+    try:
+        result = dictfetchall(cur, sql)
+    except Exception as e:
+        print("Error fetching all airports:", e)
+        result = None
+    finally:
+        cur.close()
+        conn.close()
+    return result
+
+def get_airport_by_id(airportid):
+    conn = database_connect()
+    if conn is None:
+        return None
+    cur = conn.cursor()
+
+    sql = "SELECT * FROM airports WHERE airportid = %s;"
+    try:
+        cur.execute(sql, (airportid,))
+        row = cur.fetchone()
+        if row:
+            return {
+                'airportid': row[0],
+                'name': row[1],
+                'iatacode': row[2],
+                'city': row[3],
+                'country': row[4]
+            }
+        else:
+            return None
+    except Exception as e:
+        print("Error fetching airport by ID:", e)
+        return None
+    finally:
+        cur.close()
+        conn.close()
+
+
+def add_airport(airportid, name, iatacode, city, country):
+    conn = database_connect()
+    if conn is None:
+        return None
+    cur = conn.cursor()
+
+    sql = """
+    INSERT INTO airports (airportid, name, iatacode, city, country)
+    VALUES (%s, %s, %s, %s, %s);
+    """
+    try:
+        cur.execute(sql, (airportid, name, iatacode, city, country))
+        conn.commit()
+        return "Airport added successfully!"
+    except Exception as e:
+        print("Error adding airport:", e)
+        conn.rollback()
+        return None
+    finally:
+        cur.close()
+        conn.close()
+
+def update_airport(airportid, name=None, iatacode=None, city=None, country=None):
+    conn = database_connect()
+    if conn is None:
+        return None
+    cur = conn.cursor()
+
+    set_clauses = []
+    params = []
+    
+    if name:
+        set_clauses.append("name = %s")
+        params.append(name)
+    if iatacode:
+        set_clauses.append("iatacode = %s")
+        params.append(iatacode)
+    if city:
+        set_clauses.append("city = %s")
+        params.append(city)
+    if country:
+        set_clauses.append("country = %s")
+        params.append(country)
+
+    if not set_clauses:
+        return "No fields to update."
+
+    sql = f"UPDATE airports SET {', '.join(set_clauses)} WHERE airportid = %s"
+    params.append(airportid)
+    
+    try:
+        cur.execute(sql, params)
+        conn.commit()
+        if cur.rowcount == 0:
+            # No rows were updated, airportid does not exist
+            return False
+        else:
+            return True
+    except Exception as e:
+        print(f"Error updating airport with id {airportid}:", e)
+        conn.rollback()
+        return None
+    finally:
+        cur.close()
+        conn.close()
+
+
+def delete_airport(airportid):
+    conn = database_connect()
+    if conn is None:
+        return None
+    cur = conn.cursor()
+
+    sql = "DELETE FROM airports WHERE airportid = %s;"
+    try:
+        cur.execute(sql, [airportid])
+        conn.commit()
+        if cur.rowcount == 0:
+            return False
+        else:
+            return True
+    except Exception as e:
+        print(f"Error deleting airport with id {airportid}:", e)
+        conn.rollback()
+        return None
+    finally:
+        cur.close()
+        conn.close()
+
+
+def get_airports_by_country(sort_by='country', sort_dir='asc', limit=10, offset=0):
+
+    allowed_sort_columns = {'country': 'country', 'airport_count': 'airport_count'}
+    sort_column = allowed_sort_columns.get(sort_by, 'country')
+    sort_direction = 'ASC' if sort_dir.lower() == 'asc' else 'DESC'
+
+    conn = database_connect()
+    if conn is None:
+        return []
+    cur = conn.cursor()
+
+    sql = f"""
+    SELECT country, COUNT(*) as airport_count
+    FROM airports
+    GROUP BY country
+    ORDER BY {sort_column} {sort_direction}
+    LIMIT %s OFFSET %s;
+    """
+    try:
+        cur.execute(sql, (limit, offset))
+        rows = cur.fetchall()
+        # Convert to list of dictionaries
+        result = [{'country': row[0], 'airport_count': row[1]} for row in rows]
+    except Exception as e:
+        print(f"Error fetching airport report by country: {e}")
+        result = []
+    finally:
+        cur.close()
+        conn.close()
+    return result
+
+def count_airports_by_country():
+    conn = database_connect()
+    if conn is None:
+        return 0
+    cur = conn.cursor()
+    sql = """
+    SELECT COUNT(DISTINCT country)
+    FROM airports;
+    """
+    try:
+        cur.execute(sql)
+        count = cur.fetchone()[0]
+    except Exception as e:
+        print(f"Error counting countries: {e}")
+        count = 0
+    finally:
+        cur.close()
+        conn.close()
+    return count
+
+
+
+def get_airports_paginated(page, per_page):
+    offset = (page - 1) * per_page
+    query = "SELECT * FROM airports LIMIT %s OFFSET %s"
+    
+    conn = database_connect()
+    if conn is None:
+        return None
+    cur = conn.cursor()
+    
+    try:
+        cur.execute(query, (per_page, offset))
+        result = cur.fetchall()
+        columns = [desc[0] for desc in cur.description]
+        result = [dict(zip(columns, row)) for row in result]
+    except Exception as e:
+        print("Error fetching paginated airports:", e)
+        result = None
+    finally:
+        cur.close() 
+        conn.close() 
+    
+    return result
+
+def count_airports():
+    query = "SELECT COUNT(*) FROM airports"
+    
+    conn = database_connect()  
+    if conn is None:
+        return 0
+    cur = conn.cursor()
+    
+    try:
+        cur.execute(query)
+        result = cur.fetchone() 
+    except Exception as e:
+        print("Error counting airports:", e)
+        result = None
+    finally:
+        cur.close() 
+        conn.close() 
+    
+    return result[0] if result else 0 
+
+```
+### `requirements.txt`
+```
+flask
+werkzeug
+flask_bcrypt
+pg8000
+flask-wtf
+```
+### Instruction
+Please run `pip install flask-wtf` first
+
+
+
+
 ## Part B
 ### Extensions
 
@@ -1411,6 +1414,5 @@ In the project, I learned how to use Flask's `render_template` to render templat
 ```python
 return render_template('manage_airports.html', page=page, session=session, airports=airport_list, add_form=add_form)
 ```
-
 #### `flash`
 In my Flask project, I learned how to use the `flash` function to display temporary messages to users. Flash messages are typically used to provide feedback to users, such as success or failure of form submission. These messages are displayed to the user after a request and are only shown once.
