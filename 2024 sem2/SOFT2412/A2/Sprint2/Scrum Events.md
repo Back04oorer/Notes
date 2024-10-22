@@ -7,7 +7,6 @@
 | Oct 16, 2024 | 15 hours  | Daily Standup                 |
 | Oct 17, 2024 | 50 mins   | Sprint Retrospective + Review |
 
-
 ### Planning Session
 **Time:From 9:30 PM to 12:00 AM on October 14th** 
 
