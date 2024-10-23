@@ -28,3 +28,12 @@ $$
 [*] = (a \lor b) \land (a \lor c) \land (b \lor c) \land ( \neg a \lor \neg b \lor \neg c)
 $$
 
+### Q3
+### function1
+$$
+x \land ((y \land z) \lor \neg y)
+$$
+### function2
+$$
+
+$$
