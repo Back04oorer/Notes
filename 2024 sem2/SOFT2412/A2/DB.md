@@ -52,7 +52,7 @@ update attributes of a user
 
 #### `GetSingleUser`
 
-#### `ViewAllUser` 
+#### `ViewAllUser`
 except passwd
 ### Scroll
 #### `AddScroll`
