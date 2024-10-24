@@ -17,6 +17,10 @@ In the first round, we did not reach a consensus, and there was a significant de
 
 
 We allowed the outliers to explain their reasoning, and in the second round, we successfully reached an agreement
+
 ![My Image](https://github.com/Back04oorer/Notes/blob/main/2024%20sem2/SOFT2412/A2/Sprint3/Graphs/Plan_round_2.jpg?raw=true)
 
 Based on the results of the second round, we concluded that the story points to be completed in this sprint would be 13.
+
+### Daily Scrum
+Since we only had one User Story to complete in this Sprint, we held a 30-minute stand-up on October 22nd, mainly to discuss the final objectives and progress.Through this stand-up, we gained a clearer understanding of the current progress, which helped us in reviewing and wrapping up the project.

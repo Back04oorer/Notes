@@ -7,6 +7,12 @@ In this project, we use JaCoCo to measure test coverage. The specific workflow i
 
 Additionally, since the main function involves API-related interfaces, refer to Ed's post `#662`, we excluded `Main.java` from the test report.
 
+Here is the JaCoCo Test Report coverage:
+
+![My Image](https://github.com/Back04oorer/Notes/blob/main/2024%20sem2/SOFT2412/A2/Graphs/jacocoReport_1.png?raw=true)
+
+![My Image](https://github.com/Back04oorer/Notes/blob/main/2024%20sem2/SOFT2412/A2/Graphs/jacocoReport_2.png?raw=true)
+
 #### Sprint 1
 In this Sprint, the tests primarily used JUnit to test some of the functionalities of `SQLiteJDBC.java`. The main goal was to test whether `SQLiteJDBC.java` can provide a stable connection to the database and whether it can offer effective interfaces for implementing specific functionalities. Ideally, developers implementing specific features should be able to perform necessary operations without directly connecting to the database.
 
