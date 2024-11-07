@@ -28,7 +28,7 @@ Importance:
 
 The usual way to build an information system today, is to write many application programs which all use a shared collection of data, and that data is stored in a DBMS.
 
-![w1_1](Graphs/w1_1.png)
+![w1_1](Notes/2024%20sem2/ISYS2120/Notes/Graphs/w1_1.png)
 
 
 ### Managing Data
@@ -75,7 +75,7 @@ An instance is the contents of the database at a <mark style="background: #FF558
 - For a relational DBMS,<mark style="background: #FF5582A6;"> both DML and DDL are in SQL</mark>
 
 ##### Levels of Abstraction
-![w1_1](Graphs/w1_2.png)
+![w1_1](Notes/2024%20sem2/ISYS2120/Notes/Graphs/w1_2.png)
 
 ##### Data Independence
 - <mark style="background: #FF5582A6;">(App | stuctured,stored)</mark>: Applications are insulated from how data is structured and stored.
@@ -156,7 +156,7 @@ Other tables can include this identifier as a column to make connections to the 
 Show an arrow from the referring column/table, to the one where the values are found as identifier
 这个箭头表示“Supplier”表和“Product”表之间的关系。在数据库设计中，这通常代表外键约束。具体来说，箭头指向“Product”表中的“SuppID”字段，表示该字段是“Supplier”表中“SuppID”字段的外键。这意味着“Product”表中的每条记录都与“Supplier”表中的一条记录相关联，确保数据的完整性和一致性。
 
-![w1_1](Graphs/w2_1.jpg)
+![w1_1](w2_1.jpg)
 
 ### 1.4 Composite primary key
 For each possible instance, it is not allowed for two rows to match values in every one of the columns involved.
@@ -245,9 +245,9 @@ describes one aspect of an entity type。
 	- Primary Key column(s) are underlined
 	- High-level description may leave out attributes, or show them elsewhere
 
-![w2_2](Graphs/w2_2.png)
+![w2_2](Notes/2024%20sem2/ISYS2120/Notes/Graphs/w2_2.png)
 - <mark style="background: #FF5582A6;">Composite attribute</mark> - name
-![w2_3](Graphs/w2_3.png)
+![w2_3](Notes/2024%20sem2/ISYS2120/Notes/Graphs/w2_3.png)
 
 
 ### 4.4 Relationships
@@ -260,7 +260,7 @@ is a set of similar relationships (the entities in each relationship are always 
 ##### Relationship in ER Diagram
 - Diamond represents a relationship type
 - Lines connect the involved entity types to the relationship type.
-![w2_4](Graphs/w2_4.png)
+![w2_4](Notes/2024%20sem2/ISYS2120/Notes/Graphs/w2_4.png)
 
 ##### Warnings
 A <mark style="background: #FF5582A6;">relationship</mark> in an ER conceptual model must not be confused with <mark style="background: #FF5582A6;">relation</mark> in relational model (which means set of tuples) 
@@ -281,24 +281,24 @@ Example: Supervises is a relationship type between two Employees, one has role M
 ### 4.5 Graphical Representation of Relationships in E-R Diagrams
 -  Diamond represents relationship type
 - Ellipse represents attribute of the relationship type, linked by line to the diamond
-![w2_5](Graphs/w2_5.png)
+![w2_5](Notes/2024%20sem2/ISYS2120/Notes/Graphs/w2_5.png)
 
 ##### Relationship Degree
-![w2_6](Graphs/w2_6.png)
+![w2_6](Notes/2024%20sem2/ISYS2120/Notes/Graphs/w2_6.png)
 ##### Multiplicity of a Relationship
 - "Many-to-1 from A to B" means each A is related to at most 1 of B
 - "Many B to (at most) one A" can also be called “One A to many B”, or “One-to-many from A to B”
 - Natural language can be confusing: 
 	- even when we know “one A can be related to many B”, that doesn’t tell that the relationship is “One to many”. That requires thinking about “<mark style="background: #FF5582A6;">can a B have at most one A, or not?</mark>”
-![w2_11](Graphs/w2_11.png)
+![w2_11](w2_11.png)
 
 **Some examples:**
 <mark style="background: #FF5582A6;">Many-to-many</mark>
 - It is possible for a subject to have 0 students enrolled (eg COMP2017), 1 student (SOFT2412), or more than 1 student (ISYS2120)
 - It is possible for a student to be enrolledin 0 subjects (Alan), 1 subject (Meg), or more than 1 subject (Sue)
-![w2_7](Graphs/w2_7.png)
+![w2_7](Notes/2024%20sem2/ISYS2120/Notes/Graphs/w2_7.png)
 This is a many-to-many relationship with <mark style="background: #FF5582A6;">total participation by Subject and total participation by Degree</mark> :
-![w2_10](Graphs/w2_10.png)
+![w2_10](w2_10.png)
 
 
 <mark style="background: #FF5582A6;">Many-to-one</mark> 
@@ -306,12 +306,12 @@ There isn’t an employee who works in 0 faculties, or who works in more than 1 
 
 In this case, we say that this relationship is a many-to-one relationship with <mark style="background: #FF5582A6;">total participation</mark> by employee (surjective in math, i guess..., codomain = range)
 
-![w2_8](Graphs/w2_8.png)
+![w2_8](w2_8.png)
 
 
 
 This is a many-to-one relationship without total participation.
-![w2_9](Graphs/w2_9.png)
+![w2_9](w2_9.png)
 
 
 ##### Key Constraint on diagram
@@ -323,7 +323,7 @@ If, for a particular participant entity type, each entity participates in <mark 
 
 Contrast with “many-to-many” or “one-to-many” when there is not such a constraint on this side (one entity instance can participate in many relationship instances); then we have a plain line (no arrowhead)
 
-![w2_12](Graphs/w2_12.png)
+![w2_12](w2_12.png)
 
 
 ##### Participation Constraint on diagram
@@ -333,14 +333,14 @@ If, for a particular participant entity type, each entity participates in at lea
 Representation in E-R diagram [notation for ISYS2120]: a total relationship is shown by a <mark style="background: #FF5582A6;">thick line</mark> from the entity type that must participate to the relationship diamond.
 
 Contrast with “partial participation” when an entity can participate in a relationship, but it might not; then we have a <mark style="background: #FF5582A6;">thin</mark> line.
-![w2_13](Graphs/w2_13.png)
+![w2_13](w2_13.png)
 
 
 ##### Participation and Key Constraint
 If every entity participates in exactly one relationship, both a participation and a key constraint hold.
 Representation in E-R diagrams: <mark style="background: #FF5582A6;">thick arrow</mark>
 
-![w2_14](Graphs/w2_14.png)
+![w2_14](w2_14.png)
 
 
 ##### Cardinality Constraints
@@ -351,9 +351,9 @@ A cardinality constraint for the participation of an entity set E in a relations
 - **0..1（零或一）**：每个实体可以选择不参与该关系，或者参与一次。
 - **1..1（一对一）**：每个实体必须且只能参与一次该关系。
 
-![w2_15](Graphs/w2_15.png)
+![w2_15](w2_15.png)
 ##### Comparison of Notations
-![w2_16](Graphs/w2_16.png)
+![w2_16](w2_16.png)
 
 ##### Weak Entities , Rrepresentation
 Weak entity type: An entity type that does not have a primary key among its attributes. 
@@ -363,7 +363,7 @@ Instead, the entity instances are distinguished in part by knowing which entity 
 
 Call this the <mark style="background: #FF5582A6;">identifying relationship </mark>(and the other type is called the <mark style="background: #FF5582A6;">identifying entity type</mark>).Also called “owning relationship and owning type"
 
-![w2_17](Graphs/w2_17.png)
+![w2_17](w2_17.png)
 
 
 ##### Enhanced E-R Model(啥也不是,屁话还多)
@@ -401,7 +401,7 @@ A subclass entity type inherits all the attributes of its superclass.
 A subclass entity type inherits all the <mark style="background: #FF5582A6;">relationship</mark> participations of its superclass.
 - We only show on a rectangle, the attributes and relationships which it <mark style="background: #FF5582A6;">has not inherited</mark> (those that are not found in superclass)! The inherited ones are shown on the superclass
 
-![w2_18](Graphs/w2_18.png)
+![w2_18](w2_18.png)
 
 ##### Constraints on ISA Hierarchies
 We can specify overlap and covering constraints for ISA hierarchies:
@@ -432,9 +432,9 @@ Eliminate this redundancy via aggregation
 - Allows relationships between relationships 
 - Abstraction of relationship into new entity
 
-![w2_19](Graphs/w2_19.png)
+![w2_19](w2_19.png)
 
-![w2_20](Graphs/w2_20.png)
+![w2_20](w2_20.png)
 
 
 # Week 3
@@ -572,17 +572,17 @@ Each weak entity type is captured in schema by a separate table
 - Also, include columns for any non-multivalued attributes of the relationship
 - The name of the join table can either be the <mark style="background: #FF5582A6;">name of the relationship type</mark> or a <mark style="background: #FF5582A6;">combination of the names of the entity sets involved.</mark>
 - The constraints in the join table depend on the constraints of the relationship type.
-![w2_19](Graphs/w3_2.png)
+![w2_19](w3_2.png)
 
 ### Alternative mapping of Relationship
 
-![w2_19](Graphs/w3_3.png)
+![w2_19](w3_3.png)
 ### Mapping of recursive relationship
 Many Employee to One Employee
-![w3_4](Graphs/w3_4.png)
+![w3_4](w3_4.png)
 ### Mapping of ternary relationship
 
-![w3_4](Graphs/w3_5.png)
+![w3_4](w3_5.png)
 
 ### Mapping of ISA-Hierarchies
 
@@ -592,7 +592,7 @@ Many Employee to One Employee
 - Subclass attributes go into the appropriate sub-relation ;PK of superclass relation is also included as PK of subclass relation
 - PK of a subclass relation is also a non-null foreign key referencing the superclass relation
 
-![w3_4](Graphs/w3_6.png)
+![w3_4](w3_6.png)
 
 #### Alternative way for <mark style="background: #FF5582A6;">total covering constraint</mark>
 - Distinct relation for each subclass

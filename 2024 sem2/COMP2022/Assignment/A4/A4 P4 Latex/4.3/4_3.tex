@@ -1,0 +1,31 @@
+\documentclass{standalone}
+
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\begin{document}
+
+\begin{tabular}{lllll}
+    Line & Formula & Justification \\
+    1 & $(((\neg p\lor q)\land (r\lor p))\land (r\lor q))$  & Asmp. I \\
+    2 & $((\neg p\lor q)\land ((r\lor p)\land (r\lor q)))$  & Associativity \\
+    3 & $((\neg p\lor q)\land (r\lor (p\land q)))$  & Distributivity \\
+    4 & $(((\neg p\lor q)\land r)\lor ((\neg p\lor q)\land (p\land q)))$  & Distributivity \\
+    5 & $(((\neg p\lor q)\land r)\lor ((\neg p\lor q)\land (q\land p)))$  & Commutation \\
+    6 & $(((\neg p\lor q)\land r)\lor (((\neg p\lor q)\land q)\land p))$  & Associativity \\
+    7 & $(((\neg p\lor q)\land r)\lor ((q\land (\neg p\lor q))\land p))$  & Commutation \\
+    8 & $(((\neg p\lor q)\land r)\lor ((q\land (q\lor \neg p))\land p))$  & Commutation \\
+    9 & $(((\neg p\lor q)\land r)\lor (q\land p))$  & Absorption \\
+    10 & $(((\neg p\lor q)\land r)\lor ((q\land p)\lor \bot ))$  & Unsatisfiability \\
+    11 & $(((\neg p\lor q)\land r)\lor ((q\land p)\lor (p\land \neg p)))$  & Constants \\
+    12 & $(((\neg p\lor q)\land r)\lor ((p\land q)\lor (p\land \neg p)))$  & Commutation \\
+    13 & $(((\neg p\lor q)\land r)\lor (p\land (q\lor \neg p)))$  & Distributivity \\
+    14 & $(((\neg p\lor q)\land r)\lor ((q\lor \neg p)\land p))$  & Commutation \\
+    15 & $(((\neg p\lor q)\land r)\lor ((\neg p\lor q)\land p))$  & Commutation \\
+    16 & $((\neg p\lor q)\land (r\lor p))$  & Distributivity \\
+\end{tabular}
+
+% If this is for an assessment, you must include this link with the table:
+\url{http://soitpw10001.shared.sydney.edu.au:8080/proof/913}
+
+\end{document}

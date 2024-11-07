@@ -29,7 +29,7 @@ Activities are complex and include sub-activities.
 ### 3.WaterFall Model - Heavy-Weight Model
 ##### 3.1 Definitions
 - linear/sequential model
-![[Graphs/w1_1.png]]
+![[Notes/2024 sem2/SOFT2412/Notes/Graphs/w1_1.png]]
 
 | Development activities                                                     | Teams                                                                               |
 | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
@@ -57,7 +57,7 @@ Activities are complex and include sub-activities.
 - Discovering issues in later phases should lead to returning to earlier phase
 ### 4.Requirements Engineering Process
  *How we can conduct a requirement document*
-![[Graphs/w1_2.png]]
+![[Notes/2024 sem2/SOFT2412/Notes/Graphs/w1_2.png]]
 
 - Requirements elicitation and analysis: 需求获取和分析
 - System descriptions: what the system should be
@@ -224,7 +224,7 @@ Software tools to software teams to <mark style="background: #FF5582A6;">manage 
  ![[Graphs/w2_1.png]]
 ##### 3.2 Git - Snapshots Not Differences
  Git thinks about its data as a streams of snapshots of a small file system Git doesn’t store unchanged files, it just link to previous identical file already stored   
-  ![[Graphs/w2_2.png]]
+  ![[Notes/2024 sem2/SOFT2412/Notes/Graphs/w2_2.png]]
 File A + $\Delta 1$ = A1
 $\Delta 1$ : Delta-based
 A1 : snapshot-based
@@ -283,7 +283,7 @@ git clone
 	- Who takes responsibility (fix issue)
 
 ##### 4.3 Git-Recording Changes to a Repo
-![[Graphs/w2_3.png]]
+![[Notes/2024 sem2/SOFT2412/Notes/Graphs/w2_3.png]]
 
 ##### 4.4 Git-branching
 - Diverging from the main line of development and continue messing with that main line 
@@ -292,7 +292,7 @@ git clone
 - Git branching is lightweight (nearly instantaneous) 
 	- With every commit, Git stores a commit object that contains 
 		- A pointer to the staged snapshot, author’s name and email, commit message, and commit/commits before this commit, parent/parents commits
-	![[Graphs/w2_4.png]]
+	![[Notes/2024 sem2/SOFT2412/Notes/Graphs/w2_4.png]]
 
 - If you make some changes and commit again, the <mark style="background: #FF5582A6;">next commit stores a pointer to the commit that came immediately before it.</mark>
 
@@ -302,17 +302,17 @@ git clone
 - As you start making commits, you’re given a master branch that points to the last commit you made
 - Every time you commit, the master branch pointer moves forward automatically
 
-![[Graphs/w2_5.png]]
+![[Notes/2024 sem2/SOFT2412/Notes/Graphs/w2_5.png]]
 ##### 4.6 Git – Creating a New Branch
 - Example: create a new branch called testing in our project
 ```shell
 git branch testing
 ```
 - When you create a new branch, a new pointer will be created – pointing to the same commit we are <mark style="background: #FF5582A6;">currently at</mark>
-![[Graphs/w2_6.png]]
+![[Notes/2024 sem2/SOFT2412/Notes/Graphs/w2_6.png]]
 - Git knows which branch is the current by maintaining a special pointer called <mark style="background: #FF5582A6;">“HEAD”</mark>
 - Creating a branch in Git does not switch the HEAD to the new branch
-![[Graphs/w2_7.png]]
+![[Notes/2024 sem2/SOFT2412/Notes/Graphs/w2_7.png]]
 ##### Git - Switching / Merge 
 去看Slides啦,晚点再更新图
 

@@ -11,7 +11,7 @@
 
 <meta name="author" content="back04oorer" />
 
-<meta name="date" content="2024-10-08" />
+<meta name="date" content="2024-11-06" />
 
 <title>MATH1062 Stats Note</title>
 
@@ -1559,7 +1559,7 @@ font-size: 0.95em;
 
 <h1 class="title toc-ignore">MATH1062 Stats Note</h1>
 <h4 class="author">back04oorer</h4>
-<h4 class="date">2024-10-08</h4>
+<h4 class="date">2024-11-06</h4>
 
 </div>
 
@@ -3239,7 +3239,26 @@ P(a \leq \bar{X} \leq b) = \gamma
 </div>
 <div id="calculate-ab" class="section level3" number="9.2.2">
 <h3><span class="header-section-number">9.2.2</span> Calculate a,b</h3>
-<p>Too long, See Topic 9, page 11</p>
+<ul>
+<li>Mean</li>
+</ul>
+<p><span class="math display">\[
+P(a \leq \bar{X} \leq b) = P \left( \frac{a - E(\bar{X})}{SE(\bar{X})}
+\leq \frac{\bar{X} - E(\bar{X})}{SE(\bar{X})} \leq \frac{b -
+E(\bar{X})}{SE(\bar{X})} \right)
+\]</span></p>
+<p><span class="math inline">\(CI = E(\bar{X}) \pm z^*
+SE(\bar{X})\)</span></p>
+<p><span class="math display">\[\left[ p - z^* \cdot \sqrt{\frac{p(1 -
+p)}{n}}, \, p + z^* \cdot \sqrt{\frac{p(1 - p)}{n}} \right]\]</span> -
+Sum</p>
+<p><span class="math display">\[
+P(a \leq S \leq b) = P \left( \frac{a - E(S)}{SE(S)} \leq \frac{\bar{X}
+- E(S)}{SE(S)} \leq \frac{b - E(S)}{SE(S)} \right)
+\]</span> <span class="math display">\[CI = E(S) \pm z^*
+SE(S)\]</span></p>
+<p><span class="math display">\[\left[ np - z^* \cdot \sqrt{np(1 - p)},
+\, np + z^* \cdot \sqrt{np(1 - p)} \right]\]</span></p>
 </div>
 <div id="size-of-prediction-intervals" class="section level3" number="9.2.3">
 <h3><span class="header-section-number">9.2.3</span> Size of prediction
@@ -3252,6 +3271,14 @@ proportion gets smaller as the in the box gets further from
 \sqrt{\frac{p(1-p)}{n}}\)</span></p></li>
 </ul>
 </div>
+</div>
+<div id="confidence-intervals" class="section level2" number="9.3">
+<h2><span class="header-section-number">9.3</span> Confidence
+intervals</h2>
+<pre class="r"><code>library(binom)
+binom.confint(14, 49, conf.level = 0.99, method = &quot;wilson&quot;)</code></pre>
+<pre><code>##   method  x  n      mean     lower     upper
+## 1 wilson 14 49 0.2857143 0.1531828 0.4693562</code></pre>
 </div>
 </div>
 

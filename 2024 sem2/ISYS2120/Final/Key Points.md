@@ -7,4 +7,3 @@
 ## Relational Design Theory
 
 ## Database-Backed Applications 
-Week 7-8

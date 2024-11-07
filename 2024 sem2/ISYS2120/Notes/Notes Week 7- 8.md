@@ -102,12 +102,10 @@ REVOKE manager FROM shari
 	- DBMS passwords need to be carefully protected
 		- Consider where passwords are stored, how they are handed out to users, etc
 - Some dbms may use Single Sign On(SSO), to avoid separate identity management
-
 ##### Content-based access control
 - Policy often calls for access to be limited to certain rows only, in a table
 - The decision about whether a row should be accessed by someone, may depend on the contents of the some fields in the row.
 - SQL DBMS allows one to achieve this by defining a VIEW with only the relevant data, and then **GRANT** access to that VIEW
-
 ## 5. Views
 ##### Relational Views
 - A view is a virtual relation, but we store a *definition*, rather than set of tuples
@@ -121,7 +119,6 @@ CREATE VIEW NAME AS <query expression>
 - Creator of view has a privilege on the view if he has the privilege on all underling tables
 	- Granting privilege on a view does not imply changing any privileges
 	- If creator of base tables revokes `SELECT` right from view creator, view is no longer useful
-
 ##### Updating Views
 can they be updated? Sometimes, yes
 
@@ -194,7 +191,6 @@ create domain Grade char check(value in (‘F’,’P’,’C’,’D’,’H’
 ...
 ##### ALTER TABLE statement
 IC can be added, modified(only domain constraints), 
-
 ##### Assertion
 tmd,这东西不被大部分DBMS支持,这玩意考了我吃
 ##### Transaction
@@ -211,10 +207,6 @@ tmd,这东西不被大部分DBMS支持,这玩意考了我吃
 
 
 
-
-
-
-
 ---
 # Week 8
 ## 1. Database-backed applications
@@ -223,7 +215,7 @@ tmd,这东西不被大部分DBMS支持,这玩意考了我吃
 ##### Definition
 3 types of functionality (often placed in separate layers of code):
 
-![w8_1](Graphs/w8_1.png)
+![w8_1](Notes/2024%20sem2/ISYS2120/Notes/Graphs/w8_1.png)
 The system architecture determines whether these 3 components reside on a single computing system or whether they are distributed across several tiers.
 
 ##### Presentation layer

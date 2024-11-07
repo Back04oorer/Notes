@@ -15,7 +15,7 @@ SELECT <selection list>
 FROM R JOIN S using(<list of attributes>)
 ```
 
-![w4_1](Graphs/w4_1.jpg)
+![w4_1](w4_1.jpg)
 
 # Correlated vs Noncorrelated Subqueries
 

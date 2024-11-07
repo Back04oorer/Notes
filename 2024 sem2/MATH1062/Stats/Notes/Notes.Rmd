@@ -1243,7 +1243,25 @@ P(a \leq \bar{X} \leq b) = \gamma
 $$
 
 ### Calculate a,b
-Too long, See Topic 9, page 11
+- Mean
+
+$$
+P(a \leq \bar{X} \leq b) = P \left( \frac{a - E(\bar{X})}{SE(\bar{X})} \leq \frac{\bar{X} - E(\bar{X})}{SE(\bar{X})} \leq \frac{b - E(\bar{X})}{SE(\bar{X})} \right)
+$$
+
+$CI = E(\bar{X}) \pm z^* SE(\bar{X})$
+
+$$\left[ p - z^* \cdot \sqrt{\frac{p(1 - p)}{n}}, \, p + z^* \cdot \sqrt{\frac{p(1 - p)}{n}} \right]$$
+- Sum
+
+$$
+P(a \leq S \leq b) = P \left( \frac{a - E(S)}{SE(S)} \leq \frac{\bar{X} - E(S)}{SE(S)} \leq \frac{b - E(S)}{SE(S)} \right)
+$$
+$$CI = E(S) \pm z^* SE(S)$$
+
+$$\left[ np - z^* \cdot \sqrt{np(1 - p)}, \, np + z^* \cdot \sqrt{np(1 - p)} \right]$$
+
+
 
 ### Size of prediction intervals
 
@@ -1252,3 +1270,9 @@ Too long, See Topic 9, page 11
 - This is precisely reflected in  $SE(\bar{X}) = \sqrt{\frac{p(1-p)}{n}}$
 
 ## Confidence intervals
+
+```{r}
+library(binom)
+binom.confint(14, 49, conf.level = 0.99, method = "wilson")
+```
+
