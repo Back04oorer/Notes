@@ -1,0 +1,127 @@
+---
+title: "MATH1005 Lab12 Worksheet"
+subtitle: "Two sample t-tests"
+author: "© University of Sydney 2022"
+date: 
+output:
+  html_document:
+    fig_caption: yes
+    number_sections: yes
+    self_contained: yes
+    theme: flatly
+#    css: 
+#      - https://use.fontawesome.com/releases/v5.0.6/css/all.css
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    code_folding: show
+---
+
+# Aim of Lab 12 {-}
+
+At the end of this Lab, you should be able to:
+
+- Choose and perform an appropriate hypothesis test to answer a research question.
+
+# Research Question: Tied Ridging in Ethiopia 
+
+## Domain knowledge & Data
+
+It is believed that micro basin technology, such as tied ridging, can increase crop yield by concentrating runoff around the rootzone of the crop. However, tied ridging requires more effort on behalf of the farmer than traditional tillage. 
+
+The data `TiedRidging.csv` is from experiments conducted in Ethiopia. Maize was planted into equally sized tied ridge plots and the crop yield was measured (tons/hectare) at the end of the growing season.
+
+<i class="fa fa-link"></i>
+[Research](http://agronomyaustraliaproceedings.org/images/sampledata/2012/8249_6_abebe.pdf)
+
+```{r,results='hide'}
+TiedRidging <- read.csv("Tied Ridging MATH1062 1B.csv")
+head(TiedRidging)
+dim(TiedRidging)
+str(TiedRidging)
+table(TiedRidging$Variety)
+```
+
+
+## Testing whether tied ridging is effective 
+
+You are interested in finding out whether the yield of the tied ridge plot (Variety A) is significantly greater than that of a traditional yield which is 2.6tons/hectare for this area. Use a hypothesis test to provide a recommendation to Ethiopian farmers at a 5% significance level.
+
+*Hint: use* `yieldA = TiedRidging$Yield[TiedRidging$Variety=="A"]` *to extract the yields for variety A.*
+
+```{r}
+# Write
+yieldA = TiedRidging$Yield[TiedRidging$Variety=="A"]
+```
+
+- **Hypotheses**: 
+  - Let $\mu$ denote the mean yield under Variety A.
+  - $H_0$: 
+  - $H_1$: 
+  
+- **Assumptions**:
+
+- **Test Statistic**: 
+```{r}
+# Write your code here
+```
+
+- **P-value**
+```{R}
+# Write your code here
+```
+- **Conclusion**
+
+- In the previous question, you should have used a one-sided alternate hypothesis. Without computing a second p-value, would you be able to reject the two-sided alternate hypothesis that $\mu \neq 2.6$? Compute a 95% confidence interval to verify your answer.
+
+- **95% Confidence interval**
+```{r}
+# Write your code here
+```
+
+- Use bootstrap samples to create a histogram of simulated t-statistics. Compare this with the appropriate $t$-distribution to assess the above assumptions (**Hint**: refer to Lecture 15 Slide 46).
+
+```{r}
+# Write your code here
+```
+
+# Does Psychiatric Diagnosis Depend on Social Class?
+
+The table below (taken from *The Analysis of Contingency Tables, B. Everitt*, Table 3.13, p56) shows how 284 consecutively admitted patients to a psychiatric hospital were classified with respect to social class and diagnosis:
+
+| Diagnosis: | Neurotic | Depressed | Personality disorder | Schizophrenic |
+|----------:|:--------:|:---------:|:--------------------:|:-------------:|
+|                  **1** | 45 | 25 | 21 | 18 |
+| **Social Class:** **2** | 10 | 45 | 24 | 22 |
+|                  **3** | 17 | 21 | 18 | 18 |
+
+- Create 4 vectors `neur`, `depr`, `pdis` and `schz` containing the values of each column.
+```{r}
+# Write your code here
+```
+- Use `cbind()` to form these into a matrix called `Oi`. **Optional**: give the rows nice names/labels
+
+```{r}
+# Write your code here
+```
+- Compute row sums, column sums and hence a matrix `Ei` of corresponding expected frequencies *under the assumption that diagnosis and social class are independent*.
+```{r}
+# Write your code here
+```
+
+- Compute the value of Pearson's chi-squared statistic for testing independence.
+```{r}
+# Write your code here
+```
+- Obtain an (approximate) p-value. What is the correct degrees of freedom?
+
+```{r}
+# Write your code here
+```
+
+- Check your working above using the R function `chisq.test()` (see Lecture 18 Slide 41-45)
+```{r}
+# Write your code here
+```
+
+

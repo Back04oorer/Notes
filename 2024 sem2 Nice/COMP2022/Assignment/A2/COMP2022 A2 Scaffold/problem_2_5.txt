@@ -1,0 +1,8 @@
+V = S X Y C D
+T = a b
+start = S
+S -> aXa | bCb | epsilon | a | b 
+X -> aYa | bCb | epsilon | a | b
+C -> aDa | epsilon | a | b | bCb
+Y -> aYa | epsilon | a
+D -> bCb | b

@@ -1,0 +1,8 @@
+Age,SmokersDied,SmokersSurvived,NonSmokersDied,NonSmokersSurvived
+18-24,2,53,1,61
+25-34,3,121,5,152
+35-44,14,95,7,114
+45-54,27,103,12,66
+55-64,51,64,40,81
+65-74,29,7,101,28
+75+,13,0,64,0

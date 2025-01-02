@@ -1,0 +1,13 @@
+0 a _ R S
+0 _ _ R halt-accept
+
+S a T R S0
+S _ _ R halt-accept
+
+S0 a L R S0
+S0 _ _ L S1;
+
+S1 L R R S0;
+S1 R a L S1;
+
+S1 T T * halt-accept

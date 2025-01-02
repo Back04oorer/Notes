@@ -1,0 +1,152 @@
+---
+title: "MATH1062/MATH1005 Lab7 Worksheet"
+subtitle: "Introduction to R"
+author: "© University of Sydney MATH1062/MATH1005"
+date: '`r format(Sys.Date(), "%d %B %Y")`'
+output:
+  html_document:
+    fig_caption: yes
+    number_sections: yes
+    self_contained: yes
+    theme: flatly
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    code_folding: show
+---
+
+# Aim of Lab 7
+
+
+At the end of this Lab, you should be able to:
+
+- Calculate expected value and standard error from a box model.
+- Understand the significance of expected value and standard error.
+
+# Summary
+
+The **box model** models the sum (or mean) of $n$ random draws from a population. The population is the "box", and the collection of draws forms the "sample".
+
+(1) The Box
+
+As the box represents a population, we use `popsd(box)`, where we write our own function `popsd()` to compute the "population SD" of the box:
+```{r}
+popsd = function(x) sqrt( mean(x^2)-(mean(x)^2))
+```
+
+|Focus|By hand|In R|Symbol |
+|--------------|-----|--|-------|
+|Mean of the Box|Calculate the the average| `mean(box)`|$\mu$ |
+|SD of the Box|Calculate the population sd|  `popsd(box)`|$\sigma$ |
+
+(2) The Sample
+
+We can focus on either the sum (or mean) of the sample.
+
+|Focus|Expected Value |Standard Error |
+|----|----|----|
+|Sum of the Sample| $n \mu$  |$\sqrt{n} \sigma$ |
+|Mean of the Sample| $\mu$ |  $\sigma/\sqrt{n}$|
+
+
+For each calculation, work out the answer "by hand", and then check your answers in R.
+
+# Simple Binary Box Model 
+
+Model the following scenario: the multiple choice component of your final exam contains 20 questions, each with one correct answer and three incorrect answers. A correct answer is worth 1 mark and an incorrect answer is worth 0 marks. 
+
+Would it be unusual to pass (score at least 50% in) the multiple choice section by randomly guessing? 
+
+1. **Draw the box model**
+```{r}
+box = c(1,0,0,0)
+```
+
+2. **Calculate the mean and SD of the box**
+
+```{r, message = F, warning = F}
+# write code here
+box_mean = mean(box)
+box_popsd = popsd(box)
+box_popsd
+```
+
+3. **Calculate the $E(S)$ and  $SE(S)$ where $S$ is the sum of draws from the box**
+
+```{r}
+# write code here
+n = 20
+
+# E(S)
+E_S = n * mean(box)
+E_S
+
+SE_S = sqrt(n) * popsd(box)
+SE_S
+```
+
+4. **How many standard errors is the observed value away from the expected value? Would it be unusual to pass by randomly guessing? Hint: assume the box of all possible sums has a normal shape.**
+
+```{r}
+# write code here
+z = (10 - E_S) / SE_S
+z
+pnorm(z,lower.tail = FALSE)
+
+pnorm(10,E_S,SE_S,lower.tail = FALSE)
+```
+
+# Statistical Thinking 1
+
+If we decided to model the above scenario using the **mean** $\bar X$ instead of the **sum** $S$, which parts would change, and which parts would stay the same? Why?
+
+- **Mean and SD of box**
+```{r}
+# write code here
+box_2 = c(1,0,0,0)
+
+mean(box_2)
+popsd(box_2)
+
+```
+
+- **$E(\bar X)$ and $SE(\bar X)$**
+```{r}
+# write code here
+
+E_x = mean(box)
+SE_x = popsd(box)/sqrt(n)
+
+E_x
+SE_x
+```
+
+- **Number of SE away from expected value**
+```{r}
+# write code here
+z_mean = (0.5 - E_x)/SE_x
+z_mean
+```
+
+# Statistical Thinking 2
+
+- Would it be more or less unusual to pass the multiple choice section if there were 100 questions instead of 20?
+
+```{r}
+# write code here
+n_3 = 100
+SE_100 = popsd(box)/sqrt(100)
+
+SE_100
+
+z_mean = (0.5 - E_x)/SE_100
+
+z_mean
+
+pnorm(z_mean,lower.tail = FALSE)
+
+```
+
+
+
+

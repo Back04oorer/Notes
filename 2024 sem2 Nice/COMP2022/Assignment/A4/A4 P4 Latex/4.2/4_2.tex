@@ -1,0 +1,25 @@
+\documentclass{standalone}
+
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\begin{document}
+
+\begin{tabular}{lllll}
+    Line & Formula & Justification \\
+    1 & $((p\rightarrow q)\rightarrow (q\rightarrow p))$  & Asmp. I \\
+    2 & $((\neg p\lor q)\rightarrow (q\rightarrow p))$  & Conditional Law \\
+    3 & $((\neg p\lor q)\rightarrow (\neg q\lor p))$  & Conditional Law \\
+    4 & $(\neg (\neg p\lor q)\lor (\neg q\lor p))$  & Conditional Law \\
+    5 & $(\neg (q\lor \neg p)\lor (\neg q\lor p))$  & Commutation \\
+    6 & $((\neg q\land \neg \neg p)\lor (\neg q\lor p))$  & de Morgans Laws \\
+    7 & $(((\neg q\land \neg \neg p)\lor \neg q)\lor p)$  & Associativity \\
+    8 & $((\neg q\lor (\neg q\land \neg \neg p))\lor p)$  & Commutation \\
+    9 & $(\neg q\lor p)$  & Absorption \\
+    10 & $(q\rightarrow p)$  & Conditional Law \\
+\end{tabular}
+
+% If this is for an assessment, you must include this link with the table:
+\url{http://soitpw10001.shared.sydney.edu.au:8080/proof/1029}
+
+\end{document}

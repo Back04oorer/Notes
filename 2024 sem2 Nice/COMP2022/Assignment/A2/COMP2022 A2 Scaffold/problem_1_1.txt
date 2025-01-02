@@ -1,0 +1,2 @@
+U derives the language of strings that contain exactly one "b" and end with "b.".
+T derives the language of strings with odd lengths, where all characters from the middle (inclusive) to the end are 'a'.

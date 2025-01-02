@@ -1,0 +1,225 @@
+---
+title: "MATH1062 Lab1"
+subtitle: "Introduction to R"
+author: "© University of Sydney MATH1062"
+date: '`r format(Sys.Date(), "%d %B %Y")`'
+output:
+  html_document:
+    fig_caption: yes
+    number_sections: yes
+    self_contained: yes
+    theme: flatly
+    css: 
+     # - https://use.fontawesome.com/releases/v5.0.6/css/all.css
+    toc: true
+    toc_float: true
+    code_folding: show  
+---
+
+
+Throughout this unit, we will use R and RStudio as main data analysis tools, please download R and RStudio via the following URL links:
+
+**R download:** https://cran.r-project.org/bin/windows/base/
+
+**RStudio download:** https://posit.co/download/rstudio-desktop/
+
+**RStudio will not work without R installed! You need both.**
+
+You can either use R Console directly or input the code in the R code blocks to work on these questions. To compile this R Markdown file (Rmd) into a readable html, you need to **knit** the file.
+
+**IMPORTANT** You need the data file `simpsons_smoking.csv` to knit this worksheet. First make sure your `Lab1Worksheet.Rmd` file is in your `MATH1062` folder. Then download the data from Canvas, store it in a folder called `data`, inside your `MATH1062` folder. This data file is used in Q2. 
+
+Notice, in the YAML above, that `code_folding: show`. This means that when you press knit, all the code is run and the .html file contains the output, with the code blocks shown at the side. You can try to set this to `code_folding: hide` to hide the code.
+
+Don't worry if you don't understand all the code yet - just read it carefully, see what it does, and follow the sample code.
+
+# Chick Weight
+
+Here we will explore some data stored in R called `ChickWeight`. It contains the weight of chicks in grams as they grow from day 0 to day 21.  
+
+## Background to Data
+
+Read about the background to the data. 
+
+```{r, eval = FALSE}
+?ChickWeight
+```
+
+- Putting `eval=F` in the code blocks means that the code is not run when knitted.
+
+## Structure of the Data
+
+Have a look at the first 6 rows of the data.
+```{r}
+head(ChickWeight)
+```
+
+Have a look at the last 6 rows of the data.
+```{r}
+tail(ChickWeight)
+```
+
+How many observations are in the data? How many variables are in the data? 
+
+```{r}
+dim(ChickWeight)
+```
+
+There are 578 observations and 4 variables.
+
+What are the names of the variables?
+
+```{r}
+names(ChickWeight)
+```
+
+Note: The names of variables are case sensitive. Best practise is that all the variables use the same convention - ie here, they should all start with capitals.  However, you have to use the data you are given, which may be messy!
+
+<br>
+
+## Explore the data
+
+First, isolate the **diet** variable by using `ChickWeight$Diet`, and store it in `diet`.
+
+```{r}
+diet = ChickWeight$Diet
+# diet <- ChickWeight$Diet  ## alternate option!
+```
+
+Note: RStudio has code completion, so will auto-predict your commands. When you type `ChickWeight$`, the names of the all the variables will come up. Easy!
+
+Build a frequency table to find out the most common type of diet fed to the chicks.
+
+```{r}
+# write your code here
+barplot(table(diet))
+
+# 1
+```
+
+Second, isolate the **weight** variable, and store it in `weight`.
+
+```{r}
+# write your code here
+weight = ChickWeight$weight
+```
+
+What is the minimum and maximum weight of the chicks? Use `min()` and `max()`.
+
+```{r}
+# write your code here
+min(weight)
+max(weight)
+```
+
+In later weeks, we will learn more about the `plot` command. But for now, run this code and see if you can see any patterns.
+
+```{r}
+plot(ChickWeight$Time, ChickWeight$weight, col=ChickWeight$Diet)
+```
+
+From a glance, it looks like the different types of feed (the different colours) makes the chicks grow to different weighs over time!
+
+# Smoking Study (UK) and Simpson's paradox
+
+Here we have a go at analysing an **external** data set `simpsons_smoking.csv`. The aim of the data is to analyse the effect of smoking on mortality rates in women. The initial data collected from an electoral roll near Newcastle in UK. The follow-up data is collected 20 years later. 
+
+The study concentrated on 1,314 women who were either smokers or non-smokers (there are 162 who had stopped smoking and 18 did not record their status in the full data). 
+
+For each part, check the code, run the code, and then write your answer.
+
+## Import the data
+
+- First make sure your `Lab1Worksheet.Rmd` file is in your `MATH1062` folder. Then download the data from Canvas, store it in a folder called `data`, inside your `MATH1062` folder, and then run the following code. You also need to remove the `eval = F` before you knit, otherwise the chunk won't run!
+
+```{r}
+smoking = read.csv("simpsons_smoking.csv", header=T)
+```
+
+- Alternatively, you may store the `Rmd` file in the **same folder** as the `csv` file, and then remove the `data/` part of the code.
+
+- Pro Tip: you can hover your cursor over the `Lab1Worksheet.Rmd` in the top left corner to see where the file is.
+
+- The type of data (here `.csv`) must match up with the command (`read.csv)`. So if the data has the ending`.xlsx`, we need to load a package and use `read_excel`. 
+
+## Examine the data 
+- What is the size of the data? What do the rows and columns represent? Is this the full data from the UK study, or a summary?
+
+```{r}
+dim(smoking)
+names(smoking)
+```
+
+There are 7 rows and 5 columns. The rows represent an age group, and the columns represent the variables (number of people in each catgeory). This is **summarised** data because each row represents a summary (total of all people in that age group). Contrast this to the `ChickWeight` data where each row represents an observation.
+
+- Can you see any patterns?
+
+```{r}
+smoking
+```
+
+## Research question: is the mortality rate higher for smokers or non-smokers?
+
+### First, consider the overall mortality rates 
+
+- Calculate the mortality rate for smokers.
+
+```{r}
+sum(smoking$SmokersDied)/sum(smoking$SmokersDied+smoking$SmokersSurvived)
+```
+
+- Calculate the mortality rate for non-smokers.
+
+```{r}
+# write your code here
+sum(smoking$NonSmokersDied)/sum(smoking$NonSmokersDied + smoking$NonSmokersSurvived)
+```
+
+What is your conclusion? 
+
+It looks like the non-smokers had a higher mortality rate!
+
+### Second, examine the mortality rate by age groups 
+
+#### Did more smokers or non-smokers die in the 18-24 age group? {-}
+
+- Calculate the mortality rate for smokers in the 18-24 age group.
+
+```{r}
+# Consider Smokers 18-24
+sum(smoking$SmokersDied[1])/sum(smoking$SmokersDied[1]+smoking$SmokersSurvived[1])
+```
+
+- Calculate the mortality rate for non-smokers in the 18-24 age group.
+
+```{r}
+# Consider Non-Smokers 18-24, 
+# write your code here
+
+sum(smoking$NonSmokersDied[1])/sum(smoking$NonSmokersDied[1] + smoking$NonSmokersSurvived[1])
+```
+
+Note: `smoking$SmokersDied[1]` selects the 1st entry of `smoking$SmokersDied`.
+
+- The smokers have a higher mortality rate in the 18-24 age group!
+
+#### Did more smokers or non-smokers die in the 65-74 age group? {-}
+
+```{r}
+# write your code here
+sum(smoking$SmokersDied[6])/sum(smoking$SmokersDied[1]+smoking$SmokersSurvived[6])
+sum(smoking$NonSmokersDied[6])/sum(smoking$NonSmokersDied[6] + smoking$NonSmokersSurvived[6])
+```
+
+The smokers also have a higher mortality rate in the 65-74 age group!
+
+
+    It seems that smokers have higher mortality rates for every age group if you carried out the analysis to this point. However, when we discard the age group information and treat the pooled data together, the data suggests the opposite trend. Here, the age group can be considered as a confounding variable. This is a classical example of Simpson's paradox.
+    
+###  Simpson's paradox
+
+Sometimes there is a clear trend in each of the groups of data that reverses when the groups are pooled together.
+   
+- It occurs when relationships between percentages in subgroups are reversed when the subgroups are combined, because of a confounding variable.
+- The association between a pair of variables $(X,Y)$ reverses sign upon conditioning of a third variable $Z$, regardless of the value taken by $Z$.
+

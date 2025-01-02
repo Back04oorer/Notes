@@ -1,0 +1,330 @@
+---
+title: "MATH1062 (Part B) / MATH1005 Assignment 2"
+author: "University of Sydney MATH1062 (Statistics Part) / MATH1005"
+output:
+  html_document:
+    fig_caption: yes
+    number_sections: yes
+    self_contained: yes
+    theme: flatly
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    code_folding: show
+---
+
+# Instruction {-}
+
+There are **several** questions. Each question may contain multiple tasks. To receive a full mark in this part, you should correctly solve all tasks, justify your solution in the space provided in case necessary, and add appropriate labels to your graphical summaries. 
+
+Do **NOT** modify the header of this file. Do **NOT** delete or alter any text description from this file. Only work in the space provided.
+
+**Format:** All assignment tasks have either a field for writing embedded R code, an answer field marked by the prompt **`Answer to Task x.x`**, or both. You should enter your solution either as embedded R code or as text after the prompt **`Answer to Task x.x`**.
+
+**Submission:** Upon completion, you must render this worksheet (using `Knit` in R Studio) into an html file and submit the html file. Make sure the file extension "html" is in lower case. Your html file **MUST** contain all the R code you have written in the worksheet. 
+
+# Import data {-}
+
+In this assignment, we will use simulated climate data based on real data from the Bureau of Meteorology at Canterbury Racecourse AWS {station 066194} collected in 2023. The simulated data contains several different daily measurements throughout Autumn (March-May).
+
+We will use the following variables.
+
+  * `X3pm.temperature` (**daily temperature measured at 3 pm**)
+  * `Maximum.temperature` (**maximum daily temperature**)
+  * `X9am.temperature` (**daily temperature measured at 9 am**)
+  * `Minimum.temperature` (**minimum daily temperature**) 
+  * `Speed.of.maximum.wind.gust` (**Speed of maximum wind gust**)
+  
+The temperature data are measured in Celsius and the speed of wind data are measured in km/h. Please beware that the variable names are **case sensitive**.
+
+Download the data file `AutumnCleaned.csv` in your `data` folder within your `MATH1062` folder. This R Markdown file (`Assignment2Worksheet.Rmd`) should also be saved under your `MATH1062` folder.
+
+Then **import** the csv file into a variable called `data`:
+
+```{r}
+### write your code here. Here is a sample solution 
+data = read.csv("AutumnCleaned.csv", header = T)
+### the following displays the dimension of the data
+dim(data)
+names(data)
+```
+
+*If you save the data file and the worksheet correctly, you should be able to load the data file and see its dimension and variable names.*
+
+**`Task:`** How many observations are there? How many variables are there?
+
+**`Answer:`** This is the sample solution. There are 92 observations and 16 variables.
+
+**====START OF ASSIGNMENT QUESTIONS====**
+
+**Write your SID here:** 530157791. 
+
+# Question 1 {-}
+
+There are four tasks in this question.
+    
+## **`Task 1.1`** {-}
+
+Produce a scatter plot for the the daily temperature observed at 3 pm (`X3pm.temperature`) and the observed daily maximum temperature (`Maximum.temperature`), with `X3pm.temperature` ($X$) on the horizontal axis and `Maximum.temperature` ($Y$) on the vertical axis.
+    
+Produce another scatter plot for the daily temperature observed at 9 am (`X9am.temperature`) and the observed daily minimum temperature (`Minimum.temperature`), with `X9am.temperature` ($X$) on the horizontal axis and `Minimum.temperature` ($Y$) on the vertical axis.
+
+Place two plots side-by-side and correctly label them. **Comment on and compare these associations based on the scatter plot.** Write your comment after the **`Answer to Task 1.1`** prompt provided below. 
+    
+```{r}
+### Code for Task 1.1. Write your code here
+
+par(mfrow = c(1, 2))
+
+plot(data$X3pm.temperature, data$Maximum.temperature,
+     xlab = "Daily temperature observed at 3 pm (°C)", 
+     ylab = "Daily maximum temperature (°C)", 
+     main = "3 PM vs Maximum Temperature")
+
+plot(data$X9am.temperature, data$Minimum.temperature,
+     xlab = "Daily temperature observed at 9 am (°C)", 
+     ylab = "Daily minimum temperature (°C)",
+     main = "9 AM vs Minimum Temperature")
+```
+
+**`Answer to Task 1.1:`**
+The left plot (3 p.m. temperature vs maximum temperature) shows a stronger correlation compared to the right plot.
+
+## **`Task 1.2`** {-}
+
+After rounding to two decimal places, the rounded sample SDs of `X9am.temperature` and `Minimum.temperature` are $SD_X=1.98$ and $SD_Y=1.44$, respectively. The sample means of `X9am.temperature` and `Minimum.temperature` are $\bar X = 21.22$ and $\bar Y = 16.73$, respectively. The rounded correlation coefficient between `X9am.temperature` and `Minimum.temperature` is $r=0.82$. 
+
+Derive the **intercept** and the **slope** of the regression line (round to **four** decimal places) for predicting daily minimum temperature given the temperature observed at 9 am. Write your answer after the **`Answer to Task 1.2`** prompt provided below. 
+
+```{r}
+### Below are rounded sample means, sample SDs, and r
+###
+Xbar = 21.22 # sample mean of X
+Ybar = 16.73 # sample mean of Y
+
+SDX = 1.98 # sample SD of X
+SDY = 1.44 # sample SD of Y
+r = 0.82 # corr coeff
+
+### Code for Task 1.2. you can use R as a calculator, write your code here
+slope = SDY/SDX*r
+intercept = Ybar - slope*Xbar
+slope = round(slope,4)
+intercept = round(intercept,4)
+
+slope
+intercept
+```
+
+**`Answer to Task 1.2`**
+The regression equation for predicting minimum temperature based on 9 am temperature is $Y = 4.0752 + 0.5964x$, where the slope is $0.5964$ and the intercept is $4.0752$
+
+
+## **`Task 1.3`** {-}
+
+Using the function `lm()`, build a linear model for predicting daily maximum temperature (`Maximum.temperature`) given the temperature observed at 3 pm (`X3pm.temperature`). Produce a scatter plot for `X3pm.temperature` and `Maximum.temperature`. Plot the resulting regression line on top of the scatter plot using `abline()`. Predict the value of daily maximum temperature given a value of $X=33$ for the temperature observed at 3 pm. Use the function `points(X, Y, col="red", cex=3, pch=19)` to plot the predict value $Y$ (together with the predictor $X$), where the options `col="red", cex=3, pch=19` specify the color, the marker size, and the mark type, respectively. 
+
+```{R}
+### Code for Task 1.3. Write your code here
+y = data$Maximum.temperature
+x = data$X3pm.temperature
+
+model = lm(y~x)
+model # y = 13.3040 + 0.6594x
+
+coefficients = coef(model)
+a = coefficients[1]  
+b = coefficients[2]
+
+plot(y ~ x, 
+     xlab = "Temperature observed at 3 pm (°C)", 
+     ylab = "Daily maximum temperature (°C)", 
+     main = "Scatter Plot of 3 PM Temperature vs Daily Maximum Temperature")
+
+abline(model, col = "green", lwd = 2)
+
+# predict value given a value of X=33
+predict_value = as.numeric(a + b*33)
+predict_value
+
+points(33, predict_value, col="red", cex=3, pch=19)
+```
+
+## **`Task 1.4`** {-}
+
+Produce the residual plot of the linear model built in Task 1.3. Comment on if the regression line is a good fit. Write your comment after the **`Answer to Task 1.4`** prompt provided below. 
+
+```{R}
+### Code for Task 1.4. Write your code here
+predict_values = x * b + a
+residuals = y - predict_values
+plot(residuals~x)
+abline(h = 0, col = "red", lwd = 2)  # Add a horizontal line at y = 0
+```
+
+**`Answer to Task 1.4:`**
+The regression line is a good fit because the residual plot shows no pattern(random around 0). Additionally, the residuals seem to have roughly constant spread across all values of the predictor (homoscedasticity), which further supports the adequacy of the model. 
+
+## **`Task 1.5`** {-}
+
+Compared to the baseline prediction, what percentage of variation in the response variable `Maximum.temperature` can be explained by the linear regression model fitted in Task 1.3. 
+Write your answer after the **`Answer to Task 1.5`** prompt provided below. Round your answer to two decimal places. 
+
+```{R}
+### Code for Task 1.5. Write your code here
+round(cor(x,y)^2,4)
+```
+
+**`Answer to Task 1.5:`** The percentage of variation in the response variable `Maximum.temperature` that can be explained by the linear regression model is approximately 89.58%.
+
+# Question 2 {-}
+
+Using historical data from the early 1900s, Statisticians at the Bureau of Meteorology calculated that 20% of days in Autumn had max wind speeds exceeding 40km/h. We want to test whether recent Autumn data is consistent with this hypothesis that "20% of days during Autumn exceed 40km/h".
+
+## **`Task 2.1`** {-}
+Determine `xbar`, the *observed* sample proportion of days in Autumn 2023 that (strictly) exceed a speed of 40km/h.
+```{r}
+### Code for Task 2.1. Write your code here
+exceeding_days = data$Speed.of.maximum.wind.gust > 40
+exceeding_days
+xbar = mean(exceeding_days)
+xbar
+```
+
+## **`Task 2.2`** {-}
+Calculate the expectation and standard error for the sample proportion assuming the hypothesis is true.
+```{r}
+### Code for Task 2.2. Write your code here
+p0 = 0.2
+n = nrow(data)
+se = sqrt(p0*(1-p0)/n)
+
+### expectation
+p0
+
+### standard error
+se
+```
+
+## **`Task 2.3`** {-}
+Calculate the 99% prediction interval that can be used to test whether the data is consistent with the above hypothesis.
+```{r}
+### Code for Task 2.3. Write your code here
+z_99 = qnorm(0.995)
+z_99
+
+upper = p0 + z_99 * se
+lower = p0 - z_99 * se
+
+c(lower,upper)
+```
+
+## **`Task 2.4`** {-}
+Determine a 99% (Wilson) confidence interval for the unknown proportion of days in Autumn that exceed a max wind speed of 40km/h.
+```{r}
+### Code for Task 2.4. Write your code here
+x = sum(exceeding_days)
+
+require(binom)
+CI = binom.confint(x = x, n = n, conf.level = 0.99, methods = "wilson")
+CI
+
+```
+
+## **`Task 2.5`** {-}
+Perform a "sanity check", and verify that the endpoints of your Wilson confidence interval in the previous task are such that the observed proportion `xbar` is *right on the edge* of a 99% prediction interval. Your answer should have two things:
+
+1. R code which prints appropriate output;
+2. one or two explanatory sentences (strictly no more than two)
+
+```{r}
+### Code for Task 2.5. Write your code here
+CI$lower + c(-1,1) * z_99 * sqrt(CI$lower*(1-CI$lower)/n)
+CI$upper - c(-1,1) * z_99 * sqrt(CI$upper*(1-CI$upper)/n)
+
+```
+**`Answer to Task 2.5:`**
+\( \bar{x} \) is exactly on the right edge of the prediction interval calculated based on `CI$lower`, and \( \bar{x} \) is also exactly on the left edge of the prediction interval calculated based on `CI$upper`.
+
+
+## **`Task 2.6`** {-}
+Compute the p-value for the hypothesis.
+```{r}
+### Code for Task 2.6. Write your code here
+z = (xbar -p0)/se
+
+# H1: p0 != 0.2
+p_value = 2 * pnorm(z,lower.tail = F)
+p_value
+```
+
+## **`Task 2.7`** {-}
+What is the conclusion of your hypothesis test at the 1% significance level? Is the observed proportion `xbar` **significantly different** from 20%? What assumptions do we need about our data in order to make our hypothesis test valid? Your answer should have three things:
+
+1. At most one sentence stating the conclusion of your hypothesis test.
+2. Three reasons for your conclusion. At most three sentences.
+3. At most two sentences explaining what assumptions we used during our hypothesis test.
+
+**`Answer to Task 2.7:`**
+
+1. At the 1% significance level, we reject the null hypothesis $H0$, because the p-value of 0.005730506 is smaller than 0.01.
+
+2.
+  - The p-value of 0.005730506 is less than 0.01, indicating that the observed data significantly differs from the 20% hypothesized proportion. 
+  - The hypothesis test shows that the proportion of days with wind speeds exceeding 40 km/h is significantly different from the historical 20%.
+  - At the 1% significance level, the evidence suggests that the wind speeds in Autumn 2023 significantly differ from the historical data.
+
+3.
+  - We assume that the daily wind speed measurements are independent.
+  - The sample size is large enough.
+
+# Question 3 {-}
+
+## **`Task 3.1`** {-}
+What is the the smallest prediction interval at which the data is consistent with the hypothesis? What percentage does this prediction interval correspond to? What do you notice about this interval? Write your answer after the **`Answer to Task 3.1`** prompt provided below. 
+```{r}
+### Code for Task 3.1. Write your code here
+
+# xbar = p0 + z' *se
+z_prime = (xbar - p0)/se
+z_prime
+upper_prime = p0 + z_prime* se
+lower_prime = p0 - z_prime* se
+
+# smallest prediction interval
+c(lower_prime,upper_prime)
+
+# corresponding percentage
+percentage = 1 - (1-pnorm(z_prime))*2
+percentage
+```
+
+
+**`Answer to Task 3.1:`** The smallest prediction interval at which the data is consistent with the hypothesis is [0.08478261,0.31521739]. The corresponding percentage for this prediction interval is approximately 99.43%. 
+
+The right side of this interval coincides with the `xbar` from Task 2.1. This means that at a 99.43% confidence level, `xbar` just falls within the prediction interval. This indicates that we need a confidence level slightly higher than 99% for the observed `xbar` to fall within the prediction interval, though the data is still consistent with the hypothesis.
+
+
+## **`Task 3.2`** {-}
+Suppose we only had access to $n$ days from Autumn 2023, where $n < 92$. If we assume that `xbar` would remain the same as in Task 2.1 regardless of the value of $n$, what is the smallest value $n$ such that we would reject the hypothesis with a **95%** significance level? Hint: you may need to do go through some trial and error. Your answer should have two things:
+
+1. R code which prints appropriate output;
+2. one or two explanatory sentences (strictly no more than two).
+
+```{r}
+### Code for Task 3.2. Write your code here
+# se_prime = sqrt(p0*(1- p0)/ n_prime)
+xbar
+p_value_expected = 0.05
+z_95 = qnorm(1 - p_value_expected/2)
+
+# z_95 = (xbar-p0)/se
+se_prime = (xbar - p0) / z_95
+se_prime
+
+n_prime = p0*(1-p0)/se_prime/se_prime
+ceiling(n_prime)
+```
+
+**`Answer to Task 3.2:`** We determine the 95% significance level's z-score and, assuming the sample proportion `xbar` remains constant, use the formula \( z_{95} = \frac{\bar{x} - p_0}{SE} \) to calculate the standard error \( SE \). Then, we calculate the minimum sample size \( n \) using \( SE = \sqrt{\frac{p_0(1 - p_0)}{n}} \), and since the sample size represents days, we round up to ensure the hypothesis can still be rejected.
+

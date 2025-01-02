@@ -1,5 +1,0 @@
-V = S U
-T = a b
-start = S
-S -> Ua
-U -> epsilon | bUb | aUa | a | b
